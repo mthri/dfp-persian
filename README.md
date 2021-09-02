@@ -26,7 +26,7 @@
 | 7: Advanced User Registration | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
 | 8: Environment Variables      | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
 | 9: Email                      | رزرو شده |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
-| 10: Books App                 | رزرو نشد |   -  |
+| 10: Books App                 | رزرو شده |   <a hraf="https://github.com/aliloloee">علی</a>  |
 | 11: Reviews App               | رزرو نشد |   -  |
 | 12: File/Image Uploads        | رزرو شده |   <a href="https://github.com/smhtbtb">سید محمد حسین طباطبایی</a>  |
 | 13: Permissions               | رزرو شده |   <a href="https://github.com/arianghoochani">آرین قوچانی</a>  |
