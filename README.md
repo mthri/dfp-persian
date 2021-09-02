@@ -65,5 +65,5 @@
 </h2>
 
 <ul dir="rtl">
-    <li>امیر مطهری | <a href="github.com/mthri">گیت‌هاب</a> | <a href="twitter.com/a_mthri">توییتر</a></li>
+    <li>امیر مطهری | <a href="https://github.com/mthri">گیت‌هاب</a> | <a href="https://twitter.com/a_mthri">توییتر</a></li>
 </ul>
