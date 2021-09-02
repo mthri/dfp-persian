@@ -74,4 +74,5 @@
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
     <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a></li>
     <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
+    <li>علی | <a href=https://github.com/aliloloee>گیت‌هاب</a></li>
 </ul>
