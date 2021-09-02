@@ -31,7 +31,7 @@
 | 12: File/Image Uploads        | رزرو شده |   <a href="https://github.com/smhtbtb">سید محمد حسین طباطبایی</a>  |
 | 13: Permissions               | رزرو شده |   <a href="https://github.com/arianghoochani">آرین قوچانی</a>  |
 | 14: Search                    | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
-| 15: Performance               | رزرو نشد |   -  |
+| 15: Performance               | رزرو شده |   <a href="https://github.com/MrRezoo">رضا مبارکی</a>  |
 | 16: Security                  | رزرو نشد |   -  |
 | 17: Deployment                | رزرو نشد |   -  |
 | Conclusion                    | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
@@ -74,6 +74,7 @@
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
     <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a></li>
     <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
-    <li> علی لؤلؤیی | <a href=https://github.com/aliloloee>گیت‌هاب</a></li>
+    <li>علی لؤلؤیی | <a href="https://github.com/aliloloee">گیت‌هاب</a></li>
+    <li>رضا مبارکی | <a href="https://github.com/MrRezoo" >گیت‌هاب</a></li>
 </ul>
 
