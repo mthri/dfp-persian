@@ -16,7 +16,7 @@
 
 | فصل                           |   وضعیت  | توسط |
 |-------------------------------|:--------:|:----:|
-| Introduction                  | رزرو شده |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
+| Introduction                  | تکمیل |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
 | 1: Docker                     | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 2: PostgreSQL                 | رزرو شده |   <a href="https://github.com/Kasra1377">کسری صادقیان پور</a>  |
 | 3: Bookstore Project          | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
