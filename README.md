@@ -19,7 +19,7 @@
 | Introduction                  | رزرو شده |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
 | 1: Docker                     | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 2: PostgreSQL                 | رزرو نشد |   -  |
-| 3: Bookstore Project          | رزرو نشد |   -  |
+| 3: Bookstore Project          | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 4: Pages App                  | رزرو نشد |   -  |
 | 5: User Registration          | رزرو نشد |   -  |
 | 6: Static Assets              | رزرو نشد |   -  |
