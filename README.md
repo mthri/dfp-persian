@@ -28,7 +28,7 @@
 | 9: Email                      | رزرو شده |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
 | 10: Books App                 | رزرو نشد |   -  |
 | 11: Reviews App               | رزرو نشد |   -  |
-| 12: File/Image Uploads        | رزرو نشد |   -  |
+| 12: File/Image Uploads        | رزرو نشد |   <a href="https://github.com/smhtbtb">سید محمد حسین طباطبایی</a>  |
 | 13: Permissions               | رزرو نشد |   -  |
 | 14: Search                    | رزرو نشد |   -  |
 | 15: Performance               | رزرو نشد |   -  |
@@ -70,4 +70,5 @@
     <li>حدیث سادات موسوی | <a href="https://github.com/cemusavi">گیت‌هاب</a></li>
     <li>خلیل فراشیانی | <a href="https://github.com/khalil-farashiani">گیت‌هاب</a></li>
     <li>مائده شهابی | <a href="https://github.com/mashahabi15">گیت‌هاب</a></li>
+    <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a></li>
 </ul>
