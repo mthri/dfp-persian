@@ -84,7 +84,7 @@
 
 
 
-    ## <a href='https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction'>معارفه</a>
+    ## معارفه
   
       ### پیشنیاز ها
       ### ساختار کتاب
