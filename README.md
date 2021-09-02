@@ -17,7 +17,7 @@
 | فصل                           |   وضعیت  | توسط |
 |-------------------------------|:--------:|:----:|
 | Introduction                  | رزرو شده |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
-| 1: Docker                     | رزرو نشد |   -  |
+| 1: Docker                     | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 2: PostgreSQL                 | رزرو نشد |   -  |
 | 3: Bookstore Project          | رزرو نشد |   -  |
 | 4: Pages App                  | رزرو نشد |   -  |
@@ -67,4 +67,5 @@
 <ul dir="rtl">
     <li>امیر مطهری | <a href="https://github.com/mthri">گیت‌هاب</a> | <a href="https://twitter.com/a_mthri">توییتر</a></li>
     <li>امید شهبازی | <a href="https://github.com/themaximalist">گیت‌هاب</a></li>
+    <li>حدیث سادات موسوی | <a href="https://github.com/cemusavi">گیت‌هاب</a></li>
 </ul>
