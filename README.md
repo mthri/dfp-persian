@@ -25,7 +25,7 @@
 | 6: Static Assets              | رزرو نشد |   -  |
 | 7: Advanced User Registration | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
 | 8: Environment Variables      | رزرو نشد |   -  |
-| 9: Email                      | رزرو نشد |   -  |
+| 9: Email                      | رزرو شده |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
 | 10: Books App                 | رزرو نشد |   -  |
 | 11: Reviews App               | رزرو نشد |   -  |
 | 12: File/Image Uploads        | رزرو نشد |   -  |
@@ -69,4 +69,5 @@
     <li>امید شهبازی | <a href="https://github.com/themaximalist">گیت‌هاب</a></li>
     <li>حدیث سادات موسوی | <a href="https://github.com/cemusavi">گیت‌هاب</a></li>
     <li>خلیل فراشیانی | <a href="https://github.com/khalil-farashiani">گیت‌هاب</a></li>
+    <li>مائده شهابی | <a href="https://github.com/mashahabi15">گیت‌هاب</a></li>
 </ul>
