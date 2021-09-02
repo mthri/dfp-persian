@@ -21,7 +21,7 @@
 | 2: PostgreSQL                 | رزرو شده |   <a href="https://github.com/Kasra1377">کسری صادقیان پور</a>  |
 | 3: Bookstore Project          | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 4: Pages App                  | رزرو نشد |   -  |
-| 5: User Registration          | رزرو نشد |   -  |
+| 5: User Registration          | رزرو شده |   <a href="https://github.com/mehrdadbn9">مهرداد بیوکیان</a>  |
 | 6: Static Assets              | رزرو نشد |   -  |
 | 7: Advanced User Registration | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
 | 8: Environment Variables      | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
@@ -45,7 +45,7 @@
 <ul dir="rtl">
     <li>رزرو نشده: می‌تونید یکی از این فصل ها رو انتخاب و ترجمه کنید</li>
     <li>رزرو شده: به این معنی می‌باشد شخصی در حال حاضر در حال ترجمه این بخش از کتاب می‌باشد</li>
-    <li>نیاز به برسی: به این معنی می‌باشد که باید ترجمه برسی شود، در صورت وجود اشکل، رفع و دوباره پوش شود</li>
+    <li>نیاز به برسی: به این معنی می‌باشد که باید ترجمه بررسی شود، در صورت وجود اشکال، رفع و دوباره پوش شود</li>
     <li>تکمیل: به این معنی می‌باشد این فصل تکمیل شده</li>
 </ul>
 
@@ -76,5 +76,6 @@
     <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
     <li>علی لؤلؤیی | <a href="https://github.com/aliloloee">گیت‌هاب</a></li>
     <li>رضا مبارکی | <a href="https://github.com/MrRezoo" >گیت‌هاب</a></li>
+    <li>مهرداد بیوکیان | <a href="https://github.com/mehrdadbn9">گیت‌هاب</a></li>
 </ul>
 
