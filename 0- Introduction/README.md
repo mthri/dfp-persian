@@ -245,9 +245,9 @@ hello, world
  [Black](https://github.com/ambv/black), [autopep8](https://github.com/hhatto/autopep8) و [YAPF](https://github.com/google/yapf)
 
 برخی برنامه نویسان قدیمی ممکن است 
- [Vim]() و [Emacs]() 
+ [Vim](https://www.vim.org/) و [Emacs](https://www.gnu.org/software/emacs/) 
  را ترجیح بدهند اما تازه کار ها یا برخی برنامه نویسان باتجربه از ادیتور های مثل 
- [VSCode](), [Atom](), [Sublime Text]() و [PyCharm]()
+ [VSCode](https://code.visualstudio.com/), [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/) و [PyCharm](https://www.jetbrains.com/pycharm/)
  استفاده میکنند
  
  ## جمع بندی
