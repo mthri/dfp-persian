@@ -28,8 +28,8 @@
 | 9: Email                      | رزرو شده |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
 | 10: Books App                 | رزرو نشد |   -  |
 | 11: Reviews App               | رزرو نشد |   -  |
-| 12: File/Image Uploads        | رزرو نشد |   <a href="https://github.com/smhtbtb">سید محمد حسین طباطبایی</a>  |
-| 13: Permissions               | رزرو نشد |   -  |
+| 12: File/Image Uploads        | رزرو شده |   <a href="https://github.com/smhtbtb">سید محمد حسین طباطبایی</a>  |
+| 13: Permissions               | رزرو شده |   <a href="https://github.com/arianghoochani">آرین قوچانی</a>  |
 | 14: Search                    | رزرو نشد |   -  |
 | 15: Performance               | رزرو نشد |   -  |
 | 16: Security                  | رزرو نشد |   -  |
@@ -71,4 +71,5 @@
     <li>خلیل فراشیانی | <a href="https://github.com/khalil-farashiani">گیت‌هاب</a></li>
     <li>مائده شهابی | <a href="https://github.com/mashahabi15">گیت‌هاب</a></li>
     <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a></li>
+     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
 </ul>
