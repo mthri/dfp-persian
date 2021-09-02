@@ -18,7 +18,7 @@
 |-------------------------------|:--------:|:----:|
 | Introduction                  | رزرو شده |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
 | 1: Docker                     | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
-| 2: PostgreSQL                 | رزرو نشد |   -  |
+| 2: PostgreSQL                 | رزرو شده |   <a href="https://github.com/Kasra1377">کسری صادقیان پور</a>  |
 | 3: Bookstore Project          | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 4: Pages App                  | رزرو نشد |   -  |
 | 5: User Registration          | رزرو نشد |   -  |
@@ -73,4 +73,5 @@
     <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a></li>
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
     <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a></li>
+    <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
 </ul>
