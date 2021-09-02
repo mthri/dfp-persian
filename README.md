@@ -16,7 +16,7 @@
 
 | فصل                           |   وضعیت  | توسط |
 |-------------------------------|:--------:|:----:|
-| Introduction                  | رزرو نشد |   -  |
+| Introduction                  | رزرو شده |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
 | 1: Docker                     | رزرو نشد |   -  |
 | 2: PostgreSQL                 | رزرو نشد |   -  |
 | 3: Bookstore Project          | رزرو نشد |   -  |
@@ -66,4 +66,5 @@
 
 <ul dir="rtl">
     <li>امیر مطهری | <a href="https://github.com/mthri">گیت‌هاب</a> | <a href="https://twitter.com/a_mthri">توییتر</a></li>
+    <li>امید شهبازی | <a href="https://github.com/themaximalist">گیت‌هاب</a></li>
 </ul>
