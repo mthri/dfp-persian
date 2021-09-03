@@ -20,7 +20,7 @@
 | 1: Docker                     | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 2: PostgreSQL                 | رزرو شده |   <a href="https://github.com/Kasra1377">کسری صادقیان پور</a>  |
 | 3: Bookstore Project          | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
-| 4: Pages App                  | رزرو نشد |   -  |
+| 4: Pages App                  | رزرو شده |   <a href="https://github.com/Aminmalek">امین ملک محمدی</a>  |
 | 5: User Registration          | رزرو شده |   <a href="https://github.com/mehrdadbn9">مهرداد بیوکیان</a>  |
 | 6: Static Assets              | رزرو نشد |   -  |
 | 7: Advanced User Registration | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
@@ -79,6 +79,8 @@
     <li>مهرداد بیوکیان | <a href="https://github.com/mehrdadbn9">گیت‌هاب</a></li>
     <li>محمد شیرخدایی | <a href="https://github.com/Mimshimzim">گیت‌هاب</a></li>
     <li>مهدی اسد زاده | <a href="https://github.com/mahdi-asadzadeh">گیت‌هاب</a></li>
+    <li>امین ملک محمدی | <a href="https://github.com/Aminmalek">گیت‌هاب</a></li>
+ 
 </ul>
 
 
