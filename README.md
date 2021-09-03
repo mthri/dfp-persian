@@ -33,7 +33,7 @@
 | 14: Search                    | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
 | 15: Performance               | رزرو شده |   <a href="https://github.com/MrRezoo">رضا مبارکی</a>  |
 | 16: Security                  | رزرو نشد |   -  |
-| 17: Deployment                | رزرو نشد |   -  |
+| 17: Deployment                | رزرو شده |   <a href="https://github.com/Mimshimzim">محمد شیرخدایی</a>  |
 | Conclusion                    | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
 
 ---
@@ -77,5 +77,6 @@
     <li>علی لؤلؤیی | <a href="https://github.com/aliloloee">گیت‌هاب</a></li>
     <li>رضا مبارکی | <a href="https://github.com/MrRezoo" >گیت‌هاب</a></li>
     <li>مهرداد بیوکیان | <a href="https://github.com/mehrdadbn9">گیت‌هاب</a></li>
+    <li>محمد شیرخدایی | <a href="https://github.com/Mimshimzim">گیت‌هاب</a></li>
 </ul>
 
