@@ -66,13 +66,13 @@
 
 <ul dir="rtl">
     <li>امیر مطهری | <a href="https://github.com/mthri">گیت‌هاب</a> | <a href="https://twitter.com/a_mthri">توییتر</a></li>
-    <li>امید شهبازی | <a href="https://github.com/themaximalist">گیت‌هاب</a></li> | <a href="https://www.linkedin.com/in/omid-shahbazi-76635b21b/">لینکدین</a></li>
+    <li>امید شهبازی | <a href="https://github.com/themaximalist">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/omid-shahbazi-76635b21b/">لینکدین</a></li>
     <li>حدیث سادات موسوی | <a href="https://github.com/cemusavi">گیت‌هاب</a></li>
     <li>خلیل فراشیانی | <a href="https://github.com/khalil-farashiani">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/khalil-farashiani-36393b21a">لینکدین</a></li>
     <li>مائده شهابی | <a href="https://github.com/mashahabi15">گیت‌هاب</a></li>
     <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/mohammad-hosein-tabatabaei">لینکدین</a></li>
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
-    <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a></li> | <a href="https://twitter.com/amin_moradim">توییتر</a> | <a href="https://t.me/amin_moradim">تلگرام</a>
+    <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a>| <a href="https://twitter.com/amin_moradim">توییتر</a> | <a href="https://t.me/amin_moradim">تلگرام</a></li>
     <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
     <li>علی لؤلؤیی | <a href="https://github.com/aliloloee">گیت‌هاب</a></li>
     <li>رضا مبارکی | <a href="https://github.com/MrRezoo" >گیت‌هاب</a></li>
