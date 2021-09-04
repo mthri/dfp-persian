@@ -72,7 +72,7 @@
     <li>مائده شهابی | <a href="https://github.com/mashahabi15">گیت‌هاب</a></li>
     <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a></li>
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
-    <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a></li>
+    <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a></li> | <a href="https://twitter.com/amin_moradim">توییتر</a> | <a href="https://t.me/amin_moradim">تلگرام</a>
     <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
     <li>علی لؤلؤیی | <a href="https://github.com/aliloloee">گیت‌هاب</a></li>
     <li>رضا مبارکی | <a href="https://github.com/MrRezoo" >گیت‌هاب</a></li>
