@@ -22,7 +22,7 @@
 | 3: Bookstore Project          | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 4: Pages App                  | رزرو شده |   <a href="https://github.com/Aminmalek">امین ملک محمدی</a>  |
 | 5: User Registration          | رزرو شده |   <a href="https://github.com/mehrdadbn9">مهرداد بیوکیان</a>  |
-| 6: Static Assets              | رزرو نشد |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
+| 6: Static Assets              | رزرو شده |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
 | 7: Advanced User Registration | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
 | 8: Environment Variables      | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
 | 9: Email                      | رزرو شده |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
@@ -134,7 +134,7 @@
   ### Git
   ### جمع بندی
 
-## قصل چهارم : اپ Pages
+## فصل چهارم : اپ Pages
 
   ### تمپلیت ها
   ### ٰViewها و URL ها
