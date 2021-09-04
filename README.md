@@ -70,7 +70,7 @@
     <li>حدیث سادات موسوی | <a href="https://github.com/cemusavi">گیت‌هاب</a></li>
     <li>خلیل فراشیانی | <a href="https://github.com/khalil-farashiani">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/khalil-farashiani-36393b21a">لینکدین</a></li>
     <li>مائده شهابی | <a href="https://github.com/mashahabi15">گیت‌هاب</a></li>
-    <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a></li>
+    <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/mohammad-hosein-tabatabaei">لینکدین</a></li>
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
     <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a></li> | <a href="https://twitter.com/amin_moradim">توییتر</a> | <a href="https://t.me/amin_moradim">تلگرام</a>
     <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
