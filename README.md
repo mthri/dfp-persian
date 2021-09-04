@@ -68,7 +68,7 @@
     <li>امیر مطهری | <a href="https://github.com/mthri">گیت‌هاب</a> | <a href="https://twitter.com/a_mthri">توییتر</a></li>
     <li>امید شهبازی | <a href="https://github.com/themaximalist">گیت‌هاب</a></li>
     <li>حدیث سادات موسوی | <a href="https://github.com/cemusavi">گیت‌هاب</a></li>
-    <li>خلیل فراشیانی | <a href="https://github.com/khalil-farashiani">گیت‌هاب</a></li>
+    <li>خلیل فراشیانی | <a href="https://github.com/khalil-farashiani">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/khalil-farashiani-36393b21a">لینکدین</a></li>
     <li>مائده شهابی | <a href="https://github.com/mashahabi15">گیت‌هاب</a></li>
     <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a></li>
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a></li>
