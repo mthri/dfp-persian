@@ -73,12 +73,12 @@
     <li>سید محمد حسین طباطبایی | <a href="https://github.com/smhtbtb">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/mohammad-hosein-tabatabaei">لینکدین</a></li>
     <li>آرین قوچانی | <a href="https://github.com/arianghoochani">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/arian-ghoochani-690980168">لینکدین</a></li>
     <li>امین مرادی | <a href="https://github.com/aminmoradim">گیت‌هاب</a>| <a href="https://twitter.com/amin_moradim">توییتر</a> | <a href="https://t.me/amin_moradim">تلگرام</a></li>
-    <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a></li>
+    <li>کسری صادقیان پور | <a href="https://github.com/Kasra1377">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/kasra-sadeghian-pour-87a928204/">لینکدین</a></li>
     <li>علی لؤلؤیی | <a href="https://github.com/aliloloee">گیت‌هاب</a></li>
     <li>رضا مبارکی | <a href="https://github.com/MrRezoo" >گیت‌هاب</a></li>
-    <li>مهرداد بیوکیان | <a href="https://github.com/mehrdadbn9">گیت‌هاب</a></li>
+    <li>مهرداد بیوکیان | <a href="https://github.com/mehrdadbn9">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/mehrdad-biukian-naeini">لینکدین</a></li>
     <li>محمد شیرخدایی | <a href="https://github.com/Mimshimzim">گیت‌هاب</a></li>
-    <li>مهدی اسد زاده | <a href="https://github.com/mahdi-asadzadeh">گیت‌هاب</a></li>
+    <li>مهدی اسد زاده | <a href="https://github.com/mahdi-asadzadeh">گیت‌هاب</a> | <a href="https://t.me/mahdi_asadzadeh">تلگرام</a></li>
     <li>امین ملک محمدی | <a href="https://github.com/Aminmalek">گیت‌هاب</a></li>
  
 </ul>
