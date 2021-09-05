@@ -169,7 +169,7 @@ ID به SLUG و
  
 <div dir='ltr'>
 
-```
+```python
     # This is python code
     print(Hello, World)
      
@@ -184,12 +184,10 @@ ID به SLUG و
 <div dir='ltr'>
 
  
-```
-
-     def make_my_website:
-         ...
+```python
+     def make_my_website():
+         # Code
          print("All done!")
- 
 ```
 
 </div>
@@ -204,11 +202,9 @@ ID به SLUG و
  
 <div dir='ltr'> 
 
- 
-```
- 
- $ echo "hello, world"
 
+```bash 
+ $ echo "hello, world"
 ```
  
 </div>
@@ -217,9 +213,7 @@ ID به SLUG و
 <div dir='ltr'>
 
 ```
- 
 hello, world
-
 ```
 </div>
  
@@ -228,10 +222,9 @@ hello, world
  
 <div dir='ltr'>
 
-```
+```bash
   $ echo "hello, world"
   hello, world
-
 ```
  
 </div>
