@@ -2,53 +2,56 @@
 
 <div dir="rtl">
 
-# فهرست
+**[مقدمه](https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction)**
 
+- پیشنیاز ها  
+- ساختار کتاب
+- آرایش کتاب
+- ادیتور متن
+- نتیجه گیری
 
-## [مقدمه](https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction)
+<br>
 
-  ### پیشنیاز ها
-  ### ساختار کتاب
-  ### آرایش کتاب
-  ### ادیتور متن
-  ### جمع بندی
+**فصل اول : داکر**
 
-## فصل اول : docker
+- داکر چیست
+- تفاوت کانتینر ها و Virtual Environments
+- نصب داکر
+- Hello World با داکر
+- Hello World با جنگو
+- اپ pages
+- تصاویر و کانتینر ها و میزبانی داکر
+- گیت
+- جمع بندی
 
-  ### داکر چیست
-  ### تفاوت کانتینر ها و Virtual Environments
-  ### نصب داکر
-  ### Hello World با داکر
-  ### Hello World با جنگو 
-  ### اپ pages
-  ### تصاویر و کانتینر ها و Docker Host
-  ### Git
-  ### جمع بندی
+<br>
 
-## فصل دوم : PostgreSQL
+**فصل دوم : PostgreSQL**
 
-  ### شروغ به کار
-  ### داکر 
-  ### حالت تفکیک شده (Detached Mode)
-  ### PostgreSQL
-  ### تنظیمات
-  ### Psycopg
-  ### دیتابیس تازه
-  ### git
-  ### جمع بندی
+  - شروغ به کار
+  - داکر 
+  - حالت تفکیک شده (Detached Mode)
+  - PostgreSQL
+  - تنظیمات
+  - Psycopg
+  - دیتابیس تازه
+  - git
+  - جمع بندی
 
-## فصل سوم : پروژه فروشگاه کتاب
-
-  ### داکر
-  ### PostgreSQL
-  ### مدل کاربر شخصی سازی شده (Custom User Model)
-  ### فرم های کاربر شخصی سازی شده (Custom User Forms)
-  ### پنل ادمین کاربر شخصی سازی شده (Custom User Admin)
-  ### سوپریوزر (Superuser)
-  ### تست ها 
-  ### یونیت تست ها
-  ### Git
-  ### جمع بندی
+<br>
+  
+**فصل سوم : پروژه فروشگاه کتاب**
+  
+  - داکر
+  - PostgreSQL
+  - مدل کاربر شخصی سازی شده (Custom User Model)
+  - فرم های کاربر شخصی سازی شده (Custom User Forms)
+  - پنل ادمین کاربر شخصی سازی شده (Custom User Admin)
+  - سوپریوزر (Superuser)
+  - تست ها 
+  - یونیت تست ها
+  - Git
+  - جمع بندی
 
 ## فصل چهارم : اپ Pages
 
@@ -242,7 +245,7 @@
   ### بازخورد ها
 
 </div>
-
+  
 <h2 dir="rtl">
 مشارکت کنندگان
 </h2>
