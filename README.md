@@ -4,9 +4,9 @@
 
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
   
-  <details>
-    <summary>مقدمه</summary>
-    <br>
+<details>
+  <summary>مقدمه</summary>
+  <br>
     
   - پیشنیاز ها  
   - ساختار کتاب
@@ -14,12 +14,12 @@
   - ادیتور متن
   - نتیجه گیری
     
-  </details>
+</details>
   
   
-  <details>
-    <summary>فصل اول : داکر</summary>
-    <br>
+<details>
+  <summary>فصل اول : داکر</summary>
+  <br>
 
   - داکر چیست
   - تفاوت کانتینر ها و Virtual Environments
@@ -31,11 +31,11 @@
   - گیت
   - جمع بندی
 
-  </details>
+</details>
 
-  <details>
-    <summary>فصل دوم : PostgreSQL</summary>
-    <br>
+<details>
+  <summary>فصل دوم : PostgreSQL</summary>
+  <br>
   
   - شروغ به کار
   - داکر 
@@ -47,11 +47,11 @@
   - git
   - جمع بندی
     
-  </details>
-  
-  <details>
-    <summary>فصل سوم : پروژه فروشگاه کتاب</summary>
-    <br>
+</details>
+
+<details>
+  <summary>فصل سوم : پروژه فروشگاه کتاب</summary>
+  <br>
     
   - داکر
   - PostgreSQL
@@ -64,10 +64,12 @@
   - Git
   - جمع بندی
     
-  </details>
+</details>
 
-**فصل چهارم : اپ Pages**
-
+<details>
+  <summary>فصل چهارم : اپ Pages</summary>
+  <br>
+    
   - تمپلیت ها
   - ٰViewها و URL ها
   - تست ها
@@ -77,16 +79,13 @@
   - Resolve
   - Git
   - جمع بندی
-
-  <br>
-  
-  <details>
-    <summary>مقدمه</summary>
     
-  </details>
+</details>
   
-**فصل پنجم : ثبت نام کاربر (مقدماتی)**
-
+<details>
+  <summary>فصل پنجم : ثبت نام کاربر (مقدماتی)</summary>
+  <br>
+    
   - اپ Auth
   - View ها و URL های اپ Auth
   - صفحه اصلی (Homepage)
@@ -99,11 +98,13 @@
   - setUpTestData()
   - Git
   - جمع بندی
-
+    
+</details>
+  
+<details>
+  <summary>فصل ششم : اشیاء استاتیک (Static Assets)</summary>
   <br>
   
-**فصل ششم : اشیاء استاتیک (Static Assets)** 
-
   - اپ staticfiles 
   - STATIC_URL
   - STATICFILES_DIR
@@ -118,12 +119,14 @@
   - کار باDjango Crispy Forms
   - تست ها 
   - Git
-  - جمع بندی
-
+  - حمع بندی
+  
+</details>
+  
+<details>
+  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته)</summary>
   <br>
   
-**فصل هفتم : ثبت نام کاربر (پیشرقته)**
-
   - django-allauth
   - AUTHENTICATION_BACKENDS
   - EMAIL_BACKEND
@@ -139,21 +142,25 @@
   - احراز هویت با شبکه های اجتماعی
   - Git
   - جمع بندی
-
+  
+</details>
+  
+<details>
+  <summary>فصل هشتم : متغییر های Environment</summary>
   <br>
   
-**فصل هشتم : متغییر های Environment**
- 
   - environs[django]
   - SECRET_KEY
   - DEBUG و ALLOWED_HOSTS
   - DATABASES
   - Git
   - جمع بندی
- 
-  <br>
   
-**فصل نهم : ایمیل**
+</details>
+  
+<details>
+  <summary>فصل نهم : ایمیل</summary>
+  <br>
   
   - تایید ایمیل شخصی سازی شده
   - صفحه تایید ایمیل
@@ -161,10 +168,12 @@
   - سرویس ایمیل در جنگو
   - Git
   - جمع بندی
-
-  <br>
   
-**فصل دهم : اپ Books** 
+</details>
+  
+<details>
+  <summary>فصل دهم : اپ Books</summary>
+  <br>
   
   - Model ها 
   - پنل ادمین
@@ -181,8 +190,8 @@
   - تست ها
   - Git
   - جمع بندی
-
-  <br>
+    
+</details>
   
 **فصل یازدهم : اپ Reviews**
   
