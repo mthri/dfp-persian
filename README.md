@@ -4,32 +4,39 @@
 
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
   
-**[مقدمه](https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction)**
+  <details>
+    <summary>مقدمه</summary>
+    <br>
+    
+  - پیشنیاز ها  
+  - ساختار کتاب
+  - آرایش کتاب
+  - ادیتور متن
+  - نتیجه گیری
+    
+  </details>
+  
+  
+  <details>
+    <summary>فصل اول : داکر</summary>
+    <br>
 
-- پیشنیاز ها  
-- ساختار کتاب
-- آرایش کتاب
-- ادیتور متن
-- نتیجه گیری
+  - داکر چیست
+  - تفاوت کانتینر ها و Virtual Environments
+  - نصب داکر
+  - Hello World با داکر
+  - Hello World با جنگو
+  - اپ pages
+  - تصاویر و کانتینر ها و میزبانی داکر
+  - گیت
+  - جمع بندی
 
-<br>
+  </details>
 
-**فصل اول : داکر**
-
-- داکر چیست
-- تفاوت کانتینر ها و Virtual Environments
-- نصب داکر
-- Hello World با داکر
-- Hello World با جنگو
-- اپ pages
-- تصاویر و کانتینر ها و میزبانی داکر
-- گیت
-- جمع بندی
-
-  <br>
-
-**فصل دوم : PostgreSQL**
-
+  <details>
+    <summary>فصل دوم : PostgreSQL</summary>
+    <br>
+  
   - شروغ به کار
   - داکر 
   - حالت تفکیک شده (Detached Mode)
@@ -39,11 +46,13 @@
   - دیتابیس تازه
   - git
   - جمع بندی
-
-  <br>
+    
+  </details>
   
-**فصل سوم : پروژه فروشگاه کتاب**
-  
+  <details>
+    <summary>فصل سوم : پروژه فروشگاه کتاب</summary>
+    <br>
+    
   - داکر
   - PostgreSQL
   - مدل کاربر شخصی سازی شده (Custom User Model)
@@ -54,9 +63,9 @@
   - یونیت تست ها
   - Git
   - جمع بندی
+    
+  </details>
 
-  <br>
-  
 **فصل چهارم : اپ Pages**
 
   - تمپلیت ها
@@ -70,6 +79,11 @@
   - جمع بندی
 
   <br>
+  
+  <details>
+    <summary>مقدمه</summary>
+    
+  </details>
   
 **فصل پنجم : ثبت نام کاربر (مقدماتی)**
 
