@@ -2,46 +2,57 @@
 
 <div dir="rtl">
 
-**[مقدمه](https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction)**
-
-- پیشنیاز ها  
-- ساختار کتاب
-- آرایش کتاب
-- ادیتور متن
-- نتیجه گیری
-
-<br>
-
-**فصل اول : داکر**
-
-- داکر چیست
-- تفاوت کانتینر ها و Virtual Environments
-- نصب داکر
-- Hello World با داکر
-- Hello World با جنگو
-- اپ pages
-- تصاویر و کانتینر ها و میزبانی داکر
-- گیت
-- جمع بندی
-
+قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
+  
+<details>
+  <summary>مقدمه</summary>
+  <br>
+    
+  - پیشنیاز ها  
+  - ساختار کتاب
+  - آرایش کتاب
+  - ادیتور متن
+  - نتیجه گیری
+    
+</details>
+  
+  
+<details>
+  <summary>فصل اول : داکر</summary>
   <br>
 
-**فصل دوم : PostgreSQL**
+  - داکر چیست
+  - تفاوت کانتینر ها و Virtual Environments
+  - نصب داکر
+  - Hello World با داکر
+  - Hello World با جنگو
+  - اپ pages
+  - تصاویر و کانتینر ها و میزبانی داکر
+  - گیت
+  - جمع بندی
 
-  - شروغ به کار
+</details>
+
+<details>
+  <summary>فصل دوم : PostgreSQL</summary>
+  <br>
+  
+  - شروع به کار
   - داکر 
   - حالت تفکیک شده (Detached Mode)
   - PostgreSQL
   - تنظیمات
   - Psycopg
   - دیتابیس تازه
-  - git
+  - گیت
   - جمع بندی
+    
+</details>
 
+<details>
+  <summary>فصل سوم : پروژه فروشگاه کتاب</summary>
   <br>
-  
-**فصل سوم : پروژه فروشگاه کتاب**
-  
+    
   - داکر
   - PostgreSQL
   - مدل کاربر شخصی سازی شده (Custom User Model)
@@ -50,13 +61,15 @@
   - سوپریوزر (Superuser)
   - تست ها 
   - یونیت تست ها
-  - Git
+  - گیت
   - جمع بندی
+    
+</details>
 
+<details>
+  <summary>فصل چهارم : اپ Pages</summary>
   <br>
-  
-**فصل چهارم : اپ Pages**
-
+    
   - تمپلیت ها
   - ٰViewها و URL ها
   - تست ها
@@ -64,13 +77,15 @@
   - تست کردن HTML
   - متد setUP
   - Resolve
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
+    
+</details>
   
-**فصل پنجم : ثبت نام کاربر (مقدماتی)**
-
+<details>
+  <summary>فصل پنجم : ثبت نام کاربر (مقدماتی)</summary>
+  <br>
+    
   - اپ Auth
   - View ها و URL های اپ Auth
   - صفحه اصلی (Homepage)
@@ -81,13 +96,15 @@
   - ثبت نام کاربر
   - تست ها
   - setUpTestData()
-  - Git
+  - گیت
   - جمع بندی
-
+    
+</details>
+  
+<details>
+  <summary>فصل ششم : اشیاء استاتیک (Static Assets)</summary>
   <br>
   
-**فصل ششم : اشیاء استاتیک (Static Assets)** 
-
   - اپ staticfiles 
   - STATIC_URL
   - STATICFILES_DIR
@@ -101,13 +118,15 @@
   - صفحه درباره ما (About Page)
   - کار باDjango Crispy Forms
   - تست ها 
-  - Git
-  - جمع بندی
-
+  - گیت
+  - حمع بندی
+  
+</details>
+  
+<details>
+  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته)</summary>
   <br>
   
-**فصل هفتم : ثبت نام کاربر (پیشرقته)**
-
   - django-allauth
   - AUTHENTICATION_BACKENDS
   - EMAIL_BACKEND
@@ -121,34 +140,40 @@
   - ورود کاربر فقط با ایمیل (Email Only Login)
   - تست ها
   - احراز هویت با شبکه های اجتماعی
-  - Git
+  - گیت
   - جمع بندی
-
+  
+</details>
+  
+<details>
+  <summary>فصل هشتم : متغییر های Environment</summary>
   <br>
   
-**فصل هشتم : متغییر های Environment**
- 
   - environs[django]
   - SECRET_KEY
   - DEBUG و ALLOWED_HOSTS
   - DATABASES
-  - Git
+  - گیت
   - جمع بندی
- 
-  <br>
   
-**فصل نهم : ایمیل**
+</details>
+  
+<details>
+  <summary>فصل نهم : ایمیل</summary>
+  <br>
   
   - تایید ایمیل شخصی سازی شده
   - صفحه تایید ایمیل
   - تغییر و بازنشانی رمز
   - سرویس ایمیل در جنگو
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
   
-**فصل دهم : اپ Books** 
+</details>
+  
+<details>
+  <summary>فصل دهم : اپ Books</summary>
+  <br>
   
   - Model ها 
   - پنل ادمین
@@ -163,36 +188,42 @@
   - تفاوت Slug ها با UUID ها
   - نوار پیمایش (Navbar)
   - تست ها
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
+    
+</details>
   
-**فصل یازدهم : اپ Reviews**
+<details>
+  <summary>فصل یازدهم : اپ Reviews</summary>
+  <br>
   
   - Foreign Key ها
   - مدل Review ها
   - تنظیم ادمین پنل
   - تمپلیت ها
   - تست ها
-  - Git
+  - گیت
   - جمع بندی
   
-  <br>
+</details>
   
-**فصل دوازدهم : ابلود فایل ها و تصاویر**
+<details>
+  <summary>فصل دوازدهم : ابلود فایل ها و تصاویر</summary>
+  <br>
   
   - فایل های رسانه ای (Media Files)
   - Model ها
   - تنظیم پنل ادمین
   - تمپلیت ها
   - قدم های فراتر
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
   
-**فصل سیزدهم : دسترسی ها (Permissions)**
+</details>
+
+<details>
+  <summary>فصل سیزدهم : دسترسی ها (Permissions)</summary>
+  <br>
   
   - فقط کاربر های وارد شده مجازند (Logged-In Users Only)
   - دسترسی ها
@@ -201,24 +232,28 @@
   - PermissionRequiredMixin
   - گروه ها و UserPassesTestMixin
   - تست ها
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
+    
+</details>
   
-**فصل چهاردهم : جستوجو**
+<details>
+  <summary>فصل چهاردهم : جستوجو</summary>
+  <br>
   
   - صفحه نتایج جستوجو
   - فیلتر های مقدماتی (Basic Filtering)
   - اشیاء Q (Q Objects)
   - Form ها
   - Form جستوجو
-  - Git
+  - گیت
   - جمع بندی
- 
-  <br>
+    
+</details>
   
-**فصل پانزدهم : کارایی**
+<details>
+  <summary>فصل پانزدهم : کارایی</summary>
+  <br>
   
   - django-debug-toolbar
   - آنالیز صفحه ها
@@ -227,13 +262,15 @@
   - ایندکس ها (Indexes)
   - django-extensions
   - فرانت اند و متعلقات آن
-  - Git
+  - گیت
   - جمع بندی
+    
+</details>
   
+<details>
+  <summary>فصل شانزدهم : امینت</summary>
   <br>
   
-**فصل شانزدهم : امینت**
-   
   - مهندسی اجتماعی (Social Engineering)
   - آپدیت های جنگو
   - چک لیست های دیپلویمنت (Deployment Checklist)
@@ -250,12 +287,15 @@
   - انتقال اکیدا ایمن HTTP (HSTS)
   - ایمن کردن کوکی ها 
   - ارتقا امنیت ادمین (Admin Hardening)
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
+    
+</details>
   
- **فصل هفدهم : دیپلویمنت**
+  
+<details>
+  <summary>فصل هفدهم : دیپلویمنت</summary>
+  <br>
   
   -  تفاوت PasS و IasS
   - WhiteNoise
@@ -269,12 +309,16 @@
   - افزونه های Heroku
   - جمع بندی
   
-  <br>
+</details>
   
-**جمع بندی نهایی**
+<details>
+  <summary>جمع بندی نهایی</summary>
+  <br>
   
   - منابع یادگیری بیشتر
   - بازخورد ها
+  
+</details>
 
 </div>
   
