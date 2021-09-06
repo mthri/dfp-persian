@@ -37,14 +37,14 @@
   <summary>فصل دوم : PostgreSQL</summary>
   <br>
   
-  - شروغ به کار
+  - شروع به کار
   - داکر 
   - حالت تفکیک شده (Detached Mode)
   - PostgreSQL
   - تنظیمات
   - Psycopg
   - دیتابیس تازه
-  - git
+  - گیت
   - جمع بندی
     
 </details>
@@ -61,7 +61,7 @@
   - سوپریوزر (Superuser)
   - تست ها 
   - یونیت تست ها
-  - Git
+  - گیت
   - جمع بندی
     
 </details>
@@ -77,7 +77,7 @@
   - تست کردن HTML
   - متد setUP
   - Resolve
-  - Git
+  - گیت
   - جمع بندی
     
 </details>
@@ -96,7 +96,7 @@
   - ثبت نام کاربر
   - تست ها
   - setUpTestData()
-  - Git
+  - گیت
   - جمع بندی
     
 </details>
@@ -118,7 +118,7 @@
   - صفحه درباره ما (About Page)
   - کار باDjango Crispy Forms
   - تست ها 
-  - Git
+  - گیت
   - حمع بندی
   
 </details>
@@ -140,7 +140,7 @@
   - ورود کاربر فقط با ایمیل (Email Only Login)
   - تست ها
   - احراز هویت با شبکه های اجتماعی
-  - Git
+  - گیت
   - جمع بندی
   
 </details>
@@ -153,7 +153,7 @@
   - SECRET_KEY
   - DEBUG و ALLOWED_HOSTS
   - DATABASES
-  - Git
+  - گیت
   - جمع بندی
   
 </details>
@@ -166,7 +166,7 @@
   - صفحه تایید ایمیل
   - تغییر و بازنشانی رمز
   - سرویس ایمیل در جنگو
-  - Git
+  - گیت
   - جمع بندی
   
 </details>
@@ -188,36 +188,42 @@
   - تفاوت Slug ها با UUID ها
   - نوار پیمایش (Navbar)
   - تست ها
-  - Git
+  - گیت
   - جمع بندی
     
 </details>
   
-**فصل یازدهم : اپ Reviews**
+<details>
+  <summary>فصل یازدهم : اپ Reviews</summary>
+  <br>
   
   - Foreign Key ها
   - مدل Review ها
   - تنظیم ادمین پنل
   - تمپلیت ها
   - تست ها
-  - Git
+  - گیت
   - جمع بندی
   
-  <br>
+</details>
   
-**فصل دوازدهم : ابلود فایل ها و تصاویر**
+<details>
+  <summary>فصل دوازدهم : ابلود فایل ها و تصاویر</summary>
+  <br>
   
   - فایل های رسانه ای (Media Files)
   - Model ها
   - تنظیم پنل ادمین
   - تمپلیت ها
   - قدم های فراتر
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
   
-**فصل سیزدهم : دسترسی ها (Permissions)**
+</details>
+
+<details>
+  <summary>فصل سیزدهم : دسترسی ها (Permissions)</summary>
+  <br>
   
   - فقط کاربر های وارد شده مجازند (Logged-In Users Only)
   - دسترسی ها
@@ -226,24 +232,28 @@
   - PermissionRequiredMixin
   - گروه ها و UserPassesTestMixin
   - تست ها
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
+    
+</details>
   
-**فصل چهاردهم : جستوجو**
+<details>
+  <summary>فصل چهاردهم : جستوجو</summary>
+  <br>
   
   - صفحه نتایج جستوجو
   - فیلتر های مقدماتی (Basic Filtering)
   - اشیاء Q (Q Objects)
   - Form ها
   - Form جستوجو
-  - Git
+  - گیت
   - جمع بندی
- 
-  <br>
+    
+</details>
   
-**فصل پانزدهم : کارایی**
+<details>
+  <summary>فصل پانزدهم : کارایی</summary>
+  <br>
   
   - django-debug-toolbar
   - آنالیز صفحه ها
@@ -252,13 +262,15 @@
   - ایندکس ها (Indexes)
   - django-extensions
   - فرانت اند و متعلقات آن
-  - Git
+  - گیت
   - جمع بندی
+    
+</details>
   
+<details>
+  <summary>فصل شانزدهم : امینت</summary>
   <br>
   
-**فصل شانزدهم : امینت**
-   
   - مهندسی اجتماعی (Social Engineering)
   - آپدیت های جنگو
   - چک لیست های دیپلویمنت (Deployment Checklist)
@@ -275,12 +287,15 @@
   - انتقال اکیدا ایمن HTTP (HSTS)
   - ایمن کردن کوکی ها 
   - ارتقا امنیت ادمین (Admin Hardening)
-  - Git
+  - گیت
   - جمع بندی
-
-  <br>
+    
+</details>
   
- **فصل هفدهم : دیپلویمنت**
+  
+<details>
+  <summary>فصل هفدهم : دیپلویمنت</summary>
+  <br>
   
   -  تفاوت PasS و IasS
   - WhiteNoise
@@ -294,12 +309,16 @@
   - افزونه های Heroku
   - جمع بندی
   
-  <br>
+</details>
   
-**جمع بندی نهایی**
+<details>
+  <summary>جمع بندی نهایی</summary>
+  <br>
   
   - منابع یادگیری بیشتر
   - بازخورد ها
+  
+</details>
 
 </div>
   
