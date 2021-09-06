@@ -1,4 +1,4 @@
-<body style='direction: rtl'>
+<body style='direction: rtl; text-align: rtl'>
  
  <h1>
   فصل یک: داکر
