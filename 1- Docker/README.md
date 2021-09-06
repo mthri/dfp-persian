@@ -1,4 +1,9 @@
-<body style= 'text-align: rtl'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+</head>
+<body>
  
  <h1>
   فصل یک: داکر
@@ -22,4 +27,5 @@
 
  </p>
 </body>
+</html>
  
