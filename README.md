@@ -2,6 +2,8 @@
 
 <div dir="rtl">
 
+قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
+  
 **[مقدمه](https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction)**
 
 - پیشنیاز ها  
