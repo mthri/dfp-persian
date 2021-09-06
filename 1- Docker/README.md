@@ -1,10 +1,10 @@
-<body style='direction: rtl; text-align: rtl'>
+<body style= 'text-align: rtl'>
  
  <h1>
   فصل یک: داکر
  </h1>
  
- <hr>
+ 
  
  <p>
 
