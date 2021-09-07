@@ -348,6 +348,6 @@
 |مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|-|-|-|-|
 |مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh)|-|-|[تلگرام](https://t.me/mahdi_asadzadeh)|-|
 |امین ملک محمدی|[گیتهاب](https://github.com/Aminmalek)|-|-|-|-|
-|امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ)|[لینکدین](https://linkedin.com/in/amirhosseinmohammadi)|[توییتر](https://twitter.com/GNU_Amir)|[تلگرام](https://t.me/BlackIQ)|-|
+|امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ)|[لینکدین](https://linkedin.com/in/amirhosseinmohammadi)|[توییتر](https://twitter.com/GNU_Amir)|[تلگرام](https://t.me/BlackIQ)|کارای فنی|
   
 </div>
