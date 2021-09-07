@@ -326,6 +326,13 @@
 مشارکت کنندگان
 </h2>
 
+<div dir="rtl">
+  
+|نام همکار|گیتهاب|لینکدین|توییتر|تلگرام|نوع همکاری|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+  
+</div>
+
 <ul dir="rtl">
     <li>امیر مطهری | <a href="https://github.com/mthri">گیت‌هاب</a> | <a href="https://twitter.com/a_mthri">توییتر</a></li>
     <li>امید شهبازی | <a href="https://github.com/themaximalist">گیت‌هاب</a> | <a href="https://www.linkedin.com/in/omid-shahbazi-76635b21b/">لینکدین</a></li>
