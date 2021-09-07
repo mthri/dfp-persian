@@ -338,8 +338,8 @@
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb)|[لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|-|-|-|
 |آرین فوچانی|[گیتهاب](https://github.com/arianghoochani)|[لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|-|-|-|
 |امین مرادی|[گیتهاب](https://github.com/aminmoradim)|-|[توییتر](https://twitter.com/amin_moradim)|[تلگرام](https://t.me/amin_moradim)|-|
-|کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377)|-|-|-|-|
-|علی لویویی|[گیتهاب](https://github.com/aliloloee)|[لینکدین](https://linkedin.com/in/)kasra-sadeghian-pour-87a928204|-|-|-|
+|کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377)|[لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|-|-|-|
+|علی لویویی|[گیتهاب](https://github.com/aliloloee)|-|-|-|-|
 |رضا مبارکی|[گیتهاب](https://github.com/MrRezoo)|-|-|-|-|
 |مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9)|[لینکدین](https://linkedin.com/in/mehrdad-biukian-naeini)|-|-|-|
 |مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|-|-|-|-|
