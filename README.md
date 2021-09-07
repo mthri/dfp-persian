@@ -330,22 +330,21 @@
   
 |نام همکار|گیتهاب|لینکدین|توییتر|تلگرام|نوع همکاری|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|امیر مطهری|[گیتهاب](https://github.com/mthri)|-|-|-|-|
-|امید شهبازی|[گیتهاب](https://github.com/themaximalist)|-|-|-|-|
-|حدیث سادات موسوی|[گیتهاب](https://github.com/cemusavi)|-|-|-|-|
-|خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani)|-|-|-|-|
+|امیر مطهری|[گیتهاب](https://github.com/mthri)|-|[توییتر](https://twitter.com/a_mthri)|-|-|
+|امید شهبازی|[گیتهاب](https://github.com/themaximalist)|[لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)|-|-|-|
+|حدیث سادات موسوی|[گیتهاب](https://github.com/cemusavi)|[لینکدین](https://linkedin.com/in/hadis-sadat-mousavi-178108219)|-|-|-|
+|خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani)|[لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|-|-|-|
 |مائده شهبازی|[گیتهاب](https://github.com/mashahabi15)|-|-|-|-|
-|سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb)|-|-|-|-|
-|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani)|-|-|-|-|
-|امین مرادی|[گیتهاب](https://github.com/aminmoradim)|-|-|-|-|
+|سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb)|[لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|-|-|-|
+|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani)|[لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|-|-|-|
+|امین مرادی|[گیتهاب](https://github.com/aminmoradim)|-|[توییتر](https://twitter.com/amin_moradim)|[تلگرام](https://t.me/amin_moradim)|-|
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377)|-|-|-|-|
-|علی لویویی|[گیتهاب](https://github.com/aliloloee)|-|-|-|-|
+|علی لویویی|[گیتهاب](https://github.com/aliloloee)|[لینکدین](https://linkedin.com/in/)kasra-sadeghian-pour-87a928204|-|-|-|
 |رضا مبارکی|[گیتهاب](https://github.com/MrRezoo)|-|-|-|-|
-|مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9)|-|-|-|-|
+|مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9)|[لینکدین](https://linkedin.com/in/mehrdad-biukian-naeini)|-|-|-|
 |مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|-|-|-|-|
-|مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh)|-|-|-|-|
+|مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh)|-|-|[تلگرام](https://t.me/mahdi_asadzadeh)|-|
 |امین ملک محمدی|[گیتهاب](https://github.com/Aminmalek)|-|-|-|-|
-|امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ)|-|-|-|-|
-
+|امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ)|[لینکدین](https://linkedin.com/in/amirhosseinmohammadi)|[توییتر](https://twitter.com/GNU_Amir)|[تلگرام](https://t.me/BlackIQ)|-|
   
 </div>
