@@ -337,7 +337,7 @@
 |امید شهبازی|[گیتهاب](https://github.com/themaximalist)|[لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)|-|-|مدیر - مترجم|
 |حدیث سادات موسوی|[گیتهاب](https://github.com/cemusavi)|[لینکدین](https://linkedin.com/in/hadis-sadat-mousavi-178108219)|-|-|مترجم|
 |خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani)|[لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|-|-|مترجم|
-|مائده شهبازی|[گیتهاب](https://github.com/mashahabi15)|-|-|-|مترجم|
+|مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|-|-|-|مترجم|
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb)|[لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|-|-|مترجم|
 |آرین فوچانی|[گیتهاب](https://github.com/arianghoochani)|[لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|-|-|مترجم|
 |امین مرادی|[گیتهاب](https://github.com/aminmoradim)|-|[توییتر](https://twitter.com/amin_moradim)|[تلگرام](https://t.me/amin_moradim)|مترجم|
