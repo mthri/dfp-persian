@@ -331,23 +331,24 @@
 
 <div dir="rtl">
   
-|نام همکار|گیتهاب|لینکدین|توییتر|تلگرام|نوع همکاری|
-|:-:|:-:|:-:|:-:|:-:|:-:|
-|امیر مطهری|[گیتهاب](https://github.com/mthri)|[لینکدین](https://www.linkedin.com/in/amir-motahari-963689138/)|[توییتر](https://twitter.com/a_mthri)|[تلگرام](https://t.me/a_motahari)|مدیر - مترجم|
-|امید شهبازی|[گیتهاب](https://github.com/themaximalist)|[لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)|-|-|مدیر - مترجم|
-|حدیث سادات موسوی|[گیتهاب](https://github.com/cemusavi)|[لینکدین](https://linkedin.com/in/hadis-sadat-mousavi-178108219)|-|-|مترجم|
-|خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani)|[لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|-|-|مترجم|
-|مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|-|-|-|مترجم|
-|سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb)|[لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|-|-|مترجم|
-|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani)|[لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|-|-|مترجم|
-|امین مرادی|[گیتهاب](https://github.com/aminmoradim)|-|[توییتر](https://twitter.com/amin_moradim)|[تلگرام](https://t.me/amin_moradim)|مترجم|
-|کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377)|[لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|-|-|مترجم|
-|علی لویویی|[گیتهاب](https://github.com/aliloloee)|-|-|-|مترجم|
-|رضا مبارکی|[گیتهاب](https://github.com/MrRezoo)|-|-|-|مترجم|
-|مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9)|[لینکدین](https://linkedin.com/in/mehrdad-biukian-naeini)|-|-|مترجم|
-|مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|-|-|-|مترجم|
-|مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh)|-|-|[تلگرام](https://t.me/mahdi_asadzadeh)|مترجم|
-|امین ملک محمدی|[گیتهاب](https://github.com/Aminmalek)|-|-|-|مترجم|
-|امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ)|[لینکدین](https://linkedin.com/in/amirhosseinmohammadi)|[توییتر](https://twitter.com/GNU_Amir)|[تلگرام](https://t.me/BlackIQ)|کارای فنی|
+|نام همکار|راه های ارتباطی|نوع مشارکت
+|:-:|:-:|:-:|
+|امیر مطهری|[گیتهاب](https://github.com/mthri) [لینکدین](https://www.linkedin.com/in/amir-motahari-963689138/) [توییتر](https://twitter.com/a_mthri) [تلگرام](https://t.me/a_motahari)|مدیر - مترجم فصل ۱۶|
+|امید شهبازی|[گیتهاب](https://github.com/themaximalist) [لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)| مدیر - مترجم مقدمه|
+|حدیث سادات موسوی|[گیتهاب](https://github.com/cemusavi) [لینکدین](https://linkedin.com/in/hadis-sadat-mousavi-178108219)|مترجم فصل های ۱و۳|
+|خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani) [لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|مترجم فصل های۷ و جمع بندی|
+|مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
+|سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb) [لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|مترجم فصل ۱۲|
+|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
+|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۱۴|
+|کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
+|علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
+|رضا مبارکی|[گیتهاب](https://github.com/MrRezoo)|مترجم ۱۵|
+|مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9) [لینکدین](https://linkedin.com/in/mehrdad-biukian-naeini)|مترجم فصل ۵|
+|مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|مترجم ۱۷|
+|مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh) [تلگرام](https://t.me/mahdi_asadzadeh)|مترجم فصل ۱۱|
+|امین ملک محمدی|[گیتهاب](https://github.com/Aminmalek)|مترجم فصل ۴|
+|امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ) [لینکدین](https://linkedin.com/in/amirhosseinmohammadi) [توییتر](https://twitter.com/GNU_Amir)  [تلگرام](https://t.me/BlackIQ)| اداره مخزن|
+|محمدرضا ارغشی|[گیتهاب](https://github.com/phpreza)|مترجم فصل ۶| 
   
 </div>
