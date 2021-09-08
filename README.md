@@ -7,7 +7,9 @@
 شما میتوانید برای کمک کردن و خوشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
 لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یه رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
 
-همچنین میتوانید برای دانلود کتاب (نسخه اصلی) از [این لینک]() اقدام کنید.
+همچنین میتوانید برای دانلود کتاب (نسخه اصلی) از [این لینک](https://github.com/mthri/dfp-persian/raw/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf) اقدام کنید.
+
+[خواندن کتاب به صورت آنلاین](https://github.com/mthri/dfp-persian/blob/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf)
   
 <details>
   <summary>مقدمه</summary>
