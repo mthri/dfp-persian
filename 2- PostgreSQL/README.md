@@ -1,4 +1,3 @@
-<div>
 
 <h1 dir="rtl">فصل دوم : PostgreSQL</h1>
 
@@ -25,12 +24,13 @@
 
 <h2 dir="rtl">شروع به کار</h2>
 <p dir="rtl">
- ابتدا با استفاده از command line بر روی پوشه ی <code>code</code> در desktop سوییچ کنید. شما این کار را می توانید با دو روش انجام دهید.یا با تایپ کردن  <code>cd ..</code> می توانید از  <code>Desktop/code/hello</code>به  <code>Desktop/code</code> هدایت شوید و  یا با تایپ 
- <code>/cd ~/Desktop/code</code>می توانید به آدرس مورد نظرتان هدایت شوید. سپس یک directory به اسم  <code>postgresql</code> بسازید.
+ابتدا با استفاده از command line بر روی پوشه ی code در desktop سوییچ کنید. شما این کار را می توانید با دو روش انجام دهید.یا با تایپ کردن    <code dir="ltr">cd ..</code> می توانید از  <code dir="ltr">Desktop/code/hello</code>به  <code>Desktop/code</code> هدایت شوید و  یا با تایپ 
+ <code dir="ltr">cd ~/Desktop/code/</code>می توانید به آدرس مورد نظرتان هدایت شوید. سپس یک directory به اسم  <code dir="lt">postgresql</code> بسازید.
+
 </p> 
 
 **Command Line**
-```
+```bash
 $ cd  ..
 $ mkdir postgresql && cd postgresql
 ```
@@ -40,7 +40,7 @@ $ mkdir postgresql && cd postgresql
 </p>
 
 **Command Line**
-```
+```bash
 $ pipenv install django==2.2.7
 $ pipenv shell
 (postgresql) $ django-admin startproject postgresql_project .
@@ -54,7 +54,7 @@ $ pipenv shell
 </blockquote>
   
 **Command Line**
-```
+```bash
 (postgresql) $ python manage.py migrate
 (postgresql) $ python manage.py runserver
 ```
@@ -68,9 +68,69 @@ $ pipenv shell
 </p>
  
 **Command Line**
-```
+```bash
 (postresql) $ ls
 Pipfile     Pipfile.lock     db.sqlite3     manage.py     postgresql_project.
 ```
+<h2 dir="rtl">Docker</h2>
+
+<p dir="rtl">
+برای سوییچ به داکر، ابتدا با تایپ  <code dir=”ltr”>exit</code>از محیط مجازی (virtual environment) خارج شده و سپس فایل هایی با اسم <code dir=”ltr”>Dockerfile</code> و <code dir=”ltr”> docker-compose.yml</code> ایجاد کنید. این فایل ها بترتیب، <code dir=”ltr>Docker image</code> و <code dir=”ltr”>container</code> را کنترل می کنند. 
+</p>
  
-</div>
+**Command Line**
+```bash
+(postgresql) $ exit
+$ touch Dockerfile
+$ touch docker-compose.yml
+```
+<p dir="rtl">
+<code dir=”ltr”>Dockerfile</code> زیر، همانند فایلی است که در فصل اول مورد استفاده قرار گرفته بود.       
+</p>
+
+**Dockerfile**
+```docker
+# Pull base image
+FROM python:3.7
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Set work directory
+WORKDIR /code
+
+# Install dependencies
+COPY Pipfile Pipfile.lock /code/
+RUN pip install pipenv && pipenv install --system
+
+# Copy project
+COPY . /code/
+```
+
+<p dir="rtl">
+حالا image اولیه را با استفاده از دستور <code dir="ltr"> docker build .</code> ایجاد نمایید.
+</p>
+
+<p dir="rtl">
+آیا متوجه شدید که <code dir="ltr">Dockerfile</code> این بار image را بسیار سریع تر ایجاد کرد؟ این اتفاق به این دلیل است که داکر در همان ابتدا، در کامپیوتر شما بصورت محلی به دنبال یک image خاص می گردد. اگر image مورد نظر را بصورت محلی پیدا نکرد؛سپس آن را دانلود می کند. چون بسیاری از این image ها از فصل قبل بر روی کامپیوتر بوده اند، بنابراین داکر نیازی نمی بیند که آن ها را دوباره دانلود نماید.  
+</p>
+
+<p dir="rtl">
+حالا نوبت به فایل <code dir="ltr">docker-compose.yml</code> می رسد؛ که این فایل نیز همان فایلی است  در فصل اول مورد استفاده قرار گرفته بود.     
+</p>
+
+**docker-compose.yml**
+```
+version: '3.7'
+
+
+services:
+    web:
+        build: .
+        command: python /code/manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - 8000:8000			      
+```
