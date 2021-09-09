@@ -347,7 +347,7 @@
 |امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۱۴|
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
 |علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
-|رضا مبارکی|[گیتهاب](https://github.com/MrRezoo)|مترجم ۱۵|
+|رضا مبارکی|[گیتهاب](https://github.com/MrRezoo) [لینکدین](https://www.linkedin.com/in/mrrezoo/) |مترجم ۱۵|
 |مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9) [لینکدین](https://linkedin.com/in/mehrdad-biukian-naeini)|مترجم فصل ۵|
 |مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|مترجم ۱۷|
 |مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh) [تلگرام](https://t.me/mahdi_asadzadeh)|مترجم فصل ۱۱|
