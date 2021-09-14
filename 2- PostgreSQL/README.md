@@ -150,9 +150,53 @@ $ docker-compose up -d
 </p>
 
 <p dir="rtl">
- به احتمای زیاد شما با پیام <code dir="ltr">Warning: Image for service web was built because it did not already exist</code> در زیر command مواجه خواهید شد. داکر بصورت اتوماتیک یک image درون container ساخته است. همانطور که در ادامه ی این کتاب خواهیم دید؛ اضافه کردن فلگ <code dir="ltr">--build</code> ، زمانی که پکیج های ترم افزار (software package) آپدیت هستند، لازم است. چرا که داکر، بصورت پیش فرض، بدنبال کپی حافظه ی محلی (local cached copy) نرم افزار می گردد و از آن برای ارتقا عملکرد استفاده می کند.
+ به احتمای زیاد شما با پیام <code dir="ltr">Warning: Image for service web was built because it did not already exist</code> در زیر command مواجه خواهید شد. داکر بصورت اتوماتیک یک image درون container ساخته است. همانطور که در ادامه ی این کتاب خواهیم دید؛ اضافه کردن فلگ <code dir="ltr">--build</code> ، زمانی که پکیج های نرم افزار (software package) آپدیت هستند، لازم است. چرا که داکر، بصورت پیش فرض، بدنبال کپی حافظه ی محلی (local cached copy) نرم افزار می گردد و از آن برای ارتقا عملکرد استفاده می کند.
 </p>
 
 <p dir="rtl">
 برای این که اطمینان پیدا کنیم که همه چیز بدرستی کار می کند به آدرس http://127.0.0.1:8000/ در  درون مرورگرتان برگردید؛ صفحه را ریفرش کنید تا دوباره با صفحه ی خوش آمد گویی جنگو مواجه شوید.
+</p>
+
+<p dir="rtl">
+از آن جایی که از داکر استفاده می کنیم، ما باید دستورات سنتی را با <code dir="ltr">docker-compose exec [service]</code> آغاز کنیم؛ که در آن اسم سرویس را مشخص می نماییم. برای مثال، برای ساختن یک اکانت superuser، به جای وارد کردن <code dir="ltr">python manage.py createsuperuser</code> ،دستور آپدیت شده بصورت زیر می باشد(با استفاده از سرویس <code dir="ltr">web</code>).
+</p>
+
+**Command Line**
+```bash
+$ docker-compose exec web python manage.py createsuperuser
+```
+
+<p dir="rtl">
+برای یوزرنیم، <code dir="ltr">sqliteadmin, sqliteadmin@email.com</code> را به عنوان ایمیل آدرس و پسورد را بنا بر میل خودتان انتخاب کنید. من معمولا از <code dir="ltr">testpass123</code> استفاده می کنم.
+</p>
+
+<p dir="rtl">
+پس از اینکار به قسمت ادمین در آدرس http://127.0.0.1:8000/admin  بروید و سپس وارد شوید.
+</p>
+
+<p align="center">
+  <img width="900" height="500" src="imgs/Django admin login.PNG">
+  <p align="center"><strong>Django admin login</strong></p>
+</p>
+
+<p dir="rtl">
+سپس شما به صفحه ی اصلی ادمین هدایت می شوید. دقت کنید که <code dir="ltr">sqliteadmin</code>، اسم یوزرنیم شما می باشد.
+</p>
+
+<p align="center">
+  <img width="900" height="500" src="imgs/Django sqliteadmin.PNG">
+  <p align="center"><strong>Django sqliteadmin</strong></p>
+</p>
+
+<p dir="rtl">
+اگر شما بر روی دکمه ی <code dir="ltr">Users</code> کلیک نمایید؛ شما به صفحه ی یوزر ها هدایت می شوید که در آنجا می توانیم تایید کنیم که تنها یک یوزر ساخته شده است.
+</p>
+
+<p align="center">
+  <img width="900" height="500" src="imgs/Admin Users page.PNG">
+  <p align="center"><strong>Admin Users page</strong></p>
+</p>
+
+<p dir="rtl">
+ در اینجا مهم است که یکی از جنبه های دیگر جنگو را مورد توجه قرار دهیم: تا به اینجا ما در حال آپدیت کردن دیتابیس – فایل <code dir="ltr">db.sqlite3</code> - در درون داکر بودیم. این بدا معنی است که فایل <code dir="ltr">db.sqlite3</code> به مرور زمان در حال تغییر بوده است. به لطف <code dir="ltr">volumes</code> که بر روی <code dir="ltr">docker-compose.yml</code> سوار است؛ تغییرات هر فایل در فایل <code dir="ltr">db.sqlite3</code> در درون کامپیوتر شما نیز کپی می شود. شما می توانید از داکر خارج شوید؛ <code dir="ltr">shell</code> را راه اندازی، و سرور را با <code dir="ltr">python manage.py runserver</code> راه اندازی کنید. و شما در آخر همان admin login  مشابه را مشاهده می کنید. این اتفاق به این دلیل است که دیتابیس SQLite زیرین یکی است.
 </p>
