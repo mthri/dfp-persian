@@ -26,6 +26,7 @@
  <p>
 داکر یک فناوری کامل نیست و نسبتا نوپا است که زیر ساخت های آن در حال توسعه هستند. اما میتوان این نوید را داد که یک محیط توسعه سازگار و قابل اشتراک است که قادر است بصورت محلی روی هر رایانه یا سروری اجرا شود که همین موضوع آن را به انتخابی مناسب تبدیل میکند.
 در این فصل، کمی بیشتر درباره داکر و داکراسیون کردن (dockerize) اولین پروژه جنگو می آموزیم.
+  
   <br>
   <br>
   <i> 
@@ -120,7 +121,119 @@
 درک مفاهیم اولیه و نکات کلیدی آن مهم است. اگر میخواهید در این باره بیشتر بدانید، توصیه میکنم سری به <a href="https://diveintodocker.com/ref-dfp">Dive into Docker video course</a> بزنید (:
  </p>
  
- </div>
+ <h1>نصب داکر:</h1>
+ 
+ <p>
+  خوب خوب، دیگه تئوریجات کافیه. بیاد که داکر و جنگو را در کنار هم استفاده کنیم. قدم اول ثبت نام در سایت <a href="https://hub.docker.com/signup">Docker Hub</a> و نصب نسخه ی دسکتاپ داکر بر روی سیستم است.
+ <br><br>
+  از طریق این لینک ها میتوانید داکر را نصب کنید:
+  <br><br>
+  <ul>
+   <li><a href="Docker Compose is included with Mac and Windows downloads but if you are on Linux you
+will need to add it manually. You can do this by running the command sudo pip install
+docker-compose after your Docker installation is complete.">داکر برای مک</a></li>
+   <li><a href="https://docs.docker.com/install/">داکر برای لینوکس</a></li>
+   <li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">داکر برای ویندوز</a></li>
+  </ul>
+  <br>
+ از آنجایی که فایل نصبی حجیم است، دانلود ممکن است کمی طول بکشد. در این مرحله با خیال راحت  دراز بکشین (:
+ </p>
+  
+ <p>
+     لازم به ذکر است داکر در نسخه لینوکس از یوزر root استفاده میکند که این موضوع اغلب ایده آل نیست. در صورت تمایل میتوانید داکر را طوری تنظیم کنید که به عنوان یوزر غیر root اجرا شود.
+ </p>
+ 
+ <p>
+  وقتی که داکر نصب شد با اجرای دستور docker --version در cmd میتوانیم ورژن در حال اجرای داکر را تایید کنیم. ورژن داکر حداقل باید ۱۸ باشد.
+ </p>
+ <div  dir="ltr" >
+ <hr>
+  <strong>Command Line</strong>
+  <br><br>
+  <code>
+   $ docker --version
+  </code>
+  <br>
+  <code>
+   Docker version 19.03.12, build 48a66213f
+  </code>
+ <hr>
+  </div>
+  <p>
+ بعضی اوقات داکر از یک ابزار جانبی به اسم  <a href="https://docs.docker.com/compose/">Docker Compose</a> برای کمک به اجرای خودکار دستورات استفاده میشود.
+   <br>
+   Docker Compose را برای مک و ویندوز  میتوانید دانلود کنید اما اگر از لینوکس استفاده میکنید، بایستی به صورت دستی آنرا نصب کنید. این کار را میتوانید با اجرای دستور      <code>sudo pip install docker-compose</code> پس اینکه نصب داکر تمام شد انجام دهید.
+   </p>
+ 
+ <h1>Hello, World</h1>
+  <p>
+   داکر یک image مخصوص خود به اسم "Hello, World" دارد که به عنوان اولین اجرا میتواند مفید باشد. در cmd، <code>docker run hello-world</code> را اجرا کنید. این دستور image رسمی داکر را دانلود و سپس در قالب یک پیمانه اجرا میکند.
+درباره image و container (پیمانه) جلوتر صحبت میکنیم (:
+  </p>
+ <br><br>
+ 
+ <div  dir="ltr" >
+ <hr>
+  <strong>Command Line</strong>
+  <br><br>
+   <div><code>$ docker run hello-world</code></div>
+   <div>Unable to find image 'hello-world:latest' locally</div>
+   <div>latest: Pulling from library/hello-world</div>
+   <div>1b930d010525: Pull complete</div>
+   <div>Digest: sha256:b8ba256769a0ac28dd126d584e0a2011cd2877f3f76e093a7ae560f2a5301c00</div>
+   <div>Status: Downloaded newer image for hello-world:latest</div
+    <br><br>
+   <div>Hello from Docker!</div>
+   <div>This message shows that your installation appears to be working correctly.</div>
+    <br><br>
+   <div>To generate this message, Docker took the following steps:</div>
+   <div>1. The Docker client contacted the Docker daemon.</div>
+   <div>2. The Docker daemon pulled the "hello-world" image from the Docker Hub.(amd64)</div>
+   <div>3. The Docker daemon created a new container from that image which runs the
+           executable that produces the output you are currently reading.</div>
+   <div>4. The Docker daemon streamed that output to the Docker client, which sent it
+           to your terminal.</div>
+    <br><br>
+   <div>To try something more ambitious, you can run an Ubuntu container with:</div>
+   <div>$ docker run -it ubuntu bash</div>
+    <br><br>
+   <div>Share images, automate workflows, and more with a free Docker ID:</div>
+   <div>https://hub.docker.com/</div>
+    <br><br>
+   <div>For more examples and ideas, visit:</div>
+   <div>https://docs.docker.com/get-started/</div>
+ <hr>
+  </div>
+  <br><br>
+  <p>
+  دستور <code>docker info</code> به ما این امکان را میدهد تا به آنچه که در داکر هست سرک بکشیم. 
+این دستور خروجی های زیادی را نمایش میدهد اما خطوط اول که نشان میدهد ما یک container متوقف شده و یک image داریم برایمان حائز اهمیت است.
+  </p>
+  <br><br>
+  
+   <div  dir="ltr" >
+ <hr>
+  <strong>Command Line</strong>
+  <br><br>
+  <code>$ docker info</code>
+    <div>
+     Client:
+    </div>
+Debug Mode: false<br>
+Server:<br>
+Containers: 1<br>
+Running: 0<br>
+Paused: 0<br>
+Stopped: 1<br>
+Images: 1<br>
+...
+ <hr>
+  </div>
+  <br><br>
+  <p>
+   تمامی این خطوط نشان میدهد داکر با موفقیت نصب شده و در حال اجراست.
+  </p>
+  </div>
  
 </body>
  
