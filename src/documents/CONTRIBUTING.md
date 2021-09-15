@@ -1,3 +1,8 @@
+---
+title: CONTRIBUTING
+slug: CONTRIBUTING
+---
+
 <h1 dir="rtl">چطور می‌تونم در ترجمه این کتاب مشارکت کنم؟</h1>
 
 <ol dir="rtl">

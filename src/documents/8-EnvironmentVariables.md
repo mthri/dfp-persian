@@ -1,3 +1,8 @@
+---
+title: 8-EnvironmentVariables
+slug: 8-EnvironmentVariables
+---
+
 <div dir='rtl'>
 <h1>فصل ۸: متغیر های محیطی(Environment Variables)</h1>
   

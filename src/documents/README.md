@@ -1,3 +1,8 @@
+---
+title: README
+slug: README
+---
+
 <h1 dir="rtl"> ترجمه آزاد کتاب  Django for Professionals</h1>
 
 <div dir="rtl">
