@@ -1,0 +1,3 @@
+1. change documents directory to src/
+2. rename .md file to chapter name and delete directories
+3. add frontmatter(variable) for each chapter
