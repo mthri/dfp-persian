@@ -158,3 +158,23 @@ a#active {
         margin-right: 0;
     }
 }
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dbf2ff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #80c6ff;
+    border-radius: 50px;
+}
+/* 
+::-webkit-scrollbar-button {
+    visibility: hidden;
+} */
