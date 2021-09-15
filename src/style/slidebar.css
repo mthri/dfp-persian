@@ -63,6 +63,13 @@ a#active {
     padding: 15px;
     direction: rtl;
     margin-top: 50px;
+    font-family: 'Markazi Text',serif;
+    font-size: 22px;
+    text-align: justify;
+}
+
+#page-content-wrapper a {
+    text-decoration: none;
 }
 
 #wrapper.toggled #page-content-wrapper {

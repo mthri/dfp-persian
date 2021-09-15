@@ -4,13 +4,7 @@ module.exports = {
     title: "mySite",
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-source-contentful",
-    //   options: {
-    //     accessToken: "",
-    //     spaceId: "",
-    //   },
-    // },
+
     "gatsby-plugin-image",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
@@ -23,6 +17,15 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+    resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Markazi Text`,
+        ],
+        display: 'swap'
+      },
     },
     {
       resolve: "gatsby-source-filesystem",

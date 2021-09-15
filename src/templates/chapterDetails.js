@@ -19,7 +19,7 @@ export default function chapterDetails({ data }) {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                    <h3>{title}</h3>
+                    {/* <h3>{title}</h3> */}
                     <br/>
                     <div dangerouslySetInnerHTML={{ __html: html}} />
                     </div>
@@ -41,14 +41,15 @@ export const query = graphql`
             }
         }
 
-        allMarkdownRemark {
+        allMarkdownRemark(filter: {}, sort: {fields: frontmatter___order, order: ASC}) {
             nodes {
               id
               frontmatter {
                 title
                 slug
+                order
               }
             }
-        }
+          }
     }
 `

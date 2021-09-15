@@ -1,8 +1,8 @@
 {
-  "name": "my-site",
+  "name": "dfp-persian",
   "version": "1.0.0",
   "private": true,
-  "description": "mySite",
+  "description": "dfp-persian",
   "author": "sjdkian",
   "keywords": [
     "gatsby"
@@ -19,6 +19,7 @@
     "@mdx-js/react": "^1.6.22",
     "bootstrap": "^5.1.1",
     "gatsby": "^3.13.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-mdx": "^2.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
