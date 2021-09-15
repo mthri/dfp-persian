@@ -33,17 +33,18 @@ export default Book
 
 export const query = graphql`
 query SidebarQuery {
-    allMarkdownRemark {
-      nodes {
-        id
-        frontmatter {
-          title
-          slug
-        }
+  allMarkdownRemark(filter: {}, sort: {fields: frontmatter___order, order: ASC}) {
+    nodes {
+      id
+      frontmatter {
+        title
+        slug
+        order
       }
     }
   }
-  
+}
+
 `
 
 
