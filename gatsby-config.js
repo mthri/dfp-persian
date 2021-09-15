@@ -1,10 +1,10 @@
 module.exports = {
+  pathPrefix: "/dfp-persian",
   siteMetadata: {
     siteUrl: "https://sajjadkiani.ir",
     title: "mySite",
   },
   plugins: [
-
     "gatsby-plugin-image",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
