@@ -10,4 +10,4 @@ slug: bookCover
 
 سال انتشار: 18-9-2020
 
-![book Cover]()
+![book Cover](https://github.com/SajjadKiani/dfp-persian/blob/main/src/images/bookCover.png?raw=true)
