@@ -6,9 +6,9 @@ slug: homePage
 ## ترجمه آزاد کتاب Django for Professionals
 
 شما میتوانی از 
-[اینجا](/book)
+[اینجا](https://sajjadkiani.github.io/dfp-persian/book/)
 شروع به خواندن کنید.
 
 یابرای آشنایی به صفحه 
-[درباره](/about)
+[درباره](https://sajjadkiani.github.io/dfp-persian/about)
 مراجعه کنید.
