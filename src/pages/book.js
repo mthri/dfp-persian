@@ -7,6 +7,8 @@ import Sidebar from '../components/Sidebar';
 
 const Book=( {data} ) => {
 
+    const {html} = data.bookCover.nodes[0]
+
     return (
         <Layout>
 
@@ -18,8 +20,7 @@ const Book=( {data} ) => {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>کتاب</h1>
-                        <p>شروع کتاب</p>
+                      <div dangerouslySetInnerHTML={{ __html: html}} />
                     </div>
                 </div>
             </div>
@@ -41,6 +42,12 @@ query SidebarQuery {
         slug
         order
       }
+    }
+  }
+
+  bookCover: allMarkdownRemark(filter: {frontmatter: {slug: {eq: "bookCover"}}}) {
+    nodes {
+      html
     }
   }
 }
