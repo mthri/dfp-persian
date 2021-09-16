@@ -8,6 +8,14 @@
      height: 50%;
  }
 
+table , tr, th ,td {
+    border: 1px solid black;
+}
+
+tr, th {
+    padding: 5px;
+}
+
 /* Navbar style */
 
 #nav {
