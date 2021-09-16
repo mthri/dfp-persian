@@ -10,4 +10,4 @@ slug: bookCover
 
 سال انتشار: 18-9-2020
 
-![book Cover](../../images/bookCover.png)
+![book Cover]()
