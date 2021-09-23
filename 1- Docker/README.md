@@ -168,6 +168,137 @@ $ pipenv shell
 
 با در نظر گرفتن این که همه چیز درست کار میکند، وارد `http://127.0.0.1:8000` با یک مرورگر شوید و صفحه خوش آمد گویی جنگو را مشاهده کنید.
 
+### Pages App
+
+Now we will make a simple homepage by creating a dedicated `pages` app for it. Stop the local server by typing `Control+c` and then use the `startapp` command appending our desired `pages` name.
+
+<div dir="ltr">
+
+```shell
+(hello) $ python manage.py startapp pages
+```
+
+</div>
+
+Django automatically installs a new `pages` directory and several files for us. But even though the app has been created our `config` won’t recognize it until we add it to the `INSTALLED_APPS` config within the `config/settings.py` file. Django loads apps from top to bottom so generally speaking it’s a good practice to add new apps below built-in apps they might rely on such as `admin`, `auth`,
+and all the rest.
+
+<div dir="ltr">
+
+```python
+# config/settings.py
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'pages', # new
+]
+```
+
+</div>
+
+Now we can set the URL route for the pages app. Since we want our message to appear on the homepage we’ll use the empty string ''. Don’t forget to add the include import on the second
+line as well.
+
+<div dir="ltr">
+
+```python
+# config/urls.py
+from django.contrib import admin
+from django.urls import path, include # new
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('pages.urls')), # new
+]
+```
+
+</div>
+
+Rather than set up a template at this point we can just hardcode a message in our view layer at `pages/views.py` which will output the string “Hello, World!”.
+
+<div dir="ltr">
+
+```python
+# pages/views.py
+from django.http import HttpResponse
+
+def home_page_view(request):
+    return HttpResponse('Hello, World!')
+```
+
+</div>
+
+What’s next? Our last step is to create a `urls.py` file within the `pages` app and link it to `home_-page_view`. If you are on an Mac or Linux computer the touch command can be used from the command line to create new files. On Windows create the new file with your text editor.
+
+<div dir="ltr">
+
+```shell
+(hello) $ touch pages/urls.py
+```
+
+</div>
+
+Within your text editor import path on the top line, add the `home_page_view`, and then set its route to again be the empty string of ''. Note that we also provide an optional name, `home`, for this route which is a best practice.
+
+<div dir="ltr">
+
+```python
+# pages/urls.py
+from django.urls import path
+from .views import home_page_view
+
+urlpatterns = [
+    path('', home_page_view, name='home')
+]
+```
+
+</div>
+
+The full flow of our Django homepage is as follows: * when a user goes to the homepage they will first be routed to `config/urls.py` * then routed to `pages/urls.py` * and finally directed to the home_page_view which returns the string “Hello, World!”
+
+Our work is done for a basic homepage. Start up the local server again.
+
+<div dir="ltr">
+
+```shell
+(hello) $ python manage.py runserver
+```
+
+</div>
+
+If you refresh the web browser at `http://127.0.0.1:8000` it will now output our desired message.
+
+Now it’s time to switch to Docker. Stop the local server again with `Control+c` and exit our virtual environment since we no longer need it by typing exit.
+
+<div dir="ltr">
+
+```shell
+(hello) $ exit
+$
+```
+
+</div>
+
+How do we know the virtual environment is no longer active? There will no longer be parentheses around the directory name on the command line prompt. Any normal Django commands you try to run at this point will fail. For example, try `python manage.py runserver` to see what happens.
+
+<div dir="ltr">
+
+```shell
+$ python manage.py runserver
+File "./manage.py", line 14
+    ) from exc
+        ^
+SyntaxError: invalid syntax
+```
+
+</div>
+
+This means we’re fully out of the virtual environment and ready for Docker.
+
 ### ایمیج ها، پیمانه ها و میزبانی داکر
 
 یک ایمیج داکر محتوای فوری یک پروژه میباشد. ایمیج های داکر با فایلی به نام `Dockerfile` اجرا میشوند که شامل دستور عمل های یک ایمیج میباشد. یک پیمانه به عنوان مثال ه ایمیج داکر اجرا میشود. به مثال آپارتمان بر میگردیم، ایمیج یک طرح یا مجموعه ای از طرح های آپارتمان است. پیمانه هم ساختمان واقعی و کاملا ساخته شده است.
