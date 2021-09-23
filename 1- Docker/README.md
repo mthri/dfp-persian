@@ -168,6 +168,175 @@ $ pipenv shell
 
 با در نظر گرفتن این که همه چیز درست کار میکند، وارد `http://127.0.0.1:8000` با یک مرورگر شوید و صفحه خوش آمد گویی جنگو را مشاهده کنید.
 
+### ایمیج ها، پیمانه ها و میزبانی داکر
+
+یک ایمیج داکر محتوای فوری یک پروژه میباشد. ایمیج های داکر با فایلی به نام `Dockerfile` اجرا میشوند که شامل دستور عمل های یک ایمیج میباشد. یک پیمانه به عنوان مثال ه ایمیج داکر اجرا میشود. به مثال آپارتمان بر میگردیم، ایمیج یک طرح یا مجموعه ای از طرح های آپارتمان است. پیمانه هم ساختمان واقعی و کاملا ساخته شده است.
+
+سومین مفهموم، میزبانی داکر است که سیستم عاملی اساسی است. حتی ممکن هست شما چند پیمانه توسط میزبان داکر اجرا کنید.  وقتی میخواهیم توسط داکر کد بزنیم یا روندی را انجام دهیم، یعنی آنها توسط میزبانی داکر اجرا میشوند.
+
+اولین `Dockerfile` خودمون رو میسازیم و این عملیات رو مشاهده می کنیم.
+
+<div dir="ltr">
+
+```shell
+$ touch Dockerfile
+```
+
+</div>
+
+حالا کد های زیر رو بهش اضافه کنید تا درباره آنها خط به خط صحبت کنیم.
+
+<div dir="ltr">
+
+```docker
+# Pull base image
+FROM python:3.8
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+# Set work directory
+WORKDIR /code
+# Install dependencies
+COPY Pipfile Pipfile.lock /code/
+RUN pip install pipenv && pipenv install --system
+# Copy project
+COPY . /code/
+```
+
+</div>
+
+همچنین `Dockerfile` از بالا به پایین وقتی ایمیج ساخته میشود خوانده میشوند. اولین قسمت باید دستور `FROM` باشد تا ایمیج اصلی را برای ایمیج ما فراخوانی کند. این بار، `Python 3.8`.
+
+سپس از دستور `ENV` برای تعریف دو محیط استفاده میکنیم.
+
+- `PYTHONUNBUFFERED` اطمینان می دهد که خروجی کنسول ما آشنا به نظر می رسد و توسط داکر بافر نمی شود ،
+که ما نمی خواهیم.
+- `PYTHONDONTWRITEBYTECODE` به این معنی که پایتون سعی نمی کند فایل های .pyc بنویسد که ما نیز انجام می دهیم
+میل ندارد.
+
+مرحله بعد استفاده از `WORKDIR` برای تنظیم مسیر پیش فرض فهرست کار در ایمیج خود به نام `code` که کد است استفاده می کنیم
+جایی که ما کد خود را ذخیره می کنیم اگر این کار را نکردیم ، هر بار می خواستیم دستورات را اجرا کنیم
+پیمانه ها باید در مسیری طولانی تایپ کنیم. در عوض، داکر فرض میکند که ما میخواهیم تمام دستورات را داخل پوشه اجرا کنیم.
+
+برای وابستگی ها، از `Pipenv` استفاده میکنیم. پس دو فایل `Pipfile` و `Pipfile.lock` را داخل پوشه `code` داخل داکر کپی میکنیم.
+
+ارزش داره که توضیح بدیم که چرا `Pipenv` فایل `Pipfile.lock` را درست میکند.  مفهمون فایل های `lock` هنوز یونیک نیست داخل پایتون و `Pipenv`. در واقع در پکیج منیجر ها قابل مشاهده است برای زبان های محبوب. مثل `Gemfile.lock` رو روبی، `yarn.lock` در جاوا اسکریپت، `composer.lock` در php و غیره. `Pipenv` اولین و محبوب ترین پروژه ای بود که این ها را داخل پایتون قرار داد.
+
+مزایای فایل `lock` این هست که منجر به نصب کامل میشوند. مهم نیست چند بار پکیج را نصب میکنید، همیشه نتیجه یکسان خواهد بود. بدون این فایل ها وابستگی ها و ترتیب ها اینطور نیست. اعضای تیمی که لیست یکسانی از بسته های نرم افزاری را نصب می کنند ممکن است ساختار کمی متفاوت داشته باشند.
+
+وقتی که از داکر استفاده میکنیم، چه در سیستم شخصی و چه در جای دیگه، و بروزسانی بسته های نرم افزاری، احتمال درگیری `Pipfile.lock` بوجود می آید. در فصل بعد این موضوع را بررسی میکنیم.
+
+Moving along we use the RUN command to first install Pipenv and then pipenv install to install
+the software packages listed in our Pipfile.lock, currently just Django. It’s important to add the
+--system flag as well since by default Pipenv will look for a virtual environment in which to install
+any package, but since we’re within Docker now, technically there isn’t any virtual environment.
+In a way, the Docker container is our virtual environment and more. So we must use the --system
+flag to ensure our packages are available throughout all of Docker for us.
+As the final step we copy over the rest of our local code into the /code/ directory within Docker.
+Why do we copy local code over twice, first the Pipfile and Pipfile.lock and then the rest?
+The reason is that images are created based on instructions top-down so we want things that
+change often–like our local code–to be last. That way we only have to regenerate that part of the
+image when a change happens, not reinstall everything each time there is a change. And since
+the software packages contained in our Pipfile and Pipfile.lock change infrequently, it makes
+sense to copy them over and install them earlier.
+Our image instructions are now done so let’s build the image using the command docker build
+. The period, ., indicates the current directory is where to execute the command. There will be
+a lot of output here; I’ve only included the first two lines and the last three.
+
+<div dir="ltr">
+
+```shell
+$ docker build .
+Sending build context to Docker daemon
+Step 1/7 : FROM python:3.8
+3.8: Pulling from library/python
+...
+Successfully built 8d85b5d5f5f6
+```
+
+</div>
+
+نیاز هست یک فایل به اسم `docker-compose.yml` ساخته شود تا کنترل روی اجرای پیمانه انجام شود که روی بر پایه ایمیج `Dockerfile` هست.
+
+<div dir="ltr">
+
+```shell
+$ touch docker-compose.yml
+```
+
+</div>
+
+فایل ما شامل کد های زیر میشود.
+
+<div dir="ltr">
+
+```yml
+version: '3.8'
+
+services:
+    web:
+        build: .
+        command: python /code/manage.py runserver 0.0.0.0:8000
+        volumes:
+        - .:/code
+        ports:
+        - 8000:8000
+```
+
+</div>
+
+در خط بالا ما ورژن داکر را مشخص میکنیم که در حال حاضر 3.8 میباشد. با ورژن حال پایتون که 3.8 هست اشتباه نگیرید. کاملا تصادفی است!
+
+سپس اطلاعات پیمانه را مشخص میکنیم که در داکر هاست اجرا میشود. امکان اجرای چند پیمانه نیز وجود دارد اما ولی فعلا یک پیمانه را توضیح میدهیم. مشخص میکنیم که پیمانه چطور ساخته. به پوشه فعلی `.` نگاه کن برای `Dockerfile`.بعد داهل پیمانه وب سرور را اجرا کن.
+
+The volumes mount automatically syncs the Docker filesystem with our local computer’s
+filesystem. This means that we don’t have to rebuild the image each time we change a single
+file!
+Lastly, we specify the ports to expose within Docker which will be 8000, which is the Django
+default.
+If this is your first time using Docker, it is highly likely you are confused right now. But don’t
+worry. We’ll create multiple Docker images and containers over the course of this book and with
+practice the flow will start to make more sense. You’ll see we use very similar Dockerfile and
+docker-compose.yml files in each of our projects.
+The final step is to run our Docker container using the command docker-compose up. This
+command will result in another long stream of output code on the command line.
+
+<div dir="ltr">
+
+```shell
+$ docker-compose up
+Creating network "hello_default" with the default driver
+Building web
+Step 1/7 : FROM python:3.8
+...
+Creating hello_web_1 ... done
+Attaching to hello_web_1
+web_1 | Watching for file changes with StatReloader
+web_1 | Performing system checks...
+web_1 |
+web_1 | System check identified no issues (0 silenced).
+web_1 | August 03, 2020 - 19:28:08
+web_1 | Django version 3.1, using settings 'config.settings'
+web_1 | Starting development server at http://0.0.0.0:8000/
+web_1 | Quit the server with CONTROL-C.
+```
+
+</div>
+
+برای صحت این که کار میکند داخل مرورگر وارد `127.0.0.1:8000` شوید، صفحه را رفرش کنید و صفحه `Hello, World` باید نشان داده شود. جنگو هم اکنون با داکر اجرا میشود. ما در یک محیط مجازی کار نمیکنیم. ما حتی دستور `runserver` را هم اجرا نکردیم. تمام کار های پروژه روی یک وب سرور مستقل داکر اجرا میشود. موفقیت!
+
+برای متوقف کردن پیمانه، دنترل و سی را هم زمان بفشارید و دستور `docker-composer down` را اجرا کنید. پیمانه های داکر حجم زیادی از مموری را میگیرد، پس ایده خوبی هست که آنها را متوقف کنیم. آنها بی تابعیت هستند و به همین هست که ما از `volumes` برای کپی کردن کد ها روی محیطی که میتوان استفاده کرد، استفاده کردیم.
+
+<div dir="ltr">
+
+```shell
+$ docker-compose down
+Removing hello_web_1 ... done
+Removing network hello_default
+```
+
+</div>
+
 ### گیت
 
 گیت یک سیستم کنترل ورژن امروزی هست که در این کتاب استفاده میکنیم. در ابتدا یه فایل گیت با `git init` میسازیم، تغییرات را مشاهده میکنیم و وقتی آنها را ثبت میکنیم.
