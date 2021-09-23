@@ -34,7 +34,79 @@ $ pipenv shell
 در محیط کامند لاین ممکن است اخطار هایی مثل " 18 unapplied migration(s) " را مشاهده کنید. برای الان اونا رو نادیده میگیریم. وقتش رسیده به داکر و `PostgreSQL` برگردیم.
 
 ### داکر
-
+حال میتوانیم پروژه خود را به داکر منتقل کنیم.
+در ادامه سرور محلی را با دستور `control + c` متوقف کنید و از محیط مجازی پروژه خارج شوید.
+  
+ <div dir="ltr">
+   Command Line
+   
+```shell
+(books) $ exit
+$
+```
+</div>
+  
+  `Dockerfile` مثل قبل که توضیح دادیم میباشد.
+  
+   <div dir="ltr">
+   Docker File
+   
+```docker
+# Pull base image
+FROM python:3.8
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+# Set work directory
+WORKDIR /code
+# Install dependencies
+COPY Pipfile Pipfile.lock /code/
+RUN pip install pipenv && pipenv install --system
+# Copy project
+COPY . /code/
+```
+</div>
+ 
+  پیمانه های داکر، ذاتا موقتی هستند. یعنی تا زمانی وجود دارند که اجرا شده باشند و تمامی داده هایی که در خود جا داده اند با توقف پیمانه پاک میشوند.
+  برای داده های مانا (داده هایی که میخواهیم دائمی باشند.)  در اینجا از `volume` استفاده میکنیم.
+  
+  دانستینم که در وب سرویس های آنلاین یک مخزن داریم که پروژه محلی ما را به پیمانه های در حال اجرا پیوند میدهد و بالعکس.
+اما برای دیتابیس  `PostgreSQL` یک حجم اختصاصی نداریم که داده هایمان را در آن دسته بندی کنیم. بنابراین با توقف پیمانه هر اطلاعاتی که در آن است از دست میرود. راه حل اضافه کردن یک `volume` برای دیتابیس میباشد. ما اینکار را در سرویس دیتابیس با مشخص کردن یک محل و هر `volume` که خارج از پیمانه قرار دارد انجام میدهیم.
+  
+  این توضیحات احتمالا کمی گیج کننده باشد و نیاز به توضیح بیشتری دارد که خارج از اهداف متمرکز این کتاب نیست.
+فقط در همین حد بدانید که پیمانه های داکر داده های مانا را ذخیره نمیکنند، بنابراین هر چیزی مثل سورس کد و اطلاعات پایگاه داده ای که میخواهیم ماندگار باشد، بایستی یک `volume` اختصاصی داشته باشد در غیر این صورت هر زمان که پیمانه متوقف شود از دست میرود.
+  
+   در صورت تمایل میتوانید برای توضیحات فنی بیشتر [داکیومنت داکر درباره volume ها](https://docs.docker.com/storage/volumes/) و نحوه عملکرد آنها را مطالعه کنید.
+  
+  در هر صورت، این کد بروز شده ی برای docker-compose.yml هست که اکنون از
+مخزن(volume) پایگاه داده هم پشتیبانی میکند.
+  
+   <div dir="ltr">
+   docker-compose.yml
+   
+```docker
+ version: '3.8'
+services:
+web:
+build: .
+command: python /code/manage.py runserver 0.0.0.0:8000
+volumes:
+- .:/code
+ports:
+- 8000:8000
+depends_on:
+- db
+db:
+image: postgres:11
+volumes:
+- postgres_data:/var/lib/postgresql/data/
+environment:
+- "POSTGRES_HOST_AUTH_METHOD=trust"
+volumes:
+postgres_data:
+```
+</div>
+  
 ### PostgreSQL
 
 ### یوزر مدل شفارسی
