@@ -31,7 +31,7 @@
 | 14: Search                    | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
 | 15: Performance               | رزرو شده |   <a href="https://github.com/MrRezoo">رضا مبارکی</a>  |
 | 16: Security                  | رزرو شده |   <a href="https://github.com/mthri">امیر مطهری</a>  |
-| 17: Deployment                | رزرو شده |   <a href="https://github.com/Mimshimzim">محمد شیرخدایی</a>  |
+| 17: Deployment                | ویراستاری |   <a href="https://github.com/Mimshimzim">محمد شیرخدایی</a>  |
 | Conclusion                    | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
 
 ---
