@@ -170,6 +170,80 @@ DATABASES = {
   - سفارشی کردن `UserCreationForm` و `UserChangeForm`
   - اضافه کرد یوزر سفارشی ساخته شده به `admin.py`
   
+  ولین قدم ساخت مدل `CustomUser` در اپ مربوط به خودش میباشد. اسم این اپ را `accounts` میگذاریم. ساخت اپ را میتوان بصورت محلی در shell محیط مجازی انجام داد، به این صورت که به `pipenv shell` رفته و سپس دستور `python manage.py startapp accounts` را اجرا میکنیم. با این حال، برای ثبات کار ما اکثر دستورات خود را در داکر اجرا میکنیم.
+  
+  <div dir='ltr'>
+    Command Line
+    ```shell
+    $ docker-compose exec web python manage.py startapp accounts
+    ```
+  </div>
+  
+  مدل جدیدی باسم `CustomUser` که از `AbstractUser` ارث بری میکند بسازید.
+در واقع این به این معناست که ما در حال ایجاد یک نسخه [از Abstarct User] هستیم که مدل `CustomUser` تمام قابلیت های `AbstractUser` را ارث برده اما در صورت نیاز میتوانیم عملکرد های جدید را اضافه و یا نادیده بگیریم.
+فعلا تغییری در مدل اعمال نمیکنیم بنابراین دستور pass را مینویسیم که جانشین کد های پیش رو در مدل میباشد.( مینویسیم تا فعلا ازمون خطا نگیره تا وقتی که خواستیم چیزی اضافه کنیم.)
+  
+   <div dir='ltr'>
+    Code
+    ```pyhton
+    # accounts/models.py
+     
+    from django.contrib.auth.models import AbstractUser
+    from django.db import models
+     
+     
+      class CustomUser(AbstractUser):
+          pass
+    ```
+  </div>
+  
+  حال به setting.py رفته و قسمت `INSTALLED_APPS` را با اضافه کردن اپ `accounts` بروزرسانی میکنیم.
+همچنین تنظیمات `AUTH_USER_MODEL` را به انتهای فایل اضافه میکنیم تا اینکه در پروژه بجای استفاده از یوزر پیش فرض جنگو از یوزر سفارشی ما استفاده شود.
+  
+     <div dir='ltr'>
+    Code
+    ```pyhton
+    # config/settings.py
+    INSTALLED_APPS = [
+   'django.contrib.admin',
+   'django.contrib.auth',
+   'django.contrib.contenttypes',
+   'django.contrib.sessions',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+       
+  # Local
+       
+   'accounts', # new
+  ]
+  ...
+  AUTH_USER_MODEL = 'accounts.CustomUser' # new
+    ```
+  </div>
+  
+  حال وقت ساختن فایل های `migration` برای تغییرات اخیر در متن پروژه است. میتوان اسم اپ `accounts` را در دستور `migration` بصورت دلخواه نوشت برای اینکه بگوییم این تغییرات 
+مربوط به اپ نام برده شده است.
+  
+  <div die='ltr'>
+  Command Line
+    ```shell
+    $ docker-compose exec web python manage.py makemigrations accounts
+    Migrations for 'accounts':
+      accounts/migrations/0001_initial.py
+       - Create model CustomUser
+
+    ```
+  </div>
+  
+  سپس دستور `migrate` را برای مشخص کردن دیتابیس پروژه برای اولین بار ایجاد اجرا کنید.
+  
+    <div die='ltr'>
+  Command Line
+    ```shell
+      $ docker-compose exec web python manage.py migrate
+    ```
+  </div>
+  
 ### فرم سفارشی یوزر
 
 ### سرپرست کاربر سفارشی
