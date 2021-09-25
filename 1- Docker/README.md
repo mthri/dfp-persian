@@ -357,22 +357,13 @@ COPY . /code/
 
 وقتی که از داکر استفاده میکنیم، چه در سیستم شخصی و چه در جای دیگه، و بروزسانی بسته های نرم افزاری، احتمال درگیری `Pipfile.lock` بوجود می آید. در فصل بعد این موضوع را بررسی میکنیم.
 
-Moving along we use the RUN command to first install Pipenv and then pipenv install to install
-the software packages listed in our Pipfile.lock, currently just Django. It’s important to add the
---system flag as well since by default Pipenv will look for a virtual environment in which to install
-any package, but since we’re within Docker now, technically there isn’t any virtual environment.
-In a way, the Docker container is our virtual environment and more. So we must use the --system
-flag to ensure our packages are available throughout all of Docker for us.
-As the final step we copy over the rest of our local code into the /code/ directory within Docker.
-Why do we copy local code over twice, first the Pipfile and Pipfile.lock and then the rest?
-The reason is that images are created based on instructions top-down so we want things that
-change often–like our local code–to be last. That way we only have to regenerate that part of the
-image when a change happens, not reinstall everything each time there is a change. And since
-the software packages contained in our Pipfile and Pipfile.lock change infrequently, it makes
-sense to copy them over and install them earlier.
-Our image instructions are now done so let’s build the image using the command docker build
-. The period, ., indicates the current directory is where to execute the command. There will be
-a lot of output here; I’ve only included the first two lines and the last three.
+برگردیم، ما از دستور `RUN` استفاده کردیم که اول Pipenv را نصب کنیم تا `Pipenv` پکیج های لیست شده داخل `Pipfile.lock` را نصب کند. فعلا فقط جنگو. خیلی مهم هست که از `system--` استفاده کنید تا `Pipenv` یک محیط مجازی را درست کند. اما ولی از داکر استفاده میکنیم نیازی به محیط مجازی نیست.
+
+در این حالت، کانتینر داکر ما محیط مجازی و موارد دیگر ما میباشد. بنابر این از `system--` استفاده میشود تا مطمئن شویم که بسته های ما در تمام سیستم نصب میشود. برای آخرین مرحله ما پوشه code خود را به پوشه code داکر انتقال میدهیم. ابتدا `Pipfile.lock` و `Pipfile` و بعد بقیه را؟
+
+دلیل این است که ایمیج بر اساس دستورالعمل های بالا به پایین ایجاد می شوند، بنابراین ما می خواهیم چیزهایی که اغلب تغییر می کنند مانند کد محلی ماآخرین باشند. به این ترتیب ما فقط باید آن قسمت از ایمیج را هنگام تغییر ایجاد کنیم، نه اینکه هر بار که تغییری رخ می دهد همه چیز را دوباره نصب کنیم. و از آنجا که بسته های نرم افزاری موجود در `Pipfile` و `Pipfile.lock` ما به ندرت تغییر می کنند ، منطقی است که آنها را کپی کرده و زودتر نصب کنیم.
+
+دستورالعمل های ایمیج ما اکنون انجام شده است ، بنابراین اجازه دهید image را با استفاده از دستور `docker build` بسازیم. نقطه ،`.` ، نشان می دهد که فهرست فعلی محل اجرای دستور است. در اینجا خروجی زیادی وجود خواهد داشت. به همین دلیل فقط چند خط آن را وارد کردم.
 
 <div dir="ltr">
 
@@ -420,17 +411,16 @@ services:
 
 سپس اطلاعات پیمانه را مشخص میکنیم که در داکر هاست اجرا میشود. امکان اجرای چند پیمانه نیز وجود دارد اما ولی فعلا یک پیمانه را توضیح میدهیم. مشخص میکنیم که پیمانه چطور ساخته. به پوشه فعلی `.` نگاه کن برای `Dockerfile`.بعد داهل پیمانه وب سرور را اجرا کن.
 
-The volumes mount automatically syncs the Docker filesystem with our local computer’s
-filesystem. This means that we don’t have to rebuild the image each time we change a single
+The volumes mount automatically syncs the Docker filesystem with our local computer’s filesystem. This means that we don’t have to rebuild the image each time we change a single
 file!
-Lastly, we specify the ports to expose within Docker which will be 8000, which is the Django
-default.
-If this is your first time using Docker, it is highly likely you are confused right now. But don’t
-worry. We’ll create multiple Docker images and containers over the course of this book and with
-practice the flow will start to make more sense. You’ll see we use very similar Dockerfile and
-docker-compose.yml files in each of our projects.
-The final step is to run our Docker container using the command docker-compose up. This
-command will result in another long stream of output code on the command line.
+
+
+
+در آخر ما `پورت` خروجی را در داکر مشخص میکنیم که پورت `8000` خواهد بود که همان پورت دیفالت جنگو میباشد.
+
+If this is your first time using Docker, it is highly likely you are confused right now. But don’t worry. We’ll create multiple Docker images and containers over the course of this book and with practice the flow will start to make more sense. You’ll see we use very similar Dockerfile and docker-compose.yml files in each of our projects.
+
+قدم آخر هم اجرای دستور `docker-compose up` میباشد. این دستور باعث یک خروجی طولانی دیگر در کامند لاین می‌شود.
 
 <div dir="ltr">
 
