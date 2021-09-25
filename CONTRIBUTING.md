@@ -25,14 +25,14 @@
 | 8: Environment Variables      | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
 | 9: Email                      | رزرو شده |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
 | 10: Books App                 | رزرو شده |   <a href="https://github.com/aliloloee">علی لؤلؤیی</a>  |
-| 11: Reviews App               | رزرو شده |   <a href="https://github.com/mahdi-asadzadeh">مهدی اسد زاده</a>  |
+| 11: Reviews App               | نیاز به بررسی |   <a href="https://github.com/mahdi-asadzadeh">مهدی اسد زاده</a>  |
 | 12: File/Image Uploads        | رزرو شده |   <a href="https://github.com/smhtbtb">سید محمد حسین طباطبایی</a>  |
 | 13: Permissions               | رزرو شده |   <a href="https://github.com/arianghoochani">آرین قوچانی</a>  |
 | 14: Search                    | رزرو شده |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
 | 15: Performance               | رزرو شده |   <a href="https://github.com/MrRezoo">رضا مبارکی</a>  |
 | 16: Security                  | رزرو شده |   <a href="https://github.com/mthri">امیر مطهری</a>  |
 | 17: Deployment                | ویراستاری |   <a href="https://github.com/Mimshimzim">محمد شیرخدایی</a>  |
-| Conclusion                    | رزرو شده |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
+| Conclusion                    | تکمیل |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
 
 ---
 
