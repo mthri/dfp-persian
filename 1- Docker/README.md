@@ -168,9 +168,9 @@ $ pipenv shell
 
 با در نظر گرفتن این که همه چیز درست کار میکند، وارد `http://127.0.0.1:8000` با یک مرورگر شوید و صفحه خوش آمد گویی جنگو را مشاهده کنید.
 
-### Pages App
+### اپ pages 
 
-Now we will make a simple homepage by creating a dedicated `pages` app for it. Stop the local server by typing `Control+c` and then use the `startapp` command appending our desired `pages` name.
+هم اکنون ما یک صفحه اصلی ساده به همراه یک اپ اختصاصی `pages` برای ان ایجاد میکنیم . با تایپ کردن `Control+c` سرور را متوقف کنید و برای اضافه کردن نام مورد نظر ما `pages` از دستور `.startapp` استفاده کنید .
 
 <div dir="ltr">
 
@@ -180,8 +180,7 @@ Now we will make a simple homepage by creating a dedicated `pages` app for it. S
 
 </div>
 
-Django automatically installs a new `pages` directory and several files for us. But even though the app has been created our `config` won’t recognize it until we add it to the `INSTALLED_APPS` config within the `config/settings.py` file. Django loads apps from top to bottom so generally speaking it’s a good practice to add new apps below built-in apps they might rely on such as `admin`, `auth`,
-and all the rest.
+جنگو به طور خودکار یک پوشه جدید `pages` و فایل هایی برای ما ایجاد میکند . اما حتی اگر برنامه ما ایجاد شده باشد  `config` تا زمانی که آن را به `INSTALLED_APPS` اضافه نکنیم نمیتواند بشناسد  . config در داخل فایل  `config/settings.py` قرار دارد . جنگو اپ ها را از بالا به پایین بارگذاری میکند بنابراین به طور کلی ، افزودن برنامه های جدید به برنامه های داخلی که ممکن است به آنها وابسته باشند مانند `admin`و `auth`  و بقیه ، یک عمل خوب است . 
 
 <div dir="ltr">
 
@@ -200,8 +199,7 @@ INSTALLED_APPS = [
 
 </div>
 
-Now we can set the URL route for the pages app. Since we want our message to appear on the homepage we’ll use the empty string ''. Don’t forget to add the include import on the second
-line as well.
+اکنون ما میتوانیم مسیر url را برای اپ pages تنظیم کنیم . از آنجا که میخواهیم پیام ما در صفحه اصلی ظاهر شود از رشته خالی "" استفاده میکنیم . همچنین فراموش نکنید که در خط دوم include را import کنید .
 
 <div dir="ltr">
 
@@ -218,7 +216,7 @@ urlpatterns = [
 
 </div>
 
-Rather than set up a template at this point we can just hardcode a message in our view layer at `pages/views.py` which will output the string “Hello, World!”.
+در این مرحله به جای تنظیم یک قالب میتوانیم یک پیام هارد کد (hardcode) در فایل ویو در `pages/views.py` که خروجی رشته می دهد "Hello, World!" انجام بدهیم .
 
 <div dir="ltr">
 
@@ -232,7 +230,7 @@ def home_page_view(request):
 
 </div>
 
-What’s next? Our last step is to create a `urls.py` file within the `pages` app and link it to `home_-page_view`. If you are on an Mac or Linux computer the touch command can be used from the command line to create new files. On Windows create the new file with your text editor.
+بعدی چیست ؟ ما آخرین مرحله یک فایل `urls.py` در اپ `pages` ایجاد کردیم و ان را به `home_page_view` متصل کردیم . اگر از سیستم عامل  Mac یا Linux استفاده می کنید از دستور touch در خط فرمان میتوان برای ایجاد فایل های جدید استفاده کرد . در سیستم عامل Windows میتوان برای ایجاد فایل جدید از ویرایشگر متن استفاده کرد . 
 
 <div dir="ltr">
 
@@ -242,7 +240,7 @@ What’s next? Our last step is to create a `urls.py` file within the `pages` ap
 
 </div>
 
-Within your text editor import path on the top line, add the `home_page_view`, and then set its route to again be the empty string of ''. Note that we also provide an optional name, `home`, for this route which is a best practice.
+در ویرایشگر متن خود path را در بالای خط import کنید , `home_page_view` را اضافه کنید  ,و سپس مسیر را طوری تنظیم کنید که دوباره رشته خالی "" باشد. توجه داشته باشید که ما همچنان برای این مسیر یک نام اختیاری `home` را مینویسیم که بهترین کار است .
 
 <div dir="ltr">
 
@@ -258,9 +256,11 @@ urlpatterns = [
 
 </div>
 
-The full flow of our Django homepage is as follows: * when a user goes to the homepage they will first be routed to `config/urls.py` * then routed to `pages/urls.py` * and finally directed to the home_page_view which returns the string “Hello, World!”
+جریان کامل از صفحه نخست جنگو ما به شرح زیر است :
 
-Our work is done for a basic homepage. Start up the local server again.
+* * هنگامی که یک کاربر به صفحه اصلی می رود ابتدا به مسیر `config/urls.py` هدایت می شود .  سپس به مسیر `pages/urls.py` هدایت می شود . * و در نهایت به  home_page_view هدابت می شوید که رشته "Hello, World" را بر میگرداند .
+
+کار ما برای صفحه نخست تمام شده است . سرور را دوباره راه اندازی کنید .
 
 <div dir="ltr">
 
@@ -270,9 +270,9 @@ Our work is done for a basic homepage. Start up the local server again.
 
 </div>
 
-If you refresh the web browser at `http://127.0.0.1:8000` it will now output our desired message.
+اگر شما مروگر وب را در آدرس `http://127.0.0.1:8000` رفرش (refresh) کنید اکنون پیام مورد نظر ما را ارسال می کند .
 
-Now it’s time to switch to Docker. Stop the local server again with `Control+c` and exit our virtual environment since we no longer need it by typing exit.
+اکنون وقت آن است که به سراغ docker بروید . سرور را دوباره با `Control+c` متوقف کرده و از محیط مجازی خود با نوشتن exit خارج شوید زیرا دیگر نیازی به آن نیست .
 
 <div dir="ltr">
 
@@ -283,7 +283,7 @@ $
 
 </div>
 
-How do we know the virtual environment is no longer active? There will no longer be parentheses around the directory name on the command line prompt. Any normal Django commands you try to run at this point will fail. For example, try `python manage.py runserver` to see what happens.
+چگونه میتوانیم بفهمیم که دیگر محیط مجازی فعال نیست ؟  دیگر هیچ پرانتزی در اطراف نام دایرکتوری خط فرمان (command line) وجود نخواهد داشت . هر دستور عادی جنگو که سعی کنید در این مرحله اجرا کنید ارور می دهد . به عنوان مثال , دستور `python manage.py runserver` را امتحان کنید تا ببینید چه اتفاقی می افتد .
 
 <div dir="ltr">
 
@@ -297,7 +297,7 @@ SyntaxError: invalid syntax
 
 </div>
 
-This means we’re fully out of the virtual environment and ready for Docker.
+این بدان معناست که ما کاملا از محیط مجازی خارج شده ایم و حاضر و آماده برای Docker هستیم .
 
 ### ایمیج ها، پیمانه ها و میزبانی داکر
 
