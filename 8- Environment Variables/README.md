@@ -9,7 +9,7 @@
   
 **environs[django]**
 
-در پایتون روش های مختلفی برای کار با متغیرهای محیطی وجود دارد اما برای این پروژه از package [environs](https://github.com/sloria/environs) استفاده می‌کنیم که شامل گزینه مخصوص برای جنگو است که package ‌های اضافی را همراه خود نصب می‌کند که در تنظیمات به ما کمک می‌کند. 
+در پایتون روش های مختلفی برای کار با متغیرهای محیطی وجود دارد اما برای این پروژه از پکیج [environs](https://github.com/sloria/environs) استفاده می‌کنیم که شامل گزینه مخصوص برای جنگو است که پکیج ‌های اضافی را همراه خود نصب می‌کند که در تنظیمات به ما کمک می‌کند. 
   
 در خط فرمان `environs[django]` را نصب کنید. توجه کنید که اگر از Zsh به عنوان terminal shell استفاده می‌کنید احتمالا باید از نقل‌قول`''` در اطراف اسم بسته استفاده کنید. پس`pipenv install environs[django]==8.0.0` را اجرا کنید. همچنین نیاز داریم  Docker container را با بسته های جدید بازسازی کنیم.
 
@@ -40,7 +40,7 @@ env.read_env() # new
 ```
 
 <div dir='rtl'>
-  آماده شد.  
+حالا همه چیز آماده است.
 </div>
 
 # SECRET_KEY
@@ -106,8 +106,8 @@ volumes:
 ```
 <div dir='rtl'>
 
-توجه کنید اگر `SECRET_KEY` شما دارای علامت دلار `$` باشد باید یک علامت دلار دیگر اضافه کنید `$$`. با توجه به `docker-compose` [handles variable substitution](https://docs.docker.com/compose/compose-file/#variable-substitution). در غیر این‌صورت با ارور مواجه می‌شوید!
-  
+توجه کنید اگر `SECRET_KEY` شما دارای علامت دلار `$` باشد باید یک علامت دلار دیگر اضافه کنید `$$`   . در غیر این‌صورت با ارور مواجه می‌شوید!
+  اطلاعات بیشتر در: [handles variable substitution](https://docs.docker.com/compose/compose-file/#variable-substitution)
 </div>
 
 <div dir='rtl'>
