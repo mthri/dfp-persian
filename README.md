@@ -68,8 +68,8 @@
   - سوپریوزر (Superuser)
   - تست ها 
   - یونیت تست ها
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
 
@@ -156,12 +156,12 @@
   <summary>فصل هشتم : متغییر های Environment</summary>
   <br>
   
-  - environs[django]
+  - environs[django] &check;
   - SECRET_KEY
   - DEBUG و ALLOWED_HOSTS
   - DATABASES
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
   
@@ -262,7 +262,7 @@
   <summary>فصل پانزدهم : کارایی</summary>
   <br>
   
-  - django-debug-toolbar
+  - django-debug-toolbar &check;
   - آنالیز صفحه ها
   - select_related و prefetch_related
   - کشینگ (Caching)
@@ -301,20 +301,20 @@
   
   
 <details>
-  <summary>فصل هفدهم : دیپلویمنت</summary>
+  <summary>فصل هفدهم : دیپلویمنت &check;</summary>
   <br>
   
-  -  تفاوت PasS و IasS
-  - WhiteNoise
-  - فایل های رسانه ای (Media Files)
-  - Gunicorn
-  - Heroku
-  - دیپلویمنت با داکر
-  - heroku.yml
-  - SECURE_PROXY_SSL_HEADER
-  - لاگ های Heroku 
-  - افزونه های Heroku
-  - جمع بندی
+  -  تفاوت PasS و IasS &check;
+  - WhiteNoise &check;
+  - فایل های رسانه ای (Media Files) &check;
+  - Gunicorn &check;
+  - Heroku &check;
+  - دیپلویمنت با داکر &check;
+  - heroku.yml &check;
+  - SECURE_PROXY_SSL_HEADER &check;
+  - لاگ های Heroku &check;
+  - افزونه های Heroku &check;
+  - جمع بندی &check;
   
 </details>
   
