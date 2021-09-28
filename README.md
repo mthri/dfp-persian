@@ -12,14 +12,14 @@
 [خواندن کتاب به صورت آنلاین](https://github.com/mthri/dfp-persian/blob/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf)
   
 <details>
-  <summary>مقدمه</summary>
+  <summary>مقدمه &check;</summary>
   <br>
     
-  - پیشنیاز ها  
-  - ساختار کتاب
-  - آرایش کتاب
-  - ادیتور متن
-  - نتیجه گیری
+  - پیشنیاز ها &check;
+  - ساختار کتاب &check;
+  - آرایش کتاب &check;
+  - ادیتور متن &check;
+  - نتیجه گیری &check;
     
 </details>
   
@@ -28,15 +28,15 @@
   <summary>فصل اول : داکر</summary>
   <br>
 
-  - داکر چیست
-  - تفاوت کانتینر ها و Virtual Environments
-  - نصب داکر
-  - Hello World با داکر
-  - Hello World با جنگو
-  - اپ pages
+  - داکر چیست &check;
+  - تفاوت کانتینر ها و Virtual Environments &check;
+  - نصب داکر &check;
+  - Hello World با داکر &check;
+  - Hello World با جنگو &check;
+  - اپ pages &check;
   - تصاویر و کانتینر ها و میزبانی داکر
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
 
 </details>
 
