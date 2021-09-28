@@ -12,14 +12,14 @@
 [خواندن کتاب به صورت آنلاین](https://github.com/mthri/dfp-persian/blob/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf)
   
 <details>
-  <summary>مقدمه</summary>
+  <summary>مقدمه &check;</summary>
   <br>
     
-  - پیشنیاز ها  
-  - ساختار کتاب
-  - آرایش کتاب
-  - ادیتور متن
-  - نتیجه گیری
+  - پیشنیاز ها &check;
+  - ساختار کتاب &check;
+  - آرایش کتاب &check;
+  - ادیتور متن &check;
+  - نتیجه گیری &check;
     
 </details>
   
@@ -28,15 +28,15 @@
   <summary>فصل اول : داکر</summary>
   <br>
 
-  - داکر چیست
-  - تفاوت کانتینر ها و Virtual Environments
-  - نصب داکر
-  - Hello World با داکر
-  - Hello World با جنگو
-  - اپ pages
+  - داکر چیست &check;
+  - تفاوت کانتینر ها و Virtual Environments &check;
+  - نصب داکر &check;
+  - Hello World با داکر &check;
+  - Hello World با جنگو &check;
+  - اپ pages &check;
   - تصاویر و کانتینر ها و میزبانی داکر
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
 
 </details>
 
@@ -50,7 +50,7 @@
   - PostgreSQL
   - تنظیمات
   - Psycopg
-  - دیتابیس تازه
+  - دیتابیس جدید
   - گیت
   - جمع بندی
     
@@ -68,8 +68,8 @@
   - سوپریوزر (Superuser)
   - تست ها 
   - یونیت تست ها
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
 
@@ -156,12 +156,12 @@
   <summary>فصل هشتم : متغییر های Environment</summary>
   <br>
   
-  - environs[django]
+  - environs[django] &check;
   - SECRET_KEY
   - DEBUG و ALLOWED_HOSTS
   - DATABASES
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
   
@@ -262,7 +262,7 @@
   <summary>فصل پانزدهم : کارایی</summary>
   <br>
   
-  - django-debug-toolbar
+  - django-debug-toolbar &check;
   - آنالیز صفحه ها
   - select_related و prefetch_related
   - کشینگ (Caching)
@@ -301,20 +301,20 @@
   
   
 <details>
-  <summary>فصل هفدهم : دیپلویمنت</summary>
+  <summary>فصل هفدهم : دیپلویمنت &check;</summary>
   <br>
   
-  -  تفاوت PasS و IasS
-  - WhiteNoise
-  - فایل های رسانه ای (Media Files)
-  - Gunicorn
-  - Heroku
-  - دیپلویمنت با داکر
-  - heroku.yml
-  - SECURE_PROXY_SSL_HEADER
-  - لاگ های Heroku 
-  - افزونه های Heroku
-  - جمع بندی
+  -  تفاوت PasS و IasS &check;
+  - WhiteNoise &check;
+  - فایل های رسانه ای (Media Files) &check;
+  - Gunicorn &check;
+  - Heroku &check;
+  - دیپلویمنت با داکر &check;
+  - heroku.yml &check;
+  - SECURE_PROXY_SSL_HEADER &check;
+  - لاگ های Heroku &check;
+  - افزونه های Heroku &check;
+  - جمع بندی &check;
   
 </details>
   
