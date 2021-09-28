@@ -9,7 +9,7 @@
 </p>
 <br />
 
-<h2>برنامه staticfiles</h2>
+<h2 dir="rtl">برنامه staticfiles</h2>
 
 <p dir="rtl">
 جنگو برای مدیریت فایل های استاتیک از کل پروژه ما ، به برنامه 
@@ -28,7 +28,7 @@
 </p>
 
 <br />
-<h2>STATIC_URL</h2>
+<h2 dir="rtl">STATIC_URL</h2>
 
 <p dir="rtl">
  تنظیمات اولیه فایل‌های استاتیک 
@@ -52,7 +52,7 @@ STATIC_URL = '/static/'
  نوشته شود.
 </p>
 <br />
-<h2>STATICFILES_DIRS</h2>
+<h2 dir="rtl">STATICFILES_DIRS</h2>
 
 <p dir="rtl">
 قدم بعدی
@@ -79,7 +79,7 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
 </p>
 
 <br />
-<h2>STATIC_ROOT</h2>
+<h2 dir="rtl">STATIC_ROOT</h2>
 
 <p dir="rtl">
 <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#static-root"><code>STATIC_ROOT</code></a>
@@ -103,7 +103,7 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
 </pre>
 
 <br />
-<h2>STATICFILES_FINDERS</h2>
+<h2 dir="rtl">STATICFILES_FINDERS</h2>
 
 <p dir="rtl">
 و در آخرین قسمت تنظیمات می‌رسیم به
@@ -168,7 +168,7 @@ STATICFILES_FINDERS = [ # new
 </pre>
 
 <br />
-<h2>دایرکتوری‌های استاتیک</h2>
+<h2 dir="rtl">دایرکتوری‌های استاتیک</h2>
 
 <p dir="rtl">
 اکنون بیایید چند فایل استاتیک را در پروژه خود افزوده و از آنها استفاده کنیم. حتی اگر ما باشیم
@@ -253,13 +253,17 @@ STATIC_URL
 
 <p dir="rtl">
 اکنون برای دیدن نتایج صفحه اصلی را refresh می‌کنیم.
+</p>
+
 <br /><br />
 <img src="./assets/89.png" alt="image_89" />
+
 <center>
 <h6>صفحه اصلی با تیتر قرمز</h6>
 </center>
 <br />
 
+<p dir="rtl">
 اگر در عوض یک صفحه خطا می بینید که می‌گوید
 <i>Invalid block tag on line 7: 'static'</i>
 بدین معنی است که شما احتمالا
@@ -268,7 +272,7 @@ STATIC_URL
 
 </p>
 
-<h2>تصاویر</h2>
+<h2 dir="rtl">تصاویر</h2>
 
 <p dir="rtl">
 شما می توانید تصویر جلد همین کتاب (Django for Professionals) را از 
@@ -332,7 +336,7 @@ width: auto;
 </center>
 <br />
 
-<h2>جاوا اسکریپت</h2>
+<h2 dir="rtl">جاوا اسکریپت</h2>
 
 <p dir="rtl">
 برای افزودن جاوا اسکریپت به تمپلیت مراحل مشابه قدم قبلی است. اکنون یک فایل به نام base.js می‌سازیم.
@@ -403,7 +407,7 @@ console.log('JavaScript is Here!');
 </center>
 <br />
 
-<h2>collectstatic</h2>
+<h2 dir="rtl">collectstatic</h2>
 <p dir="rtl">
 
 فرض کنید می‌خواهیم وبسایتمان را همین حالا دیپلوی کنیم. میان تمام مراحل، ما نیاز داریم
@@ -435,7 +439,7 @@ result: 135 static files copied to '/code/staticfiles'.
 وجود دارد. و سه تای دیگر هم توضیح داده شده. به همین دلیل 122 فایل کپی شدند.
 </p>
 
-<h2>Bootstrap</h2>
+<h2 dir="rtl">Bootstrap</h2>
 
 <p dir="rtl">
 نوشتن CSS سفارشی برای وبسایت یک هدف ارزشمند است و چیزی است که همیشه به تمام توسعه‌دهندگان نرم‌افزار توصیه می‌شود زمانی آن را امتحان کنند. ولی در عمل دلیلی وجود دارد که فریمورک‌های فرانت-اند مثل
@@ -557,7 +561,7 @@ copy / paste
 </center>
 <br />
 
-<h2>صفحه‌ی About</h2>
+<h2 dir="rtl">صفحه‌ی About</h2>
 
 <p dir="rtl">
 آیا متوجهِ لینک "About" در نوار هدایت شدید؟ مشکل این است که صفحه و لینک هنوز وجود ندارند. ولی از آنجایی که ما از قبل یک اَپ 
@@ -669,7 +673,7 @@ path('', HomePageView.as_view(), name='home'),
 </code>
 </pre>
 
-<h2>فرم‌های کریسپی جنگو</h2>
+<h2 dir="rtl">فرم‌های کریسپی جنگو</h2>
 
 <p dir="rtl">
 
@@ -756,7 +760,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 {% block content %}
 
-  <h2>Sign Up</h2>
+  <h2 dir="rtl">Sign Up</h2>
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
@@ -795,7 +799,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 {% block content %}
 
-  <h2>Log In</h2>
+  <h2 dir="rtl">Log In</h2>
   <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
@@ -812,7 +816,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 </center>
 <br />
 
-<h2>Testها</h2>
+<h2 dir="rtl">Testها</h2>
 
 <p dir="rtl">
 
@@ -877,7 +881,7 @@ Destroying test database for alias 'default'...
 </code>
 </pre>
 
-<h2>Git</h2>
+<h2 dir="rtl">Git</h2>
 
 <p dir="rtl">
 
@@ -902,7 +906,7 @@ $ git commit -m 'ch6'
 
 </p>
 
-<h2>نتیجه‌گیری</h2>
+<h2 dir="rtl">نتیجه‌گیری</h2>
 
 <p dir="rtl">
 فایل‌های استاتیک یک بخش اصلی هر وبسایتی است و در جنگو ما باید چند قدم اضافه برداریم تا به شکل کارا در محیط پروداکشن (production) گرداوری و میزبانی شوند. بعداً در این کتاب ما یادخواهیم گرفت که چگونه از شبکه تحویل محتوا (CDN) برای میزبانی و نمایش فایل‌های استاتیک پروژه‌ی خود استفاده کنیم.
