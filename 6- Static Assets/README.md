@@ -39,8 +39,8 @@
   گنجانده شده است.
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 # config/settings.py
 STATIC_URL = '/static/'
 </code>
@@ -61,14 +61,13 @@ STATIC_URL = '/static/'
  است، که موقعیت فیزیکی فایل های استاتیک را در  مود development بصورت top-level و ثابت مشخص می کند.
 </p>
 
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 # config/settings.py
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
 </code>
-
 </pre>
 
 <p>
@@ -93,8 +92,8 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
  این روش بسیار سریعتر از استفاده پراکنده فایلهای استاتیک از سراسر پروژه بصورت جدا از هم (که صرفا در مود development از آن استفاده می‌شود) می‌باشد.
 </p>
 
-<>
-
+<pre dir="ltr">
+<code>
 # config/settings.py
 
 STATIC_URL = '/static/'
@@ -114,9 +113,10 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
 این بخش به طور آپشنال برای ما تنظیم شده است، گرچه این یک مرحله اختیاری است ترجیحاً آن را در پروژه ها استفاده نمایید
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 # config/settings.py
+
 STATICFILES_FINDERS = [
 "django.contrib.staticfiles.finders.FileSystemFinder",
 "django.contrib.staticfiles.finders.AppDirectoriesFinder",
@@ -154,9 +154,10 @@ STATICFILES_FINDERS = [
 
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 # config/settings.py
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
@@ -176,14 +177,14 @@ STATICFILES_FINDERS = [ # new
 زیر شاخه های جدید برای CSS ، JavaScript و تصاویر.
 </p>
 
-<span  dir="ltr">
-```
+<pre dir="ltr">
+<code>
 $ mkdir static
 $ mkdir static/css
 $ mkdir static/js
 $ mkdir static/images
-```
-</span>
+</code>
+</pre>
 
 <p>
 در قدم بعد یک فایل استایل به نام
@@ -193,8 +194,8 @@ $ mkdir static/images
 
 </p>
 
-<code  dir="ltr">
-```
+<pre  dir="ltr">
+<code>
 $ touch static/css/base.css
 </code>
 </pre>
@@ -205,9 +206,10 @@ $ touch static/css/base.css
  را برای شروع قرمز می‌کنیم. هدف ما نشان دادن چگونگی افزودن css به پروژه است و عمیقاً وارد خود CSS نمیشویم
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 /* static/css/base.css */
+
 h1 {
 color: red;
 }
@@ -233,9 +235,10 @@ STATIC_URL
 ما می توانیم به سادگی از css/base.css استفاده کنیم.
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 <!-- templates/_base.html -->
+
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -279,9 +282,10 @@ books/static/images
 و مقدار static را در آدرس‌دهی فایل مانند مثال زیر، برای تگ <img>  درج کنید.
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 <!-- templates/home.html -->
+
 {% extends '_base.html' %}
 {% load static %}
 {% block title %}Home{% endblock title %}
@@ -304,9 +308,10 @@ books/static/images
 با refresh کردن صفحه میبینید که عکس بصورت خام و بدون استایل بارگزاری می‌شود. اکنون مقداری استایل به آن اضافه می‌کنیم.
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 /* static/css/base.css */
+
 h1 {
 color: red;
 }
@@ -334,8 +339,8 @@ width: auto;
 برای افزودن جاوا اسکریپت به تمپلیت مراحل مشابه قدم قبلی است. اکنون یک فایل به نام base.js می‌سازیم.
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 $ touch static/js/base.js
 </code>
 </pre>
@@ -344,12 +349,11 @@ $ touch static/js/base.js
 معمولا کدهای آماری را در اینجا قرار می دهیم ، مانند Google Analytics. برای اهداف نمایشی بطور مثال یک  ()console.log اضافه می کنیم تا بتوانیم جاوا اسکریپتی که به درستی load شده را ببینیم.
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 // static/js/base.js
 
 console.log('JavaScript is Here!');
-
 </code>
 </pre>
 
@@ -359,9 +363,8 @@ console.log('JavaScript is Here!');
 این مدل کاری به بهبود سرعت بارگزاری قسمت های بصری سایت کمک می‌کند.
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 <!-- templates/_base.html -->
 
 {% load static %}
@@ -411,12 +414,11 @@ console.log('JavaScript is Here!');
 
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 $ docker-compose exec web python manage.py collectstatic
 
 result: 135 static files copied to '/code/staticfiles'.
-
 </code>
 </pre>
 
@@ -465,9 +467,8 @@ copy / paste
 در نهایت، مطمئن باشید که در header یک navbar حداقلی داشته باشید تا اگر یک کاربر LogIn شده، فقط لینک "Log Out" دیده شود. و زمانی که یک کاربر هنوز LogIn نشده دو عبارت "Log In" و "Sign Up" را ببیند.
 
 </P>
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 <!-- templates/_base.html -->
 
 {% load static %}
@@ -538,9 +539,10 @@ copy / paste
 
 </P>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 <!-- templates/_base.html -->
+
 <a class="p-2 text-dark" href="#">About</a>
 </code>
 </pre>
@@ -569,9 +571,9 @@ copy / paste
 
 </p>
 
-<pre>
-<code dir="ltr">
-touch templates/about.html
+<pre dir="ltr">
+<code>
+$ touch templates/about.html
 </code>
 </pre>
 
@@ -581,9 +583,10 @@ touch templates/about.html
  ارث‌بری خواهد کرد.
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 <!-- templates/about.html -->
+
 {% extends '_base.html' %}
 
 {% block title %}About{% endblock title %}
@@ -594,15 +597,15 @@ touch templates/about.html
 
 </code>
 </pre>
+
 <p>
 ویو می‌تواند از
 <code>TemplateView</code>
  داخلی خوده جنگو استفاده کند مانند صفحه‌ی home.
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 # pages/views.py
 
 from django.views.generic import TemplateView
@@ -615,15 +618,15 @@ template_name = 'about.html'
 
 </code>
 </pre>
+
 <p>
 مسیر URL هم مشابه خواهد بود: URL را در
 <code>about/</code>
  قرار دهید، ویوی مناسب را ایمپورت کنید و یک URL برای about فراهم کنید.
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 # pages/urls.py
 
 from django.urls import path
@@ -634,9 +637,9 @@ urlpatterns = [
 path('about/', AboutPageView.as_view(), name='about'), # new
 path('', HomePageView.as_view(), name='home'),
 ]
-
 </code>
 </pre>
+
 <p>
 حالا اگر به
 <code>http://127.0.0.1:8000/about/</code>
@@ -659,13 +662,11 @@ path('', HomePageView.as_view(), name='home'),
 
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 <!-- templates/_base.html -->
 
 <a class="p-2 text-dark" href="{% url 'about' %}">About</a>
-
 </code>
 </pre>
 
@@ -683,13 +684,11 @@ path('', HomePageView.as_view(), name='home'),
 
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 $ docker-compose exec web pipenv install django-crispy-forms==1.9.2
 $ docker-compose down
 $ docker-compose up -d --build
-
 </code>
 </pre>
 
@@ -705,9 +704,8 @@ $ docker-compose up -d --build
  مشخص کنید. این کار فرم‌های از پیش استایل شده برای ما فراهم می‌کند.
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 # config/settings.py
 
 INSTALLED_APPS = [
@@ -730,7 +728,6 @@ INSTALLED_APPS = [
 # django-crispy-forms
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
-
 </code>
 </pre>
 
@@ -749,9 +746,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 <!-- templates/registration/signup.html -->
 
 {% extends '_base.html' %}
@@ -789,9 +785,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 <!-- templates/registration/login.html -->
+
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
 
@@ -824,9 +821,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 </p>
 
-<pre>
-<code dir="ltr">
+<pre dir="ltr">
+<code>
 # pages/tests.py
+
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from .views import HomePageView, AboutPageView # new
@@ -859,7 +857,6 @@ class AboutPageTests(SimpleTestCase): # new
         view.func.__name__,
         AboutPageView.as_view().__name__
         )
-
 </code>
 </pre>
 
@@ -867,20 +864,17 @@ class AboutPageTests(SimpleTestCase): # new
 تست‌ها را اجرا کنید.
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 $ docker-compose exec web python manage.py test
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
 ...............
 
 ---
-
 Ran 15 tests in 0.433s
 OK
 Destroying test database for alias 'default'...
-
 </code>
 </pre>
 
@@ -892,13 +886,11 @@ Destroying test database for alias 'default'...
 
 </p>
 
-<pre>
-<code dir="ltr">
-
+<pre dir="ltr">
+<code>
 $ git status
 $ git add .
 $ git commit -m 'ch6'
-
 </code>
 </pre>
 
@@ -918,4 +910,3 @@ $ git commit -m 'ch6'
 </p>
 
 </div>
-```
