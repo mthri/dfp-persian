@@ -1,7 +1,6 @@
-<div dir="rtl">
 <h1> فصل ششم: Static Assets</h1>
 	
-<p> 
+<p dir="rtl"> 
 فایل های استاتیک مثل CSS ، JavaScript و تصاویر جزء اصلی هر وب سایت هستند
 جنگو انعطاف پذیری زیادی را در پیکربندی و ذخیره آنها در اختیار ما قرار می دهد. در این
 فصل ما فایل های استاتیک اولیه خود را پیکربندی می کنیم و 
@@ -12,7 +11,7 @@
 
 <h2>برنامه staticfiles</h2>
 
-<p>
+<p dir="rtl">
 جنگو برای مدیریت فایل های استاتیک از کل پروژه ما ، به برنامه 
 <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/staticfiles/"><code>staticfiles</code></a>
  متکی است،
@@ -31,7 +30,7 @@
 <br />
 <h2>STATIC_URL</h2>
 
-<p>
+<p dir="rtl">
  تنظیمات اولیه فایل‌های استاتیک 
 (<a href="https://docs.djangoproject.com/en/3.1/ref/settings/#static-url"><code>STATIC_URL</code></a>)
  ، در حال حاضر برای ما در
@@ -39,14 +38,14 @@
   گنجانده شده است.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # config/settings.py
 STATIC_URL = '/static/'
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 این ثابت، یک URL را تعیین میکند که می توانیم از آن برای ارجاع فایل های استاتیک استفاده کنیم. 
 توجه داشته باشید، که در آخر آدرس دایرکتوری، حتما کاراکتر اسلش
 (<code> / </code>)
@@ -55,13 +54,13 @@ STATIC_URL = '/static/'
 <br />
 <h2>STATICFILES_DIRS</h2>
 
-<p>
+<p dir="rtl">
 قدم بعدی
 <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#staticfiles-dirs"><code>STATICFILES_DIRS</code></a>
  است، که موقعیت فیزیکی فایل های استاتیک را در  مود development بصورت top-level و ثابت مشخص می کند.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # config/settings.py
 
@@ -70,7 +69,7 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 همچنین در اغلب اوقات چندین دایرکتوری با فایلهای استاتیک در یک پروژه وجود دارد ، بنابراین پایتون
 براکت
 <code>[ ]</code>
@@ -82,7 +81,7 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
 <br />
 <h2>STATIC_ROOT</h2>
 
-<p>
+<p dir="rtl">
 <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#static-root"><code>STATIC_ROOT</code></a>
  محل ذخیره فایل های استاتیک برای خروجی نهایی به‌جهت مود production است و باید بر روی مسیر دیگری تنظیم شود.
  
@@ -92,7 +91,7 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
  این روش بسیار سریعتر از استفاده پراکنده فایلهای استاتیک از سراسر پروژه بصورت جدا از هم (که صرفا در مود development از آن استفاده می‌شود) می‌باشد.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # config/settings.py
 
@@ -106,14 +105,14 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
 <br />
 <h2>STATICFILES_FINDERS</h2>
 
-<p>
+<p dir="rtl">
 و در آخرین قسمت تنظیمات می‌رسیم به
 <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#staticfiles-finders"><code>STATICFILES_FINDERS</code></a>،
 که به جانگو می‌فهماند چطور باید مستقیماً به دنبال آدرس فایل استاتیک بگردد،
 این بخش به طور آپشنال برای ما تنظیم شده است، گرچه این یک مرحله اختیاری است ترجیحاً آن را در پروژه ها استفاده نمایید
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # config/settings.py
 
@@ -124,7 +123,7 @@ STATICFILES_FINDERS = [
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 بنظر می‌رسد
 <code>FileSystemFinder</code>
  را در تنظیماتِ
@@ -154,7 +153,7 @@ STATICFILES_FINDERS = [
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # config/settings.py
 
@@ -171,13 +170,13 @@ STATICFILES_FINDERS = [ # new
 <br />
 <h2>دایرکتوری‌های استاتیک</h2>
 
-<p>
+<p dir="rtl">
 اکنون بیایید چند فایل استاتیک را در پروژه خود افزوده و از آنها استفاده کنیم. حتی اگر ما باشیم
 با مراجعه به یک فهرست راهنمای ثابت برای پرونده های ما ، ایجاد آن با ما است ، بنابراین همین کار را هم اکنون انجام دهید
 زیر شاخه های جدید برای CSS ، JavaScript و تصاویر.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 $ mkdir static
 $ mkdir static/css
@@ -186,7 +185,7 @@ $ mkdir static/images
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 در قدم بعد یک فایل استایل به نام
 
 <code>base.css</code>
@@ -200,13 +199,13 @@ $ touch static/css/base.css
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 با ساده‌ترین استایل‌ شروع می‌کنیم، تیتر 
 <code>h1</code>
  را برای شروع قرمز می‌کنیم. هدف ما نشان دادن چگونگی افزودن css به پروژه است و عمیقاً وارد خود CSS نمیشویم
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 /* static/css/base.css */
 
@@ -216,7 +215,7 @@ color: red;
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 اگر صفحه اصلی را refresh کنید ، خواهید دید که چیزی تغییر نکرده است. دلیلش این است که assetsها
 باید به صراحت درتمپلیت‌ها load شود.
 ابتدا همه فایلهای استاتیک را در بالای صفحه با 
@@ -235,7 +234,7 @@ STATIC_URL
 ما می توانیم به سادگی از css/base.css استفاده کنیم.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/_base.html -->
 
@@ -252,7 +251,7 @@ STATIC_URL
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 اکنون برای دیدن نتایج صفحه اصلی را refresh می‌کنیم.
 <br /><br />
 <img src="./assets/89.png" alt="image_89" />
@@ -271,7 +270,7 @@ STATIC_URL
 
 <h2>تصاویر</h2>
 
-<p>
+<p dir="rtl">
 شما می توانید تصویر جلد همین کتاب (Django for Professionals) را از 
 <a href="https://learndjango.com/static/images/books/dfp_cover_31.png">این لینک</a>
  load کنید.
@@ -282,7 +281,7 @@ books/static/images
 و مقدار static را در آدرس‌دهی فایل مانند مثال زیر، برای تگ <img>  درج کنید.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/home.html -->
 
@@ -293,22 +292,22 @@ books/static/images
 <h1>Homepage</h1>
 <img class="bookcover" src="{% static 'images/dfp.png' %}">
 {% if user.is_authenticated %}
-<p>Hi {{ user.email }}!</p>
-<p><a href="{% url 'logout' %}">Log Out</a></p>
+<p dir="rtl">Hi {{ user.email }}!</p>
+<p dir="rtl"><a href="{% url 'logout' %}">Log Out</a></p>
 {% else %}
-<p>You are not logged in</p>
-<p><a href="{% url 'login' %}">Log In</a> |
+<p dir="rtl">You are not logged in</p>
+<p dir="rtl"><a href="{% url 'login' %}">Log In</a> |
 <a href="{% url 'signup' %}">Sign Up</a></p>
 {% endif %}
 {% endblock content %}
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 با refresh کردن صفحه میبینید که عکس بصورت خام و بدون استایل بارگزاری می‌شود. اکنون مقداری استایل به آن اضافه می‌کنیم.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 /* static/css/base.css */
 
@@ -322,7 +321,7 @@ width: auto;
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 با یک refresh مجدد میتوانید نتیجه را با استایل جدید ببینید.
 </p>
 
@@ -335,21 +334,21 @@ width: auto;
 
 <h2>جاوا اسکریپت</h2>
 
-<p>
+<p dir="rtl">
 برای افزودن جاوا اسکریپت به تمپلیت مراحل مشابه قدم قبلی است. اکنون یک فایل به نام base.js می‌سازیم.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 $ touch static/js/base.js
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 معمولا کدهای آماری را در اینجا قرار می دهیم ، مانند Google Analytics. برای اهداف نمایشی بطور مثال یک  ()console.log اضافه می کنیم تا بتوانیم جاوا اسکریپتی که به درستی load شده را ببینیم.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 // static/js/base.js
 
@@ -357,13 +356,13 @@ console.log('JavaScript is Here!');
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 حالا آن را به تمپلیت خود یعنی base.html_ اضافه کنید. توجه کنید جاوا اسکریپت باید در پایین فایل اضافه شود.
 فایلهای جاوا اسکریپت‌ در آخر کار و بعد از HTML ، CSS و سایر assetsها که ابتدا بارگزاری و در مرورگر render می‌شوند بارگزاری خواهند شد.
 این مدل کاری به بهبود سرعت بارگزاری قسمت های بصری سایت کمک می‌کند.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/_base.html -->
 
@@ -389,7 +388,7 @@ console.log('JavaScript is Here!');
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 در مرورگر وب خود ، کنسول جاوا اسکریپت را باز کنید. برای این کار در فایرفاکس از قسمت "Developer Tools" به تب "console" بروید.
 و در کروم کلید f12 را بفشارید و از پنل باز شده باز به تب console بروید.
 
@@ -405,7 +404,7 @@ console.log('JavaScript is Here!');
 <br />
 
 <h2>collectstatic</h2>
-<p>
+<p dir="rtl">
 
 فرض کنید می‌خواهیم وبسایتمان را همین حالا دیپلوی کنیم. میان تمام مراحل، ما نیاز داریم
 <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/staticfiles/#collectstatic"><code>collectstatic</code></a>
@@ -414,7 +413,7 @@ console.log('JavaScript is Here!');
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 $ docker-compose exec web python manage.py collectstatic
 
@@ -422,7 +421,7 @@ result: 135 static files copied to '/code/staticfiles'.
 </code>
 </pre>
 
-<P>
+<p dir="rtl">
 اگر به ide خود نگاه کنید، یک دایرکتوری جدید به نام
 <code>staticfiles</code>
 با چهار زیر پوشه به نام‌های
@@ -438,7 +437,7 @@ result: 135 static files copied to '/code/staticfiles'.
 
 <h2>Bootstrap</h2>
 
-<p>
+<p dir="rtl">
 نوشتن CSS سفارشی برای وبسایت یک هدف ارزشمند است و چیزی است که همیشه به تمام توسعه‌دهندگان نرم‌افزار توصیه می‌شود زمانی آن را امتحان کنند. ولی در عمل دلیلی وجود دارد که فریمورک‌های فرانت-اند مثل
 <a href="https://getbootstrap.com">Bootstrap</a>
 وجود دارند: در هنگام آغاز یک پروژه‌ی جدید، کلّی زمان صرفه جویی می‌شود. اگر شما با یک طراح همکاری نمی‌کنید، از فریم‌ورک برای دوره‌های اولیه‌ی وبسایتتان استفاده کنید.
@@ -467,7 +466,7 @@ copy / paste
 در نهایت، مطمئن باشید که در header یک navbar حداقلی داشته باشید تا اگر یک کاربر LogIn شده، فقط لینک "Log Out" دیده شود. و زمانی که یک کاربر هنوز LogIn نشده دو عبارت "Log In" و "Sign Up" را ببیند.
 
 </P>
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/_base.html -->
 
@@ -525,7 +524,7 @@ copy / paste
 </code>
 </pre>
 
-<P>
+<p dir="rtl">
 بهتر است که این کد را تایپ نکنید. به جایش کد را از
 
 <a href="https://github.com/wsvincent/djangoforprofessionals/blob/master/ch6-static-assets/templates/_base.html">مخزن رسمی</a>
@@ -539,7 +538,7 @@ copy / paste
 
 </P>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/_base.html -->
 
@@ -547,7 +546,7 @@ copy / paste
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 ما مسیر URL صفحه‌ی "About" را بعداً اضافه خواهیم کرد. اگر شما پس از این تغییرات صفحه‌ی خانه را دوباره refresh کنید، باید به این شکل باشد:
 </p>
 
@@ -560,7 +559,7 @@ copy / paste
 
 <h2>صفحه‌ی About</h2>
 
-<p>
+<p dir="rtl">
 آیا متوجهِ لینک "About" در نوار هدایت شدید؟ مشکل این است که صفحه و لینک هنوز وجود ندارند. ولی از آنجایی که ما از قبل یک اَپ 
 <code>pages</code>
  دم دست داریم، ساختن صفحه و لینک زمان کمی می‌برد.
@@ -571,19 +570,19 @@ copy / paste
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 $ touch templates/about.html
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 فعلاً صفحه فقط شامل "About Page" خواهد شد و از
 <code>_base.html</code>
  ارث‌بری خواهد کرد.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/about.html -->
 
@@ -598,13 +597,13 @@ $ touch templates/about.html
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 ویو می‌تواند از
 <code>TemplateView</code>
  داخلی خوده جنگو استفاده کند مانند صفحه‌ی home.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # pages/views.py
 
@@ -619,13 +618,13 @@ template_name = 'about.html'
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 مسیر URL هم مشابه خواهد بود: URL را در
 <code>about/</code>
  قرار دهید، ویوی مناسب را ایمپورت کنید و یک URL برای about فراهم کنید.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # pages/urls.py
 
@@ -640,7 +639,7 @@ path('', HomePageView.as_view(), name='home'),
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 حالا اگر به
 <code>http://127.0.0.1:8000/about/</code>
  بروید، می‌توانید صفحه‌ی About را ببینید.
@@ -653,7 +652,7 @@ path('', HomePageView.as_view(), name='home'),
 </center>
 <br />
 
-<p>
+<p dir="rtl">
 به عنوان قدم نهایی، لینک نوار هدایت را به‌روز کنید. چون ما یک نام در مسیر URL صفحه‌ی about فراهم کردیم که از همان استفاده خواهیم کرد.
 
 در خط 18 فایل
@@ -662,7 +661,7 @@ path('', HomePageView.as_view(), name='home'),
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/_base.html -->
 
@@ -672,7 +671,7 @@ path('', HomePageView.as_view(), name='home'),
 
 <h2>فرم‌های کریسپی جنگو</h2>
 
-<p>
+<p dir="rtl">
 
 یک به‌روز رسانی پایانی به فرم‌های ما مربوط می‌شود. بسته‌ی محبوب شخص ثالث
 
@@ -684,7 +683,7 @@ path('', HomePageView.as_view(), name='home'),
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 $ docker-compose exec web pipenv install django-crispy-forms==1.9.2
 $ docker-compose down
@@ -692,7 +691,7 @@ $ docker-compose up -d --build
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 حالا فرم‌های کریسپی را به
 <code>INSTALLED_APPS</code>
  در تنظیمات اضافه کنید. به یاد داشته باشید که در اینجا نامش باید
@@ -704,7 +703,7 @@ $ docker-compose up -d --build
  مشخص کنید. این کار فرم‌های از پیش استایل شده برای ما فراهم می‌کند.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # config/settings.py
 
@@ -731,7 +730,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 برای استفاده از فرم‌های کریسپی، ما
 <code>crispy_forms_tags</code>
 را بالای یک تمپلیت بارگذاری می‌کنیم و
@@ -746,7 +745,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/registration/signup.html -->
 
@@ -774,7 +773,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 </center>
 <br />
 
-<p>
+<p dir="rtl">
 
 <code>login.html</code>
 را هم با
@@ -785,7 +784,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 <!-- templates/registration/login.html -->
 
@@ -815,13 +814,13 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 <h2>Testها</h2>
 
-<p>
+<p dir="rtl">
 
 زمان تست‌هایی است که خیلی شبیه به تست‌هایی خواهند بود ما قبلاً برای صفحه‌ی home اضافه کردیم.
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 # pages/tests.py
 
@@ -860,11 +859,11 @@ class AboutPageTests(SimpleTestCase): # new
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 تست‌ها را اجرا کنید.
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 $ docker-compose exec web python manage.py test
 Creating test database for alias 'default'...
@@ -880,13 +879,13 @@ Destroying test database for alias 'default'...
 
 <h2>Git</h2>
 
-<p>
+<p dir="rtl">
 
 وضعیت تغییرات (changes) را در این بخش بررسی کنید، همه را اضافه (add) کنید، و سپس یک comment برای commit بنویسید.
 
 </p>
 
-<pre dir="ltr">
+<pre>
 <code>
 $ git status
 $ git add .
@@ -894,7 +893,7 @@ $ git commit -m 'ch6'
 </code>
 </pre>
 
-<p>
+<p dir="rtl">
 
 مانند همیشه اگر مشکلی داشتید، می‌توانید کد خود را با
 
@@ -905,8 +904,6 @@ $ git commit -m 'ch6'
 
 <h2>نتیجه‌گیری</h2>
 
-<p>
+<p dir="rtl">
 فایل‌های استاتیک یک بخش اصلی هر وبسایتی است و در جنگو ما باید چند قدم اضافه برداریم تا به شکل کارا در محیط پروداکشن (production) گرداوری و میزبانی شوند. بعداً در این کتاب ما یادخواهیم گرفت که چگونه از شبکه تحویل محتوا (CDN) برای میزبانی و نمایش فایل‌های استاتیک پروژه‌ی خود استفاده کنیم.
 </p>
-
-</div>
