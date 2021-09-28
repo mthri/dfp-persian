@@ -20,11 +20,12 @@
 تمامی فایل ها با یکدیگر ترکیب و در یک مکان واحد ارائه می‌کند.
 گاهاً تمایز بین فایل های استاتیک local و فایل تولیدشده حاصله از این پروسه، بسیاری از تازه‌واردان جنگو را گیج می کند.
 
-برای شروع ، پیکربندی برنامه 
+برای شروع ، پیکربندی برنامه
 <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/staticfiles/"><code>staticfiles</code></a>
- را در 
+را در
 <code>settings.py</code>
-  بروزرسانی می کنیم.
+بروزرسانی می کنیم.
+
 </p>
 
 <br />
@@ -38,13 +39,12 @@
   گنجانده شده است.
 </p>
 
-
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
 # config/settings.py
 STATIC_URL = '/static/'
 ```
-</span>
+</code>
 
 <p>
 این ثابت، یک URL را تعیین میکند که می توانیم از آن برای ارجاع فایل های استاتیک استفاده کنیم. 
@@ -61,13 +61,13 @@ STATIC_URL = '/static/'
  است، که موقعیت فیزیکی فایل های استاتیک را در  مود development بصورت top-level و ثابت مشخص می کند.
 </p>
 
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
 # config/settings.py
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
 ```
-</span>
+</code>
 
 <p>
 همچنین در اغلب اوقات چندین دایرکتوری با فایلهای استاتیک در یک پروژه وجود دارد ، بنابراین پایتون
@@ -91,14 +91,14 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
  این روش بسیار سریعتر از استفاده پراکنده فایلهای استاتیک از سراسر پروژه بصورت جدا از هم (که صرفا در مود development از آن استفاده می‌شود) می‌باشد.
 </p>
 
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
 # config/settings.py
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
 ```
-</span>
+</code>
 
 <br />
 <h2>STATICFILES_FINDERS</h2>
@@ -110,18 +110,15 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
 این بخش به طور آپشنال برای ما تنظیم شده است، گرچه این یک مرحله اختیاری است ترجیحاً آن را در پروژه ها استفاده نمایید
 </p>
 
-
-
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
 # config/settings.py
 STATICFILES_FINDERS = [
 "django.contrib.staticfiles.finders.FileSystemFinder",
 "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 ```
-</span>
-
+</code>
 
 <p>
 بنظر می‌رسد
@@ -134,13 +131,13 @@ STATICFILES_FINDERS = [
 <code>static/img.png</code>
  فراخوانی شود،
 
-ابتدا توسط 
+ابتدا توسط
 <code>FileSystemFinder</code>
 به گونه‌ای یافت شود
 <br />
-  که
+که
 
- در آدرس تعیین شده یک فایل به نام
+در آدرس تعیین شده یک فایل به نام
 <code>img.png</code>
 قرار دارد، اما بعنوان یک صفحه از برنامه آدرس را به فرم
 
@@ -150,10 +147,11 @@ STATICFILES_FINDERS = [
 <br /><br />
 
 در نهایت تنظیمات این بخش باید به شکل زیر باشد:
+
 </p>
 
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
 # config/settings.py
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
@@ -163,8 +161,7 @@ STATICFILES_FINDERS = [ # new
 "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 ```
-</span>
-
+</code>
 
 <br />
 <h2>دایرکتوری‌های استاتیک</h2>
@@ -175,11 +172,8 @@ STATICFILES_FINDERS = [ # new
 زیر شاخه های جدید برای CSS ، JavaScript و تصاویر.
 </p>
 
-
-
-
 <span  dir="ltr">
-```bash
+```
 $ mkdir static
 $ mkdir static/css
 $ mkdir static/js
@@ -191,15 +185,15 @@ $ mkdir static/images
 در قدم بعد یک فایل استایل به نام
 
 <code>base.css</code>
- می‌سازیم.
+می‌سازیم.
+
 </p>
 
-
-<span  dir="ltr">
+<code  dir="ltr">
 ```
 $ touch static/css/base.css
 ```
-</span>
+</code>
 
 <p>
 با ساده‌ترین استایل‌ شروع می‌کنیم، تیتر 
@@ -207,16 +201,14 @@ $ touch static/css/base.css
  را برای شروع قرمز می‌کنیم. هدف ما نشان دادن چگونگی افزودن css به پروژه است و عمیقاً وارد خود CSS نمیشویم
 </p>
 
-
-<span dir="ltr">
-```css
+<code dir="ltr">
+```
 /* static/css/base.css */
 h1 {
 color: red;
 }
 ```
-</span>
-
+</code>
 
 <p>
 اگر صفحه اصلی را refresh کنید ، خواهید دید که چیزی تغییر نکرده است. دلیلش این است که assetsها
@@ -237,9 +229,8 @@ STATIC_URL
 ما می توانیم به سادگی از css/base.css استفاده کنیم.
 </p>
 
-
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
 <!-- templates/_base.html -->
 {% load static %}
 <!DOCTYPE html>
@@ -252,7 +243,7 @@ STATIC_URL
 </head>
 ...
 ```
-</span>
+</code>
 
 <p>
 اکنون برای دیدن نتایج صفحه اصلی را refresh می‌کنیم.
@@ -268,8 +259,8 @@ STATIC_URL
 بدین معنی است که شما احتمالا
 فراموش کردید که تگ static را در بالای صفحه include کنید پس خط {٪ load static٪} را در بالای صفحه وارد کنید.
 معمولا این خطا زیاد رخ می‌دهد.
-</p>
 
+</p>
 
 <h2>تصاویر</h2>
 
@@ -284,8 +275,8 @@ books/static/images
 و مقدار static را در آدرس‌دهی فایل مانند مثال زیر، برای تگ <img>  درج کنید.
 </p>
 
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
 <!-- templates/home.html -->
 {% extends '_base.html' %}
 {% load static %}
@@ -303,14 +294,14 @@ books/static/images
 {% endif %}
 {% endblock content %}
 ```
-</span>
+</code>
 
 <p>
 با refresh کردن صفحه میبینید که عکس بصورت خام و بدون استایل بارگزاری می‌شود. اکنون مقداری استایل به آن اضافه می‌کنیم.
 </p>
 
-<span dir="ltr">
-```css
+<code dir="ltr">
+```
 /* static/css/base.css */
 h1 {
 color: red;
@@ -320,7 +311,7 @@ height: 300px;
 width: auto;
 }
 ```
-</span>
+</code>
 
 <p>
 با یک refresh مجدد میتوانید نتیجه را با استایل جدید ببینید.
@@ -339,23 +330,24 @@ width: auto;
 برای افزودن جاوا اسکریپت به تمپلیت مراحل مشابه قدم قبلی است. اکنون یک فایل به نام base.js می‌سازیم.
 </p>
 
-<span dir="ltr">
-```bash
+<code dir="ltr">
+```
 $ touch static/js/base.js
 ```
-</span>
+</code>
 
 <p>
 معمولا کدهای آماری را در اینجا قرار می دهیم ، مانند Google Analytics. برای اهداف نمایشی بطور مثال یک  ()console.log اضافه می کنیم تا بتوانیم جاوا اسکریپتی که به درستی load شده را ببینیم.
 </p>
 
-<span dir="ltr">
-```javascript
+<code dir="ltr">
+```
 // static/js/base.js
 
 console.log('JavaScript is Here!');
+
 ```
-</span>
+</code>
 
 <p>
 حالا آن را به تمپلیت خود یعنی base.html_ اضافه کنید. توجه کنید جاوا اسکریپت باید در پایین فایل اضافه شود.
@@ -363,10 +355,13 @@ console.log('JavaScript is Here!');
 این مدل کاری به بهبود سرعت بارگزاری قسمت های بصری سایت کمک می‌کند.
 </p>
 
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
+
 <!-- templates/_base.html -->
+
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -385,13 +380,14 @@ console.log('JavaScript is Here!');
 </body>
 </html>
 ```
-</span>
+</code>
 
 <p>
 در مرورگر وب خود ، کنسول جاوا اسکریپت را باز کنید. برای این کار در فایرفاکس از قسمت "Developer Tools" به تب "console" بروید.
 و در کروم کلید f12 را بفشارید و از پنل باز شده باز به تب console بروید.
 
 در صورت فراخوانی صفحه console ،باید تصویری مانند زیر را مشاهده کنید:
+
 </p>
 
 <br />
@@ -401,34 +397,35 @@ console.log('JavaScript is Here!');
 </center>
 <br />
 
-
 <h2>collectstatic</h2>
 <p>
 
-فرض کنید می‌خواهیم وبسایتمان را همین حالا دیپلوی کنیم. میان تمام مراحل، ما نیاز داریم 
+فرض کنید می‌خواهیم وبسایتمان را همین حالا دیپلوی کنیم. میان تمام مراحل، ما نیاز داریم
 <a href="https://docs.djangoproject.com/en/3.1/ref/contrib/staticfiles/#collectstatic"><code>collectstatic</code></a>
 
- را اجرا کنیم تا یک دایرکتوری واحد آماده به کار از تمام فایل‌های استاتیک (static assets) پروژه بسازیم.
+را اجرا کنیم تا یک دایرکتوری واحد آماده به کار از تمام فایل‌های استاتیک (static assets) پروژه بسازیم.
+
 </p>
 
-<span dir="ltr">
-```bash
+<code dir="ltr">
+```
 $ docker-compose exec web python manage.py collectstatic
 
 result: 135 static files copied to '/code/staticfiles'.
+
 ```
-</span>
+</code>
 
 <P>
-اگر به ide خود نگاه کنید، یک دایرکتوری جدید به نام 
+اگر به ide خود نگاه کنید، یک دایرکتوری جدید به نام
 <code>staticfiles</code>
-با چهار زیر پوشه به نام‌های 
+با چهار زیر پوشه به نام‌های
 <code>admin</code>
-و 
+و
 <code>css</code>
-و 
+و
 <code>images</code>
-و 
+و
 <code>js</code>
 وجود دارد. و سه تای دیگر هم توضیح داده شده. به همین دلیل 122 فایل کپی شدند.
 </p>
@@ -437,14 +434,14 @@ result: 135 static files copied to '/code/staticfiles'.
 <h2>Bootstrap</h2>
 
 <p>
-نوشتن CSS سفارشی برای وبسایت یک هدف ارزشمند است و چیزی است که همیشه به تمام توسعه‌دهندگان نرم‌افزار توصیه می‌شود زمانی آن را امتحان کنند. ولی در عمل دلیلی وجود دارد که فریمورک‌های فرانت-اند مثل 
+نوشتن CSS سفارشی برای وبسایت یک هدف ارزشمند است و چیزی است که همیشه به تمام توسعه‌دهندگان نرم‌افزار توصیه می‌شود زمانی آن را امتحان کنند. ولی در عمل دلیلی وجود دارد که فریمورک‌های فرانت-اند مثل
 <a href="https://getbootstrap.com">Bootstrap</a>
 وجود دارند: در هنگام آغاز یک پروژه‌ی جدید، کلّی زمان صرفه جویی می‌شود. اگر شما با یک طراح همکاری نمی‌کنید، از فریم‌ورک برای دوره‌های اولیه‌ی وبسایتتان استفاده کنید.
 <br /><br />
-در این بخش ما Bootstrap را به همراه فایل 
+در این بخش ما Bootstrap را به همراه فایل
 <code>base.css</code>
  قبلی به پروژه‌ی خودمان اضافه خواهیم کرد. تایپ کردن دستی همه‌ کدها طول می‌کشد و ممکن است باعث خطا شود. پس این جا از معدود موقعیت‌هایی است که توصیه می‌شود از
- 
+
 <a href="https://github.com/wsvincent/djangoforprofessionals/blob/master/ch6-static-assets/templates/_base.html">
 سورس کد رسمی
 </a>
@@ -452,9 +449,9 @@ result: 135 static files copied to '/code/staticfiles'.
 copy / paste
  کنید.
 
-به یاد داشته باشید که اینجا برای CSS و  JavaScript ترتیب مهم است. فایل‌ها از بالا به پایین بارگذاری خواهند شد پس فایل 
+به یاد داشته باشید که اینجا برای CSS و  JavaScript ترتیب مهم است. فایل‌ها از بالا به پایین بارگذاری خواهند شد پس فایل
 <code>base.css</code>
-ما بعد از Bootstrap CSS بارگذاری خواهد شد و استایلِ 
+ما بعد از Bootstrap CSS بارگذاری خواهد شد و استایلِ
 <code>h1</code>
 
 ما بر استایل پیش‌فرضِ Bootstrap غالب می‌شود.
@@ -464,10 +461,13 @@ copy / paste
 
 در نهایت، مطمئن باشید که در header یک navbar حداقلی داشته باشید تا اگر یک کاربر LogIn شده، فقط لینک "Log Out" دیده شود. و زمانی که یک کاربر هنوز LogIn نشده دو عبارت "Log In" و "Sign Up" را ببیند.
 </P>
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
+
 <!-- templates/_base.html -->
+
 {% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -518,28 +518,28 @@ copy / paste
 </body>
 </html>
 ```
-</span>
-
+</code>
 
 <P>
-بهتر است که این کد را تایپ نکنید. به جایش کد را از 
+بهتر است که این کد را تایپ نکنید. به جایش کد را از
 
 <a href="https://github.com/wsvincent/djangoforprofessionals/blob/master/ch6-static-assets/templates/_base.html">مخزن رسمی</a>
-کپی و پیست کنید. در خط 18 کد، مطمئن شوید که تگ 
+کپی و پیست کنید. در خط 18 کد، مطمئن شوید که تگ
 <code>href</code>
- را به 
+را به
 <code>#</code>
-تغییر دهید، نه 
+تغییر دهید، نه
 <code>{% url 'about' %}</code>
 به عبارت دیگر، باید با کد بالا تطابق داشته باشد و به این شکل باشد:
+
 </P>
 
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
 <!-- templates/_base.html -->
 <a class="p-2 text-dark" href="#">About</a>
 ```
-</span>
+</code>
 
 <p>
 ما مسیر URL صفحه‌ی "About" را بعداً اضافه خواهیم کرد. اگر شما پس از این تغییرات صفحه‌ی خانه را دوباره refresh کنید، باید به این شکل باشد:
@@ -552,7 +552,6 @@ copy / paste
 </center>
 <br />
 
-
 <h2>صفحه‌ی About</h2>
 
 <p>
@@ -560,17 +559,17 @@ copy / paste
 <code>pages</code>
  دم دست داریم، ساختن صفحه و لینک زمان کمی می‌برد.
 
-از آنجایی که این یک صفحه‌ی استاتیک خواهد بود، ما نیازی به مدل پایگاه داده نداریم. با این حال، به یک تمپلیت، ویو (View) و URL نیاز خواهیم داشت. بیاید با یک تمپلیت به نام 
+از آنجایی که این یک صفحه‌ی استاتیک خواهد بود، ما نیازی به مدل پایگاه داده نداریم. با این حال، به یک تمپلیت، ویو (View) و URL نیاز خواهیم داشت. بیاید با یک تمپلیت به نام
 <code>about.html</code>
- شروع کنیم.
+شروع کنیم.
+
 </p>
 
-
-<span dir="ltr">
-```bash
+<code dir="ltr">
+```
 touch templates/about.html
 ```
-</span>
+</code>
 
 <p>
 فعلاً صفحه فقط شامل "About Page" خواهد شد و از
@@ -578,61 +577,64 @@ touch templates/about.html
  ارث‌بری خواهد کرد.
 </p>
 
-
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
 <!-- templates/about.html -->
 {% extends '_base.html' %}
 
 {% block title %}About{% endblock title %}
 
 {% block content %}
-	<h1>About Page</h1>
+<h1>About Page</h1>
 {% endblock content %}
+
 ```
-</span>
+</code>
 <p>
 ویو می‌تواند از
 <code>TemplateView</code>
  داخلی خوده جنگو استفاده کند مانند صفحه‌ی home.
 </p>
 
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
+
 # pages/views.py
+
 from django.views.generic import TemplateView
 
-
 class HomePageView(TemplateView):
-	template_name = 'home.html'
-    
-    
+template_name = 'home.html'
+
 class AboutPageView(TemplateView): # new
-	template_name = 'about.html'
+template_name = 'about.html'
+
 ```
-</span>
+</code>
 <p>
-مسیر URL هم مشابه خواهد بود: URL را در 
+مسیر URL هم مشابه خواهد بود: URL را در
 <code>about/</code>
  قرار دهید، ویوی مناسب را ایمپورت کنید و یک URL برای about فراهم کنید.
 </p>
 
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
+
 # pages/urls.py
+
 from django.urls import path
 
 from .views import HomePageView, AboutPageView # new
 
-
 urlpatterns = [
-	path('about/', AboutPageView.as_view(), name='about'), # new
-	path('', HomePageView.as_view(), name='home'),
+path('about/', AboutPageView.as_view(), name='about'), # new
+path('', HomePageView.as_view(), name='home'),
 ]
+
 ```
-</span>
+</code>
 <p>
-حالا اگر به 
+حالا اگر به
 <code>http://127.0.0.1:8000/about/</code>
  بروید، می‌توانید صفحه‌ی About را ببینید.
 </p>
@@ -647,17 +649,20 @@ urlpatterns = [
 <p>
 به عنوان قدم نهایی، لینک نوار هدایت را به‌روز کنید. چون ما یک نام در مسیر URL صفحه‌ی about فراهم کردیم که از همان استفاده خواهیم کرد.
 
-در خط 18 فایل 
+در خط 18 فایل
 <code>_base.html</code>
 ، خط را با استفاده از لینک صفحه‌ی About تغییر دهید. مانند زیر:
 </p>
 
-<span dir="ltr">
-```html
-<!-- templates/_base.html -->
-<a class="p-2 text-dark" href="{% url 'about' %}">About</a>
+<code dir="ltr">
 ```
-</span>
+
+<!-- templates/_base.html -->
+
+<a class="p-2 text-dark" href="{% url 'about' %}">About</a>
+
+```
+</code>
 
 <h2>فرم‌های کریسپی جنگو</h2>
 
@@ -672,73 +677,83 @@ urlpatterns = [
 ما الگوی معمول را برای نصب آن دنبال می‌کنیم: در یک داکر نصب کنید، کانتینر داکر را متوقف کنید و سپس آن را rebuilt کنید.
 </p>
 
-<span dir="ltr">
-```bash
+<code dir="ltr">
+```
+
 $ docker-compose exec web pipenv install django-crispy-forms==1.9.2
 $ docker-compose down
 $ docker-compose up -d --build
+
 ```
-</span>
+</code>
 
 <p>
-حالا فرم‌های کریسپی را به 
+حالا فرم‌های کریسپی را به
 <code>INSTALLED_APPS</code>
- در تنظیمات اضافه کنید. به یاد داشته باشید که در اینجا نامش باید 
+ در تنظیمات اضافه کنید. به یاد داشته باشید که در اینجا نامش باید
  <code>crispy_forms</code>
-  باشد. یک ویژگی اضافه‌ی خوب این است که 
+  باشد. یک ویژگی اضافه‌ی خوب این است که
 <code>bootstrap4</code>
- را ذیل 
+ را ذیل
 <code>CRISPY_TEMPLATE_PACK</code>
  مشخص کنید. این کار فرم‌های از پیش استایل شده برای ما فراهم می‌کند.
 </p>
 
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
+
 # config/settings.py
+
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+
     # Third-party
     'crispy_forms', # new
-    
+
     # Local
     'accounts',
-    'pages',    
+    'pages',
+
 ]
 
 # django-crispy-forms
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
+
 ```
-</span>
+</code>
 
 <p>
-برای استفاده از فرم‌های کریسپی، ما 
+برای استفاده از فرم‌های کریسپی، ما
 <code>crispy_forms_tags</code>
-را بالای یک تمپلیت بارگذاری می‌کنیم و 
+را بالای یک تمپلیت بارگذاری می‌کنیم و
  <code>{{ form|crispy }}</code>
-را بارگذاری می‌کنیم تا برای نمایش فیلدهای فرم جایگزین 
+را بارگذاری می‌کنیم تا برای نمایش فیلدهای فرم جایگزین
 <code>{{ form.as_p }}</code>
 شود. ما همچنین این زمان را برای اضافه کردن استایل Bootstrap به دکمه‌ی Submit صرف می‌کنیم.
 
-با 
+با
 <code>signup.html</code>
  شروع کنید. به‌روز رسانی‌های زیر را ایجاد کنید.
 </p>
 
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
+
 <!-- templates/registration/signup.html -->
+
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
 
 {% block title %}Sign Up{% endblock title %}
 
 {% block content %}
+
   <h2>Sign Up</h2>
   <form method="post">
     {% csrf_token %}
@@ -747,8 +762,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
   </form>
 {% endblock content %}
 ```
-</span>
-
+</code>
 
 <br />
 <img src="./assets/100.png" alt="image_100" />
@@ -759,17 +773,17 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 <p>
 
-
 <code>login.html</code>
- را هم با 
+را هم با
 <code>crispy_forms_tags</code>
- در بالایش و 
+در بالایش و
 <code>{{ form|crispy }}</code>
- در فرم به‌روز کنید.
+در فرم به‌روز کنید.
+
 </p>
 
-<span dir="ltr">
-```html
+<code dir="ltr">
+```
 <!-- templates/registration/login.html -->
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
@@ -777,6 +791,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 {% block title %}Log In{% endblock title %}
 
 {% block content %}
+
   <h2>Log In</h2>
   <form method="post">
     {% csrf_token %}
@@ -785,8 +800,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
   </form>
 {% endblock content %}
 ```
-</span>
-
+</code>
 
 <br />
 <img src="./assets/101.png" alt="image_101" />
@@ -800,64 +814,68 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 <p>
 
 زمان تست‌هایی است که خیلی شبیه به تست‌هایی خواهند بود ما قبلاً برای صفحه‌ی home اضافه کردیم.
+
 </p>
 
-<span dir="ltr">
-```python
+<code dir="ltr">
+```
 # pages/tests.py
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from .views import HomePageView, AboutPageView # new
 
-
 class HomepageTests(SimpleTestCase):
-    ...
-    
-    
+...
+
 class AboutPageTests(SimpleTestCase): # new
-    
+
     def setUp(self):
         url = reverse('about')
         self.response = self.client.get(url)
-        
+
     def test_aboutpage_status_code(self):
     	self.assertEqual(self.response.status_code, 200)
-    
+
     def test_aboutpage_template(self):
     	self.assertTemplateUsed(self.response, 'about.html')
-    
+
     def test_aboutpage_contains_correct_html(self):
     	self.assertContains(self.response, 'About Page')
-    
+
     def test_aboutpage_does_not_contain_incorrect_html(self):
         self.assertNotContains(
         self.response, 'Hi there! I should not be on the page.')
-    
+
     def test_aboutpage_url_resolves_aboutpageview(self):
         view = resolve('/about/')
         self.assertEqual(
         view.func.__name__,
         AboutPageView.as_view().__name__
         )
+
 ```
-</span>
+</code>
 
 <p>
 تست‌ها را اجرا کنید.
 </p>
 
-<span dir="ltr">
-```bash
+<code dir="ltr">
+```
+
 $ docker-compose exec web python manage.py test
 Creating test database for alias 'default'...
 System check identified no issues (0 silenced).
 ...............
-----------------------------------------------------------------------
+
+---
+
 Ran 15 tests in 0.433s
 OK
 Destroying test database for alias 'default'...
+
 ```
-</span>
+</code>
 
 
 <h2>Git</h2>
@@ -867,17 +885,19 @@ Destroying test database for alias 'default'...
 وضعیت تغییرات (changes) را در این بخش بررسی کنید، همه را اضافه (add) کنید، و سپس یک comment برای commit بنویسید.
 </p>
 
-<span dir="ltr">
-```bash
+<code dir="ltr">
+```
+
 $ git status
 $ git add .
 $ git commit -m 'ch6'
+
 ```
-</span>
+</code>
 
 <p>
 
-مانند همیشه اگر مشکلی داشتید، می‌توانید کد خود را با 
+مانند همیشه اگر مشکلی داشتید، می‌توانید کد خود را با
 
 <a href="https://github.com/wsvincent/djangoforprofessionals/tree/master/ch6-static-assets">کد رسمی در Github</a>
  مقایسه کنید.
@@ -891,3 +911,4 @@ $ git commit -m 'ch6'
 </p>
 
 </div>
+```
