@@ -97,4 +97,20 @@ volumes:
 
 قدم دوم آپدیت کردن تنظیمات `SECRET_KEY` در `config/settings.py` است.
 
+### گیت
+
+ما تغییرات مهمدی در این فصل داشتیم پس مطمئن شوید که تغییرات را با گیت آپدیت میکنیم.
+
+<div dir="ltr">
+
+```shell
+$ git status
+$ git add .
+$ git commit -m 'ch8'
+```
+
+</div>
+
+در صورت بروز هر گونه مشکل، فایل های خود را با [منبع اصلی](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch8-environment-variables) مقایسه نمایید.
+
 </div>
