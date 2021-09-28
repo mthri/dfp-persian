@@ -39,12 +39,12 @@
   گنجانده شده است.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 # config/settings.py
 STATIC_URL = '/static/'
-```
 </code>
+</pre>
 
 <p>
 این ثابت، یک URL را تعیین میکند که می توانیم از آن برای ارجاع فایل های استاتیک استفاده کنیم. 
@@ -62,12 +62,14 @@ STATIC_URL = '/static/'
 </p>
 
 <code dir="ltr">
-```
+
 # config/settings.py
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
-```
 </code>
+
+</pre>
 
 <p>
 همچنین در اغلب اوقات چندین دایرکتوری با فایلهای استاتیک در یک پروژه وجود دارد ، بنابراین پایتون
@@ -91,14 +93,16 @@ STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),) # new
  این روش بسیار سریعتر از استفاده پراکنده فایلهای استاتیک از سراسر پروژه بصورت جدا از هم (که صرفا در مود development از آن استفاده می‌شود) می‌باشد.
 </p>
 
-<code dir="ltr">
-```
+<>
+
 # config/settings.py
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
-```
 </code>
+
+</pre>
 
 <br />
 <h2>STATICFILES_FINDERS</h2>
@@ -110,15 +114,15 @@ STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
 این بخش به طور آپشنال برای ما تنظیم شده است، گرچه این یک مرحله اختیاری است ترجیحاً آن را در پروژه ها استفاده نمایید
 </p>
 
+<pre>
 <code dir="ltr">
-```
 # config/settings.py
 STATICFILES_FINDERS = [
 "django.contrib.staticfiles.finders.FileSystemFinder",
 "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-```
 </code>
+</pre>
 
 <p>
 بنظر می‌رسد
@@ -150,8 +154,8 @@ STATICFILES_FINDERS = [
 
 </p>
 
+<pre>
 <code dir="ltr">
-```
 # config/settings.py
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
@@ -160,8 +164,8 @@ STATICFILES_FINDERS = [ # new
 "django.contrib.staticfiles.finders.FileSystemFinder",
 "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-```
 </code>
+</pre>
 
 <br />
 <h2>دایرکتوری‌های استاتیک</h2>
@@ -192,8 +196,8 @@ $ mkdir static/images
 <code  dir="ltr">
 ```
 $ touch static/css/base.css
-```
 </code>
+</pre>
 
 <p>
 با ساده‌ترین استایل‌ شروع می‌کنیم، تیتر 
@@ -201,14 +205,14 @@ $ touch static/css/base.css
  را برای شروع قرمز می‌کنیم. هدف ما نشان دادن چگونگی افزودن css به پروژه است و عمیقاً وارد خود CSS نمیشویم
 </p>
 
+<pre>
 <code dir="ltr">
-```
 /* static/css/base.css */
 h1 {
 color: red;
 }
-```
 </code>
+</pre>
 
 <p>
 اگر صفحه اصلی را refresh کنید ، خواهید دید که چیزی تغییر نکرده است. دلیلش این است که assetsها
@@ -229,8 +233,8 @@ STATIC_URL
 ما می توانیم به سادگی از css/base.css استفاده کنیم.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 <!-- templates/_base.html -->
 {% load static %}
 <!DOCTYPE html>
@@ -242,8 +246,8 @@ STATIC_URL
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 ...
-```
 </code>
+</pre>
 
 <p>
 اکنون برای دیدن نتایج صفحه اصلی را refresh می‌کنیم.
@@ -275,8 +279,8 @@ books/static/images
 و مقدار static را در آدرس‌دهی فایل مانند مثال زیر، برای تگ <img>  درج کنید.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 <!-- templates/home.html -->
 {% extends '_base.html' %}
 {% load static %}
@@ -293,15 +297,15 @@ books/static/images
 <a href="{% url 'signup' %}">Sign Up</a></p>
 {% endif %}
 {% endblock content %}
-```
 </code>
+</pre>
 
 <p>
 با refresh کردن صفحه میبینید که عکس بصورت خام و بدون استایل بارگزاری می‌شود. اکنون مقداری استایل به آن اضافه می‌کنیم.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 /* static/css/base.css */
 h1 {
 color: red;
@@ -310,8 +314,8 @@ color: red;
 height: 300px;
 width: auto;
 }
-```
 </code>
+</pre>
 
 <p>
 با یک refresh مجدد میتوانید نتیجه را با استایل جدید ببینید.
@@ -330,24 +334,24 @@ width: auto;
 برای افزودن جاوا اسکریپت به تمپلیت مراحل مشابه قدم قبلی است. اکنون یک فایل به نام base.js می‌سازیم.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 $ touch static/js/base.js
-```
 </code>
+</pre>
 
 <p>
 معمولا کدهای آماری را در اینجا قرار می دهیم ، مانند Google Analytics. برای اهداف نمایشی بطور مثال یک  ()console.log اضافه می کنیم تا بتوانیم جاوا اسکریپتی که به درستی load شده را ببینیم.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 // static/js/base.js
 
 console.log('JavaScript is Here!');
 
-```
 </code>
+</pre>
 
 <p>
 حالا آن را به تمپلیت خود یعنی base.html_ اضافه کنید. توجه کنید جاوا اسکریپت باید در پایین فایل اضافه شود.
@@ -355,8 +359,8 @@ console.log('JavaScript is Here!');
 این مدل کاری به بهبود سرعت بارگزاری قسمت های بصری سایت کمک می‌کند.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 <!-- templates/_base.html -->
 
@@ -379,8 +383,8 @@ console.log('JavaScript is Here!');
 <script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>
-```
 </code>
+</pre>
 
 <p>
 در مرورگر وب خود ، کنسول جاوا اسکریپت را باز کنید. برای این کار در فایرفاکس از قسمت "Developer Tools" به تب "console" بروید.
@@ -407,14 +411,14 @@ console.log('JavaScript is Here!');
 
 </p>
 
+<pre>
 <code dir="ltr">
-```
 $ docker-compose exec web python manage.py collectstatic
 
 result: 135 static files copied to '/code/staticfiles'.
 
-```
 </code>
+</pre>
 
 <P>
 اگر به ide خود نگاه کنید، یک دایرکتوری جدید به نام
@@ -429,7 +433,6 @@ result: 135 static files copied to '/code/staticfiles'.
 <code>js</code>
 وجود دارد. و سه تای دیگر هم توضیح داده شده. به همین دلیل 122 فایل کپی شدند.
 </p>
-
 
 <h2>Bootstrap</h2>
 
@@ -447,9 +450,9 @@ result: 135 static files copied to '/code/staticfiles'.
 </a>
 
 copy / paste
- کنید.
+کنید.
 
-به یاد داشته باشید که اینجا برای CSS و  JavaScript ترتیب مهم است. فایل‌ها از بالا به پایین بارگذاری خواهند شد پس فایل
+به یاد داشته باشید که اینجا برای CSS و JavaScript ترتیب مهم است. فایل‌ها از بالا به پایین بارگذاری خواهند شد پس فایل
 <code>base.css</code>
 ما بعد از Bootstrap CSS بارگذاری خواهد شد و استایلِ
 <code>h1</code>
@@ -457,12 +460,13 @@ copy / paste
 ما بر استایل پیش‌فرضِ Bootstrap غالب می‌شود.
 <br /><br />
 
- مانند قبل، در پایین فایل مهم است که اول jQuery بارگذاری شود، سپس PopperJs و بعد از آن فایل جاوا اسکریپتِ Bootstrap.
+مانند قبل، در پایین فایل مهم است که اول jQuery بارگذاری شود، سپس PopperJs و بعد از آن فایل جاوا اسکریپتِ Bootstrap.
 
 در نهایت، مطمئن باشید که در header یک navbar حداقلی داشته باشید تا اگر یک کاربر LogIn شده، فقط لینک "Log Out" دیده شود. و زمانی که یک کاربر هنوز LogIn نشده دو عبارت "Log In" و "Sign Up" را ببیند.
+
 </P>
+<pre>
 <code dir="ltr">
-```
 
 <!-- templates/_base.html -->
 
@@ -517,8 +521,8 @@ copy / paste
     9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
 </body>
 </html>
-```
 </code>
+</pre>
 
 <P>
 بهتر است که این کد را تایپ نکنید. به جایش کد را از
@@ -534,12 +538,12 @@ copy / paste
 
 </P>
 
+<pre>
 <code dir="ltr">
-```
 <!-- templates/_base.html -->
 <a class="p-2 text-dark" href="#">About</a>
-```
 </code>
+</pre>
 
 <p>
 ما مسیر URL صفحه‌ی "About" را بعداً اضافه خواهیم کرد. اگر شما پس از این تغییرات صفحه‌ی خانه را دوباره refresh کنید، باید به این شکل باشد:
@@ -565,11 +569,11 @@ copy / paste
 
 </p>
 
+<pre>
 <code dir="ltr">
-```
 touch templates/about.html
-```
 </code>
+</pre>
 
 <p>
 فعلاً صفحه فقط شامل "About Page" خواهد شد و از
@@ -577,8 +581,8 @@ touch templates/about.html
  ارث‌بری خواهد کرد.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 <!-- templates/about.html -->
 {% extends '_base.html' %}
 
@@ -588,16 +592,16 @@ touch templates/about.html
 <h1>About Page</h1>
 {% endblock content %}
 
-```
 </code>
+</pre>
 <p>
 ویو می‌تواند از
 <code>TemplateView</code>
  داخلی خوده جنگو استفاده کند مانند صفحه‌ی home.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 # pages/views.py
 
@@ -609,16 +613,16 @@ template_name = 'home.html'
 class AboutPageView(TemplateView): # new
 template_name = 'about.html'
 
-```
 </code>
+</pre>
 <p>
 مسیر URL هم مشابه خواهد بود: URL را در
 <code>about/</code>
  قرار دهید، ویوی مناسب را ایمپورت کنید و یک URL برای about فراهم کنید.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 # pages/urls.py
 
@@ -631,8 +635,8 @@ path('about/', AboutPageView.as_view(), name='about'), # new
 path('', HomePageView.as_view(), name='home'),
 ]
 
-```
 </code>
+</pre>
 <p>
 حالا اگر به
 <code>http://127.0.0.1:8000/about/</code>
@@ -650,19 +654,20 @@ path('', HomePageView.as_view(), name='home'),
 به عنوان قدم نهایی، لینک نوار هدایت را به‌روز کنید. چون ما یک نام در مسیر URL صفحه‌ی about فراهم کردیم که از همان استفاده خواهیم کرد.
 
 در خط 18 فایل
-<code>_base.html</code>
+<code>\_base.html</code>
 ، خط را با استفاده از لینک صفحه‌ی About تغییر دهید. مانند زیر:
+
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 <!-- templates/_base.html -->
 
 <a class="p-2 text-dark" href="{% url 'about' %}">About</a>
 
-```
 </code>
+</pre>
 
 <h2>فرم‌های کریسپی جنگو</h2>
 
@@ -675,17 +680,18 @@ path('', HomePageView.as_view(), name='home'),
 تغییرات خوب زیادی دارد.
 
 ما الگوی معمول را برای نصب آن دنبال می‌کنیم: در یک داکر نصب کنید، کانتینر داکر را متوقف کنید و سپس آن را rebuilt کنید.
+
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 $ docker-compose exec web pipenv install django-crispy-forms==1.9.2
 $ docker-compose down
 $ docker-compose up -d --build
 
-```
 </code>
+</pre>
 
 <p>
 حالا فرم‌های کریسپی را به
@@ -699,8 +705,8 @@ $ docker-compose up -d --build
  مشخص کنید. این کار فرم‌های از پیش استایل شده برای ما فراهم می‌کند.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 # config/settings.py
 
@@ -725,8 +731,8 @@ INSTALLED_APPS = [
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
-```
 </code>
+</pre>
 
 <p>
 برای استفاده از فرم‌های کریسپی، ما
@@ -739,11 +745,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 با
 <code>signup.html</code>
- شروع کنید. به‌روز رسانی‌های زیر را ایجاد کنید.
+شروع کنید. به‌روز رسانی‌های زیر را ایجاد کنید.
+
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 <!-- templates/registration/signup.html -->
 
@@ -761,8 +768,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
     <button class="btn btn-success" type="submit">Sign Up</button>
   </form>
 {% endblock content %}
-```
 </code>
+</pre>
 
 <br />
 <img src="./assets/100.png" alt="image_100" />
@@ -782,8 +789,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 </p>
 
+<pre>
 <code dir="ltr">
-```
 <!-- templates/registration/login.html -->
 {% extends '_base.html' %}
 {% load crispy_forms_tags %}
@@ -799,8 +806,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
     <button class="btn btn-success" type="submit">Log In</button>
   </form>
 {% endblock content %}
-```
 </code>
+</pre>
 
 <br />
 <img src="./assets/101.png" alt="image_101" />
@@ -817,8 +824,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # new
 
 </p>
 
+<pre>
 <code dir="ltr">
-```
 # pages/tests.py
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
@@ -853,15 +860,15 @@ class AboutPageTests(SimpleTestCase): # new
         AboutPageView.as_view().__name__
         )
 
-```
 </code>
+</pre>
 
 <p>
 تست‌ها را اجرا کنید.
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 $ docker-compose exec web python manage.py test
 Creating test database for alias 'default'...
@@ -874,35 +881,35 @@ Ran 15 tests in 0.433s
 OK
 Destroying test database for alias 'default'...
 
-```
 </code>
-
+</pre>
 
 <h2>Git</h2>
 
 <p>
 
 وضعیت تغییرات (changes) را در این بخش بررسی کنید، همه را اضافه (add) کنید، و سپس یک comment برای commit بنویسید.
+
 </p>
 
+<pre>
 <code dir="ltr">
-```
 
 $ git status
 $ git add .
 $ git commit -m 'ch6'
 
-```
 </code>
+</pre>
 
 <p>
 
 مانند همیشه اگر مشکلی داشتید، می‌توانید کد خود را با
 
 <a href="https://github.com/wsvincent/djangoforprofessionals/tree/master/ch6-static-assets">کد رسمی در Github</a>
- مقایسه کنید.
-</p>
+مقایسه کنید.
 
+</p>
 
 <h2>نتیجه‌گیری</h2>
 
