@@ -223,7 +223,6 @@ $ touch static/css/base.css
 
 ```css
 /* static/css/base.css */
-
 h1 {
   color: red;
 }
@@ -277,9 +276,9 @@ STATIC_URL
 <br /><br />
 <img src="./assets/89.png" alt="image_89" />
 
-<center>
+<p align="center">
 <h6>صفحه اصلی با تیتر قرمز</h6>
-</center>
+</p>
 <br />
 
 <p>
@@ -300,8 +299,7 @@ STATIC_URL
 آن را در آدرس
 books/static/images
  با نام dfp.png ذخیره کنید.
-برای نمایش آن در صفحه اصلی ، templates/home.html را باید ویرایش کنید و {٪ load static٪} را به بالای صفحه اضافه و
-و مقدار static را در آدرس‌دهی فایل مانند مثال زیر، برای تگ <img>  درج کنید.
+برای نمایش آن در صفحه اصلی ، templates/home.html را باید ویرایش کنید و {٪ load static٪} را به بالای صفحه اضافه و مقدار static را در آدرس‌دهی فایل مانند مثال زیر، برای تگ <img>  درج کنید.
 </p>
 
 <div dir="ltr">
@@ -352,9 +350,10 @@ h1 {
 
 <br />
 <img src="./assets/91.png" alt="image_91" />
-<center>
+
+<p align="center">
 <h6>صفحه اصلی با تصویر جلد کتاب</h6>
-</center>
+</p>
 <br />
 
 <h2>جاوا اسکریپت</h2>
@@ -372,7 +371,7 @@ $ touch static/js/base.js
 </div>
 
 <p>
-معمولا کدهای آماری را در اینجا قرار می دهیم ، مانند Google Analytics. برای اهداف نمایشی بطور مثال یک  ()console.log اضافه می کنیم تا بتوانیم جاوا اسکریپتی که به درستی load شده را ببینیم.
+معمولا کدهای آماری را در اینجا قرار می دهیم ، مانند Google Analytics. برای اهداف نمایشی بطور مثال یک  console.log اضافه می کنیم تا بتوانیم جاوا اسکریپتی که به درستی load شده را ببینیم.
 </p>
 
 <div dir="ltr">
@@ -394,7 +393,6 @@ console.log("JavaScript is Here!");
 
 ```html
 <!-- templates/_base.html -->
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -425,9 +423,10 @@ console.log("JavaScript is Here!");
 
 <br />
 <img src="./assets/93.png" alt="image_93" />
-<center>
+
+<p align="center">
 <h6>کنسول جاوا اسکریپت و  صفحه اصلی</h6>
-</center>
+</p>
 <br />
 
 <h2>collectstatic</h2>
@@ -595,7 +594,6 @@ copy / paste
 
 ```html
 <!-- templates/_base.html -->
-
 <a class="p-2 text-dark" href="#">About</a>
 ```
 
@@ -607,9 +605,10 @@ copy / paste
 
 <br />
 <img src="./assets/96.png" alt="image_96" />
-<center>
+
+<p align="center">
 <h6>صفحه اصلی و بوت‌استرپ</h6>
-</center>
+</p>
 <br />
 
 <h2>صفحه‌ی About</h2>
@@ -703,9 +702,10 @@ path('', HomePageView.as_view(), name='home'),
 
 <br />
 <img src="./assets/98.png" alt="image_98" />
-<center>
+
+<p align="center">
 <h6>صفحه About</h6>
-</center>
+</p>
 <br />
 
 <p>
@@ -824,9 +824,10 @@ Up{% endblock title %} {% block content %}
 
 <br />
 <img src="./assets/100.png" alt="image_100" />
-<center>
+
+<p align="center">
 <h6>صفحه ثبت‌نام با کریسپی فرم</h6>
-</center>
+</p>
 <br />
 
 <p>
@@ -859,9 +860,10 @@ In{% endblock title %} {% block content %}
 
 <br />
 <img src="./assets/101.png" alt="image_101" />
-<center>
+
+<p align="center">
 <h6>صفحه ورود با کریسپی فرم</h6>
-</center>
+</p>
 <br />
 
 <h2>Testها</h2>
