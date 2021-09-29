@@ -411,14 +411,11 @@ services:
 
 سپس اطلاعات پیمانه را مشخص میکنیم که در داکر هاست اجرا میشود. امکان اجرای چند پیمانه نیز وجود دارد اما ولی فعلا یک پیمانه را توضیح میدهیم. مشخص میکنیم که پیمانه چطور ساخته. به پوشه فعلی `.` نگاه کن برای `Dockerfile`.بعد داهل پیمانه وب سرور را اجرا کن.
 
-The volumes mount automatically syncs the Docker filesystem with our local computer’s filesystem. This means that we don’t have to rebuild the image each time we change a single
-file!
-
-
+ظرفیت پایه به صورت خودکار فایل داکر را توسط کامپیوتر ما همگام می سازد  . این به این معنی است که ما نیاز نداریم هر زمان که یک فایل را تغیر می دهیم , `image` را دوباره بسازیم .
 
 در آخر ما `پورت` خروجی را در داکر مشخص میکنیم که پورت `8000` خواهد بود که همان پورت دیفالت جنگو میباشد.
 
-If this is your first time using Docker, it is highly likely you are confused right now. But don’t worry. We’ll create multiple Docker images and containers over the course of this book and with practice the flow will start to make more sense. You’ll see we use very similar Dockerfile and docker-compose.yml files in each of our projects.
+اگر اولین بار است که از docker استفاده می کنید , به احتمال زیاد الان سردرگم شده اید . اما نگران نباشید . ما چندین ایمیج داکر و پیمانه ها (containers) در طول فصل های این کتاب خواهیم ساخت که با تمرین کردن مهارت لازم را به دست می آورید . شما خواهید دید که چندین Dockerfile و docker-compose.yml مشابه در پروژه ها استفاده می کنیم .
 
 قدم آخر هم اجرای دستور `docker-compose up` میباشد. این دستور باعث یک خروجی طولانی دیگر در کامند لاین می‌شود.
 
