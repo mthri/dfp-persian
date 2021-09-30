@@ -118,9 +118,15 @@ admin.site.register(Book)
 
 اگر الان به ادمین در آدرس http://127.0.0.1/admin نگاهی بیندازید ، می‌توانید اپلیکیشن Books را ببینید.
 
+[![Image](images/1.png)](#)
+
 بسیارخب بیایید یک نمونه از Book تحت عنوان ”Django for Professionals” ایجاد کنیم. روی دکمه ی add(+) کلیک کنید. قسمت title را ”Django for Professionls” ، قسمت author را ”William S.Vincent” و price را ”39.00$” قرار دهید. نیازی به نوشتن علامت دلار در قسمت price نیست ، در ادامه می‌توانیم در بخش template آن را به price اضافه کنیم.
 
+[![Image](images/2.png)](#)
+
 بعد از کلیک روی دکمه ی ”Save” به صفحه ی اصلی اپلیکیشن Books هدایت می‌شویم که title های کتاب‌های اضافه شده را به ما نمایش می دهد.
+
+[![Image](images/3.png)](#)
 
 بیاید فایل books/admin.py رو مجدداً تغییر دهیم و مشخص کنیم کدام فیلدها نمایش داده شود.
 
@@ -140,6 +146,8 @@ admin.site.register(Book, BookAdmin)
 </div>
 
 سپس صفحه را refresh کنید.
+
+[![Image](images/4.png)](#)
 
 به این ترتیب مدل خود را در دیتابیس ایجاد کردیم. در قدم بعد برای اینکه بتوانیم اطلاعاتی را نمایش دهیم بایدURL ها ، View ها و Template های لازم را ایجاد کنیم. اینکه از کدامیک شروع کنیم همیشه می‌تواند سؤال برانگیز باشد.
 شخصاً اکثر اوقات با URL ها شروع کرده ، سپس به سراغ View ها رفته و در نهایت Template ها را می‌نویسم.
@@ -254,6 +262,10 @@ $ docker-compose up -d
 
 </div>
 
+حالا با مراجعه به آدرس http://127.0.0.1:8000/books به صفحه ی کتاب‌ها هدایت می شویم.
+
+[![Image](images/5.png)](#)
+
 ### Object List
 
 همانطور که دیدیم به صورت پیش‌فرض کلاس ListView از متغیری به نام object_list به عنوان context که قرار است برای template مربوطه ارسال شود استفاده می کند. اگرچه این روش کاملاً درست کار می‌کند اما روش بهتر و اصطلاحاً friendly تر استفاده از یک متغیر با نامی مرتبط است و این کار به کمک context_object_name ، یک attribute از کلاس ListView انجام پذیر است.
@@ -297,6 +309,8 @@ class BookListView(ListView):
 صفحه را refresh کنید و همه چیز مثل قبل کار می کند. این تکنیک به‌خصوص زمانی که پروژه ها بزرگ‌تر می‌شوند و developer های بیشتری روی آن کار می‌کنند مؤثر تر و کمک کننده تر خواهد بود. به طور مثال برای یک frontend developer حدس زدن اینکه متغیر object_list مربوط به چه قسمتی است بسیار سخت تر خواهد بود در مقایسه با زمانی که از یک نام مرتبط استفاده شده باشد.
 
 برای اینکه اطمینان حاصل کنید این روش ، درست مثل قبل کار می‌کند از پنل admin دو کتاب دیگر را نیز اضافه کنید. من دو کتاب دیگرم ، Django for Beginners و Django for APIs ، هردو به نویسندگی (author) “William S. Vincent” و قیمت (price) “39.00” اضافه کرده‌ام.
+
+[![Image](images/6.png)](#)
 
 ### صفحه اختصاصی برای هر کتاب
 
@@ -378,6 +392,8 @@ $ touch templates/books/book_detail.html
 </div>
 
 در ادامه اگر به آدرس http://127.0.0.1/books/1 بروید page اختصاصی مربوط به اولین کتاب را خواهید دید.
+
+[![Image](images/7.png)](#)
 
 ### context_object_name
 
@@ -578,6 +594,8 @@ $ docker-compose exec web python manage.py createsuperuser
 
 حالا به پنل admin بروید و مجدداً سه رکورد از مدل Book ایجاد کنید. به page مربوط به همه ی کتاب‌ها بروید و روی یک از کتاب‌ها کلیک کنید. به URL صفحه‌ای که به آن هدایت شده‌اید نگاه کنید. UUID و تغییراتی که ایجاد کردیم را مشاهده می کنید.
 
+[![Image](images/8.png)](#)
+
 ### Navbar
 
 بسیارخب بیایید لینک مربوط به page همه ی کتاب‌ها را در navbar نیز اضافه کنیم. می‌توانیم این کار را به کمک url template tag و نام URL که book_list بود انجام دهیم.
@@ -592,6 +610,8 @@ $ docker-compose exec web python manage.py createsuperuser
 ```
 
 </div>
+
+[![Image](images/9.png)](#)
 
 ### Tests
 
