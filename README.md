@@ -25,7 +25,7 @@
   
   
 <details>
-  <summary>فصل اول : داکر</summary>
+  <summary>فصل اول : داکر &check;</summary>
   <br>
 
   - داکر چیست &check;
@@ -34,7 +34,7 @@
   - Hello World با داکر &check;
   - Hello World با جنگو &check;
   - اپ pages &check;
-  - تصاویر و کانتینر ها و میزبانی داکر
+  - تصاویر و کانتینر ها و میزبانی داکر &check;
   - گیت &check;
   - جمع بندی &check;
 
@@ -179,24 +179,24 @@
 </details>
   
 <details>
-  <summary>فصل دهم : اپ Books</summary>
+  <summary>فصل دهم : اپ Books &check;</summary>
   <br>
   
-  - Model ها 
-  - پنل ادمین
-  - URL ها
-  - View ها
-  - تمپلیت ها
-  - object_list
-  - صفحه جداگانه برای هر کتاب
-  - context_object_name
-  - get_absolute_url
-  - تفاوت Primary Keys با ID ها
-  - تفاوت Slug ها با UUID ها
-  - نوار پیمایش (Navbar)
-  - تست ها
-  - گیت
-  - جمع بندی
+  - Model ها &check;
+  - پنل ادمین &check;
+  - URL ها &check;
+  - View ها &check;
+  - تمپلیت ها &check;
+  - object_list &check;
+  - صفحه جداگانه برای هر کتاب &check;
+  - context_object_name &check;
+  - get_absolute_url &check;
+  - تفاوت Primary Keys با ID ها &check;
+  - تفاوت Slug ها با UUID ها &check;
+  - نوار پیمایش (Navbar) &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
@@ -343,7 +343,7 @@
 |خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani) [لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|مترجم فصل های۷ و جمع بندی|
 |مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb) [لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|مترجم فصل ۱۲|
-|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
+|آرین قوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
 |امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۱۴|
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
 |علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
