@@ -343,7 +343,7 @@
 |خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani) [لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|مترجم فصل های۷ و جمع بندی|
 |مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb) [لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|مترجم فصل ۱۲|
-|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
+|آرین قوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
 |امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۱۴|
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
 |علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
