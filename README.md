@@ -4,39 +4,39 @@
 
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
 
-شما میتوانید برای کمک کردن و خوشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
-لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یه رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
+شما می‌توانید برای کمک کردن و خشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
+لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یک رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
 
 همچنین میتوانید برای دانلود کتاب (نسخه اصلی) از [این لینک](https://github.com/mthri/dfp-persian/raw/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf) اقدام کنید.
 
 [خواندن کتاب به صورت آنلاین](https://github.com/mthri/dfp-persian/blob/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf)
   
 <details>
-  <summary>مقدمه</summary>
+  <summary>مقدمه &check;</summary>
   <br>
     
-  - پیشنیاز ها  
-  - ساختار کتاب
-  - آرایش کتاب
-  - ادیتور متن
-  - نتیجه گیری
+  - پیشنیاز ها &check;
+  - ساختار کتاب &check;
+  - آرایش کتاب &check;
+  - ادیتور متن &check;
+  - نتیجه گیری &check;
     
 </details>
   
   
 <details>
-  <summary>فصل اول : داکر</summary>
+  <summary>فصل اول : داکر &check;</summary>
   <br>
 
-  - داکر چیست
-  - تفاوت کانتینر ها و Virtual Environments
-  - نصب داکر
-  - Hello World با داکر
-  - Hello World با جنگو
-  - اپ pages
-  - تصاویر و کانتینر ها و میزبانی داکر
-  - گیت
-  - جمع بندی
+  - داکر چیست &check;
+  - تفاوت کانتینر ها و Virtual Environments &check;
+  - نصب داکر &check;
+  - Hello World با داکر &check;
+  - Hello World با جنگو &check;
+  - اپ pages &check;
+  - تصاویر و کانتینر ها و میزبانی داکر &check;
+  - گیت &check;
+  - جمع بندی &check;
 
 </details>
 
@@ -50,7 +50,7 @@
   - PostgreSQL
   - تنظیمات
   - Psycopg
-  - دیتابیس تازه
+  - دیتابیس جدید
   - گیت
   - جمع بندی
     
@@ -68,8 +68,8 @@
   - سوپریوزر (Superuser)
   - تست ها 
   - یونیت تست ها
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
 
@@ -109,24 +109,24 @@
 </details>
   
 <details>
-  <summary>فصل ششم : اشیاء استاتیک (Static Assets)</summary>
+  <summary>فصل ششم : اشیاء استاتیک (Static Assets) &check;</summary>
   <br>
   
-  - اپ staticfiles 
-  - STATIC_URL
-  - STATICFILES_DIR
-  - STATIC_ROOT
-  - STATIC_FINDERS
-  - پوشه استاتیک (Static directory)
-  - تصاویر
-  - جاوا اسکریپت
-  - collectstatic
-  - بوت استرپ (Bootstrap)
-  - صفحه درباره ما (About Page)
-  - کار باDjango Crispy Forms
-  - تست ها 
-  - گیت
-  - حمع بندی
+  - اپ staticfiles &check;
+  - STATIC_URL &check;
+  - STATICFILES_DIR &check;
+  - STATIC_ROOT &check;
+  - STATIC_FINDERS &check;
+  - پوشه استاتیک (Static directory) &check;
+  - تصاویر &check;
+  - جاوا اسکریپت &check;
+  - collectstatic &check;
+  - بوت استرپ (Bootstrap) &check;
+  - صفحه درباره ما (About Page) &check;
+  - کار باDjango Crispy Forms &check;
+  - تست ها &check;
+  - گیت &check;
+  - حمع بندی &check;
   
 </details>
   
@@ -156,12 +156,12 @@
   <summary>فصل هشتم : متغییر های Environment</summary>
   <br>
   
-  - environs[django]
+  - environs[django] &check;
   - SECRET_KEY
   - DEBUG و ALLOWED_HOSTS
   - DATABASES
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
   
@@ -179,24 +179,24 @@
 </details>
   
 <details>
-  <summary>فصل دهم : اپ Books</summary>
+  <summary>فصل دهم : اپ Books &check;</summary>
   <br>
   
-  - Model ها 
-  - پنل ادمین
-  - URL ها
-  - View ها
-  - تمپلیت ها
-  - object_list
-  - صفحه جداگانه برای هر کتاب
-  - context_object_name
-  - get_absolute_url
-  - تفاوت Primary Keys با ID ها
-  - تفاوت Slug ها با UUID ها
-  - نوار پیمایش (Navbar)
-  - تست ها
-  - گیت
-  - جمع بندی
+  - Model ها &check;
+  - پنل ادمین &check;
+  - URL ها &check;
+  - View ها &check;
+  - تمپلیت ها &check;
+  - object_list &check;
+  - صفحه جداگانه برای هر کتاب &check;
+  - context_object_name &check;
+  - get_absolute_url &check;
+  - تفاوت Primary Keys با ID ها &check;
+  - تفاوت Slug ها با UUID ها &check;
+  - نوار پیمایش (Navbar) &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
@@ -229,18 +229,18 @@
 </details>
 
 <details>
-  <summary>فصل سیزدهم : دسترسی ها (Permissions)</summary>
+  <summary>فصل سیزدهم : دسترسی ها (Permissions) &check;</summary>
   <br>
   
-  - فقط کاربر های وارد شده مجازند (Logged-In Users Only)
-  - دسترسی ها
-  - دسترسی های شخصی سازی شده (Custom Permissions)
-  - دسترسی های کاربر
-  - PermissionRequiredMixin
-  - گروه ها و UserPassesTestMixin
-  - تست ها
-  - گیت
-  - جمع بندی
+  - فقط کاربر های وارد شده مجازند (Logged-In Users Only) &check;
+  - دسترسی ها &check;
+  - دسترسی های شخصی سازی شده (Custom Permissions) &check;
+  - دسترسی های کاربر &check;
+  - PermissionRequiredMixin &check;
+  - گروه ها و UserPassesTestMixin &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
@@ -262,7 +262,7 @@
   <summary>فصل پانزدهم : کارایی</summary>
   <br>
   
-  - django-debug-toolbar
+  - django-debug-toolbar &check;
   - آنالیز صفحه ها
   - select_related و prefetch_related
   - کشینگ (Caching)
@@ -287,7 +287,7 @@
   - SECRET_KEY
   - امنیت وب
   - تزریق SQL (SQL injection)
-  - تزریق اسکریپت از طریق وبگاه (ٓXSS)
+  - تزریق اسکریپت از طریق وبگاه (ٓXSS) &check;
   - جعل درخواست میان وبگاهی (CSRF)
   - مقابله با کلیک دزدی (Clickjacking Protection)
   - HTTPS/SSL
@@ -301,20 +301,20 @@
   
   
 <details>
-  <summary>فصل هفدهم : دیپلویمنت</summary>
+  <summary>فصل هفدهم : دیپلویمنت &check;</summary>
   <br>
   
-  -  تفاوت PasS و IasS
-  - WhiteNoise
-  - فایل های رسانه ای (Media Files)
-  - Gunicorn
-  - Heroku
-  - دیپلویمنت با داکر
-  - heroku.yml
-  - SECURE_PROXY_SSL_HEADER
-  - لاگ های Heroku 
-  - افزونه های Heroku
-  - جمع بندی
+  -  تفاوت PasS و IasS &check;
+  - WhiteNoise &check;
+  - فایل های رسانه ای (Media Files) &check;
+  - Gunicorn &check;
+  - Heroku &check;
+  - دیپلویمنت با داکر &check;
+  - heroku.yml &check;
+  - SECURE_PROXY_SSL_HEADER &check;
+  - لاگ های Heroku &check;
+  - افزونه های Heroku &check;
+  - جمع بندی &check;
   
 </details>
   
@@ -343,8 +343,8 @@
 |خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani) [لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|مترجم فصل های۷ و جمع بندی|
 |مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb) [لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|مترجم فصل ۱۲|
-|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
-|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۱۴|
+|آرین قوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
+|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۸ و ۱۴|
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
 |علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
 |رضا مبارکی|[گیتهاب](https://github.com/MrRezoo) [لینکدین](https://www.linkedin.com/in/mrrezoo/) |مترجم ۱۵|
