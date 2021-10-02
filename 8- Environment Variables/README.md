@@ -94,9 +94,36 @@ SECRET_KEY = ')*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n'
 دو گام برای جابه‌جایی environment variables وجود دارد:
 </div>
  ‎
-<div dir='rtl'> 
+<div dir='rtl'>
 
-- Environment Variable را به فایل `docker-compose.yml` اضافه کنید.
-- `config/settings.py` را برای اشاره به متغیر بروز کنید.
-
+در فایل ` docker-compose.yml` بخشی را با نام `environment` در زیر `web service` اضافه کنید. این متغیری خواهد بود که آن را ` DJANGO_SECRET_KEY` با مقدار `SECRET_KEY` موجود خود می‌نامیم. فایل آپدیت شده به این شکل است:
+  
 </div>
+
+**docker-compose.yml**
+```
+# config/settings.py
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - "DJANGO_SECRET_KEY=)*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n"
+  db:
+    image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      
+volumes:
+  postgres_data:
+```
