@@ -127,3 +127,28 @@ services:
 volumes:
   postgres_data:
 ```
+<div dir='rtl'>
+
+توجه کنید اگر `SECRET_KEY` شما دارای علامت دلار `$` باشد باید یک علامت دلار دیگر اضافه کنید `$$`   . در غیر این‌صورت با ارور مواجه می‌شوید!
+  اطلاعات بیشتر در: [handles variable substitution](https://docs.docker.com/compose/compose-file/#variable-substitution)
+</div>
+
+<div dir='rtl'>
+  
+قدم دوم آپدیت کردن تنظیمات `SECRET_KEY` در `config/settings.py` است.
+  
+</div>
+
+**Code**
+```
+# config/settings.py
+SECRET_KEY = env("DJANGO_SECRET_KEY")
+```
+
+<div dir='rtl'>
+  
+اگر وبسایت را رفرش کنید, خواهید دید همه چیز مانند قبل کار می‌کنند که همان چیزیست که می‌خواهیم. اگر به دلایلی `SECRET_KEY` به درستی اجرا نشده بود, اروری خواهیم دید با عنوان, جنگو برای کار کردن به آن نیاز دارد. 
+  
+</div>
+
+<div dir='rtl'>
