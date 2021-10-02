@@ -15,3 +15,30 @@
 
 
 </div>
+
+**Command Line**
+
+```
+$ docker-compose exec web pipenv install 'environs[django]==8.0.0'
+$ docker-compose down
+$ docker-compose up -d --build
+
+```  
+<div dir='rtl'>
+  
+در فایل `config/settings.py` سه خط imports برای اضافه کردن در بالای فایل در زیر *import path* وجود دارد.  
+  
+</div>
+
+**Code**
+```
+# config/settings.py
+from pathlib import Path
+from environs import Env # new
+env = Env() # new
+env.read_env() # new
+```
+
+<div dir='rtl'>
+حالا همه چیز آماده است.
+</div>
