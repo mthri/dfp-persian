@@ -43,7 +43,6 @@ env.read_env() # new
 حالا همه چیز آماده است.
 </div>
 
-
 # SECRET_KEY
 
 <div dir='rtl'>
@@ -72,28 +71,6 @@ SECRET_KEY = ')*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n'
 
 </div>
 
-
-# SECRET_KEY
-
-<div dir='rtl'>
-  
-برای اولین environment variable خود [SECRET_KEY](https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-SECRET_KEY) را تنظیم می‌کنیم, رشته‌ای که به طور تصادفی تولید شده و برای [cryptographic signing](https://docs.djangoproject.com/en/3.1/topics/signing/) شده استفاده می‌شود و هر زمان که دستور `SECRET_KEY` اجرا شود ایجاد می‌شود. بسیار مهم است که SECRET_KEY مخفی نگه داشته شود. در فایل `config/settings.py` من مقدار زیر را دارد: 
-  
-</div>
-
-**Code**
-```
-# config/settings.py
-SECRET_KEY = ')*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n'
-```
-<div dir='rtl'>
-توجه داشته باشید که نقل قول های اطراف SECRET_KEY باعث می‌شود که تبدیل به رشته پایتونی شود. در واقع آنها بخشی از  SECRET_KEY نیستند که به آسانی اشتباه گرفته می‌شوند. 
-</div>
-
-<div dir='rtl'>
-دو گام برای جابه‌جایی environment variables وجود دارد:
-</div>
- ‎
 <div dir='rtl'>
 
 در فایل ` docker-compose.yml` بخشی را با نام `environment` در زیر `web service` اضافه کنید. این متغیری خواهد بود که آن را ` DJANGO_SECRET_KEY` با مقدار `SECRET_KEY` موجود خود می‌نامیم. فایل آپدیت شده به این شکل است:
@@ -153,7 +130,6 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 <div dir='rtl'>
 
-
 خوانندگان ریزبین ممکن است متوجه شوند, با اینکه از environment variable استفاده می‌کنیم, مقدار `SECRET_KEY` در سورس‌کد هنوز قابل مشاهده است. همانطور که صرفا به ` docker-compose.yml` منتقل شد. درست است! با این حال, وقتی وبسایت خود برای فاز نهایی آماده می‌کنیم فایل جداگانه‌ای را برای اهداف عملی ایجاد خواهیم کرد(`docker-compose-production.yml`)و از طریق فایل `.env` آن را در محیط عملی بارگذاری خواهیم کرد که توسط گیت ردیابی نمی‌شود. 
   
 </div>
@@ -163,7 +139,6 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 هر چند, در حال‌حاضر هدف این فصل استفاده از environment variables به صورت لوکال و برای مقادیری است که باید به طور حتم مخفی باشند و یا در محیط عملی تغییر کنند.
   
 </div>
-
 
 # DEBUG and ALLOWED_HOSTS
 
@@ -221,20 +196,109 @@ ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1'] # new
 **Code**
 ```
 # config/settings.py
-DEBUG = False # new
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1'] # new
+DEBUG = env.bool("DJANGO_DEBUG")
 ```
 
 <div dir='rtl'>
 
-بعد صفحه وب را رفرش کنید.  
+سپس بروزرسانی `docker-compose.yml` را انجام دهید تا `DJANGO_DEBUG` روی `True` تنظیم شود. 
+
+</div>
+
+**docker-compose.yml**
+```
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - "DJANGO_SECRET_KEY=)*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n"
+      - "DJANGO_DEBUG=True"
+  db:
+    image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      
+volumes:
+  postgres_data:
+```
+
+<div dir='rtl'>
+
+پس از تغییرات وبسایت را رفرش کنید و مانند قبل کار خواهد کرد.
+
+</div>
+
+# DATABASES
+
+<div dir='rtl'>
+
+وقتی قبل‌تر `True` را نصب کردیم,  Django “goodies” شامل پکیج [ djdatabase-url](https://github.com/jacobian/dj-database-url) بود که تمام پیکربندی‌های مورد نیاز دیتابیس را شامل می‌شود, SQLite یا PostgreSQL. این بعدا در محیط عملی مفید خواهد بود.
+
+</div>
+
+<div dir='rtl'>
+
+حال می‌توانیم آن را با یک مقدار پیش‌فرض به‌صورت لوکال از PostgreSQL استفاده کنیم. پیکربندی `DATABASES` موجود را با موارد زیر آپدیت کنید: 
+
+</div>
+
+**Code**
+```
+# config/settings.py
+DATABASES = {
+    "default": env.dj_db_url("DATABASE_URL",
+    default="postgres://postgres@db/postgres")
+}
+```
+<div dir='rtl'>
+
+هنگام دیپلوی, متغیر محیطی `DATABASE_URL` توسط Heroku ایجاد می‌شود. 
+
+</div>
   
+<div dir='rtl'>
+
+وبسایت را رفرش کنید تا از کارکرد درست همه‌چیز اطمینان حاصل کنید.
+
 </div>
+
+# Git
 
 <div dir='rtl'>
 
-![20211001_124252](https://user-images.githubusercontent.com/59054740/135596004-dbc322a6-578f-4ca7-9295-62b82d9ac3e9.png)
+تغییرات مهمی را در این فصل اعمال کردیم مطمئن شوید کدها را به وسیله‌ی گیت کامیت کنید.
 
 </div>
 
+**Command Line**
+```
+$ git status
+$ git add .
+$ git commit -m 'ch8'
+```
+
 <div dir='rtl'>
+
+در صورت بروز هرگونه مشکل کدهای خود را با کدهای سورس‌کد رسمی در [گیتهاب](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch8-environment-variables) مقایسه کنید.
+
+</div>
+
+# Conclusion - نتیجه
+
+<div dir='rtl'>
+
+افزودن متغیرهای محیطی یک مرحله ضروری برای هر پروژه حرفه‌ای جنگو است. با توجه به کاری که بعدا در این کتاب می‌کنیم جا‌به‌جای بین محیط عملی و محیطی, به این شکل, بی ارزش خواد شد.
+در فصل بعد تنظیمات ایمیل هارا پیکربندی کرده و قابلیت بازنشانی رمز عبور را اضافه خواهیم کرد.
+
+</div>
