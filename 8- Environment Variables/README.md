@@ -217,3 +217,24 @@ ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1'] # new
 این همان رفتاری است که از سایت می‌خواهیم: بدون اطلاعات, فقط یک پیام عمومی. زمانی که وبسایت را دیپلوی می‌کنیم, از راهی بخصوص برای جا‌به‌جایی بین تنظیمات استفاده می‌کنیم, اما حال `DEBUG` را به متیر محیطی `DJANGO_DEBUG` تغییر دهید. 
 
 </div>
+
+**Code**
+```
+# config/settings.py
+DEBUG = False # new
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1'] # new
+```
+
+<div dir='rtl'>
+
+بعد صفحه وب را رفرش کنید.  
+  
+</div>
+
+<div dir='rtl'>
+
+![20211001_124252](https://user-images.githubusercontent.com/59054740/135596004-dbc322a6-578f-4ca7-9295-62b82d9ac3e9.png)
+
+</div>
+
+<div dir='rtl'>
