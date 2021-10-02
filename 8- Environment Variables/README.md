@@ -71,3 +71,32 @@ SECRET_KEY = ')*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n'
 - `config/settings.py` را برای اشاره به متغیر بروز کنید.
 
 </div>
+
+
+# SECRET_KEY
+
+<div dir='rtl'>
+  
+برای اولین environment variable خود [SECRET_KEY](https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-SECRET_KEY) را تنظیم می‌کنیم, رشته‌ای که به طور تصادفی تولید شده و برای [cryptographic signing](https://docs.djangoproject.com/en/3.1/topics/signing/) شده استفاده می‌شود و هر زمان که دستور `SECRET_KEY` اجرا شود ایجاد می‌شود. بسیار مهم است که SECRET_KEY مخفی نگه داشته شود. در فایل `config/settings.py` من مقدار زیر را دارد: 
+  
+</div>
+
+**Code**
+```
+# config/settings.py
+SECRET_KEY = ')*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n'
+```
+<div dir='rtl'>
+توجه داشته باشید که نقل قول های اطراف SECRET_KEY باعث می‌شود که تبدیل به رشته پایتونی شود. در واقع آنها بخشی از  SECRET_KEY نیستند که به آسانی اشتباه گرفته می‌شوند. 
+</div>
+
+<div dir='rtl'>
+دو گام برای جابه‌جایی environment variables وجود دارد:
+</div>
+ ‎
+<div dir='rtl'> 
+
+- Environment Variable را به فایل `docker-compose.yml` اضافه کنید.
+- `config/settings.py` را برای اشاره به متغیر بروز کنید.
+
+</div>
