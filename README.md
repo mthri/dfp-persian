@@ -109,24 +109,24 @@
 </details>
   
 <details>
-  <summary>فصل ششم : اشیاء استاتیک (Static Assets)</summary>
+  <summary>فصل ششم : اشیاء استاتیک (Static Assets) &check;</summary>
   <br>
   
-  - اپ staticfiles 
-  - STATIC_URL
-  - STATICFILES_DIR
-  - STATIC_ROOT
-  - STATIC_FINDERS
-  - پوشه استاتیک (Static directory)
-  - تصاویر
-  - جاوا اسکریپت
-  - collectstatic
-  - بوت استرپ (Bootstrap)
-  - صفحه درباره ما (About Page)
-  - کار باDjango Crispy Forms
-  - تست ها 
-  - گیت
-  - حمع بندی
+  - اپ staticfiles &check;
+  - STATIC_URL &check;
+  - STATICFILES_DIR &check;
+  - STATIC_ROOT &check;
+  - STATIC_FINDERS &check;
+  - پوشه استاتیک (Static directory) &check;
+  - تصاویر &check;
+  - جاوا اسکریپت &check;
+  - collectstatic &check;
+  - بوت استرپ (Bootstrap) &check;
+  - صفحه درباره ما (About Page) &check;
+  - کار باDjango Crispy Forms &check;
+  - تست ها &check;
+  - گیت &check;
+  - حمع بندی &check;
   
 </details>
   
@@ -229,18 +229,18 @@
 </details>
 
 <details>
-  <summary>فصل سیزدهم : دسترسی ها (Permissions)</summary>
+  <summary>فصل سیزدهم : دسترسی ها (Permissions) &check;</summary>
   <br>
   
-  - فقط کاربر های وارد شده مجازند (Logged-In Users Only)
-  - دسترسی ها
-  - دسترسی های شخصی سازی شده (Custom Permissions)
-  - دسترسی های کاربر
-  - PermissionRequiredMixin
-  - گروه ها و UserPassesTestMixin
-  - تست ها
-  - گیت
-  - جمع بندی
+  - فقط کاربر های وارد شده مجازند (Logged-In Users Only) &check;
+  - دسترسی ها &check;
+  - دسترسی های شخصی سازی شده (Custom Permissions) &check;
+  - دسترسی های کاربر &check;
+  - PermissionRequiredMixin &check;
+  - گروه ها و UserPassesTestMixin &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
@@ -287,7 +287,7 @@
   - SECRET_KEY
   - امنیت وب
   - تزریق SQL (SQL injection)
-  - تزریق اسکریپت از طریق وبگاه (ٓXSS)
+  - تزریق اسکریپت از طریق وبگاه (ٓXSS) &check;
   - جعل درخواست میان وبگاهی (CSRF)
   - مقابله با کلیک دزدی (Clickjacking Protection)
   - HTTPS/SSL
