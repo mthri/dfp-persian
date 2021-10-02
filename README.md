@@ -4,8 +4,8 @@
 
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
 
-شما میتوانید برای کمک کردن و خوشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
-لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یه رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
+شما می‌توانید برای کمک کردن و خشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
+لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یک رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
 
 همچنین میتوانید برای دانلود کتاب (نسخه اصلی) از [این لینک](https://github.com/mthri/dfp-persian/raw/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf) اقدام کنید.
 
@@ -344,7 +344,7 @@
 |مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb) [لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|مترجم فصل ۱۲|
 |آرین قوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
-|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۱۴|
+|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۸ و ۱۴|
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
 |علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
 |رضا مبارکی|[گیتهاب](https://github.com/MrRezoo) [لینکدین](https://www.linkedin.com/in/mrrezoo/) |مترجم ۱۵|
