@@ -98,9 +98,7 @@ class SearchResultsListView(ListView): # new
 
 **Command Line**
 
-```python
-# books/views.py
-...
+```
 $ touch templates/books/search_results.html
 ```
 
