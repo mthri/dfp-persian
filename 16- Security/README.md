@@ -10,9 +10,7 @@
   
    این <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md">OWASP’s XSS Cheat Sheet</a> برای مطالعه بیشتر توصیه می شود .
 
-
-    
- ### Cross-Site Request Forgery (CSRF)
+### Cross-Site Request Forgery (CSRF)
   
 این <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross-Site Request Forgery (CSRF)</a> سومین نوع عمده حمله است اما عموما نسبت به تزریق sql (SQL Injection) یا حمله XSS کمتر شناخته شده است . این حمله اساسا از اعتماد سایت به مرورگر کاربر استفاده می کند .
   
@@ -44,3 +42,5 @@ Middleware</a> و در فرم ها از طریق تمپلیت تگ (template tag
 
 </div>
   
+=======
+</div>
