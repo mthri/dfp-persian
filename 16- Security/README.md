@@ -33,6 +33,14 @@ Middleware</a> و در فرم ها از طریق تمپلیت تگ (template tag
   
 یک قانون کلی خوب این است که هر گاه در سایت خود یک فرمی دارید , فکر کنید که آیا به تک csrf_token نیاز دارید . بیشتر مواقع به آن نیاز دارید !
 
+
+### Clickjacking Protection (مقابله با کلیک دزدی)
+<a href="https://en.wikipedia.org/wiki/Clickjacking">Clickjacking</a> حمله دیگری است که در آن یک سایت مخرب کاربر را فریب می دهد تا روی یک frame مخفی شده کلیک کند . یک frame داخلی,که به عنوان `iframe` شناخته می شود , معمولا برای جاسازی یک سایت در داخل یکی دیگر استفاده می شود . برای مثال , اگر میخواهید Google Map یا ویدیوی Yuotube را در سایت خود قرار دهید iframe شامل tag است که آن سایت را در سایت شما قرار می دهد. این بسیار راحت است.
   
+اما این یک خطر امنیتی دارد که می تواند یک frame را از دید کاربر مخفی کند . در نظر بگیرید که یک کاربر قبلا به حساب کاربری اش در آمازون login شده است و سپس از یک سایت مخرب بازدید می کند که به نظر می رسید عکس بچه گربه باشد . کاربر برای مشاهده بچه گربه های بیشتر بر روی سایت مخرب گفته شده کلیک می کند , اما در واقع آنها روی یک iframe از محصول آمازون که ناخودآگاه خریداری شده کلیک می کنند . این تنها یک نمونه از clickjacking است .
+  
+برای جلوگیری از این (حمله) جنگو با یک پیش فرض همراه است <a href="https://docs.djangoproject.com/en/3.1/ref/clickjacking/#clickjacking-prevention">clickjacking middleware</a> که <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-FrameOptions HTTP header</a> را تنظیم می کند , که نشان می دهد که یک منبع مجاز به load یک frame یا iframe است یا خیر. در صورت تمایل می توانید این محافظ را خاموش کنید , یا آن را در سطح نمایش تنظیم کنید . با این حال این کار را با احتیاط و <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Clickjacking_Defense_Cheat_Sheet.md">research(تحقیق بالا)</a> انجام دهید .
+  
+
 </div>
   
