@@ -34,11 +34,216 @@ $ pipenv shell
 در محیط کامند لاین ممکن است اخطار هایی مثل " 18 unapplied migration(s) " را مشاهده کنید. برای الان اونا رو نادیده میگیریم. وقتش رسیده به داکر و `PostgreSQL` برگردیم.
 
 ### داکر
+حال میتوانیم پروژه خود را به داکر منتقل کنیم.
+در ادامه سرور محلی را با دستور `control + c` متوقف کنید و از محیط مجازی پروژه خارج شوید.
+  
+ <div dir="ltr">
+   Command Line
+   
+```shell
+(books) $ exit
+$
+```
+</div>
+  
+  `Dockerfile` مثل قبل که توضیح دادیم میباشد.
+  
+   <div dir="ltr">
+   Docker File
+   
+```docker
+# Pull base image
+FROM python:3.8
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+# Set work directory
+WORKDIR /code
+# Install dependencies
+COPY Pipfile Pipfile.lock /code/
+RUN pip install pipenv && pipenv install --system
+# Copy project
+COPY . /code/
+```
+</div>
+ 
+  پیمانه های داکر، ذاتا موقتی هستند. یعنی تا زمانی وجود دارند که اجرا شده باشند و تمامی داده هایی که در خود جا داده اند با توقف پیمانه پاک میشوند.
+  برای داده های مانا (داده هایی که میخواهیم دائمی باشند.)  در اینجا از `volume` استفاده میکنیم.
+  
+  دانستینم که در وب سرویس های آنلاین یک مخزن داریم که پروژه محلی ما را به پیمانه های در حال اجرا پیوند میدهد و بالعکس.
+اما برای دیتابیس  `PostgreSQL` یک مخزن اختصاصی نداریم که داده هایمان را در آن دسته بندی کنیم. بنابراین با توقف پیمانه هر اطلاعاتی که در آن است از دست میرود. راه حل اضافه کردن یک `volume` برای دیتابیس میباشد. ما اینکار را در سرویس دیتابیس با مشخص کردن یک محل و هر `volume` که خارج از پیمانه قرار دارد انجام میدهیم.
+  
+  این توضیحات احتمالا کمی گیج کننده باشد و نیاز به توضیح بیشتری دارد که خارج از اهداف متمرکز این کتاب نیست.
+فقط در همین حد بدانید که پیمانه های داکر داده های مانا را ذخیره نمیکنند، بنابراین هر چیزی مثل سورس کد و اطلاعات پایگاه داده ای که میخواهیم ماندگار باشد، بایستی یک `volume` اختصاصی داشته باشد در غیر این صورت هر زمان که پیمانه متوقف شود از دست میرود.
+  
+   در صورت تمایل میتوانید برای توضیحات فنی بیشتر [داکیومنت داکر درباره volume ها](https://docs.docker.com/storage/volumes/) و نحوه عملکرد آنها را مطالعه کنید.
+  
+  در هر صورت، این کد بروز شده ی برای docker-compose.yml هست که اکنون از
+مخزن(volume) پایگاه داده هم پشتیبانی میکند.
+  
+   <div dir="ltr">
+   docker-compose.yml
+   
+```docker
+ version: '3.8'
+services:
+web:
+build: .
+command: python /code/manage.py runserver 0.0.0.0:8000
+volumes:
+- .:/code
+ports:
+- 8000:8000
+depends_on:
+- db
+db:
+image: postgres:11
+volumes:
+- postgres_data:/var/lib/postgresql/data/
+environment:
+- "POSTGRES_HOST_AUTH_METHOD=trust"
+volumes:
+postgres_data:
+```
+</div>
+  
+  ميتوانيم `image` را بسازیم و پیمانه هارا با یک دستور اجرا کنیم.
+  
+<div dir="ltr">
+    Command Line
+   
+```shell
+ $ docker-compose up -d --build
+```
+</div>
+  
+  اگر به خطایی مثل `Bindfor 0.0.0.0:8000 faild: port is already allocated` مواجه شدین بخاطر این است که پیمانه های داکر را که در  بخش دوم استفاده کردیم به طور کامل متوقف نکرده اید. دستور `docker-compose down` را در پوشه ای که احتمالا `postgresql` است و قبلا اجرا کرده اید امتحان کنید.
+اگر این روش مجدد با خطا مواجه شد، میتوانید از اپ دسکتاپ داکر خارج شوید و دوباره برنامه را باز کنید.
+  
+ در مرورگر اکنون به آدرس http://127.0.0.1:8000/ رفته و صفحه را رفرش کنید. بایستی محتوای صفحه لود شده welcome page جنگو باشد، با این تفاوت که اکنون از داخل داکر اجرا میشود.
+  
 
 ### PostgreSQL
 
-### یوزر مدل شفارسی
+ اگرچه از قبل `psycopg` را نصب کردیم و `PostgreSQl` در فایل `docker-compose.yml` موجود است، اما بایستی پروژه جنگو را طوری تنظیم کنیم که بجا دیتابیس پیش فرض `SQLite` به `PostgreSQL` واقع در داکر تغییر پیدا کند.
+  
+  طبق کد زیر را که مثل بخش قبلی کتاب است عمل کنید.
 
+<div dir='ltr'>
+ Code
+  
+```python
+# config/settings.py
+DATABASES = {
+'default': {
+'ENGINE': 'django.db.backends.postgresql',
+'NAME': 'postgres',
+'USER': 'postgres',
+'PASSWORD': 'postgres',
+'HOST': 'db',
+'PORT': 5432
+    }
+}  
+```
+</div>
+  
+  مرورگر را برای صفحه اصلی رفرش کنید تا همه چیز به درستی کار کند.
+  
+### مدل یوزر شفارسی  
+
+  حال زمان آن است یک یوزر سفارشی که (https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project)[داکیومنت رسمی جنگو بسیار بر آن تاکید دارد] ایجاد کنیم. چرا؟  چون شما احتیاج دارید بعضی از مواقع در یوزر پیش فرض پروژه خود تغییراتی بوجود بیاورید [باصطلاح آنرا سفارشی کنید]. 
+اگر در اولین دستور migrate که اجرا کردید، یوزر سفارشی را نساخته اید و استارت نزدید باید بگویم سخت در اشتباهید ((: چون که `user` رابطه تنگاتنگی با سایر بخش های پروژه ی 
+ جنگو دارد. سفارشی کردن یوزر در میانه مسیر پروژه چالش برانگیز است. (بهتر است در ابتدای استارت پروژه یوزر را سفارشی کنید.)
+  
+  
+  یک مسئله گیج کننده برای اکثر مردم این است که مدل یوزر سفارشی فقط در جنگو ۱.۵ اضافه شده است. تا قبل از آن روش پیشنهادی برای سفارشی کردن این بود که یک فیلد یک به یک [(OneToOneField)](https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.OneToOneField) برای یوزر ایجاد میکردند که به آن اغلب مدل پروفایل میگفتند. 
+معمولا این ساختار در پروژه های قدیمی قابل مشاهده است ولی امروزه استفاده از یوزر سفارشی یک روش فراگیرتر است.
+  هر چند برای یوزر سفارشی هم مانند سایر موارد در  جنگو روش های پیاده سازی مختلفی وجود دارد: یا میتوان از [AbstractUser](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#django.contrib.auth.models.AbstractUser) که تمامی فیلد های مربوط به یوزر پیش فرض و سطح دسترسی ها را دارد استفاده کرد یا اینکه از [AbstractBaseUser](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#django.contrib.auth.models.AbstractBaseUser) که شامل موارد دقیق تر 
+ و انعطاف پذیر تر است استفاده کنیم، اما بایستی بیشتر روی آن کار کنیم.(خلاصه اینکه دستمون برای تغییر دادن بازه)
+ما در این کتاب `AbstractUser` را مبنا قرار میدهیم زیرا در صورت نیاز `AbstarctBaseUser` بعدا میتواند اضافه شود.
+  
+  
+  برای اضافه کردن یوزر سفارشی به پروژه خود چهار مرحله پیش رو داریم:
+  
+  - ساخت مدل `CustomUser`
+  - بروز رسانی `config/setting.py`
+  - سفارشی کردن `UserCreationForm` و `UserChangeForm`
+  - اضافه کرد یوزر سفارشی ساخته شده به `admin.py`
+  
+  ولین قدم ساخت مدل `CustomUser` در اپ مربوط به خودش میباشد. اسم این اپ را `accounts` میگذاریم. ساخت اپ را میتوان بصورت محلی در shell محیط مجازی انجام داد، به این صورت که به `pipenv shell` رفته و سپس دستور `python manage.py startapp accounts` را اجرا میکنیم. با این حال، برای ثبات کار ما اکثر دستورات خود را در داکر اجرا میکنیم.
+  
+  <div dir='ltr'>
+    Command Line
+    ```shell
+    $ docker-compose exec web python manage.py startapp accounts
+    ```
+  </div>
+  
+  مدل جدیدی باسم `CustomUser` که از `AbstractUser` ارث بری میکند بسازید.
+در واقع این به این معناست که ما در حال ایجاد یک نسخه [از Abstarct User] هستیم که مدل `CustomUser` تمام قابلیت های `AbstractUser` را ارث برده اما در صورت نیاز میتوانیم عملکرد های جدید را اضافه و یا نادیده بگیریم.
+فعلا تغییری در مدل اعمال نمیکنیم بنابراین دستور pass را مینویسیم که جانشین کد های پیش رو در مدل میباشد.( مینویسیم تا فعلا ازمون خطا نگیره تا وقتی که خواستیم چیزی اضافه کنیم.)
+  
+   <div dir='ltr'>
+    Code
+    ```pyhton
+    # accounts/models.py
+     
+    from django.contrib.auth.models import AbstractUser
+    from django.db import models
+     
+     
+      class CustomUser(AbstractUser):
+          pass
+    ```
+  </div>
+  
+  حال به setting.py رفته و قسمت `INSTALLED_APPS` را با اضافه کردن اپ `accounts` بروزرسانی میکنیم.
+همچنین تنظیمات `AUTH_USER_MODEL` را به انتهای فایل اضافه میکنیم تا اینکه در پروژه بجای استفاده از یوزر پیش فرض جنگو از یوزر سفارشی ما استفاده شود.
+  
+     <div dir='ltr'>
+    Code
+    ```pyhton
+    # config/settings.py
+    INSTALLED_APPS = [
+   'django.contrib.admin',
+   'django.contrib.auth',
+   'django.contrib.contenttypes',
+   'django.contrib.sessions',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+       
+  # Local
+       
+   'accounts', # new
+  ]
+  ...
+  AUTH_USER_MODEL = 'accounts.CustomUser' # new
+    ```
+  </div>
+  
+  حال وقت ساختن فایل های `migration` برای تغییرات اخیر در متن پروژه است. میتوان اسم اپ `accounts` را در دستور `migration` بصورت دلخواه نوشت برای اینکه بگوییم این تغییرات 
+مربوط به اپ نام برده شده است.
+  
+  <div die='ltr'>
+  Command Line
+    ```shell
+    $ docker-compose exec web python manage.py makemigrations accounts
+    Migrations for 'accounts':
+      accounts/migrations/0001_initial.py
+       - Create model CustomUser
+
+    ```
+  </div>
+  
+  سپس دستور `migrate` را برای مشخص کردن دیتابیس پروژه برای اولین بار ایجاد اجرا کنید.
+  
+    <div die='ltr'>
+  Command Line
+    ```shell
+      $ docker-compose exec web python manage.py migrate
+    ```
+  </div>
+  
 ### فرم سفارشی یوزر
 
 ### سرپرست کاربر سفارشی
