@@ -60,13 +60,12 @@
   <summary>فصل سوم : پروژه فروشگاه کتاب</summary>
   <br>
     
-  - داکر
-  - PostgreSQL
-  - مدل کاربر شخصی سازی شده (Custom User Model)
+  - داکر &check;
+  - PostgreSQL &check;
+  - مدل کاربر شخصی سازی شده (Custom User Model) &check;
   - فرم های کاربر شخصی سازی شده (Custom User Forms)
   - پنل ادمین کاربر شخصی سازی شده (Custom User Admin)
   - سوپریوزر (Superuser)
-  - تست ها 
   - یونیت تست ها
   - گیت &check;
   - جمع بندی &check;
