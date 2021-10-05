@@ -200,16 +200,16 @@
 </details>
   
 <details>
-  <summary>فصل یازدهم : اپ Reviews</summary>
+  <summary>فصل یازدهم : اپ Reviews &check;</summary>
   <br>
   
-  - Foreign Key ها
-  - مدل Review ها
-  - تنظیم ادمین پنل
-  - تمپلیت ها
-  - تست ها
-  - گیت
-  - جمع بندی
+  - Foreign Key ها &check;
+  - مدل Review ها &check;
+  - تنظیم ادمین پنل &check;
+  - تمپلیت ها &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
   
@@ -217,13 +217,13 @@
   <summary>فصل دوازدهم : ابلود فایل ها و تصاویر</summary>
   <br>
   
-  - فایل های رسانه ای (Media Files)
-  - Model ها
-  - تنظیم پنل ادمین
+  - فایل های رسانه ای (Media Files) &check;
+  - Model ها &check;
+  - تنظیم پنل ادمین &check;
   - تمپلیت ها
   - قدم های فراتر
-  - گیت
-  - جمع بندی
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
 
