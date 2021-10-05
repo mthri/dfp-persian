@@ -155,4 +155,20 @@ $ docker-compose exec web python manage.py migrate
 
 </div>
 
+### گیت
+
+دقت داشته باشید که تغییرات این فصل رو کامیت کرده باشید.
+
+<div dir="ltr">
+
+```shell
+$ git status
+$ git add .
+$ git commit -m 'ch12'
+```
+
+</div>
+
+مثل همیشه، کد های خودتون رو با [منبع اصلی](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch12-file-image-uploads) مقایسه کنید.
+
 </div>
