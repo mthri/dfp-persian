@@ -34,22 +34,22 @@ $ pipenv shell
 در محیط کامند لاین ممکن است اخطار هایی مثل " 18 unapplied migration(s) " را مشاهده کنید. برای الان اونا رو نادیده میگیریم. وقتش رسیده به داکر و `PostgreSQL` برگردیم.
 
 ### داکر
+
 حال میتوانیم پروژه خود را به داکر منتقل کنیم.
 در ادامه سرور محلی را با دستور `control + c` متوقف کنید و از محیط مجازی پروژه خارج شوید.
   
- <div dir="ltr">
-   Command Line
+<div dir="ltr">
    
 ```shell
 (books) $ exit
 $
 ```
+
 </div>
   
-  `Dockerfile` مثل قبل که توضیح دادیم میباشد.
+`Dockerfile` مثل قبل که توضیح دادیم میباشد.
   
-   <div dir="ltr">
-   Docker File
+<div dir="ltr">
    
 ```docker
 # Pull base image
@@ -81,29 +81,29 @@ COPY . /code/
   در هر صورت، این کد بروز شده ی برای docker-compose.yml هست که اکنون از
 مخزن(volume) پایگاه داده هم پشتیبانی میکند.
   
-   <div dir="ltr">
-   docker-compose.yml
-   
+<div dir="ltr">
+
 ```docker
- version: '3.8'
-services:
-web:
-build: .
-command: python /code/manage.py runserver 0.0.0.0:8000
+version: '3.8'
+  services:
+    web:
+      build: .
+      command: python /code/manage.py runserver 0.0.0.0:8000
+      volumes:
+        - .:/code
+      ports:
+        - 8000:8000
+      depends_on:
+        - db
+  db:
+    image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
 volumes:
-- .:/code
-ports:
-- 8000:8000
-depends_on:
-- db
-db:
-image: postgres:11
-volumes:
-- postgres_data:/var/lib/postgresql/data/
-environment:
-- "POSTGRES_HOST_AUTH_METHOD=trust"
-volumes:
-postgres_data:
+  postgres_data:
 ```
 </div>
   
@@ -130,119 +130,123 @@ postgres_data:
   طبق کد زیر را که مثل بخش قبلی کتاب است عمل کنید.
 
 <div dir='ltr'>
- Code
   
 ```python
 # config/settings.py
 DATABASES = {
-'default': {
-'ENGINE': 'django.db.backends.postgresql',
-'NAME': 'postgres',
-'USER': 'postgres',
-'PASSWORD': 'postgres',
-'HOST': 'db',
-'PORT': 5432
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'postgres',
+    'USER': 'postgres',
+    'PASSWORD': 'postgres',
+    'HOST': 'db',
+    'PORT': 5432
+  }
 }  
 ```
 </div>
   
-  مرورگر را برای صفحه اصلی رفرش کنید تا همه چیز به درستی کار کند.
+مرورگر را برای صفحه اصلی رفرش کنید تا همه چیز به درستی کار کند.
   
 ### مدل یوزر شفارسی  
 
-  حال زمان آن است یک یوزر سفارشی که (https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project)[داکیومنت رسمی جنگو بسیار بر آن تاکید دارد] ایجاد کنیم. چرا؟  چون شما احتیاج دارید بعضی از مواقع در یوزر پیش فرض پروژه خود تغییراتی بوجود بیاورید [باصطلاح آنرا سفارشی کنید]. 
+حال زمان آن است یک یوزر سفارشی که [داکیومنت رسمی جنگو بسیار بر آن تاکید دارد](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) ایجاد کنیم. چرا؟  چون شما احتیاج دارید بعضی از مواقع در یوزر پیش فرض پروژه خود تغییراتی بوجود بیاورید [باصطلاح آنرا سفارشی کنید]. 
 اگر در اولین دستور migrate که اجرا کردید، یوزر سفارشی را نساخته اید و استارت نزدید باید بگویم سخت در اشتباهید ((: چون که `user` رابطه تنگاتنگی با سایر بخش های پروژه ی 
  جنگو دارد. سفارشی کردن یوزر در میانه مسیر پروژه چالش برانگیز است. (بهتر است در ابتدای استارت پروژه یوزر را سفارشی کنید.)
   
   
-  یک مسئله گیج کننده برای اکثر مردم این است که مدل یوزر سفارشی فقط در جنگو ۱.۵ اضافه شده است. تا قبل از آن روش پیشنهادی برای سفارشی کردن این بود که یک فیلد یک به یک [(OneToOneField)](https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.OneToOneField) برای یوزر ایجاد میکردند که به آن اغلب مدل پروفایل میگفتند. 
+یک مسئله گیج کننده برای اکثر مردم این است که مدل یوزر سفارشی فقط در جنگو ۱.۵ اضافه شده است. تا قبل از آن روش پیشنهادی برای سفارشی کردن این بود که یک فیلد یک به یک [(OneToOneField)](https://docs.djangoproject.com/en/3.1/ref/models/fields/#django.db.models.OneToOneField) برای یوزر ایجاد میکردند که به آن اغلب مدل پروفایل میگفتند. 
 معمولا این ساختار در پروژه های قدیمی قابل مشاهده است ولی امروزه استفاده از یوزر سفارشی یک روش فراگیرتر است.
   هر چند برای یوزر سفارشی هم مانند سایر موارد در  جنگو روش های پیاده سازی مختلفی وجود دارد: یا میتوان از [AbstractUser](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#django.contrib.auth.models.AbstractUser) که تمامی فیلد های مربوط به یوزر پیش فرض و سطح دسترسی ها را دارد استفاده کرد یا اینکه از [AbstractBaseUser](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#django.contrib.auth.models.AbstractBaseUser) که شامل موارد دقیق تر 
  و انعطاف پذیر تر است استفاده کنیم، اما بایستی بیشتر روی آن کار کنیم.(خلاصه اینکه دستمون برای تغییر دادن بازه)
 ما در این کتاب `AbstractUser` را مبنا قرار میدهیم زیرا در صورت نیاز `AbstarctBaseUser` بعدا میتواند اضافه شود.
   
   
-  برای اضافه کردن یوزر سفارشی به پروژه خود چهار مرحله پیش رو داریم:
+برای اضافه کردن یوزر سفارشی به پروژه خود چهار مرحله پیش رو داریم:
   
   - ساخت مدل `CustomUser`
   - بروز رسانی `config/setting.py`
   - سفارشی کردن `UserCreationForm` و `UserChangeForm`
   - اضافه کرد یوزر سفارشی ساخته شده به `admin.py`
   
-  ولین قدم ساخت مدل `CustomUser` در اپ مربوط به خودش میباشد. اسم این اپ را `accounts` میگذاریم. ساخت اپ را میتوان بصورت محلی در shell محیط مجازی انجام داد، به این صورت که به `pipenv shell` رفته و سپس دستور `python manage.py startapp accounts` را اجرا میکنیم. با این حال، برای ثبات کار ما اکثر دستورات خود را در داکر اجرا میکنیم.
+
+ولین قدم ساخت مدل `CustomUser` در اپ مربوط به خودش میباشد. اسم این اپ را `accounts` میگذاریم. ساخت اپ را میتوان بصورت محلی در shell محیط مجازی انجام داد، به این صورت که به `pipenv shell` رفته و سپس دستور `python manage.py startapp accounts` را اجرا میکنیم. با این حال، برای ثبات کار ما اکثر دستورات خود را در داکر اجرا میکنیم.
+
+<div dir='ltr'>
+
+```shell
+$ docker-compose exec web python manage.py startapp accounts
+```
+</div>
   
-  <div dir='ltr'>
-    Command Line
-    ```shell
-    $ docker-compose exec web python manage.py startapp accounts
-    ```
-  </div>
-  
-  مدل جدیدی باسم `CustomUser` که از `AbstractUser` ارث بری میکند بسازید.
+مدل جدیدی باسم `CustomUser` که از `AbstractUser` ارث بری میکند بسازید.
 در واقع این به این معناست که ما در حال ایجاد یک نسخه [از Abstarct User] هستیم که مدل `CustomUser` تمام قابلیت های `AbstractUser` را ارث برده اما در صورت نیاز میتوانیم عملکرد های جدید را اضافه و یا نادیده بگیریم.
 فعلا تغییری در مدل اعمال نمیکنیم بنابراین دستور pass را مینویسیم که جانشین کد های پیش رو در مدل میباشد.( مینویسیم تا فعلا ازمون خطا نگیره تا وقتی که خواستیم چیزی اضافه کنیم.)
   
-   <div dir='ltr'>
-    Code
-    ```pyhton
-    # accounts/models.py
-     
-    from django.contrib.auth.models import AbstractUser
-    from django.db import models
-     
-     
-      class CustomUser(AbstractUser):
-          pass
-    ```
-  </div>
+<div dir='ltr'>
+
+```python
+# accounts/models.py
   
-  حال به setting.py رفته و قسمت `INSTALLED_APPS` را با اضافه کردن اپ `accounts` بروزرسانی میکنیم.
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+  
+  
+class CustomUser(AbstractUser):
+  pass
+```
+
+</div>
+  
+حال به setting.py رفته و قسمت `INSTALLED_APPS` را با اضافه کردن اپ `accounts` بروزرسانی میکنیم.
 همچنین تنظیمات `AUTH_USER_MODEL` را به انتهای فایل اضافه میکنیم تا اینکه در پروژه بجای استفاده از یوزر پیش فرض جنگو از یوزر سفارشی ما استفاده شود.
   
-     <div dir='ltr'>
-    Code
-    ```pyhton
-    # config/settings.py
-    INSTALLED_APPS = [
-   'django.contrib.admin',
-   'django.contrib.auth',
-   'django.contrib.contenttypes',
-   'django.contrib.sessions',
+<div dir='ltr'>
+
+```python
+# config/settings.py
+INSTALLED_APPS = [
+  'django.contrib.admin',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
   'django.contrib.messages',
   'django.contrib.staticfiles',
        
   # Local
        
    'accounts', # new
-  ]
-  ...
-  AUTH_USER_MODEL = 'accounts.CustomUser' # new
-    ```
-  </div>
+]
+...
+AUTH_USER_MODEL = 'accounts.CustomUser' # new
+```
+
+</div>
   
-  حال وقت ساختن فایل های `migration` برای تغییرات اخیر در متن پروژه است. میتوان اسم اپ `accounts` را در دستور `migration` بصورت دلخواه نوشت برای اینکه بگوییم این تغییرات 
+حال وقت ساختن فایل های `migration` برای تغییرات اخیر در متن پروژه است. میتوان اسم اپ `accounts` را در دستور `migration` بصورت دلخواه نوشت برای اینکه بگوییم این تغییرات 
 مربوط به اپ نام برده شده است.
   
-  <div die='ltr'>
-  Command Line
-    ```shell
-    $ docker-compose exec web python manage.py makemigrations accounts
-    Migrations for 'accounts':
-      accounts/migrations/0001_initial.py
-       - Create model CustomUser
+<div dir='ltr'>
 
-    ```
-  </div>
+```shell
+$ docker-compose exec web python manage.py makemigrations accounts
+Migrations for 'accounts':
+  accounts/migrations/0001_initial.py
+  - Create model CustomUser
+
+```
   
-  سپس دستور `migrate` را برای مشخص کردن دیتابیس پروژه برای اولین بار ایجاد اجرا کنید.
+</div>
   
-    <div die='ltr'>
-  Command Line
-    ```shell
-      $ docker-compose exec web python manage.py migrate
-    ```
-  </div>
+سپس دستور `migrate` را برای مشخص کردن دیتابیس پروژه برای اولین بار ایجاد اجرا کنید.
+  
+<div dir='ltr'>
+
+```shell
+$ docker-compose exec web python manage.py migrate
+```
+
+</div>
   
 ### فرم سفارشی یوزر
 
