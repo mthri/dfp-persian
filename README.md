@@ -130,24 +130,24 @@
 </details>
   
 <details>
-  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته)</summary>
+  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته) &check;</summary>
   <br>
   
-  - django-allauth
-  - AUTHENTICATION_BACKENDS
-  - EMAIL_BACKEND
-  - ACCOUNT_LOGOUT_REDIRECT
-  - URL ها
-  - تمپلیت ها
-  -  ورود کاربر (Log in)
-  - خروج کاربر (Log Out)
-  - ثبت نام کاربر (Sign Up)
-  - تنظیمات پنل ادمین
-  - ورود کاربر فقط با ایمیل (Email Only Login)
-  - تست ها
-  - احراز هویت با شبکه های اجتماعی
-  - گیت
-  - جمع بندی
+  - django-allauth &check;
+  - AUTHENTICATION_BACKENDS &check;
+  - EMAIL_BACKEND &check;
+  - ACCOUNT_LOGOUT_REDIRECT &check;
+  - URL ها &check;
+  - تمپلیت ها &check;
+  -  ورود کاربر (Log in) &check;
+  - خروج کاربر (Log Out) &check;
+  - ثبت نام کاربر (Sign Up) &check;
+  - تنظیمات پنل ادمین &check;
+  - ورود کاربر فقط با ایمیل (Email Only Login) &check;
+  - تست ها &check;
+  - احراز هویت با شبکه های اجتماعی &check;
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
   
