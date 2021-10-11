@@ -287,14 +287,14 @@
   - امنیت وب
   - تزریق SQL (SQL injection)
   - تزریق اسکریپت از طریق وبگاه (ٓXSS) &check;
-  - جعل درخواست میان وبگاهی (CSRF)
-  - مقابله با کلیک دزدی (Clickjacking Protection)
-  - HTTPS/SSL
-  - انتقال اکیدا ایمن HTTP (HSTS)
-  - ایمن کردن کوکی ها 
-  - ارتقا امنیت ادمین (Admin Hardening)
-  - گیت
-  - جمع بندی
+  - جعل درخواست میان وبگاهی (CSRF) &check;
+  - مقابله با کلیک دزدی (Clickjacking Protection) &check;
+  - HTTPS/SSL &check;
+  - انتقال اکیدا ایمن HTTP (HSTS) &check;
+  - ایمن کردن کوکی ها  &check;
+  - ارتقا امنیت ادمین (Admin Hardening) &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
