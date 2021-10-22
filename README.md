@@ -277,10 +277,10 @@
   <summary>فصل شانزدهم : امینت</summary>
   <br>
   
-  - مهندسی اجتماعی (Social Engineering)
-  - آپدیت های جنگو
-  - چک لیست های دیپلویمنت (Deployment Checklist)
-  - docker-compose-prod.yml
+  - مهندسی اجتماعی (Social Engineering) &check;
+  - آپدیت های جنگو &check;
+  - چک لیست های دیپلویمنت (Deployment Checklist) &check;
+  - docker-compose-prod.yml &check;
   - DEBUG
   - پیش فرض ها (Defaults)
   - SECRET_KEY
