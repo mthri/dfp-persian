@@ -200,3 +200,83 @@ $ docker-compose exec web python manage.py createsuperuser
 <p dir="rtl">
  در اینجا مهم است که یکی از جنبه های دیگر جنگو را مورد توجه قرار دهیم: تا به اینجا ما در حال آپدیت کردن دیتابیس – فایل <code dir="ltr">db.sqlite3</code> - در درون داکر بودیم. این بدا معنی است که فایل <code dir="ltr">db.sqlite3</code> به مرور زمان در حال تغییر بوده است. به لطف <code dir="ltr">volumes</code> که بر روی <code dir="ltr">docker-compose.yml</code> سوار است؛ تغییرات هر فایل در فایل <code dir="ltr">db.sqlite3</code> در درون کامپیوتر شما نیز کپی می شود. شما می توانید از داکر خارج شوید؛ <code dir="ltr">shell</code> را راه اندازی، و سرور را با <code dir="ltr">python manage.py runserver</code> راه اندازی کنید. و شما در آخر همان admin login  مشابه را مشاهده می کنید. این اتفاق به این دلیل است که دیتابیس SQLite زیرین یکی است.
 </p>
+
+<h2 dir="rtl">PostgreSQL</h2>
+
+<p dir="rtl">
+حالا زمان آن فرا رسیده است که برای ادامه ی پروژه به سمت PostgreSQL سوییچ کنیم. این کار سه قدم دیگر را در بر می گیرد:
+</p>
+
+<li dir="rtl">	وفق دهنده ی دیتابیس (database adapter) <code dir=”ltr”>Psycopg2</code> را نصب کنید. با این کار python می توانید با PostgreSQL ارتباط برقرار کند.</li>
+
+<li dir="rtl">	کانفیگ DATABASE را در فایل <code dir=”ltr”>settings.py</code> آپدیت کنید.</li>
+
+<li dir="rtl">PostgreSQL را بصورت محلی اجرا نمایید.</li>
+
+<p dir="rtl">
+ حالا اجرای docker container را با استفاده از <code dir="ltr">docker-compose down</code> متوقف کنید.
+</p>
+
+**command line**
+```bash
+$ docker-compose down
+Stopping postgresql_web_1 ... done
+Removing postgresql_web_1 ... done
+Removing network postgresql_default
+```
+
+<p dir="rtl">
+ سپس در درون فایل <code dir="ltr">docker-compose.yml</code> یک سرویس به نام <code dir="ltr">db</code> اضافه نمایید. این بدان معنی است که دو سرویس کاملا جداگانه وجود خواهد داشت؛ هر کدام دارای یک container که در درون Docker host اجرا می شوند:سرویس <code dir="ltr">web</code> برای سرور محلی Django و سرویس <code dir="ltr">db</code> برای دیتابیس PostgreSQL.
+</p>
+
+<p dir="rtl">
+PostgreSQL دارای آخرین ورژن است؛ یعنی ورژن 11. اگر ورژن خاصی را مشخص نکنیم و به جای آن تنها از <code dir="ltr">postgres</code> استفاده کنیم؛ آخرین نسخه ی PostgreSQL دانلود خواهد شد. بنابراین در آینده ممکن است PostgreSQL نسخه ی 12 برای شما نصب گردد که پیش نیاز های دیگری خواهد داشت.
+</p>
+
+<p dir="rtl">
+ در آخر، خط <code dir=”ltr”>depends-on</code> را به سرویس <code dir="ltr">web</code> اضافه خواهیم کرد؛ چرا که این سرویس بنا بر نوع دیتابیس اجرا می گردد. این بدان معنی است که <code dir="ltr">db</code> قبل از <code dir="ltr">web</code> شروع بکار خواهد کرد.
+</p>
+
+**docker-compose.yml**
+```docker
+version: '3.7'
+services:
+web:
+build: .
+command: python /code/manage.py runserver 0.0.0.0:8000
+volumes:
+- .:/code
+ports:
+- 8000:8000
+depends_on:
+- db
+db:
+image: postgres:11	
+```
+
+<p dir="rtl">
+ حالا <code dir="ltr">docker-compose up -d</code> را اجرا نمایید. با این کار، docker image ما rebuild خواهد شد و دو container را راه اندازی می کند. یکی PostgreSQL را در <code dir="ltr">db</code> اجرا می کند و دیگری جنگو <code dir="ltr">web</code> سرور را اجرا می کند.
+</p>
+
+<p dir="rtl">
+ در این جا مهم است به این نکته دقت کنیم که production database هایی نظیر PostgreSQL، file-based نیستند. این دیتابیس کاملا در سرویس <code dir="ltr">db</code> اجرا شده و بصورت موقت می باشد. زمانی که <code dir="ltr">docker-compose down</code> را اجرا می کنیم، تمام دیتای درون آن از بین می رود. این کاملا بر خلاف کد ما در درون web container می باشد که دارای یک <code dir="ltr">volumnes</code> سوار بر سینک محلی (sync local) و کد داکر است.
+</p>
+
+<p dir="rtl">
+ در فصل بعدی یاد خواهیم گرفت که چگونه volumes mount را برای سرویس <code dir="ltr">db</code> اضافه نماییم که اطلاعات دیتابیس را مقاوم نگه دارد.
+</p>
+
+<p dir="rtl">
+</p>
+
+<p dir="rtl">
+</p>
+
+<p dir="rtl">
+</p>
+
+<p dir="rtl">
+</p>
+
+<p dir="rtl">
+</p>
