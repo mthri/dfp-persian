@@ -130,24 +130,24 @@
 </details>
   
 <details>
-  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته)</summary>
+  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته) &check;</summary>
   <br>
   
-  - django-allauth
-  - AUTHENTICATION_BACKENDS
-  - EMAIL_BACKEND
-  - ACCOUNT_LOGOUT_REDIRECT
-  - URL ها
-  - تمپلیت ها
-  -  ورود کاربر (Log in)
-  - خروج کاربر (Log Out)
-  - ثبت نام کاربر (Sign Up)
-  - تنظیمات پنل ادمین
-  - ورود کاربر فقط با ایمیل (Email Only Login)
-  - تست ها
-  - احراز هویت با شبکه های اجتماعی
-  - گیت
-  - جمع بندی
+  - django-allauth &check;
+  - AUTHENTICATION_BACKENDS &check;
+  - EMAIL_BACKEND &check;
+  - ACCOUNT_LOGOUT_REDIRECT &check;
+  - URL ها &check;
+  - تمپلیت ها &check;
+  -  ورود کاربر (Log in) &check;
+  - خروج کاربر (Log Out) &check;
+  - ثبت نام کاربر (Sign Up) &check;
+  - تنظیمات پنل ادمین &check;
+  - ورود کاربر فقط با ایمیل (Email Only Login) &check;
+  - تست ها &check;
+  - احراز هویت با شبکه های اجتماعی &check;
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
   
@@ -287,14 +287,14 @@
   - امنیت وب
   - تزریق SQL (SQL injection)
   - تزریق اسکریپت از طریق وبگاه (ٓXSS) &check;
-  - جعل درخواست میان وبگاهی (CSRF)
-  - مقابله با کلیک دزدی (Clickjacking Protection)
-  - HTTPS/SSL
-  - انتقال اکیدا ایمن HTTP (HSTS)
-  - ایمن کردن کوکی ها 
-  - ارتقا امنیت ادمین (Admin Hardening)
-  - گیت
-  - جمع بندی
+  - جعل درخواست میان وبگاهی (CSRF) &check;
+  - مقابله با کلیک دزدی (Clickjacking Protection) &check;
+  - HTTPS/SSL &check;
+  - انتقال اکیدا ایمن HTTP (HSTS) &check;
+  - ایمن کردن کوکی ها  &check;
+  - ارتقا امنیت ادمین (Admin Hardening) &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
