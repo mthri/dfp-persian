@@ -207,11 +207,13 @@ $ docker-compose exec web python manage.py createsuperuser
 حالا زمان آن فرا رسیده است که برای ادامه ی پروژه به سمت PostgreSQL سوییچ کنیم. این کار سه قدم دیگر را در بر می گیرد:
 </p>
 
+<ul dir="rtl">
 <li dir="rtl">	وفق دهنده ی دیتابیس (database adapter) <code dir=”ltr”>Psycopg2</code> را نصب کنید. با این کار python می توانید با PostgreSQL ارتباط برقرار کند.</li>
 
 <li dir="rtl">	کانفیگ DATABASE را در فایل <code dir=”ltr”>settings.py</code> آپدیت کنید.</li>
 
 <li dir="rtl">PostgreSQL را بصورت محلی اجرا نمایید.</li>
+</ul>
 
 <p dir="rtl">
  حالا اجرای docker container را با استفاده از <code dir="ltr">docker-compose down</code> متوقف کنید.
@@ -240,18 +242,20 @@ PostgreSQL دارای آخرین ورژن است؛ یعنی ورژن 11. اگر 
 **docker-compose.yml**
 ```docker
 version: '3.7'
+
+
 services:
-web:
-build: .
-command: python /code/manage.py runserver 0.0.0.0:8000
-volumes:
-- .:/code
-ports:
-- 8000:8000
-depends_on:
-- db
+    web:
+        build: .
+        command: python /code/manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/code
+        ports:
+            - 8000:8000
+        depends_on:
+            - db
 db:
-image: postgres:11	
+    image: postgres:11	
 ```
 
 <p dir="rtl">
@@ -266,7 +270,40 @@ image: postgres:11
  در فصل بعدی یاد خواهیم گرفت که چگونه volumes mount را برای سرویس <code dir="ltr">db</code> اضافه نماییم که اطلاعات دیتابیس را مقاوم نگه دارد.
 </p>
 
+<h2 dir="rtl">Settings</h2>
+
 <p dir="rtl">
+ با استفاده از text editor، فایل <code dir="ltr">postgresql-project/settings.py</code> را باز نمایید و سپس به سمت پایین scroll نمایید تا با کانفیگ <code dir="ltr">DATABASE</code> مواجه شوید. Setting فعلی به شرح زیر است:
+</p>
+
+**Code**
+```python
+# postgresql_project/settings.py
+DATABASES = {
+       'default': {
+             'ENGINE': 'django.db.backends.sqlite3',
+             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       }
+}
+```
+
+<p dir="rtl">
+ جنگو بصورت پیش فرض از <code dir="ltr">sqlite3</code> به عنوان موتور دیتابیس (database engine) استفاده می کند. آن را <code dir="ltr">db.sqlite3</code> نام گذاری کنید و در <code dir="ltr">BASE_DIR</code> قرار دهید؛ که این دایرکتوری، دایرکتوری پروژه ی ما می باشد.
+</p>
+
+<p dir="rtl">
+ از آن جایی که ساختار دایرکتوری بگونه ای است که باعث سردرگمی می شود، ضمن این نکته لازم است که دایکرتوری پروژه جایی است که فایل های <code dir="ltr">postgresql_project</code>، <code dir="ltr">manage.py</code> ، <code dir="ltr">Pipfile</code> ، <code dir="ltr">Pipfile.lock</code> و <code dir="ltr">db.sqlite3</code> در آن واقع هستند.
+</p>
+
+**command line**
+```bash
+(postgresql)   $   ls
+Dockerfile   Pipfile.lock   docker-compose.yml   postgresql_project
+Pipfile   db.sqlite3   manage.py
+```
+
+<p dir="rtl">
+ برای این که به PostgreSQL سوییچ کنیم، ما کانفیگ [ENGINE]( https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-DATABASE-ENGINE) را آپدیت خواهیم کرد.PostgreSQL موارد <code dir="ltr">NAME</code> ،  <code dir="ltr">USER</code> ، <code dir="ltr">PASSWORD</code> ، <code dir="ltr">HOST</code> و <code dir="ltr">PORT</code> را از شما می خواهد.
 </p>
 
 <p dir="rtl">
