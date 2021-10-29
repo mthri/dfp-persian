@@ -303,7 +303,7 @@ Pipfile   db.sqlite3   manage.py
 ```
 
 <p dir="rtl">
- برای این که به PostgreSQL سوییچ کنیم، ما کانفیگ [ENGINE]( https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-DATABASE-ENGINE) را آپدیت خواهیم کرد.PostgreSQL موارد <code dir="ltr">NAME</code> ،  <code dir="ltr">USER</code> ، <code dir="ltr">PASSWORD</code> ، <code dir="ltr">HOST</code> و <code dir="ltr">PORT</code> را از شما می خواهد.
+ برای این که به PostgreSQL سوییچ کنیم، ما کانفیگ <a href="https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-DATABASE-ENGINE">ENGINE</a> را آپدیت خواهیم کرد.PostgreSQL موارد <code dir="ltr">NAME</code> ،  <code dir="ltr">USER</code> ، <code dir="ltr">PASSWORD</code> ، <code dir="ltr">HOST</code> و <code dir="ltr">PORT</code> را از شما می خواهد.
 </p>
 
 <p dir="rtl">
