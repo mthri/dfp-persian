@@ -330,6 +330,11 @@ DATABASES = {
 اگر پیج را ریفرش کنید، با ارور مواجه خواهید شد.
 </p>
 
+<p align="center">
+  <img width="900" height="500" src="imgs/Django error.PNG">
+  <p align="center"><strong>Django error</strong></p>
+</p>
+
 <p dir="rtl">
  چه اتفاقی افتاده است؟ زمانی که ما Docker را در حالت detached mode همراه با فلگ <code dir="ltr">-d</code> اجرا می کنیم، ممکن است خطا در وهله ی اول برای ما واضح و روشن نباشد. نوبت آن است که log ها را بررسی نماییم.
 </p>
