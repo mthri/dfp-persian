@@ -307,6 +307,56 @@ Pipfile   db.sqlite3   manage.py
 </p>
 
 <p dir="rtl">
+برای راحتی عبارت <code dir="ltr">postgresql</code> را برای سه مورد اول وارد نمایید؛ <code dir="ltr">db</code> که اسم service set در فایل <code dir="ltr">docker-compose.yml</code> می باشد را روبروی HOST وارد نمایید. در آخر <code dir="ltr">PORT</code> را <code dir="ltr">5432</code> قرار دهید؛ که <a href="https://en.wikipedia.org/wiki/Port_(computer_networking)">port</a> پیش فرض PostgreSQL می باشد.
+</p>
+
+**Code**
+```python
+# postgresql_project/settings.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432
+    }
+}
+```
+
+
+<p dir="rtl">
+اگر پیج را ریفرش کنید، با ارور مواجه خواهید شد.
+</p>
+
+<p dir="rtl">
+ چه اتفاقی افتاده است؟ زمانی که ما Docker را در حالت detached mode همراه با فلگ <code dir="ltr">-d</code> اجرا می کنیم، ممکن است خطا در وهله ی اول برای ما واضح و روشن نباشد. نوبت آن است که log ها را بررسی نماییم.
+</p>
+
+**Command Line**
+```
+$ docker-compose logs
+...
+web_1 | django.core.exceptions.ImproperlyConfigured: Error loading psycopg2
+module: No module named 'psycopg2'
+```
+
+<p dir="rtl">
+همانطور که می بینید، خروجی های زیادی تولید شده اند؛ اما اگر به قسمت پایین web_1 دقت نمایید، خطا به ما می گوید که درایور <code dir="ltr">Psycopg</code> هنوز نصب نشده است.
+</p>
+
+<h2 dir=”rtl”>Psycopg</h2>
+
+<p dir="rtl">
+PostgreSQL دیتابیسی است که از آن می توان تقریبا در هر زبان برنامه نویسی استفاده کرد. اما به این مورد فکر کنید که چگونه یک زبان برنامه نویسی می تواند به دیتابیس متصل گردد.
+</p>
+
+<p dir="rtl">
+جواب database adaptor است. دقیقا کاری است که <a href="http://initd.org/psycopg/">Psycopg</a> انجام می دهد. Psycopg معروف ترین و پرطرفدار ترین database adaptor در python می باشد. اگر مایل هستید که اطلاعات بیشتری را در مورد کارکرد Psycopg بدانید، می توانید <a href="https://www.psycopg.org/docs/index.html">توضیحات بیشتری</a> را در سایت رسمی دنبال نمایید.
+</p>
+
+<p dir="rtl">
 </p>
 
 <p dir="rtl">
