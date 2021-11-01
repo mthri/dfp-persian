@@ -41,18 +41,18 @@
 </details>
 
 <details>
-  <summary>فصل دوم : PostgreSQL</summary>
+  <summary>فصل دوم : PostgreSQL &check;</summary>
   <br>
   
-  - شروع به کار
-  - داکر 
-  - حالت تفکیک شده (Detached Mode)
-  - PostgreSQL
-  - تنظیمات
-  - Psycopg
-  - دیتابیس جدید
-  - گیت
-  - جمع بندی
+  - شروع به کار &check;
+  - داکر &check; 
+  - حالت تفکیک شده (Detached Mode) &check;
+  - PostgreSQL &check;
+  - تنظیمات &check;
+  - Psycopg &check;
+  - دیتابیس جدید &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
 
@@ -286,7 +286,7 @@
   - SECRET_KEY
   - امنیت وب
   - تزریق SQL (SQL injection)
-  - تزریق اسکریپت از طریق وبگاه (ٓXSS) &check;
+  - تزریق اسکریپت از طریق وبگاه (XSS) &check;
   - جعل درخواست میان وبگاهی (CSRF) &check;
   - مقابله با کلیک دزدی (Clickjacking Protection) &check;
   - HTTPS/SSL &check;
