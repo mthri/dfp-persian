@@ -116,7 +116,44 @@ $ docker-compose -f docker-compose-prod.yml up -d --build
 $ docker-compose exec web python manage.py migrate
 ```
 
+ 
+### امنیت وب
+ 
+حتی اگر جنگو به طور پیش‌فرض با رایج‌ترین مسائل امنیتی برخورد کند، هنوز درک آن حیاتی است
+روش ها و حمله های مکرر وجود دارد که جنگو تلاش می کند تا آنها را کاهش دهد . 
+شما می توانید یک نمای کلی در  <a href="https://docs.djangoproject.com/en/3.1/topics/security/">صفحه امنیتی جنگو</a> بیابید،
+اما در اینجا به عمق بیشتری خواهیم پرداخت.
+ 
+جنگو به طور پیش فرض با تعدادی <a href="https://docs.djangoproject.com/en/3.1/ref/middleware/#django.middleware.security.SecurityMiddleware">میان افزار امنیتی</a> اضافی همراه است که نگهبان در برابر
+سایر حملات چرخه درخواست/پاسخ (request/response) است.
 
+توضیح کامل هر یک از حوصله این کتاب خارج است، اما ارزش خواندن در مورد آن را دارد
+حفاظت های ارائه شده توسط تیم امنیتی جنگو در طول سال هاست. پیش فرض ها را تغییر ندهید
+.
+
+ 
+### تزریق SQL 
+
+بیا شروع کنیم با <a href="https://en.wikipedia.org/wiki/SQL_injection">حمله تزریق SQL</a> که زمانی اتفاق می افتد که 
+ یک کاربر مخرب بتواند به صورت دلخواه در دیتابیس ما کد SQL اجرا کند.یک فرم ورود به سایت را در نظر بگیرید. چه اتفاقی
+ می افتد اگر یک کاربر مخرب بتواند `DELETE from users WHERE user_id=user_id` را تایپ کند ؟
+ 
+ 
+ اگر این کد در مقابل پایگاه داده بدون حفاظت های مناسب اجرا شود, می تواند منجر به حذف تمام رکوردهای کاربر شود! خوب نیست .
+ این <a href="https://www.xkcd.com/327/">XKCD comic</a> یک تفکر طنز آمیز 
+ به طور بالقوه مثال دقیقی از چگونگی وقوع این امر ارائه می دهد.
+
+ 
+خوشبختانه Django ORM به طور پیش فرض ورودی های کاربر را هنگام ساخت querysets برای جلوگیری از این نوع حملات پاکسازی می کند.
+زمانی که باید مراقب باشید این است که جنگو گزینه ای برای اجرای 
+<a href="https://docs.djangoproject.com/en/3.1/topics/db/sql/#executing-custom-sql"> sql سفارشی</a> یا <a href="https://docs.djangoproject.com/en/3.1/topics/db/sql/#executing-raw-queries">پرس و جوهای خام</a> ارائه می دهد.
+هر دو باید با احتیاط مورد استفاده قرار گیرند زیرا میتوانند آسیب پذیری را در برابر تزریق SQL باز کنند.
+ 
+The non-profit Open Web Application Security Project (OWASP) has a fantastic and very detailed
+that is recommended for further reading.
+
+ 
+ 
 ### XSS (Cross Site Scripting)
 
 <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Cross-site scripting (XSS)</a> این یک حمله کلاسیک دیگر است که زمانی اتفاق می افتد که مهاجم (attacker) قادر است تکه های کوچکی از کد را به صفحات مشاهده شده توسط افراد دیگر, تزریق کند. این کد ، معمولاً به زبان جاوا اسکریپت است و در صورت ذخیره در پایگاه داده ، بازیابی شده و برای سایر کاربران نمایش داده می شود .
