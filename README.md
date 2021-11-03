@@ -130,7 +130,7 @@
 </details>
   
 <details>
-  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته) &check;</summary>
+  <summary>فصل هفتم : ثبت نام کاربر (پیشرفته) &check;</summary>
   <br>
   
   - django-allauth &check;
@@ -284,7 +284,7 @@
   - DEBUG
   - پیش فرض ها (Defaults)
   - SECRET_KEY
-  - امنیت وب
+  - امنیت وب &check;
   - تزریق SQL (SQL injection)
   - تزریق اسکریپت از طریق وبگاه (XSS) &check;
   - جعل درخواست میان وبگاهی (CSRF) &check;
