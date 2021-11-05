@@ -285,7 +285,7 @@
   - پیش فرض ها (Defaults)
   - SECRET_KEY
   - امنیت وب &check;
-  - تزریق SQL (SQL injection)
+  - تزریق SQL (SQL injection) &check;
   - تزریق اسکریپت از طریق وبگاه (XSS) &check;
   - جعل درخواست میان وبگاهی (CSRF) &check;
   - مقابله با کلیک دزدی (Clickjacking Protection) &check;
