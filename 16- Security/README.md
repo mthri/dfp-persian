@@ -6,7 +6,7 @@
 
 خوشبختانه، جنگو به دلیل سال‌ها تجربه در رسیدگی به مسایل مربوط به امنیت وب و همچنین یک چرخه بروز رسانی امنیتی قوی از سابقه بسیار خوبی بر خوردار می‌باشد.
 
-فیچر های جدید تقریبا هذ ۹ ماه یک بار مثل ورژن ۲.۲ تا ۳.۰ منتشر می‌شوند اما وصله های امنیتی تقریبا هر ماه بصورت ۲.۲.۲ تا ۲.۲.۳ منتشر می‌شوند.
+فیچر های جدید تقریبا هر ۹ ماه یک بار مثل ورژن ۲.۲ تا ۳.۰ منتشر می‌شوند اما وصله های امنیتی تقریبا هر ماه بصورت ۲.۲.۲ تا ۲.۲.۳ منتشر می‌شوند.
 
 به هرحال، مانند هر ابزاری، این مهم است که فیچر های امنیتی بطور صحیح پیاده سازی شوند و ما در این قسمت آموزش می‌دهیم که چطور این موراد امنیتی را در  پروژه کتاب فروشی (Book Store) پیاده سازی کنید.
 
@@ -149,10 +149,12 @@ $ docker-compose exec web python manage.py migrate
 <a href="https://docs.djangoproject.com/en/3.1/topics/db/sql/#executing-custom-sql"> sql سفارشی</a> یا <a href="https://docs.djangoproject.com/en/3.1/topics/db/sql/#executing-raw-queries">پرس و جوهای خام</a> ارائه می دهد.
 هر دو باید با احتیاط مورد استفاده قرار گیرند زیرا میتوانند آسیب پذیری را در برابر تزریق SQL باز کنند.
  
-The non-profit Open Web Application Security Project (OWASP) has a fantastic and very detailed
-that is recommended for further reading.
+پروژه غیرانتفاعی `Open Web Application Security Project (OWASP)` دارای 
+<a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.md">یک برگه تقلب تزریق SQL</a> فوق العاده و بسیار 
+ دقیق است که برای مطالعه بیشتر توصیه می شود.
 
  
+
  
 ### XSS (Cross Site Scripting)
 
