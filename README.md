@@ -214,7 +214,7 @@
 </details>
   
 <details>
-  <summary>فصل دوازدهم : ابلود فایل ها و تصاویر</summary>
+  <summary>فصل دوازدهم : اپلود فایل ها و تصاویر</summary>
   <br>
   
   - فایل های رسانه ای (Media Files) &check;
@@ -310,6 +310,7 @@
   - Heroku &check;
   - دیپلویمنت با داکر &check;
   - heroku.yml &check;
+  - دیپلوی Heroku
   - SECURE_PROXY_SSL_HEADER &check;
   - لاگ های Heroku &check;
   - افزونه های Heroku &check;
