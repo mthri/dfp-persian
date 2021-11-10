@@ -73,18 +73,18 @@
 </details>
 
 <details>
-  <summary>فصل چهارم : اپ Pages</summary>
+  <summary>فصل چهارم : اپ Pages &check;</summary>
   <br>
     
-  - تمپلیت ها
-  - ٰViewها و URL ها
-  - تست ها
-  - تست کردن تمپلیت ها
-  - تست کردن HTML
-  - متد setUP
-  - Resolve
-  - گیت
-  - جمع بندی
+  - تمپلیت ها &check;
+  - ٰViewها و URL ها &check;
+  - تست ها &check;
+  - تست کردن تمپلیت ها &check;
+  - تست کردن HTML &check;
+  - متد setUP &check;
+  - Resolve &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
@@ -310,7 +310,7 @@
   - Heroku &check;
   - دیپلویمنت با داکر &check;
   - heroku.yml &check;
-  - دیپلوی Heroku
+  - دیپلوی Heroku &check;
   - SECURE_PROXY_SSL_HEADER &check;
   - لاگ های Heroku &check;
   - افزونه های Heroku &check;
@@ -351,7 +351,7 @@
 |مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9) [لینکدین](https://linkedin.com/in/mehrdad-biukian-naeini)|مترجم فصل ۵|
 |مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|مترجم ۱۷|
 |مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh) [تلگرام](https://t.me/mahdi_asadzadeh)|مترجم فصل ۱۱|
-|امین ملک محمدی|[گیتهاب](https://github.com/Aminmalek)|مترجم فصل ۴|
+|امیرحسین صالحی|[گیتهاب](https://github.com/Amir796-hash)|مترجم فصل ۴|
 |امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ) [لینکدین](https://linkedin.com/in/amirhosseinmohammadi) [توییتر](https://twitter.com/GNU_Amir)  [تلگرام](https://t.me/BlackIQ)| اداره مخزن|
 |محمدرضا ارغشی|[گیتهاب](https://github.com/phpreza)|مترجم فصل ۶| 
   
