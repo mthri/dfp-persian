@@ -152,24 +152,24 @@
 </details>
   
 <details>
-  <summary>فصل هشتم : متغییر های Environment</summary>
+  <summary>فصل هشتم : متغییر های Environment &check;</summary>
   <br>
   
   - environs[django] &check;
-  - SECRET_KEY
-  - DEBUG و ALLOWED_HOSTS
-  - DATABASES
+  - SECRET_KEY &check;
+  - DEBUG و ALLOWED_HOSTS &check;
+  - DATABASES &check;
   - گیت &check;
   - جمع بندی &check;
   
 </details>
   
 <details>
-  <summary>فصل نهم : ایمیل</summary>
+  <summary>فصل نهم : ایمیل &check;</summary>
   <br>
   
-  - تایید ایمیل شخصی سازی شده
-  - صفحه تایید ایمیل
+  - تایید ایمیل شخصی سازی شده &check;
+  - صفحه تایید ایمیل 
   - تغییر و بازنشانی رمز
   - سرویس ایمیل در جنگو
   - گیت
