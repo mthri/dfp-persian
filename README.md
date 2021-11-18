@@ -166,7 +166,7 @@
 </details>
   
 <details>
-  <summary>فصل نهم : ایمیل &check;</summary>
+  <summary>فصل نهم : ایمیل</summary>
   <br>
   
   - تایید ایمیل شخصی سازی شده &check;
