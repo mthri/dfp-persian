@@ -63,9 +63,10 @@
   - داکر &check;
   - PostgreSQL &check;
   - مدل کاربر شخصی سازی شده (Custom User Model) &check;
-  - فرم های کاربر شخصی سازی شده (Custom User Forms)
+  - فرم های کاربر شخصی سازی شده (Custom User Forms) &check;
   - پنل ادمین کاربر شخصی سازی شده (Custom User Admin)
-  - سوپریوزر (Superuser)
+  - سوپریوزر (Superuser) &check;
+  - تست 
   - یونیت تست ها
   - گیت &check;
   - جمع بندی &check;
@@ -152,24 +153,24 @@
 </details>
   
 <details>
-  <summary>فصل هشتم : متغییر های Environment</summary>
+  <summary>فصل هشتم : متغییر های Environment &check;</summary>
   <br>
   
   - environs[django] &check;
-  - SECRET_KEY
-  - DEBUG و ALLOWED_HOSTS
-  - DATABASES
+  - SECRET_KEY &check;
+  - DEBUG و ALLOWED_HOSTS &check;
+  - DATABASES &check;
   - گیت &check;
   - جمع بندی &check;
   
 </details>
   
 <details>
-  <summary>فصل نهم : ایمیل</summary>
+  <summary>فصل نهم : ایمیل &check;</summary>
   <br>
   
-  - تایید ایمیل شخصی سازی شده
-  - صفحه تایید ایمیل
+  - تایید ایمیل شخصی سازی شده &check;
+  - صفحه تایید ایمیل 
   - تغییر و بازنشانی رمز
   - سرویس ایمیل در جنگو
   - گیت
@@ -219,7 +220,7 @@
   
   - فایل های رسانه ای (Media Files) &check;
   - Model ها &check;
-  - تنظیم پنل ادمین &check;
+  - تنظیم پنل ادمین 
   - تمپلیت ها
   - قدم های فراتر
   - گیت &check;
@@ -262,7 +263,7 @@
   <br>
   
   - django-debug-toolbar &check;
-  - آنالیز صفحه ها
+  - آنالیز صفحه ها 
   - select_related و prefetch_related
   - کشینگ (Caching)
   - ایندکس ها (Indexes)
