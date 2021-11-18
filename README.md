@@ -63,9 +63,10 @@
   - داکر &check;
   - PostgreSQL &check;
   - مدل کاربر شخصی سازی شده (Custom User Model) &check;
-  - فرم های کاربر شخصی سازی شده (Custom User Forms)
+  - فرم های کاربر شخصی سازی شده (Custom User Forms) &check;
   - پنل ادمین کاربر شخصی سازی شده (Custom User Admin)
-  - سوپریوزر (Superuser)
+  - سوپریوزر (Superuser) &check;
+  - تست 
   - یونیت تست ها
   - گیت &check;
   - جمع بندی &check;
@@ -219,7 +220,7 @@
   
   - فایل های رسانه ای (Media Files) &check;
   - Model ها &check;
-  - تنظیم پنل ادمین &check;
+  - تنظیم پنل ادمین 
   - تمپلیت ها
   - قدم های فراتر
   - گیت &check;
@@ -262,7 +263,7 @@
   <br>
   
   - django-debug-toolbar &check;
-  - آنالیز صفحه ها
+  - آنالیز صفحه ها 
   - select_related و prefetch_related
   - کشینگ (Caching)
   - ایندکس ها (Indexes)
