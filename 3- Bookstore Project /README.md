@@ -1,4 +1,5 @@
 
+
 <div dir="rtl">
 
 # پروژه کتاب فروشی
@@ -290,6 +291,38 @@ class CustomUserChangeForm(UserChangeForm):
 
 
 ### سرپرست کاربر سفارشی
+
+در نهایت باید اطلاعات فایل `accounts/admin.py` را آپدیت کنیم.
+این فایل محلی برای دستکاری داده های کاربری است و همانطور که می دانید ارتباط تنگاتنگی میان کاربر سیستم و ادمین وجود دارد.
+
+ما `UserAdmin` موجود را به `CustomUserAdmin` گسترش می‌دهیم و به جنگو می‌گوییم که از فرم‌های جدید و مدل کاربر سفارشی استفاده کند و در نهایت یک لیست از ایمیل و نام کاربری یوزرها برای ما برگرداند.
+در صورت تمایل، می‌توانیم فیلدهای کاربری موجود بیشتری مانند is_staff را به list_display اضافه کنیم.
+
+<div dir="ltr">
+
+```
+# accounts/admin.py
+from django.contrib import admin
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
+
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+
+CustomUser = get_user_model()
+
+class CustomUserAdmin(UserAdmin):
+	add_form = CustomUserCreationForm
+	form = CustomUserChangeForm
+	model = CustomUser
+	list_display = ['email', 'username',]
+	
+admin.site.register(CustomUser, CustomUserAdmin)
+```
+
+</div>
+
+گذاشتن . قبل از تابع ورودی باعث اضافه شدن مقدار بیشتری کد ورودی شده ولی از دردسرهای آتی جلوگیری می کند.
+
 
 ### ابر کاربر
 
