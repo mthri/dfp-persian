@@ -64,9 +64,9 @@
   - PostgreSQL &check;
   - مدل کاربر شخصی سازی شده (Custom User Model) &check;
   - فرم های کاربر شخصی سازی شده (Custom User Forms) &check;
-  - پنل ادمین کاربر شخصی سازی شده (Custom User Admin)
+  - پنل ادمین کاربر شخصی سازی شده (Custom User Admin) &check;
   - سوپریوزر (Superuser) &check;
-  - تست 
+  - تست &check;
   - یونیت تست ها
   - گیت &check;
   - جمع بندی &check;
@@ -215,14 +215,14 @@
 </details>
   
 <details>
-  <summary>فصل دوازدهم : اپلود فایل ها و تصاویر</summary>
+  <summary>فصل دوازدهم : اپلود فایل ها و تصاویر &check;</summary>
   <br>
   
   - فایل های رسانه ای (Media Files) &check;
   - Model ها &check;
-  - تنظیم پنل ادمین 
-  - تمپلیت ها
-  - قدم های فراتر
+  - تنظیم پنل ادمین &check; 
+  - تمپلیت ها &check;
+  - قدم های فراتر &check;
   - گیت &check;
   - جمع بندی &check;
   
@@ -345,7 +345,7 @@
 |مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb) [لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|مترجم فصل ۱۲|
 |آرین قوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
-|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۸ و ۱۴|
+|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۸ |
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
 |علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
 |رضا مبارکی|[گیتهاب](https://github.com/MrRezoo) [لینکدین](https://www.linkedin.com/in/mrrezoo/) |مترجم ۱۵|
@@ -355,5 +355,6 @@
 |امیرحسین صالحی|[گیتهاب](https://github.com/Amir796-hash)|مترجم فصل ۴|
 |امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ) [لینکدین](https://linkedin.com/in/amirhosseinmohammadi) [توییتر](https://twitter.com/GNU_Amir)  [تلگرام](https://t.me/BlackIQ)| اداره مخزن|
 |محمدرضا ارغشی|[گیتهاب](https://github.com/phpreza)|مترجم فصل ۶| 
+|امیررضا پاسندی|[گیتهاب](https://github.com/amirpsd) [تلگرام](https://t.me/amir_psd2)|مترجم فصل ۱۴| 
   
 </div>
