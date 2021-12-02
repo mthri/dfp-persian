@@ -245,16 +245,16 @@
 </details>
   
 <details>
-  <summary>فصل چهاردهم : جستوجو</summary>
+  <summary>فصل چهاردهم : جستوجو &check;</summary>
   <br>
   
-  - صفحه نتایج جستوجو
-  - فیلتر های مقدماتی (Basic Filtering)
-  - اشیاء Q (Q Objects)
-  - Form ها
-  - Form جستوجو
-  - گیت
-  - جمع بندی
+  - صفحه نتایج جستوجو &check;
+  - فیلتر های مقدماتی (Basic Filtering) &check;
+  - اشیاء Q (Q Objects) &check;
+  - Form ها &check;
+  - Form جستوجو &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
