@@ -285,7 +285,7 @@ class CustomUserChangeForm(UserChangeForm):
 
 استفاده از کتابخانه ها به صورت بالا به جای ایمپورت کردن و استفاده مستقیم از `CostumUser` ممکن است پیچیده تر به نظر برسد. دلیل استفاده از این ایده این است که به جای رفرنس دادن چندباره در سرتاسر پروژه به مدل سفارشی یوزر فقط یک رفرنس مرجع داشته باشیم.
 
-در مرحله بعد، `UserCreationForm` و `UserChangeForm` را وارد می کنیم که هر دو گسترش خواهند یافت. 
+در مرحله بعد، [UserCreationForm](https://docs.djangoproject.com/en/3.1/topics/auth/default/#django.contrib.auth.forms.UserCreationForm) و [UserChangeForm](https://docs.djangoproject.com/en/3.1/topics/auth/default/#django.contrib.auth.forms.UserChangeForm) را وارد می کنیم که هر دو گسترش خواهند یافت. 
 
 سپس دو فرم جدید به نام های `CustomUserCreationForm` و `CustomUserChangeForm`  میسازیم. این 2 فرم گسترش یافته فرم پایه یوزری که در بالا ایمپورت  شد هستند و ما به طور خاص مدل یوزر سفارشی خاص خود را در آن ها جایگزین کرده و دو فیلد ایمیل و یوزرنیم را در آن ها نمایش میدهیم.فیلد پسوورد به صورت پیشفرض موجود است بنابراین نیاز به تعریف دوباره آن در این قسمت نیست.
 
@@ -296,7 +296,7 @@ class CustomUserChangeForm(UserChangeForm):
 این فایل محلی برای دستکاری داده های کاربری است و همانطور که می دانید ارتباط تنگاتنگی میان کاربر سیستم و ادمین وجود دارد.
 
 ما `UserAdmin` موجود را به `CustomUserAdmin` گسترش می‌دهیم و به جنگو می‌گوییم که از فرم‌های جدید و مدل کاربر سفارشی استفاده کند و در نهایت یک لیست از ایمیل و نام کاربری یوزرها برای ما برگرداند.
-در صورت تمایل، می‌توانیم فیلدهای کاربری موجود بیشتری مانند is_staff را به list_display اضافه کنیم.
+در صورت تمایل، می‌توانیم فیلدهای [کاربری](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/) موجود بیشتری مانند is_staff را به list_display اضافه کنیم.
 
 <div dir="ltr">
 
@@ -362,12 +362,78 @@ admin.site.register(CustomUser, CustomUserAdmin)
 
 شما باید در هنگام نوشتن تست تعداد زیادی تست واحد و تعداد محدودی تست یکپارچه داشته باشید.
 
-زبان برنامه نویسی پایتون شامل کتابخانه های زیادی برای تست واحد است، همچنین جنگو نیز کتابخانه های زیادی برای تست اتوماتیک برنامه در اختیار شما قرار می دهد. بر این اساس بهانه ای برای ننوشتن تست های فراوان برای یک برنامه وجود ندارد و همانطور که گفته شد این تست ها در زمان شما برای دیباگ کردن برنامه صرفه جویی میکنند.
+زبان برنامه نویسی پایتون شامل کتابخانه های زیادی برای [تست واحد](https://docs.python.org/3/library/unittest.html) است، همچنین جنگو نیز کتابخانه های زیادی برای [تست اتوماتیک](https://docs.djangoproject.com/en/3.1/topics/testing/) برنامه در اختیار شما قرار می دهد. بر این اساس بهانه ای برای ننوشتن تست های فراوان برای یک برنامه وجود ندارد و همانطور که گفته شد این تست ها در زمان شما برای دیباگ کردن برنامه صرفه جویی میکنند.
 
 توجه داشته باشید که لازم نیست برای همه چیز در یک برنامه تست نوشته شود. برای مثال، برای همه توابع پیس ساخته جنگو در کد مرجع تست واحد وجود دارد و شما نیاز به دوباره نویسی تست ها ندارید. مثلا وقتی از مدل `User` استفاده میکنید نیاز به نوشتن تست نیست، ولی اگر به جای آن از مدل `CostumUser` استفاده کنید باید برای آن تست بنویسید.
 
 
 ### تست های واحد
+برای نوشتن [تست واحد](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase) در جنگو از اکستنشنی به نام [TestCase](https://docs.python.org/3/library/unittest.html#unittest.TestCase) استفاده میکنیم. در حال حاضر در اپلیکیشن ما فایلی به نام `test.py` وجود دارد که به صورت خودکار هنگام ایجاد برنامه با دستور `startapp` ساخته شد؛ این فایل در حال حاضر یک فایل خالی است و ما شروع به تغییر دادن آن میکنیم.
+
+در این قسمت نام هر متد باید با test شروع شود تا بتواند به عنوان یک تست واحد در جنگو اجرا شود. این روش نام گذاری همچنین کمک میکند که شناسایی تست ها ساده تر باشد زیرا در جنگو حدود صدها و شاید هزاران متد وجود داشته باشد!
+
+<div dir="ltr">
+
+```
+# accounts/tests.py
+from django.contrib.auth import get_user_model
+from django.test import TestCase
+class CustomUserTests(TestCase):
+	def test_create_user(self):
+		User = get_user_model()
+		user = User.objects.create_user(
+			username='will',
+			email='will@email.com',
+			password='testpass123'
+		)
+		self.assertEqual(user.username, 'will')
+		self.assertEqual(user.email, 'will@email.com')
+		self.assertTrue(user.is_active)
+		self.assertFalse(user.is_staff)
+		self.assertFalse(user.is_superuser)
+	def test_create_superuser(self):
+		User = get_user_model()
+		admin_user = User.objects.create_superuser(
+			username='superadmin',
+			email='superadmin@email.com',
+			password='testpass123'
+		)
+		self.assertEqual(admin_user.username, 'superadmin')
+		self.assertEqual(admin_user.email, 'superadmin@email.com')
+		self.assertTrue(admin_user.is_active)
+		self.assertTrue(admin_user.is_staff)
+		self.assertTrue(admin_user.is_superuser)
+```
+
+</div>
+
+در ابتدا هر دو کتابخانه `get_user_model` و `TestCase` را قبل از ایجاد کلاس `CustomUserTests` فراخوتنی میکنیم. در این کلاس دو تابع تست مختلف خواهیم داشت. `test_create_user` برای تایید کاربر جدید است، که در این تابع در ابتدا ما یک شی از مدل کاربر میسازیم و سپس با استفاده از متد `create_user` کاربری با دسترسی های مورد نیاز تعریف میکنیم.
+
+برای تابع `test_create_superuser` نیز روند بالا را با یک تفاوت جزئی تکرار میکنیم. در اینجا برای ساخت کاربر از تابع [create_superuser](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.UserManager.create_superuser) به جای تابع [create_user](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.UserManager.create_user)  استفاده میشود. تفاوت این دو کاربر در این است که در ابرکاربر هر دو متغیر `is_staff` و `is_superuser` مقدار True میگیرند.
+
+برای ران کردن تست ها با داکر میتوان از دستور `docker-compose exec` استفاده کرد. یا به طور سنتی میتوانیم فایل تست خود را با دستور `python manage.py test` اجرا کنیم.
+
+
+<div dir="ltr">
+
+```
+
+Command Line
+$ docker-compose exec web python manage.py test
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+..
+---------------------------------------------------------------------
+Ran 2 tests in 0.268s
+OK
+Destroying test database for alias 'default'...
+
+```
+
+</div>
+
+زمانی که همه تست ها موفقیت آمیز باشند میتوانیم از این مرحله گذر کنیم.
+
 
 ### گیت
 
