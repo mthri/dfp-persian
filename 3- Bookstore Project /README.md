@@ -368,6 +368,67 @@ admin.site.register(CustomUser, CustomUserAdmin)
 
 
 ### تست های واحد
+برای نوشتن تست واحد در جنگو از اکستنشنی به نام `TestCase` استفاده میکنیم. در حال حاضر در اپلیکیشن ما فایلی به نام `test.py` وجود دارد که به صورت خودکار هنگام ایجاد برنامه با دستور `startapp` ساخته شد؛ این فایل در حال حاضر یک فایل خالی است و ما شروع به تغییر دادن آن میکنیم.
+
+در این قسمت نام هر متد باید با test شروع شود تا بتواند به عنوان یک تست واحد در جنگو اجرا شود. این روش نام گذاری همچنین کمک میکند که شناسایی تست ها ساده تر باشد زیرا در جنگو حدود صدها و شاید هزاران متد وجود داشته باشد!
+
+<div dir="ltr">
+
+```
+# accounts/tests.py
+from django.contrib.auth import get_user_model
+from django.test import TestCase
+class CustomUserTests(TestCase):
+	def test_create_user(self):
+		User = get_user_model()
+		user = User.objects.create_user(
+			username='will',
+			email='will@email.com',
+			password='testpass123'
+		)
+		self.assertEqual(user.username, 'will')
+		self.assertEqual(user.email, 'will@email.com')
+		self.assertTrue(user.is_active)
+		self.assertFalse(user.is_staff)
+		self.assertFalse(user.is_superuser)
+	def test_create_superuser(self):
+		User = get_user_model()
+		admin_user = User.objects.create_superuser(
+			username='superadmin',
+			email='superadmin@email.com',
+			password='testpass123'
+		)
+		self.assertEqual(admin_user.username, 'superadmin')
+		self.assertEqual(admin_user.email, 'superadmin@email.com')
+		self.assertTrue(admin_user.is_active)
+		self.assertTrue(admin_user.is_staff)
+		self.assertTrue(admin_user.is_superuser)
+```
+
+</div>
+
+
+
+<div dir="ltr">
+
+```
+
+Command Line
+$ docker-compose exec web python manage.py test
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+..
+---------------------------------------------------------------------
+Ran 2 tests in 0.268s
+OK
+Destroying test database for alias 'default'...
+
+```
+
+</div>
+
+زمانی که همه تست ها موفقیت آمیز باشند میتوانیم از این مرحله گذر کنیم.
+
 
 ### گیت
 
