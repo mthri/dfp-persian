@@ -57,7 +57,7 @@
 </details>
 
 <details>
-  <summary>فصل سوم : پروژه فروشگاه کتاب</summary>
+  <summary>فصل سوم : پروژه فروشگاه کتاب &check;</summary>
   <br>
     
   - داکر &check;
@@ -67,7 +67,7 @@
   - پنل ادمین کاربر شخصی سازی شده (Custom User Admin) &check;
   - سوپریوزر (Superuser) &check;
   - تست &check;
-  - یونیت تست ها
+  - یونیت تست ها &check;
   - گیت &check;
   - جمع بندی &check;
     
