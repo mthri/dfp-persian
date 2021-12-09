@@ -37,6 +37,8 @@
 
 به دلیل اینکه ما داریم از داکر استفاده میکنیم باید دستور `docker-compose exec web` را نیز به دستوراتمان اضافه کنیم.
 
+<div align='left'>
+ 
 ```bash
 $ docker-compose exec web python manage.py check --deploy
 System check identified some issues:
@@ -47,6 +49,8 @@ System check identified 5 issues (0 silenced).
 
 ```
 
+</div> 
+ 
 چقدر خوب! یک لیست توصیفی و طولانی از مشکلات که باید قبل از دیپلوری کردن پروژه کتاب‌فروشی رفع کنیم
 
 
@@ -55,19 +59,31 @@ System check identified 5 issues (0 silenced).
 
 راه  های زیادی برای برخورد با این چالش وجود دارد.باتوجه به اینکه قرار است در Heroku استقرار دهیم، رویکرد ما ایجاد فایل *docker-compose-prod.yml* است که به واسطه آن می‌توانیم محیط محصول رو تست  کنیم و همچنین میتوانیم بصورت دستی متغییرهای محلی به محیط محصول اضاافه کنیم.
 
+ 
+<div align='left'>
+ 
 ```bash
 $ touch docker-compose-prod.yml
 ```
 
+</div> 
+ 
 بطور پیشفرض، گیت تمامی فایل ها و پوشه ها را در پروژه ما دنبال میکند. ما نمی‌خواهیم این فایل جدید را دنبال کند،‌چون حاوی اطلاعات مهم و حساسی هست. راه حل آن ایجاد فایل جدید به نام *.gitignore* است که درون آن باید نام فایل ها و پوشه  هایی که مایلیم توسط گیت  دنبال **نشود** قرار دهیم.
 
 یک فایل جدید ایجاد میکنیم.
+ 
+<div align='left'>
+ 
 ```bash
 $ touch .gitignore
 ```
-
+ 
+</div>
+ 
 تنها فایل خود را به آن اضافه میکنیم
 
+<div align='left'>
+ 
 **.gitignore**
 ```bash
 docker-compose-prod.yml
@@ -75,13 +91,19 @@ __pycache__/
 db.sqlite3
 .DS_Store # Mac only
 ```
-
+ 
+</div> 
+ 
+ 
 اگر کنجکاو هستید، گیت‌هاب یک فایل رسمی برای [python gitignore](https://github.com/github/gitignore/blob/master/Python.gitignore) دارد که شامل تنظیمات اضافی ارزشمندی هست (برای جستجو) 
 
 اگر دوباره دستور `git status` را اجرا کنید فایل *docker-compose-prod.yml* را مشاهده نخواهید کرد، با اینکه هنوز در پروژه شما قرار دارد. دقیقا همان چیزی که ما می‌خواستیم!
 
 حالا، محتویات فایل docker-compose.yml را در docker-compose-prod.yml کپی می‌کنیم.
 
+<div align='left'>
+ 
+ 
 **docker-compose-prod.yml**
 ```yaml
 version: '3.8'
@@ -107,15 +129,22 @@ services:
   volumes:
     postgres_data:
 ```
-
+ 
+</div> 
+ 
+ 
 برای اجرای فایل جدید، داکر را با فلگ -f ریستارت کنید تا فایل [کامپوز جایگزین]((https://docs.docker.com/compose/reference/‌))  انتخاب شود.
 
+<div align='left'>
+ 
+ 
 ```bash
 $ docker-compose down
 $ docker-compose -f docker-compose-prod.yml up -d --build
 $ docker-compose exec web python manage.py migrate
 ```
-
+ 
+</div> 
  
 ### امنیت وب
  
