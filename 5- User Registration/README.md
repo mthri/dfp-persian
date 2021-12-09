@@ -1,5 +1,6 @@
 <div dir="rtl">
 
+    
 # User Registration
 
 User registration is a core feature in any dynamic website. And it will be in our Bookstore project,
