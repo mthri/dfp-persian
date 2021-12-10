@@ -1,12 +1,10 @@
 <div dir="rtl">
+# فصل  پنجم : User Registeration
 
-    
-# User Registration
+یک ویژگی مهم در وب سایت های پویا، بحث ثبت نام کاربران است. این مسئله در پروژه فروشگاه کتاب مورد نظر ما نیز وجود دارد. در این فصل به پیاده سازی موارد ورود به سایت، خروج از سایت و ثبت نام در سایت می پردازیم. از آنجایی که جنگو نماها و آدرس های اینترنتی لازم برای دو مورد ورود و خروج از سایت را در اختیار ما قرار می دهد، پیاده سازی دو مورد اول نسبتا راحت است اما پیاده سازی مورد ثبت نام به دلیل اینکه هیچ راه ل داخلی از پیش تعریف شده ای برای آن در جنگو وجود ندارد، چالش رانگیز است.
 
-User registration is a core feature in any dynamic website. And it will be in our Bookstore project,
-too. In this chapter we will implement log in, log out, and sign up functionality. The first two are
-relatively straightforward since Django provides us with the necessary views and urls for them,
-however sign up is more challenging since there is no built-in solution.
+### Auth App
+بیایید با پیاده سازی دو مورد ورود به سایت و خروج از سایت با استفاده از سیستم احراز هویت جنگو شروع کنیم. 
 
 ### Auth App
 
