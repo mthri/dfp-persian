@@ -136,18 +136,13 @@ Code
 
 کاربر پیش فرض شامل فیلدهای متعددی از جمله [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) و [email](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.email) می باشد. که به آن ها ارجاع داده شده است. 
 
-و logout و login اسامی URL هستند. تگ [url](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url) به این معناست که اگر ما نام URL را مشخص نمودیم، لینک به طور خودکار به مسیر آن URL متصل شود. به عنوان مثال در فصل قبلی ما نام URL صفحه homepage خودمان را به home تنظیم نمودیم. بنابراین یک لینک به homepage به فرمت `{% url 'home' %}` خواهد بود.در ادامه بیشتر دراین باره می پردازیم.
+و logout و login اسامی URL هستند. تگ [url](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url) به این معناست که اگر ما نام URL را مشخص نمودیم، لینک به طور خودکار به مسیر آن URL متصل شود. به عنوان مثال در فصل قبلی ما نام URL صفحه homepage خودمان را به home تنظیم نمودیم. بنابراین یک لینک به homepage به فرمت `{% url 'home' %}` خواهد بود.در ادامه بیشتر به این موضوع می پردازیم.
 
-And the logout and login are URL names. The [url](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url)
-template tag means if we specify the URL
-name the link will automatically refer to that URL path. For example, in the previous chapter we
-set the name of our homepage URL to home so a link to the homepage would take the format of
-`{% url 'home' %}`. More on this shortly.
-
-If you look at the homepage now at http://127.0.0.1:8000/ it will likely show the email address
-of your superuser account since we used it previously to log in.
+اگر حالا به homepage در http://127.0.0.1:8000/ نگاهی بیاندازید به احتمال زیاد آدرس ایمیل حساب کاربری ابرکاربر(superuser) شما را نشان خواهد داد چون قبلا برای لاگین شدن از آن استفاده کرده بودیم.  
 
 ![Homepage with greeting](images/1.png)
+    
+در بخش admin در http://127.0.0.1:8000/admin/، اگر روی دکمه "log out" کلیک کنید که در گوشه ی بالا سمت راست قرار دارد، ما میتوانیم از admin و admin خارج شویم. 
 
 In the admin over at http://127.0.0.1:8000/admin/, if you click on the “Log out” button in the
 upper right corner we can log out of the admin and by extension the Django project.
