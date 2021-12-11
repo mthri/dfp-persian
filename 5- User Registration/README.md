@@ -149,17 +149,15 @@ Code
     
 به هوم پیج در http://127.0.0.1:8000/ بازگردید و پیج را رفرش کنید.
 
-Return to the homepage at http://127.0.0.1:8000/ and refresh the page.
-
 
 
 ### Django Source Code
 
-You might have been able to piece together these steps on your own from reading [the official docs](https://docs.djangoproject.com/en/3.1/topics/auth/default/). 
-But the deeper–and better–approach is to learn how to read the Django source code on
-your own.
+ممکن است بتوانید این مراحل را از طریق خواندن [داکیومنت رسمی](https://docs.djangoproject.com/en/3.1/topics/auth/default/) به تنهایی کنار هم قرار دهید اما رویکرد عمیق و بهتر این است که یاد بگیرید چگونه کد منبع جنگو را خودتان بخوانید.
 
-One question is, how was the `user` and its related variables magically available in our template?
+یک سوال این است که، چطور `user` و متغیرهای مرتبط با آن در تمپلیت ظاهر شده اند؟ پاسخ این است که جنگو مفهومی به نام [template context](https://docs.djangoproject.com/en/3.1/topics/auth/default/#authentication-data-in-templates) دارد و به این معناست که هر تمپلیتی با داده هایی از فایل `views.py` مربوطه بارگذاری شده است. ما میتوانیم از یوزر درون template tag برای دسترسی به ویژگی های User استفاده کنیم. به عبارت دیگر، جنگو این را به طور خودکار برایما محیا می سازد.
+
+ One question is, how was the `user` and its related variables magically available in our template?
 The answer is that Django has a concept called the [template context](https://docs.djangoproject.com/en/3.1/topics/auth/default/#authentication-data-in-templates)
 which means each template
 is loaded with data from the corresponding `views.py` file. We can use user within template tags
