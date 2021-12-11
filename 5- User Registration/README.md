@@ -161,28 +161,14 @@ Code
 حال برای این که بدانیم یک یوزر وارد سایت شده است یا نه، به `user` دسترسی پیدا می کنیم و پس از آن می توانیم از [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) که یک ویژگی بولین می باشد، استفاده کنیم. اگر کاربری وارد شده باشد مقدار True برگردانده شده و ما می توانیم کارهایی مانند نمایش ایمیل کاربر را اجرا کنیم. یا اگر هیچ کاربری وارد نشده باشد، نتیجه False خواهد بود. 
 
 
-So to check if a user is logged in or not, we access `user` and
-then can use the boolean [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated)
-attribute. If a user is logged in, it will return True and we can do things like display
-the user’s email. Or if no user is logged in, the result will be False.
+در ادامه ما URL به نام  login `{% url 'login' %}` را بخش به بخش باز کنیم.را داریم. این اسم از کجا می آید؟ البته که از خود جنگو!بیایید قطعه کد 
 
 
-Moving on we have the URL name `login`. Where did that come from? The answer, of course, is
-from Django itself! Let’s unpack the code snippet `{% url 'login' %}` piece by piece.
+در ابتدا ما از [url template tag](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url) استفاده کرده ایم که آرگومان اول آن یک [named URL pattern](https://docs.djangoproject.com/en/3.1/topics/http/urls/#naming-url-patterns) می باشد. این یک بخش دلخواه است که به عنوان تمرین به تمامی مسیرهای URL خود اضافه نموده ایم. بنابراین باید یک نام `login` ضمیمه ی URL شده باشد!   
 
+دو راه وجود دارد که ما باید با آن ها آشنا باشیم. به عبارت دیگر اگر من به شما نمی گفتم که می خواهیم از `{% url 'login' %}` استفاده کنید، چطور متوجه آن می شدید؟ 
 
-First up we’re using the [url template tag](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url)
-which takes as its first argument a [named URL pattern](https://docs.djangoproject.com/en/3.1/topics/http/urls/#naming-url-patterns).
-That’s the optional name section we add as a best practice to all our URL paths. Therefore there
-must be a `login` name attached to the URL used by Django for log ins, right!
-
-There are two ways we could have known this. In other words, if I hadn’t just told you that we
-wanted to use `{% url 'login' %}`, how could you have figured it out?
-
-First look at the [official documentation](https://docs.djangoproject.com/en/3.1/). Personally I often use the search feature so I would have
-typed in something like “login” and then clicked around until I found a description of log in. The
-one we want is actually called [authentication views](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views)
-and lists the corresponding URL patterns for us.
+در ابتدا به [داکیومنت رسمی](https://docs.djangoproject.com/en/3.1/) نگاه کنید. من به شخصه اغلب اوقات از قابلیت جستجو استفاده می کنم و چیزی مثل "login" را تایپ نموده و جستجو می کنم تا زمانی که توصیفی از login بیابم. چیزی که ما می خواهیم [authentication views](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views) نام دارد و الگوهای URL مربوطه را برایمان لیست می کند.
 
 
 <div dir="ltr">
