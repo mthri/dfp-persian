@@ -131,15 +131,12 @@ Code
 
 </div>
 
-اگر کاربر وارد سیستم شده باشد(تایید شده باشد)، ما پیامی که می گوید "سلام" و شامل آدرس ایمیل است را به او نشان می دهیم.
+اگر کاربر وارد سیستم شده باشد(تایید شده باشد)، ما پیامی شامل "سلام" و آدرس ایمیل است را به او نشان می دهیم.
 هر دوی اینها [متغیرهایی](https://docs.djangoproject.com/en/3.1/topics/templates/#variables) هستند که ما می توانیم با template engine جنگو از طریق دو براکت باز {{ و بسته }} استفاده کنیم.
 
-کاربر پیش فرض شامل فیلدهای متعددی از جمله [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) و [email](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.email) می باشد. که به آن ها ارجاع داده می شود. 
+کاربر پیش فرض شامل فیلدهای متعددی از جمله [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) و [email](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.email) می باشد. که به آن ها ارجاع داده شده است. 
 
-The default User contains numerous fields including 
-[is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated)
-and [email](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.email) which are
-referenced here.
+و logout و login اسامی URL هستند. تگ [url](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url) به این معناست که اگر ما نام URL را مشخص نمودیم، لینک به طور خودکار به مسیر آن URL متصل شود. به عنوان مثال در فصل قبلی ما نام URL صفحه homepage خودمان را به home تنظیم نمودیم. بنابراین یک لینک به homepage به فرمت `{% url 'home' %}` خواهد بود.در ادامه بیشتر دراین باره می پردازیم.
 
 And the logout and login are URL names. The [url](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url)
 template tag means if we specify the URL
