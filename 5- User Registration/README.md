@@ -48,16 +48,7 @@ INSTALLED_APPS = [
 
 ### Auth URLs and Views
 
-به منظور استفاده از auth app داخلی جنگو، ما باید آن را به فایل `config/urls.py` اضافه کنیم. ساده ترین روش این است که فایل `accounts/` به عنوان پیشوند قرار بگیرد چون عموما در جامعه جنگو از این حالت استفاده می شود. یک خط زیر را تغییر دهید. توجه کنید که هر چقدر طول فایل `urls.py` افزایش یابد، افزودن کامنت برای هر بخشی از URL-admin, user management, local apps,... به خوانایی کد کمک خواهد کرد.
-
-
-
-### Auth URLs and Views
-
-To use Django’s built-in auth app we must explicitly add it to our `config/urls.py` file. The easiest
-approach is to use `accounts/` as the prefix since that is commonly used in the Django community.
-Make the one line change below. Note that as our `urls.py` file grows in length, adding comments
-for each type of URL–admin, user management, local apps, etc.–helps with readability.
+به منظور استفاده از auth app داخلی جنگو، ما باید آن را به فایل `config/urls.py` اضافه کنیم. ساده ترین روش این است که فایل `accounts/` به عنوان پیشوند قرار بگیرد چون عموما در جامعه جنگو از این حالت استفاده می شود. یک خط را در زیر تغییر دهید. توجه کنید که هر چقدر طول فایل `urls.py` افزایش یابد، افزودن کامنت برای هر بخشی از URL-admin, user management, local apps,... به خوانایی کد کمک خواهد کرد.
 
 
 <div dir="ltr">
@@ -82,8 +73,8 @@ urlpatterns = [
 
 </div>
 
-What’s included in the auth app? A lot it turns out. First off, there are a number of associated
-urls.
+
+چه چیزی به auth app اضافه شده است؟ به نظر می رسد چیزهای زیادی اضافه شده باشد. قبل از همه تعداد زیادی url های مرتبط وجود دارد. 
 
 
 
