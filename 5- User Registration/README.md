@@ -39,57 +39,12 @@ INSTALLED_APPS = [
 </div>
 
 
+درواقع جنگو 6app برایمان آماده نموده است که باعث قدرتمندی سایت می شود. اولین آن admin و دومی auth است. ما به این شکل متوجه شدیم که auth app اکنون در پروژه جنگو ما وجود دارد.
 
 
-### Auth App
+وقتی که ما برای بار اول دستور migrate را اجرا میکنیم، تمامی این Appها با هم در پایگاه داده اولیه لینک و متصل شده اند. و به خاطر داشته باشید که ما از تنظیمات AUTH_USER_MODEL تا از مدل کاربر خودمان استفاده کند نه مدل کاربر پیش فرضی که اینجا وجود دارد. به همین دلیل باید قبل از اجرای migrate برای بار اول، تا زمانی که این 
+پیکره بندی کامل شود، صبر نماییم.استفاده نموده ایم تا به جنگو اعلام کنیم 
 
-Let’s begin by implementing log in and log out using Django’s own [auth](https://docs.djangoproject.com/en/3.1/topics/auth/default/) app. Django provides us
-with the necessary views and urls which means we only need to update a template for things to
-work. This saves us a lot of time as developers and it ensures that we don’t make a mistake since
-the underlying code has already been tested and used by millions of developers.
-
-
-However this simplicity comes at the cost of feeling “magical” to Django newcomers. We covered
-some of these steps previously in my book, [Django for Beginners](https://djangoforbeginners.com/), but we did not slow down and
-look at the underlying source code. The intention for a beginner was to broadly explain and
-demonstrate “how” to implement user registration properly, but this came at the cost of truly
-diving into “why” we used the code we did.
-
-
-Since this is a more advanced book, we delve deeper to understand the underlying source code
-better. The approach here can also be used to explore any other built-in Django functionality on
-your own.
-
-The first thing we need to do is make sure the `auth` app is included in our `INSTALLED_APPS` setting.
-We have added our own apps here previously, but have you ever taken a close look at the built-in
-apps Django adds automatically for us? Most likely the answer is no. Let’s do that now!
-
-
-<div dir="ltr">
-
-Code
-```python
-# config/settings.py
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth', # Yoohoo!!!!
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    
-    # Local
-    'accounts',
-    'pages',
-]
-```
-
-</div>
-
-
-There are, in fact, 6 apps already there that Django provides for us which power the site. The
-first is admin and the second is auth. This is how we know the auth app is already present in our
-Django project.
 
 
 When we earlier ran the migrate command for the first time all of these apps were linked
