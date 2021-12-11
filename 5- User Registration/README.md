@@ -105,7 +105,7 @@ accounts/reset/done/ [name='password_reset_complete']
 مرحله بعدی چیست؟ بیایید هوم پیج خود را به روز کنیم تا اگر کاربری لاگین نمود یا نه به ما اطلاع دهد که در حال حاضر فقط از طریق ادمین امکانپذیر است.
 
     
-اینجا کد جدیدی برای فایل `templates/home.html` وجود دارد که از تگ های [if/else](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if) templating engin موجود در جنگو برای منطق پایه ای استفاده می کنه.
+اینجا کد جدیدی برای فایل `templates/home.html` وجود دارد که از تگ های [if/else](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if) موجود در template engin جنگو برای منطق اصلی استفاده می کند. 
 
 Here is the new code for the `templates/home.html` file. It uses the Django templating engine’s
 [if/else](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if) tags for basic logic
