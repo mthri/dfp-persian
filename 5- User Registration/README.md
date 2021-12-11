@@ -98,22 +98,14 @@ accounts/reset/done/ [name='password_reset_complete']
 من این را چطور متوجه شدم؟ به دو روش. اولین روش [official auth docs](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views) این را به ما می گوید. اما دومی، روش عمیق تر این است که به کد منبع جنگو که در [در گیت هاب قرار دارد](https://github.com/django/django) است نگاهی بیاندازیم. اگر آن را بالا و پایین و جستجو کنیم راه خودمان به [auth app](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth) را پیدا خواهیم کرد و می توانیم فایل `urls.py` را [در این لینک](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) بیابیم که کد منبع کامل را نمایش می دهد.
     
 
-How did I know that? Two ways. The first is the [official auth docs](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views)
-tell us so! But a second, deeper
-approach is to look at the Django source code which is [available on Github](https://github.com/django/django). 
-If we navigate or
-search around we’ll find our way to the [auth app itself](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth). 
-And within that we can find the `urls.py`
-file [at this link](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) which shows the complete source code.
-
-
-It takes practice to understand the Django source code, but it is well worth the time
-
+فهمیدن کد اصلی جنگو نیازمند تمرین است، اما ارزش وقت گذاشتن را دارد.
+    
 ### Homepage
 
-What’s next? Let’s update our existing homepage so that it will notify us if a user is already logged
-in or not which currently can only happen via the admin.
+مرحله بعدی چیست؟ بیایید homepage به ما اطلاع دهد که در حال حاضر فقط از طریق ادمین امکانپذیر است. موجود خود را به روز کنیم که اگر کاربری لاگین کرد یا نه
 
+    
+اینجا کد جدیدی برای فایل `templates/home.html` وجود دارد که از تگ های [if/else](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if) templating engin موجود در جنگو برای منطق پایه ای استفاده می کنه.
 
 Here is the new code for the `templates/home.html` file. It uses the Django templating engine’s
 [if/else](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if) tags for basic logic
