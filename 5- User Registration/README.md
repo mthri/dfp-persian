@@ -133,9 +133,8 @@ Code
 
 اگر کاربر وارد سیستم شده باشد(تایید شده باشد)، ما پیامی که می گوید "سلام" و شامل آدرس ایمیل است را به او نشان می دهیم.
 هر دوی اینها [متغیرهایی](https://docs.djangoproject.com/en/3.1/topics/templates/#variables) هستند که ما می توانیم با template engine جنگو از طریق دو براکت باز {{ و بسته }} استفاده کنیم.
-If the user is logged in (authenticated), we display a greeting that says “Hi” and includes their
-email address. These are both [variables](https://docs.djangoproject.com/en/3.1/topics/templates/#variables) which we can use with Django’s template engine via
-double opening {{ and closing }} brackets.
+
+کاربر پیش فرض شامل فیلدهای متعددی از جمله [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) و [email](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.email) می باشد. که به آن ها ارجاع داده می شود. 
 
 The default User contains numerous fields including 
 [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated)
