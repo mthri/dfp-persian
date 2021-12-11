@@ -46,11 +46,10 @@ INSTALLED_APPS = [
 پیکره بندی کامل شود، صبر نماییم. 
 
 
+### Auth URLs and Views
 
-When we earlier ran the migrate command for the first time all of these apps were linked
-together in the initial database. And remember that we used the `AUTH_USER_MODEL` setting to
-tell Django to use our custom user model, not the default User model here. This is why we had
-to wait until that configuration was complete before running migrate for the first time.
+به منظور استفاده از auth app داخلی جنگو، ما باید آن را به فایل `config/urls.py` اضافه کنیم. ساده ترین روش این است که فایل `accounts/` به عنوان پیشوند قرار بگیرد چون عموما در جامعه جنگو از این حالت استفاده می شود. یک خط زیر را تغییر دهید. توجه کنید که هر چقدر طول فایل `urls.py` افزایش یابد، افزودن کامنت برای هر بخشی از URL-admin, user management, local apps,... به خوانایی کد کمک خواهد کرد.
+
 
 
 ### Auth URLs and Views
