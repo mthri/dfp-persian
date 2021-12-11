@@ -142,13 +142,12 @@ Code
 
 ![Homepage with greeting](images/1.png)
     
-در بخش admin در http://127.0.0.1:8000/admin/، اگر روی دکمه "log out" کلیک کنید که در گوشه ی بالا سمت راست قرار دارد، ما میتوانیم از admin و admin خارج شویم. 
-
-In the admin over at http://127.0.0.1:8000/admin/, if you click on the “Log out” button in the
-upper right corner we can log out of the admin and by extension the Django project.
+در بخش admin در http://127.0.0.1:8000/admin/، اگر روی دکمه "log out"  که در گوشه ی بالا سمت راست قرار دارد کلیک کنید، میتوانیم از admin خارج شویم. 
 
 
 ![Admin logout link](images/2.png)
+    
+به هوم پیج در http://127.0.0.1:8000/ بازگردید و پیج را رفرش کنید.
 
 Return to the homepage at http://127.0.0.1:8000/ and refresh the page.
 
