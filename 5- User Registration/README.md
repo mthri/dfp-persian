@@ -157,11 +157,8 @@ Code
 
 یک سوال این است که، چطور `user` و متغیرهای مرتبط با آن در تمپلیت ظاهر شده اند؟ پاسخ این است که جنگو مفهومی به نام [template context](https://docs.djangoproject.com/en/3.1/topics/auth/default/#authentication-data-in-templates) دارد و به این معناست که هر تمپلیتی با داده هایی از فایل `views.py` مربوطه بارگذاری شده است. ما میتوانیم از یوزر درون template tag برای دسترسی به ویژگی های User استفاده کنیم. به عبارت دیگر، جنگو این را به طور خودکار برایما محیا می سازد.
 
- One question is, how was the `user` and its related variables magically available in our template?
-The answer is that Django has a concept called the [template context](https://docs.djangoproject.com/en/3.1/topics/auth/default/#authentication-data-in-templates)
-which means each template
-is loaded with data from the corresponding `views.py` file. We can use user within template tags
-to access User attributes. In other words, Django just gives this to us automatically.
+
+حال برای این که بدانیم یک یوزر وارد سایت شده است یا نه، به user [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) که یک ویژگی بولین می باشد، استفاده کنیم. اگر کاربری وارد شده باشد مقدار True برگردانده شده و ما می توانیم کارهایی مانند نمایش ایمیل کاربر را اجرا کنیم. یا اگر هیچ کاربری وارد نشده باشد، نتیجه False خواهد بود. دسترسی پیدا میکنیم و پس از آن می توانیم از 
 
 
 So to check if a user is logged in or not, we access `user` and
