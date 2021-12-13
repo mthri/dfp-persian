@@ -187,7 +187,7 @@ accounts/reset/done/ [name='password_reset_complete']
 
 </div>
     
-این به ما می گوید که مسیر    در جایی قرار دارد که "login" قرار گرفته است و نامش login هست. در ابتدا کمی گیج کندده هست اما اطلاعاتی که نیاز داریم اینجا هست.
+این به ما می گوید که مسیر accounts/login/ در جایی قرار دارد که "login" قرار گرفته است و نامش login هست. در ابتدا کمی گیج کننده هست اما اطلاعاتی که نیاز داریم اینجا هست.
 
 با یک قدم عمیق تر شدن به مرحله دوم، می توانیم سورس کد جنگو را بررسی کنیم تا "logout" را در عمل ببینیم. اگر در گیت هاب جستجو کنید، در نهایت خود [auth app](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth) را خواهید یافت. خوب، حالا بیایید فایل `urls.py` را بررسی کنیم. لینک کامل کد در [اینجا](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) قرار دارد.
 
@@ -231,16 +231,9 @@ urlpatterns = [
 
 
 
-در اینجا کد مربوطه که جنگو برای auth app استفاده می کند وجود دارد. امیدوارم ببینید که "logout" route جادویی نیست. دقیقا در معرض دید قرار دارد. از ویوی LogoutView استفاده می کند و URL name آن logout است. اصلا جادویی در کار نیست! فقط پیدا کردن آن برای بار اول کمی چالشی هست.
+در اینجا کد مربوطه که جنگو برای auth app استفاده می کند وجود دارد. امیدوارم ببینید که logout route جادویی نیست. دقیقا در معرض دید قرار دارد. از ویوی LogoutView استفاده می کند و URL name آن logout است. اصلا جادویی در کار نیست! فقط پیدا کردن آن برای بار اول کمی چالشی هست.
     
 این فرایند سه مرحله ای یک راه عالی برای یادگیری است: یا Django shotcut را به خاطر بسپارید،  آن را در داکیومنت جستجو کنید و یا گاهی به سورس کد سری بزنید و واقعا درک کنید که این همه خوبی از کجاست.
-Here is the underlying code Django uses itself for the auth app. I hope you can see that the
-“logout” route is not magic. It’s right there in plain sight, it uses the view LogoutView and has the
-URL name 'logout'. Not magic at all! Just a little challenging to find the first time.
-
-This three-step process is a great way to learn: either remember the Django shortcut, look it
-up in the docs, or on occasion dive into the source code and truly understand where all this
-goodness comes from.
 
 
 
