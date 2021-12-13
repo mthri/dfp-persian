@@ -264,7 +264,7 @@ $ touch templates/registration/login.html
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```html
