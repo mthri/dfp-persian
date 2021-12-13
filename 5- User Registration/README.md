@@ -18,7 +18,7 @@
 اولین کاری که نیاز به انجام آن داریم این است که مطمئن شویم `auth` app  به تنظیمات `INSTALLED_APPS` اضافه شده است. ما قبلا appهای خود را به اینجا افزوده ایم، اما آیا تابه حال به app های داخلی که جنگو به صورت خودکار برایمان اضافه مینماید توجه کرده اید؟ به نظر میرسد جواب خیر باشد. بیایید حالا این کار را انجام دهیم.
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 به منظور استفاده از auth app داخلی جنگو، ما باید آن را به فایل `config/urls.py` اضافه کنیم. ساده ترین روش این است که فایل `accounts/` به عنوان پیشوند قرار بگیرد چون عموما در جامعه جنگو از این حالت استفاده می شود. یک خط را در زیر تغییر دهید. توجه کنید که هر چقدر طول فایل `urls.py` افزایش یابد، افزودن کامنت برای هر بخشی از URL-admin, user management, local apps,... به خوانایی کد کمک خواهد کرد.
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -79,7 +79,7 @@ urlpatterns = [
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -110,7 +110,7 @@ accounts/reset/done/ [name='password_reset_complete']
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```html
@@ -172,7 +172,7 @@ Code
 در ابتدا به [داکیومنت رسمی](https://docs.djangoproject.com/en/3.1/) نگاه کنید. من به شخصه اغلب اوقات از قابلیت جستجو استفاده می کنم و چیزی مثل "login" را تایپ نموده و جستجو می کنم تا زمانی که توصیفی از login بیابم. چیزی که ما می خواهیم [authentication views](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views) نام دارد و الگوهای URL مربوطه را برایمان لیست می کند.
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -194,7 +194,7 @@ accounts/reset/done/ [name='password_reset_complete']
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
