@@ -233,32 +233,24 @@ urlpatterns = [
 
 
 ### Log In
-Back on our basic homepage, click on the “Log In” link and… it results in an error!
+به هوم پیج اصلی خودمان برمی گردیم. روی لینک "Log In" کلیک کرده و ... یک خطا داریم!
 
 
 ![Log in template not exist error](images/3.png)
 
 
-Django is throwing a TemplateDoesNotExist error at us. Specifically, it seems to expect a log in
-template at registration/login.html. In addition to Django telling us this, we can look in the
-[documentation](https://docs.djangoproject.com/en/3.1/topics/auth/default/#all-authentication-views) and see that the desired `template_name` has that location .
+جنگو یک خطای TemplateDoesNotExist برایمان دارد. به نظر می رسد انتظار یک تمپلیت log in را در register/login.html دارد. به علاوه می توانیم [داکیومنت](https://docs.djangoproject.com/en/3.1/topics/auth/default/#all-authentication-views) جنگو را نگاه کنیم و ببینیم که `template_name` خواسته شده، آن لوکیشن را دارد.  
+
+    
+اما بیایید واقعا مطمئن شویم و سورس کد را بررسی کنیم. بنابراین اینجا می توانیم هر جادویی را از بین ببریم. به هر حال این فقط جنگو است.
 
 
-But let’s really be sure and check the source code so we can remove any perceived magic here.
-After all, it’s just Django.
+اگر به فایل [auth/views.py](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/views.py) برگردیم می توانیم در خط 47 ببینیم که برای LoginView نام تمپلیت 'registration/login.html' است. بنابراین اگر می خواستیم مسیر پیش فرض را تغیر دهیم، می توانستیم، اما این به معنای override کردن LoginView است که بیش از حد به نظر می رسد. بیایید فقط از چیزی که جنگو در اینجا به ما می گوید استفاده کنیم.
+
+یک فولدر `registration` جدید در مسیر تمپلیت های موجود، ایجاد کرده و سپس فایل login.html را هم در آن قرار دهید.
 
 
-Back in the [auth/views.py](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/views.py)
-file we can see on line 47 for LoginView that the template_name is
-'registration/login.html'. So if we wanted to change the default location we could, but it
-would mean overriding LoginView which seems like overkill. Let’s just use what Django gives us
-here.
-
-Create a new `registration` folder within the existing templates directory and then add our
-login.html file there, too.
-
-
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Command Line
 ```shell
@@ -268,8 +260,7 @@ $ touch templates/registration/login.html
 
 </div>
 
-The actual code is as follows. We extend our base template, add a title, and then specify that we
-want to use a form that will “post” or send the data.
+کد اصلی به صورت زیر است. ما تمپلیت اصلی خود را گسترش می دهیم، یک title اضافه کرده و سپس مشخص می کنیم که می خواهیم از فرمی که در آن داده ها را ارسال یا “post” کند، استفاده نماییم.
 
 
 
@@ -296,24 +287,18 @@ Code
 </div>
 
 
-You should **always** add [CSRF protection](https://docs.djangoproject.com/en/3.1/ref/csrf/)
-on any submittable form. Otherwise a malicious website
-can change the link and attack the site and the user. Django has CSRF middleware to handle this
-for us; all we need to do is add `{% csrf_token %}` tags at the start of the form.
+شما **همیشه** باید در هر فرم قابل ارسالی حفاظت [CSRF protection](https://docs.djangoproject.com/en/3.1/ref/csrf/) را اضافه کنید. در غیراینصورت یک سایت آلوده و مخرب می تواند لینک را تغییر داده و به سایت و کاربر حمله نماید. جنگو دارای میان افزار CSRF است که این مسئله را برایمان مدیریت می کند. تنها کاری که باید انجام دهیم این است که تگ های `{% csrf_token %}` را به ابتدای فرم اضافه کنیم.
 
-Next we can control the look of the form contents. For now we’ll use [as_p()](https://docs.djangoproject.com/en/3.1/ref/forms/api/#as-p) so that each form
-field is displayed within a paragraph p tag.
+در مرحله بعد می توانیم ظاهر محتویات فر زا کنترل کنیم. در حال حاضر ما از [as_p()](https://docs.djangoproject.com/en/3.1/ref/forms/api/#as-p) استفاده می کنیم تا هر فیلد form در یک تگ پاراگراف p نمایش داده شود.
 
-With that explanation out of the way, let’s check if our new template is working correctly. Refresh
-the web page at http://127.0.0.1:8000/accounts/login/.
+با این توضیحات، بگذارید بررسی کنیم که آیا تمپلیت جدیدمان به درستی کار می کند یا خیر. وب پیج را در http://127.0.0.1:8000/accounts/login/ را رفرش کنید.
 
 
 ![Log in page](images/4.png)
 
 
-And there is our page! Lovely. You can navigate back to the homepage and confirm that the “Log
-In” link works, too, if you like. As a final step, go ahead and try to log in with your superuser
-account on the log in page.
+و حالا صفحه ما! خیلی هم دوست داشتنی. در صورت تمایل می توانید به هوم پیج برگردیدو تایید کنید که لینک  “Log
+In” کار میکند. در گام آخر، ادامه دهید و سعی کنید با حساب کاربری superuser خود در صفحه login کنید.
 
 
 ### Redirects
