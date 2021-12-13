@@ -187,15 +187,9 @@ accounts/reset/done/ [name='password_reset_complete']
 
 </div>
     
-این به ما می گوید که مسیر accounts/login/ در جایی قرار دارد که "login" قرار گرفته است و نامش login هست. در ابتدا کمی گیج کننده هست اما اطلاعاتی که نیاز داریم اینجا هست.
+این به ما می گوید که مسیر /accounts/login در جایی قرار دارد که "login" قرار گرفته است و نامش login هست. در ابتدا کمی گیج کننده هست اما اطلاعاتی که نیاز داریم اینجا هست.
 
-با یک قدم عمیق تر شدن به مرحله دوم، می توانیم سورس کد جنگو را بررسی کنیم تا "logout" را در عمل ببینیم. اگر در گیت هاب جستجو کنید، در نهایت خود [auth app](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth) را خواهید یافت. خوب، حالا بیایید فایل `urls.py` را بررسی کنیم. لینک کامل کد در [اینجا](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) قرار دارد.
-
-Going a step deeper to phase two, we can investigate the underlying Django source code to see
-“logout” in action. If you perform a search [over on Github](https://github.com/django/django) you’ll eventually 
-find the [auth app itself](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth). 
-Ok, now let’s start by investigating the `urls.py` file.
-[Here is the link](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) to the complete code:
+با یک قدم عمیق تر شدن در مرحله دوم، می توانیم سورس کد جنگو را بررسی کنیم تا "logout" را در عمل ببینیم. اگر در گیت هاب جستجو کنید، در نهایت خود [auth app](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth) را خواهید یافت. خوب، حالا بیایید فایل `urls.py` را بررسی کنیم. لینک کامل کد در [اینجا](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) قرار دارد:
 
 
 
