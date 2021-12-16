@@ -400,23 +400,19 @@ Code
 ## ثبت نام کاربر
 
 
-Implementing a sign up page for user registration is completely up to us. We’ll go through the
-standard steps for any new page:
-
-- create an app-level `accounts/urls.py` file
-- update the project-level `config/urls.py` to point to the accounts app
-- add a view called `SignupPageView`
-- create a `signup.html` template
-- update `home.html` to display the sign up page
-
-
-A common question is: what’s the right order for implementing these steps? Honestly it doesn’t
-matter since we need all of them for the sign up page to work properly. Generally, I like to start
-with urls, then switch to views, and finally templates but it’s a matter of personal preference.
+پیاده سازی یک صفحه ثبت نام برای ثبت نام کاربر کاملا بر عهده خودمان هست. برای هر صفحه جدیدی یکسری گام های استاندارد وجود دارد:
+    
+- یک فایل `accounts/urls.py` در سطح اپ ایجاد نمایید
+-`config/urls.py` را به روزرسانی کنید تا به اپ اکانت ها اشاره کند
+- یک ویویی به نام `SignupPageView` اضافه کنید
+-یک تمپلیتی به نام `signup.html` ایجاد کنید
+- صفحه `home.html` را به روز رسانی کنید تا صفحه ثبت نام را نمایش دهد
 
 
-To start create a `urls.py` file within the accounts app. Up to this point it only contains our
-CustomUser in the `models.py` file; we haven’t configured any routes or views.
+یک سوال رایج: درست ترین ترتیب پیاده سازی این مراحل چیست؟ صادقانه بگویم فرقی نمیکند چون ما همه این مراحل را برای اینکه صفحه ثبت نام به درستی کار کند، نیاز داریم. عموما، من خودم دوست ددارم با url شروع کنم، سپس سراغ ویوها رفته، و در نهایت تمپلیتها اما این به انتخاب خود شخص بستگی دارد.
+
+
+برای شروع یک فایل `urls.py` در اپ اکانت ها ایجاد کنید. تا اینجا این فقط شامل CustomUser هست که در فایل `models.py` قرار دارد; ما هنوز هیچ ویو یا مسیری را تنظیم نکرده ایم. 
 
 
 <div dir="ltr">
@@ -454,6 +450,7 @@ urlpatterns = [
 
 
 
+سپس فایل `config/urls.py` را به روز کنید تا اپ `accounts` را داشته باشد. ما می توانیم هر مسیری که دوست داریم را ایجاد کنیم اما عموما همان accounts/ را که به صورت پیش فرض auth app استفاده می شد، استفاده می کنیم. مهم هست که برای `accounts.urls` زیر مسیر را شامل شود: مسیرهای URL از بالا تا پایین لود می شوند و این ما را مطمئن می کند که هر سیریauth URL ای در ابتدا لود می شود.(؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟) 
 Next update the `config/urls.py` file to include the `accounts` app. We can create any route we
 like but it’s common to use the same accounts/ one used by the default auth app. Note that it’s
 important to include the path for `accounts.urls` below: URL paths are loaded top-to-bottom so
@@ -483,9 +480,7 @@ urlpatterns = [
 
 </div>
 
-Now create the view SignupPageView. It references the CustomUserCreationForm and has a
-`success_url` that points to the login page, meaning after the form is submitted the user will
-be redirected there. The template_name will be `signup.html`.
+حالا ویوی SignupPageView را می سازیم. به CustomUserCreationForm ارجاع می دهد و یک `success_url` دارد که به صفحه لاگین اشاره می کند، یعنی بعد از اینکه فرم ارسال شد، یوزر به آن جا هدایت خواهد شد. template-name نیز `signup.html` خواهد بود.   
 
 
 <div dir="ltr">
@@ -508,7 +503,7 @@ class SignupPageView(generic.CreateView):
 </div>
 
 
-As a final step create a file called signup.html file within the existing registration/ directory.
+به عنوان گام نهایی یک فایلی به نام signup.html در مسیر registration/ موجود ایجاد کنید. 
 
 
 <div dir="ltr">
@@ -520,8 +515,7 @@ $ touch templates/registration/signup.html
 
 </div>
 
-The code is basically identical to the log in page.
-
+کد اساسا مشابه به صفحه ورود است. 
 
 
 <div dir="ltr">
@@ -545,6 +539,7 @@ Code
 
 </div>
 
+به عنوان قدم آخر می توانیم یک خط برای "Sign Up" به تمپلیت `home.html` دقیقا زیر لینک “Log In” اضافه کنیم. این یک تغییر یک خطی هست. 
 As a final step we can add a line for “Sign Up” to our `home.html` template right below the link for
 “Log In”. This is a one-line change.
 
@@ -574,19 +569,17 @@ Code
 </div>
 
 
-All done! Reload the homepage to see our work.
+تمام شد! هوم پیج را از نو بارگذاری کنید تا کارمان را ببینید.
 
 ![Homepage with Signup](images/9.png)
 
-The “Sign Up” link will redirect us to http://127.0.0.1:8000/accounts/signup/.
+لینک "Sign Up" ما را به  /http://127.0.0.1:8000/accounts/signup هدایت خواهد کرد.
 
 ![Signup page](images/10.png)
 
 
 
-Create a new user with the email address `testuser@email.com`, username of testuser, and
-testpass123 for the password. Upon submission it will redirect us to the Log In page. Log in
-with the new account and it redirects to the homepage with a personalized greeting.
+یک کاربر جدید با آدرس ایمیل `testuser@email.com` و نام کاربری testuser و پسورد testpass123 بسازید. این ما را به صفحه Log In هدایت خواهد نمود. با یک اکانت جدید لاگین نمایید که این ما را به هوم پیجی با صفحه خوشامدگویی شخصی شده هدایت می نماید.  
 
 ![Homepage with testuser greeting](images/11.png)
 
