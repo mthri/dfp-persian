@@ -5,7 +5,7 @@
     
 یک ویژگی مهم در وب سایت های پویا، بحث ثبت نام کاربران است. این مسئله در پروژه فروشگاه کتاب مورد نظر ما نیز وجود دارد. در این فصل به پیاده سازی موارد ورود به سایت، خروج از سایت و ثبت نام در سایت می پردازیم. از آنجایی که جنگو ویوها و url لازم برای دو مورد ورود و خروج از سایت را در اختیار ما قرار می دهد، پیاده سازی دو مورد اول نسبتا راحت است اما پیاده سازی مورد ثبت نام به دلیل اینکه هیچ راه حل داخلی از پیش تعریف شده ای برای آن در جنگو وجود ندارد، چالش برانگیز است.
 
-## Auth App
+## Auth اپ
 
 
 بیایید با پیاده سازی دو مورد ورود به سایت و خروج از سایت با استفاده از سیستم احراز هویت [auth](https://docs.djangoproject.com/en/3.1/topics/auth/default/) app جنگو شروع کنیم. جنگو، ویو ها و url های مهمی را دراختیارمان قرار میدهد و این یعنی ما فقط به یک تمپلیت ای برای بروزرسانی کارهایی که میبایست انجام دهیم نیاز داریم. این کار زمان زیادی را برای ما به عنوان یک توسعه دهنده ذخیره کرده و تضمین می کند که مرتکب اشتباهی نخواهیم شد. زیرا کد اصلی قبلا توسط میلیونها توسعه دهنده مورد آزمایش و بهره برداری قرار گرفته است.
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 پیکره بندی کامل شود، صبر نماییم. 
 
 
-## Auth URLs and Views
+## Viewها و URL های اپ  Auth
 
 به منظور استفاده از auth app داخلی جنگو، ما باید آن را به فایل `config/urls.py` اضافه کنیم. ساده ترین روش این است که فایل `/accounts` به عنوان پیشوند قرار بگیرد چون عموما در جامعه جنگو از این حالت استفاده می شود. یک خط را در زیر تغییر دهید. توجه کنید که هر چقدر طول فایل `urls.py` افزایش یابد، افزودن کامنت برای هر بخشی از URL-admin, user management, local apps,... به خوانایی کد کمک خواهد کرد.
 
@@ -102,7 +102,7 @@ accounts/reset/done/ [name='password_reset_complete']
 
 فهمیدن کد اصلی جنگو نیازمند تمرین است، اما ارزش وقت گذاشتن را دارد.
     
-## Homepage
+## صفحه اصلی (Homepage)
 
 مرحله بعدی چیست؟ بیایید هوم پیج خود را به روز کنیم تا اگر کاربری لاگین نمود یا نه به ما اطلاع دهد که در حال حاضر فقط از طریق ادمین امکانپذیر است.
 
@@ -153,7 +153,7 @@ Code
 
 
 
-## Django Source Code
+## سورس کد جنگو
 
 ممکن است بتوانید این مراحل را از طریق خواندن [داکیومنت رسمی](https://docs.djangoproject.com/en/3.1/topics/auth/default/) به تنهایی کنار هم قرار دهید اما رویکرد عمیق و بهتر این است که یاد بگیرید چگونه کد منبع جنگو را خودتان بخوانید.
 
@@ -233,7 +233,7 @@ urlpatterns = [
 
 
 
-## Log In
+## لاگین کاربر
 به هوم پیج اصلی خودمان برمی گردیم. روی لینک "Log In" کلیک کرده و ... یک خطا داریم!
 
 
@@ -302,7 +302,7 @@ Code
 In” کار میکند. در گام آخر، ادامه دهید و سعی کنید با حساب کاربری superuser خود در صفحه login کنید.
 
 
-## Redirects
+## ریدایرکت ها(Redirects)
 
 توجه کردید که در جمله آخرم گفتم "سعی کنید"؟ اگر روی لینک "Log In" کلیک کنید، با خطای(404) صفحه یافت نشد مواجه می شوید.
 
@@ -336,7 +336,7 @@ LOGIN_REDIRECT_URL = 'home'
 
 
 
-## Log Out
+## لاگ اوت کاربر (Log Out)
 
 
 حالا بیایید گزینه log out را هم به هوم پیج خود اضافه کنیم. چون فقط یک ابرکاربر یا سوپریوزر به ادمین دسترسی خواد داشت. چطور این کار را انجام دهیم؟
@@ -397,7 +397,7 @@ Code
 
 
 
-## Sign Up
+## ثبت نام کاربر
 
 
 Implementing a sign up page for user registration is completely up to us. We’ll go through the
@@ -590,7 +590,7 @@ with the new account and it redirects to the homepage with a personalized greeti
 
 ![Homepage with testuser greeting](images/11.png)
 
-### Tests
+## تست ها
 
 For tests we do not need to test log in and log out features since those are built into Django and
 already have tests. We do need to test our sign up functionality though!
@@ -724,7 +724,7 @@ Destroying test database for alias 'default'...
 All done.
 
 
-### setUpTestData()
+## setUpTestData()
 
 Django 1.8 introduced a [major update to TestCase](https://docs.djangoproject.com/en/3.1/releases/1.8/#testcase-data-setup)
 that added the ability to run tests both within
@@ -740,7 +740,7 @@ We will use setUp() in this book, but be aware that if your test suite seems slu
 optimization to look into is using setUpTestData()
 
 
-### Git
+## گیت
 
 As ever make sure to save our work by adding changes into Git.
 
@@ -762,7 +762,7 @@ if you want to compare your code.
 
 
 
-### Conclusion
+## جمع بندی
 
 Our Bookstore project is not the most beautiful site in the world, but it is very functional at
 this point. In the next chapter we’ll configure our static assets and add Bootstrap for improved
