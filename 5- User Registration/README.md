@@ -362,7 +362,7 @@ LOGOUT_REDIRECT_URL = 'home' # new
 
 سپس لینک logout را به `templates/home.html` اضافه می کنیم.
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```html
@@ -415,7 +415,7 @@ Code
 برای شروع یک فایل `urls.py` در اپ اکانت ها ایجاد کنید. تا اینجا این فقط شامل CustomUser هست که در فایل `models.py` قرار دارد; ما هنوز هیچ ویو یا مسیری را تنظیم نکرده ایم. 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -433,7 +433,7 @@ built-in Django app file `django/contrib/auth/urls.py` we saw above.
 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -457,7 +457,7 @@ important to include the path for `accounts.urls` below: URL paths are loaded to
 this ensures that any auth URL paths will be loaded first.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -483,7 +483,7 @@ urlpatterns = [
 حالا ویوی SignupPageView را می سازیم. به CustomUserCreationForm ارجاع می دهد و یک `success_url` دارد که به صفحه لاگین اشاره می کند، یعنی بعد از اینکه فرم ارسال شد، یوزر به آن جا هدایت خواهد شد. template-name نیز `signup.html` خواهد بود.   
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -506,7 +506,7 @@ class SignupPageView(generic.CreateView):
 به عنوان گام نهایی یک فایلی به نام signup.html در مسیر registration/ موجود ایجاد کنید. 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -518,7 +518,7 @@ $ touch templates/registration/signup.html
 کد اساسا مشابه به صفحه ورود است. 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```html
@@ -544,7 +544,7 @@ As a final step we can add a line for “Sign Up” to our `home.html` template 
 “Log In”. This is a one-line change.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```html
@@ -596,7 +596,7 @@ In your text editor, update the `accounts/tests.py` file with these changes.
 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -628,7 +628,7 @@ class SignupPageTests(TestCase): # new
 
 Then run our tests.
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -649,7 +649,7 @@ Next we can test that our CustomUserCreationForm is being used and that the page
 SignupPageView.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -696,7 +696,7 @@ class SignupPageTests(TestCase):
 Run our tests again.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -738,7 +738,7 @@ optimization to look into is using setUpTestData()
 As ever make sure to save our work by adding changes into Git.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
