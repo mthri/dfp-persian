@@ -14,7 +14,7 @@
 بیایید برای یک اکانت کاربری جدید ثبت نام کنیم تا جریان کنونی ثبت نام کاربر را مرور کنیم.
 سپس ما آن را سفارشی می کنیم. اطمینان حاصل کنید که خارج شده اید و دوباره به صفحه ثبت نام بروید. من انتخاب کرده ام که از testuser3@email.com[به عنوان نام کاربری] و testpass123 به عنوان پسورد استفاده کنم.
 
-![testuser3 Sign Up](./images/testuser%203%20Sign%20Up.png)
+![testuser3 Sign Up](./images/testuser 3 Sign Up.png)
 
 پس از ارائه‌ی این فصل، ما به صفحه خانه هدایت می‌شویم که یک عبارت خوش‌آمدگویی سفارشی نشان می‌دهد و یک ایمیل از طریق کنسول خط فرمان به ما ارسال می‌شود. شما می‌توانید این را با بررسی لاگ‌های docker-compose logs ببینید.
 برای سفارشی سازی این ایمیل ما ابتدا نیاز داریم که قالب‌های موجود را پیدا کنیم.
@@ -171,5 +171,114 @@ web_1 | djangobookstore.com
 
 و حال ایمیل ما با تنظیمات جدید From، دامنه‌ی جدید djangobookstore.com، و پیام جدید داخل ایمیل ایجاد شده است. 
 
+## صفحه تایید ایمیل
+روی لینک یکتای داخل ایمیل که به صفحه‌ی تایید ایمیل هدایت می‌کند کلیک کنید.
+
+![Email Confirm Page](./images/Confirm%20Email%20Page.png)
+
+خیلی جذاب نیست. بیایید آن را به‌روزرسانی کنیم تا با ظاهر بقیه‌ی سایت ما هماهنگ باشد. جست‌وجوی دوباره در 
+  [سورس کد django-allauth در گیت‌هاب](https://github.com/pennersr/django-allauth)
+مشخص می‌کند که نام و موقعیت این فایل templates/account/email_confirm.html است.
+پس بیایید قالب خودمان را ایجاد کنیم.
+
+<div dir='ltr'>
+Command Line
+
+```shell
+$ touch templates/account/email_confirm.html
+```
 </div>
 
+و سپس آن را به‌روزرسانی می‌کنیم تا فایل _base.html را توسعه دهد و برای دکمه از Bootstrap استفاده می‌کنیم.
+
+
+<div dir='ltr'>
+
+```Code
+<!-- templates/account/email_confirm.html -->
+{% extends '_base.html' %}
+{% load i18n %}
+{% load account %}
+{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Confirm E-mail Address" %}</h1>
+{% if confirmation %}
+{% user_display confirmation.email_address.user as user_display %}
+<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm
+that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user
+{{ user_display }}.{% endblocktrans %}</p>
+<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+{% csrf_token %}
+<button class="btn btn-primary" type="submit">{% trans 'Confirm' %}</button>
+</form>139
+Chapter 9: Email
+{% else %}
+{% url 'account_email' as email_url %}
+<p>{% blocktrans %}This e-mail confirmation link expired or is invalid. Please
+<a href="{{ email_url }}">issue a new e-mail confirmation request</a>.\
+{% endblocktrans %}</p>
+{% endif %}
+{% endblock %}
+```
+</div> 
+
+صفحه‌ را رفرش کنید تا به‌روز‌رسانی را ببینید.
+
+![Confirm Email Page Updated](./images/Confirm%20Email%20Page%20Updated.png)
+
+## بازنشانی رمز عبور و تغییر رمز عبور
+
+جنگو و django-allauth ویژگی‌های بیشتر برای اکانت کاربر را همراه خود دارند، مانند توانایی بازنشانی رمز عبور و تغییر رمز عبور اگر از قبل وارد شده‌اید. 
+ صفحات پیش‌فرض بازنشانی رمز عبور و تغییر رمز عبور اینجا قرار دارند:
+ 
+- http://127.0.0.1:8000/accounts/password/reset/
+- http://127.0.0.1:8000/accounts/password/change/
+
+اگر داخل هرکدام از این دو مسیر بروید می‌توانید قالب‌های متناظر و پیام‌های ایمیل را در سورس کد django-allauth پیدا کنید.
+
+##سرویس ایمیل
+ایمیل‌هایی که تاکنون پیکربندی کرده‌ایم به طور کلی تحت نام «ایمیل‌های تراکنشی» ارجاع داده می‌شوند، زیرا آن‌ها بر اساس یک نوع فعالیت کاربر اتفاق می‌افتند.
+این در مقابل «ایمیل‌های بازاریابی» است که به طور مثال، همچون یک خبرنامه‌ی ماهانه‌اند.
+تعداد بسیار زیادی ارائه‌دهنده ایمیل‌های تراکنشی وجود دارد، مثل SendGrid, MailGun, Amazon’s
+Simple Email Service.
+برای جنگو تفاوتی نمی‌کند که از کدام ارائه‌دهنده استفاده شود، مراحل انجام کار برای همه‌ی آن‌ها مشابه است و بسیاری از آن‌ها امکان عضویت رایگان دارند.
+پس از اینکه در سرویس ایمیلی که انتخاب کردید ثبت‌نام انجام دادید، اغلب بین استفاده از
+  [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
+  یا یک Web API می‌توانید انتخاب کنید. پیکربندی SMTP آسان‌تر است،
+ اما web API قابلیت‌های پیکربندی بیشتری دارد و قدرتمندتر است. با SMTP شروع کنید و کار خودتان را از آن‌جا پیش ببرید: پیکربندی‌های ایمیل می‌توانند به خودی خود کاملا پیچیده باشند.
+پس از دریافت نام کاربری و رمز عبور از یک ارائه‌دهنده ایمیل، یکسری تنظیمات دقیق به جنگو اجازه می‌دهد تا برای ارسال ایمیل از آن‌ها استفاده کند.
+اولین قدم به‌روزرسانی تنظیمات EMAIL_BACKEND است، که در انتهای فایل config/settings.py قرار دارد چون ما قبلا آن‌را آپدیت کرده‌ایم.   
+  
+<div dir='ltr'>
+
+```Code
+# config/settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+```
+
+</div> 
+و سپس برای پیکربندی EMAIL_HOST، EMAIL_HOST_USER، EMAIL_HOST_PASSWORD، EMAIL_PORT و EMAIL_USE_TLS به عنوان متغیرهای محلی بر اساس دستورالعمل‌های ارائه‌دهنده سرویس ایمیل شما.
+در سورس کد رسمی، EMAIL_BACKEND همان console باقی خواهد ماند، اما مراحل قبلی چگونگی اضافه کردن یک سرویس ایمیل بودند. اگر هنگام پیکربندی مناسب ایمیل ناامید شدید، شما تنها نیستید! حداقل جنگو این کار را برای ما بسیار بسیار آسان‌تر کرده است.
+
+##گیت
+برای کامیت کردن تغییرات کد این فصل، حتما وضعیت تغییرات را چک کرده، همه‌ی آن‌ها را اضافه کنید و سپس یک پیام کامیت بنویسید.
+  
+<div dir='ltr'>
+
+```Command Line
+$ git status
+$ git add .
+$ git commit -m 'ch9'
+```
+
+</div>
+
+اگر هر مشکلی داشتید، کد خود را با 
+  [سورس کد رسمی در گیت‌هاب](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch9-email)
+مقایسه کنید.
+
+## نتیجه گیری
+پیکربندی صحیح ایمیل تا حد زیادی یک درد یکباره است. ولی این یک قسمت ضروری از وبسایت هر محصولی می‌باشد. [پیکربندی ایمیل] به فصل‌های اساسی پروژه کتاب‌فروشی ما ختم می‌شود. در فصل بعدی ما بالاخره ساخت خود سایت کتاب‌فروشی را آغاز خواهیم کرد.   
+
+
+</div>
