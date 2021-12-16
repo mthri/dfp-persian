@@ -303,30 +303,23 @@ In” کار میکند. در گام آخر، ادامه دهید و سعی کن
 
 ### Redirects
 
-Did you notice I said “try” in that last sentence? If you click on the “Log In” link it brings up a
-Page not found (404) error.
+توجه کردید که در جمله آخرم گفتم "سعی کنید"؟ اگر روی لینک "Log In" کلیک کنید، با خطای(404) صفحه یافت نشد مواجه می شوید.
 
 
 ![Page not found error](images/5.png)
 
-Django has redirected us to 127.0.0.1:8000/accounts/profile/ yet no such page exists. Now
-why would Django do this? Well, if you think about it, how does Django know where we want to
-redirect the user after log in? Maybe it’s the homepage. But maybe it’s a user profile page. Or any
-number of options.
+جنگو ما را به 127.0.0.1:8000/accounts/profile/ هدایت می کند که هیچ صفحه ای در آن وجود ندارد. حالا چرا جنگو اینطور می کند؟ خوب، گر در مورد آن فکر کنی، اینکه جنگو چگونه می داند که ما می خواهیم کاربر را پس از لاگین به کجا هدایت کنیم؟ شاید هوم پیج باشد. شاید صفحه پروفایل یک کاربر باشد یا هر گزینه دیگری. 
 
 
-The final piece of the log in puzzle is to set the proper configuration for
-[LOGIN_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#login-redirect-url)
-because by default it redirects to `accounts/profile`.
+آخرین تکه پازل لاگین این است که پیکره بندی مناسبی برای [LOGIN_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#login-redirect-url) تنظیم کنیم. چون به طور پیش فرض به قسمت `accounts/profile` هدایت می شود.
+
+    
+خوشبختانه این کار سریع انجام می شود. ما کاربر را به هوم پیج خود هدایت خواهیم کرد و از آن جایی که نام URL ما home هست، تنها چیزی است که برای هدایت کاربران لاگین شده به هوم پیج نیاز داریم.
+
+به انتهای فایل `config/settings.py` این یک خط را اضافه کنید
 
 
-Fortunately, this is a quick fix. We’ll send the user to our homepage. And since we specified a
-URL name of home that’s all we need to redirect logged in users to the homepage.
-
-At the bottom of the `config/settings.py` file add this one line.
-
-
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -336,8 +329,7 @@ LOGIN_REDIRECT_URL = 'home'
 
 </div>
 
-Attempt to log in again at http://127.0.0.1:8000/accounts/login/. Upon success it redirects
-the user to the homepage greeting the superuser account you just logged in with!
+حالا تلاش کنید تا دوباره در http://127.0.0.1:8000/accounts/login/ لاگین نمایید. پس با موفقیت، کاربر را به صفحه هوم پیج و خوشامد گویی به اکانتی که با آن لاگین نموده اید هدایت می شوید.
 
 ![Homepage logged out](images/6.png)
 
@@ -346,23 +338,17 @@ the user to the homepage greeting the superuser account you just logged in with!
 ### Log Out
 
 
-Now let’s add a log out option to our homepage since only a superuser will have access to the
-admin. How do we do this?
+حالا بیایید گزینه log out را هم به هوم پیج خود اضافه کنیم. چون فقط یک ابرکاربر یا سوپریوزر به ادمین دسترسی خواد داشت. چطور این کار را انجام دهیم؟
 
 
-If you look at the `auth` views above we can see that logout uses LogoutView, which we could
-explore in the source code, and has a URL name of logout. That means we can refer to it with a
-template tag as just logout
+اگر به `auth` ویوهای بالا نگاهی بیاندازید می بینیم که ویژگی لاگ اوت از LogoutView استفاده می کند، و URL name آن logout است. و ما می توانیم با یک تمپلیت تگ به آن به عنوان logout بنگریم. 
 
 
 
-But we can set this ourself, if desired, using [LOGOUT_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#logout-redirect-url)
-which can be added to
-the bottom of our `config/settings.py` file. Let’s do that so a logged out user is redirected to the
-homepage
+اما اگر بخواهیم، می توانیم با استفاده از [LOGOUT_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#logout-redirect-url) که می تواند به انتهای فایل `config/settings.py` اضافه شود، خودمان این را تنظیم کنیم. بیایید این کار را انجام دهیم تا کاربری که لاگ اوت نموده به هوم پیج هدایت شود.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -373,7 +359,7 @@ LOGOUT_REDIRECT_URL = 'home' # new
 
 </div>
 
-Then add the logout link to `templates/home.html`.
+سپس لینک logout را به `templates/home.html` اضافه می کنیم.
 
 <div dir="ltr">
 
@@ -400,12 +386,11 @@ Code
 
 
 
-Refresh the homepage at http://127.0.0.1:8000/ and the “Log out” link is now visible.
+هوم پیج را در http://127.0.0.1:8000/ رفرش کنید و حالا لینک "log out" ظاهر شده است.
 
 ![Homepage with logout link](images/7.png)
 
-If you click on it you will be logged out and redirected to the homepage, which has the “Log In”
-link visible.
+اگر روی آن کلیک نمایید از لاگ اوت می شوید و به هوم پیجی که لینک "Log In" را دارد هدایت می شوید.
 
 ![Homepage with login link](images/8.png)
 
