@@ -1,37 +1,25 @@
-<div dir="rtl">
+<div dir='rtl' align='right'>
+    
+# فصل  پنجم : User Registeration
 
-# User Registration
+    
+یک ویژگی مهم در وب سایت های پویا، بحث ثبت نام کاربران است. این مسئله در پروژه فروشگاه کتاب مورد نظر ما نیز وجود دارد. در این فصل به پیاده سازی موارد ورود به سایت، خروج از سایت و ثبت نام در سایت می پردازیم. از آنجایی که جنگو ویوها و url لازم برای دو مورد ورود و خروج از سایت را در اختیار ما قرار می دهد، پیاده سازی دو مورد اول نسبتا راحت است اما پیاده سازی مورد ثبت نام به دلیل اینکه هیچ راه حل داخلی از پیش تعریف شده ای برای آن در جنگو وجود ندارد، چالش برانگیز است.
 
-User registration is a core feature in any dynamic website. And it will be in our Bookstore project,
-too. In this chapter we will implement log in, log out, and sign up functionality. The first two are
-relatively straightforward since Django provides us with the necessary views and urls for them,
-however sign up is more challenging since there is no built-in solution.
-
-### Auth App
-
-Let’s begin by implementing log in and log out using Django’s own [auth](https://docs.djangoproject.com/en/3.1/topics/auth/default/) app. Django provides us
-with the necessary views and urls which means we only need to update a template for things to
-work. This saves us a lot of time as developers and it ensures that we don’t make a mistake since
-the underlying code has already been tested and used by millions of developers.
+## Auth اپ
 
 
-However this simplicity comes at the cost of feeling “magical” to Django newcomers. We covered
-some of these steps previously in my book, [Django for Beginners](https://djangoforbeginners.com/), but we did not slow down and
-look at the underlying source code. The intention for a beginner was to broadly explain and
-demonstrate “how” to implement user registration properly, but this came at the cost of truly
-diving into “why” we used the code we did.
+بیایید با پیاده سازی دو مورد ورود به سایت و خروج از سایت با استفاده از سیستم احراز هویت [auth](https://docs.djangoproject.com/en/3.1/topics/auth/default/) app جنگو شروع کنیم. جنگو، ویو ها و url های مهمی را دراختیارمان قرار میدهد و این یعنی ما فقط به یک تمپلیت ای برای بروزرسانی کارهایی که میبایست انجام دهیم نیاز داریم. این کار زمان زیادی را برای ما به عنوان یک توسعه دهنده ذخیره کرده و تضمین می کند که مرتکب اشتباهی نخواهیم شد. زیرا کد اصلی قبلا توسط میلیونها توسعه دهنده مورد آزمایش و بهره برداری قرار گرفته است.
 
 
-Since this is a more advanced book, we delve deeper to understand the underlying source code
-better. The approach here can also be used to explore any other built-in Django functionality on
-your own.
-
-The first thing we need to do is make sure the `auth` app is included in our `INSTALLED_APPS` setting.
-We have added our own apps here previously, but have you ever taken a close look at the built-in
-apps Django adds automatically for us? Most likely the answer is no. Let’s do that now!
+با این حال، این سادگی در پیاده سازی موجب می شود افرادی که در جنگو تازه کار هستند دچار حس "جادویی بودن" شوند. ما برخی از این موارد را در کتاب خود  [Django for Beginnets](https://djangoforbeginners.com/)، پوشش داده ایم اما با این وجود سرعت خود را کاهش نداده و کد منبع اصلی نگاه نکرده ایم. مقصود برای یک تازه کار این بود که به صورت گسترده توضیح داده و نشان دهیم که "چگونه" به درستی ثبت نام کاربر را پیاده سازی نماییم اما این واقعا به قیمت فرو رفتن در اینکه "چرا" از آن کد استفاده کرده ایم تمام شد. 
 
 
-<div dir="ltr">
+از آنجایی که این یک کتاب بسیار پیشرفته است ما برای فهم بهتر کد منبع عمیق تر خواهیم شد. رویکردی که در اینجا مطرح می شود می تواند برای کشف سایر عملکردهای داخلی جنگو هم به تنهایی مورد استفاده قرار گیرد.
+
+اولین کاری که نیاز به انجام آن داریم این است که مطمئن شویم `auth` app  به تنظیمات `INSTALLED_APPS` اضافه شده است. ما قبلا appهای خود را به اینجا افزوده ایم، اما آیا تابه حال به app های داخلی که جنگو به صورت خودکار برایمان اضافه می نماید توجه کرده اید؟ به نظر میرسد جواب خیر باشد. بیایید حالا این کار را انجام دهیم.
+
+
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -53,26 +41,19 @@ INSTALLED_APPS = [
 </div>
 
 
-There are, in fact, 6 apps already there that Django provides for us which power the site. The
-first is admin and the second is auth. This is how we know the auth app is already present in our
-Django project.
+درواقع جنگو 6 اپ برایمان آماده نموده است که باعث قدرتمندی سایت می شود. اولین آن admin و دومی auth است. ما به این شکل متوجه شدیم که auth app اکنون در پروژه جنگو ما وجود دارد.
 
 
-When we earlier ran the migrate command for the first time all of these apps were linked
-together in the initial database. And remember that we used the `AUTH_USER_MODEL` setting to
-tell Django to use our custom user model, not the default User model here. This is why we had
-to wait until that configuration was complete before running migrate for the first time.
+وقتی که ما برای بار اول دستور migrate را اجرا می کنیم، تمامی این Appها با هم در پایگاه داده اولیه لینک و متصل شده اند. و به خاطر داشته باشید که ما از تنظیمات `AUTH_USER_MODEL` استفاده نموده ایم تا به جنگو اعلام کنیم تا از user model خودمان استفاده کند نه user model پیش فرضی که اینجا وجود دارد. به همین دلیل باید قبل از اولین اجرای migrate ، تا زمانی که این 
+پیکره بندی کامل شود، صبر نماییم. 
 
 
-### Auth URLs and Views
+## Auth های اپURL ها و View
 
-To use Django’s built-in auth app we must explicitly add it to our `config/urls.py` file. The easiest
-approach is to use `accounts/` as the prefix since that is commonly used in the Django community.
-Make the one line change below. Note that as our `urls.py` file grows in length, adding comments
-for each type of URL–admin, user management, local apps, etc.–helps with readability.
+به منظور استفاده از auth app داخلی جنگو، ما باید آن را به فایل `config/urls.py` اضافه کنیم. ساده ترین روش این است که فایل `/accounts` به عنوان پیشوند قرار بگیرد چون عموما در جامعه جنگو از این حالت استفاده می شود. یک خط را در زیر تغییر دهید. توجه کنید که هر چقدر طول فایل `urls.py` افزایش یابد، افزودن کامنت برای هر بخشی از URL-admin, user management, local apps,... به خوانایی کد کمک خواهد کرد.
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -94,12 +75,12 @@ urlpatterns = [
 
 </div>
 
-What’s included in the auth app? A lot it turns out. First off, there are a number of associated
-urls.
+
+چه چیزی به auth app اضافه شده است؟ به نظر می رسد چیزهای زیادی اضافه شده باشد. قبل از همه تعداد زیادی url های مرتبط وجود دارد. 
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -116,29 +97,21 @@ accounts/reset/done/ [name='password_reset_complete']
 </div>
 
 
-How did I know that? Two ways. The first is the [official auth docs](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views)
-tell us so! But a second, deeper
-approach is to look at the Django source code which is [available on Github](https://github.com/django/django). 
-If we navigate or
-search around we’ll find our way to the [auth app itself](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth). 
-And within that we can find the `urls.py`
-file [at this link](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) which shows the complete source code.
+من این را چطور متوجه شدم؟ به دو روش. اولین روش [official auth docs](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views) این را به ما می گوید. اما دومی، روش عمیق تر این است که به کد منبع جنگو که در [در گیت هاب قرار دارد](https://github.com/django/django) است نگاهی بیاندازیم. اگر آن را بالا و پایین و جستجو کنیم راه خودمان به [auth app](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth) را پیدا خواهیم کرد و می توانیم فایل `urls.py` را [در این لینک](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) بیابیم که کد منبع کامل را نمایش می دهد.
+    
 
+فهمیدن کد اصلی جنگو نیازمند تمرین است، اما ارزش وقت گذاشتن را دارد.
+    
+## صفحه اصلی (Homepage)
 
-It takes practice to understand the Django source code, but it is well worth the time
+مرحله بعدی چیست؟ بیایید هوم پیج خود را به روز کنیم تا اگر کاربری لاگین نمود یا نه به ما اطلاع دهد که در حال حاضر فقط از طریق ادمین امکانپذیر است.
 
-### Homepage
-
-What’s next? Let’s update our existing homepage so that it will notify us if a user is already logged
-in or not which currently can only happen via the admin.
-
-
-Here is the new code for the `templates/home.html` file. It uses the Django templating engine’s
-[if/else](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if) tags for basic logic
+    
+اینجا کد جدیدی برای فایل `templates/home.html` وجود دارد که از تگ های [if/else](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if) موجود در template engin جنگو برای منطق اصلی استفاده می کند.
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```html
@@ -160,74 +133,47 @@ Code
 
 </div>
 
-If the user is logged in (authenticated), we display a greeting that says “Hi” and includes their
-email address. These are both [variables](https://docs.djangoproject.com/en/3.1/topics/templates/#variables) which we can use with Django’s template engine via
-double opening {{ and closing }} brackets.
+اگر کاربر وارد سیستم شده باشد(تایید شده باشد)، ما پیامی که شامل "سلام" و آدرس ایمیل است را به او نشان می دهیم.
+هر دوی اینها [متغیرهایی](https://docs.djangoproject.com/en/3.1/topics/templates/#variables) هستند که ما می توانیم با template engine جنگو از طریق دو براکت باز {{ و بسته }} استفاده کنیم.
 
-The default User contains numerous fields including 
-[is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated)
-and [email](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.email) which are
-referenced here.
+دیفالت یوزر(کاربر پیش فرض)، شامل فیلدهای متعددی از جمله [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) و [email](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.email) می باشد. که به آن ها ارجاع داده شده است. 
 
-And the logout and login are URL names. The [url](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url)
-template tag means if we specify the URL
-name the link will automatically refer to that URL path. For example, in the previous chapter we
-set the name of our homepage URL to home so a link to the homepage would take the format of
-`{% url 'home' %}`. More on this shortly.
+و logout و login اسامی URL هستند. تگ [url](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url) به این معناست که اگر ما نام URL را مشخص نمودیم، لینک به طور خودکار به مسیر آن URL متصل شود. به عنوان مثال در فصل قبلی ما نام URL صفحه homepage خودمان را به home تنظیم نمودیم. بنابراین یک لینک به homepage به فرمت `{% url 'home' %}` خواهد بود.در ادامه بیشتر به این موضوع می پردازیم.
 
-If you look at the homepage now at http://127.0.0.1:8000/ it will likely show the email address
-of your superuser account since we used it previously to log in.
+اگر حالا به homepage در /http://127.0.0.1:8000 نگاهی بیاندازید به احتمال زیاد آدرس ایمیل حساب کاربری ابرکاربر(superuser) شما را نشان خواهد داد چون قبلا برای لاگین شدن از آن استفاده کرده بودیم.  
 
 ![Homepage with greeting](images/1.png)
-
-In the admin over at http://127.0.0.1:8000/admin/, if you click on the “Log out” button in the
-upper right corner we can log out of the admin and by extension the Django project.
+    
+در بخش admin در /http://127.0.0.1:8000/admin، اگر روی دکمه "log out"  که در گوشه ی بالا سمت راست قرار دارد کلیک کنید، می توانیم از admin خارج شویم. 
 
 
 ![Admin logout link](images/2.png)
-
-Return to the homepage at http://127.0.0.1:8000/ and refresh the page.
-
-
-
-### Django Source Code
-
-You might have been able to piece together these steps on your own from reading [the official docs](https://docs.djangoproject.com/en/3.1/topics/auth/default/). 
-But the deeper–and better–approach is to learn how to read the Django source code on
-your own.
-
-One question is, how was the `user` and its related variables magically available in our template?
-The answer is that Django has a concept called the [template context](https://docs.djangoproject.com/en/3.1/topics/auth/default/#authentication-data-in-templates)
-which means each template
-is loaded with data from the corresponding `views.py` file. We can use user within template tags
-to access User attributes. In other words, Django just gives this to us automatically.
+    
+به هوم پیج در /http://127.0.0.1:8000 بازگردید و پیج را رفرش کنید.
 
 
-So to check if a user is logged in or not, we access `user` and
-then can use the boolean [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated)
-attribute. If a user is logged in, it will return True and we can do things like display
-the user’s email. Or if no user is logged in, the result will be False.
+
+## سورس کد جنگو
+
+ممکن است بتوانید این مراحل را از طریق خواندن [داکیومنت رسمی](https://docs.djangoproject.com/en/3.1/topics/auth/default/) به تنهایی کنار هم قرار دهید اما رویکرد عمیق و بهتر این است که یاد بگیرید چگونه کد منبع جنگو را خودتان بخوانید.
+
+یک سوال این است که، چطور `user` و متغیرهای مرتبط با آن در تمپلیت ظاهر شده اند؟ پاسخ این است که جنگو مفهومی به نام [template context](https://docs.djangoproject.com/en/3.1/topics/auth/default/#authentication-data-in-templates) دارد و به این معناست که هر تمپلیتی با داده هایی از فایل `views.py` مربوطه بارگذاری شده است. ما میتوانیم از یوزر درون template tag  کلاس برای دسترسی به ویژگی های User استفاده کنیم. به عبارت دیگر، جنگو این را به طور خودکار برایما محیا می سازد.
 
 
-Moving on we have the URL name `login`. Where did that come from? The answer, of course, is
-from Django itself! Let’s unpack the code snippet `{% url 'login' %}` piece by piece.
+حال برای این که بدانیم یک یوزر وارد سایت شده است یا نه، به `user` دسترسی پیدا می کنیم و پس از آن می توانیم از [is_authenticated](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.User.is_authenticated) که یک ویژگی بولین می باشد، استفاده کنیم. اگر کاربری وارد شده باشد مقدار True برگردانده شده و ما می توانیم کارهایی مانند نمایش ایمیل کاربر را اجرا کنیم. یا اگر هیچ کاربری وارد نشده باشد، نتیجه False خواهد بود. 
 
 
-First up we’re using the [url template tag](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url)
-which takes as its first argument a [named URL pattern](https://docs.djangoproject.com/en/3.1/topics/http/urls/#naming-url-patterns).
-That’s the optional name section we add as a best practice to all our URL paths. Therefore there
-must be a `login` name attached to the URL used by Django for log ins, right!
-
-There are two ways we could have known this. In other words, if I hadn’t just told you that we
-wanted to use `{% url 'login' %}`, how could you have figured it out?
-
-First look at the [official documentation](https://docs.djangoproject.com/en/3.1/). Personally I often use the search feature so I would have
-typed in something like “login” and then clicked around until I found a description of log in. The
-one we want is actually called [authentication views](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views)
-and lists the corresponding URL patterns for us.
+در ادامه ما Url name `login` را داریم. این اسم از کجا می آید؟ البته که پاسخ خود جنگو است! بیایید قطعه کد `{% url 'login' %}` را را بخش به بخش باز کنیم. 
 
 
-<div dir="ltr">
+در ابتدا ما از [url template tag](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url) استفاده کرده ایم که آرگومان اول آن یک [named URL pattern](https://docs.djangoproject.com/en/3.1/topics/http/urls/#naming-url-patterns) می باشد. این یک بخش دلخواه است که به عنوان تمرین به تمامی مسیرهای URL خود اضافه نموده ایم. بنابراین باید یک نام `login` ضمیمه ی URL شده باشد!   
+
+دو راه وجود دارد که ما باید با آن ها آشنا باشیم. به عبارت دیگر اگر من به شما نمی گفتم که می خواهیم از `{% url 'login' %}` استفاده کنید، چطور متوجه آن می شدید؟ 
+
+در ابتدا به [داکیومنت رسمی](https://docs.djangoproject.com/en/3.1/) نگاه کنید. من به شخصه اغلب اوقات از قابلیت جستجو استفاده می کنم و چیزی مثل "login" را تایپ نموده و جستجو می کنم تا زمانی که توصیفی از login بیابم. چیزی که ما می خواهیم [authentication views](https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views) نام دارد و الگوهای URL مربوطه را برایمان لیست می کند.
+
+
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -242,19 +188,14 @@ accounts/reset/done/ [name='password_reset_complete']
 ```
 
 </div>
+    
+این به ما می گوید که مسیر /accounts/login در جایی قرار دارد که "login" قرار گرفته است و نامش login هست. در ابتدا کمی گیج کننده هست اما اطلاعاتی که نیاز داریم اینجا هست.
 
-This tells us at the path accounts/login/ is where “login” is located and its name is 'login'. A
-little confusing at first, but here is the info we need.
-
-Going a step deeper to phase two, we can investigate the underlying Django source code to see
-“logout” in action. If you perform a search [over on Github](https://github.com/django/django) you’ll eventually 
-find the [auth app itself](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth). 
-Ok, now let’s start by investigating the `urls.py` file.
-[Here is the link](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) to the complete code:
+با یک قدم عمیق تر شدن در مرحله دوم، می توانیم سورس کد جنگو را بررسی کنیم تا "logout" را در عمل ببینیم. اگر در گیت هاب جستجو کنید، در نهایت خود [auth app](https://github.com/django/django/tree/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth) را خواهید یافت. خوب، حالا بیایید فایل `urls.py` را بررسی کنیم. لینک کامل کد در [اینجا](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/urls.py) قرار دارد:
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```python
@@ -286,43 +227,31 @@ urlpatterns = [
 
 
 
-Here is the underlying code Django uses itself for the auth app. I hope you can see that the
-“logout” route is not magic. It’s right there in plain sight, it uses the view LogoutView and has the
-URL name 'logout'. Not magic at all! Just a little challenging to find the first time.
-
-This three-step process is a great way to learn: either remember the Django shortcut, look it
-up in the docs, or on occasion dive into the source code and truly understand where all this
-goodness comes from.
+در اینجا کد مربوطه که جنگو برای auth app استفاده می کند وجود دارد. امیدوارم ببینید که logout route جادویی نیست. دقیقا در معرض دید قرار دارد. از ویوی LogoutView استفاده می کند و URL name آن logout است. اصلا جادویی در کار نیست! فقط پیدا کردن آن برای بار اول کمی چالشی هست.
+    
+این فرایند سه مرحله ای یک راه عالی برای یادگیری است: یا Django shotcut را به خاطر بسپارید،  آن را در داکیومنت جستجو کنید و یا گاهی به سورس کد سری بزنید و واقعا درک کنید که این همه خوبی از کجاست.
 
 
 
-### Log In
-Back on our basic homepage, click on the “Log In” link and… it results in an error!
+## لاگین کاربر
+به هوم پیج اصلی خودمان برمی گردیم. روی لینک "Log In" کلیک کرده و ... یک خطا داریم!
 
 
 ![Log in template not exist error](images/3.png)
 
 
-Django is throwing a TemplateDoesNotExist error at us. Specifically, it seems to expect a log in
-template at registration/login.html. In addition to Django telling us this, we can look in the
-[documentation](https://docs.djangoproject.com/en/3.1/topics/auth/default/#all-authentication-views) and see that the desired `template_name` has that location .
+جنگو یک خطای TemplateDoesNotExist برایمان دارد. به نظر می رسد انتظار یک تمپلیت log in را در register/login.html دارد. به علاوه می توانیم [داکیومنت](https://docs.djangoproject.com/en/3.1/topics/auth/default/#all-authentication-views) جنگو را نگاه کنیم و ببینیم که `template_name` خواسته شده، آن لوکیشن را دارد.  
+
+    
+اما بیایید واقعا مطمئن شویم و سورس کد را بررسی کنیم. بنابراین اینجا می توانیم هر جادویی را از بین ببریم. به هر حال این فقط جنگو است.
 
 
-But let’s really be sure and check the source code so we can remove any perceived magic here.
-After all, it’s just Django.
+اگر به فایل [auth/views.py](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/views.py) برگردیم می توانیم در خط 47 ببینیم که برای LoginView نام تمپلیت 'registration/login.html' است. بنابراین اگر می خواستیم مسیر پیش فرض را تغیر دهیم، می توانستیم، اما این به معنای override کردن LoginView است که بیش از حد به نظر می رسد. بیایید فقط از چیزی که جنگو در اینجا به ما می گوید استفاده کنیم.
+
+یک فولدر `registration` جدید در مسیر تمپلیت های موجود، ایجاد کرده و سپس فایل login.html را هم در آن قرار دهید.
 
 
-Back in the [auth/views.py](https://github.com/django/django/blob/b9cf764be62e77b4777b3a75ec256f6209a57671/django/contrib/auth/views.py)
-file we can see on line 47 for LoginView that the template_name is
-'registration/login.html'. So if we wanted to change the default location we could, but it
-would mean overriding LoginView which seems like overkill. Let’s just use what Django gives us
-here.
-
-Create a new `registration` folder within the existing templates directory and then add our
-login.html file there, too.
-
-
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Command Line
 ```shell
@@ -332,12 +261,11 @@ $ touch templates/registration/login.html
 
 </div>
 
-The actual code is as follows. We extend our base template, add a title, and then specify that we
-want to use a form that will “post” or send the data.
+کد اصلی به صورت زیر است. ما تمپلیت اصلی خود را گسترش می دهیم، یک title اضافه کرده و سپس مشخص می کنیم که می خواهیم از فرمی که در آن داده ها را ارسال یا “post” کند، استفاده نماییم.
 
 
 
-<div dir="ltr">
+<div dir="ltr" align='left'>
 
 Code
 ```html
@@ -360,52 +288,39 @@ Code
 </div>
 
 
-You should **always** add [CSRF protection](https://docs.djangoproject.com/en/3.1/ref/csrf/)
-on any submittable form. Otherwise a malicious website
-can change the link and attack the site and the user. Django has CSRF middleware to handle this
-for us; all we need to do is add `{% csrf_token %}` tags at the start of the form.
+شما **همیشه** باید در هر فرم قابل ارسالی حفاظت [CSRF protection](https://docs.djangoproject.com/en/3.1/ref/csrf/) را اضافه کنید. در غیراینصورت یک سایت آلوده و مخرب می تواند لینک را تغییر داده و به سایت و کاربر حمله نماید. جنگو دارای میان افزار CSRF است که این مسئله را برایمان مدیریت می کند. تنها کاری که باید انجام دهیم این است که تگ های `{% csrf_token %}` را به ابتدای فرم اضافه کنیم.
 
-Next we can control the look of the form contents. For now we’ll use [as_p()](https://docs.djangoproject.com/en/3.1/ref/forms/api/#as-p) so that each form
-field is displayed within a paragraph p tag.
+در مرحله بعد می توانیم ظاهر محتویات فرم را کنترل کنیم. در حال حاضر ما از [()as_p](https://docs.djangoproject.com/en/3.1/ref/forms/api/#as-p) استفاده می کنیم تا هر فیلد form در یک تگ پاراگراف p نمایش داده شود.
 
-With that explanation out of the way, let’s check if our new template is working correctly. Refresh
-the web page at http://127.0.0.1:8000/accounts/login/.
+با این توضیحات، بگذارید بررسی کنیم که آیا تمپلیت جدیدمان به درستی کار می کند یا خیر. وب پیج را در /http://127.0.0.1:8000/accounts/login را رفرش کنید.
 
 
 ![Log in page](images/4.png)
 
 
-And there is our page! Lovely. You can navigate back to the homepage and confirm that the “Log
-In” link works, too, if you like. As a final step, go ahead and try to log in with your superuser
-account on the log in page.
+و حالا صفحه ما! خیلی هم دوست داشتنی. در صورت تمایل می توانید به هوم پیج برگردیدو تایید کنید که لینک  “Log
+In” کار میکند. در گام آخر، ادامه دهید و سعی کنید با حساب کاربری superuser خود در صفحه login کنید.
 
 
-### Redirects
+## ریدایرکت ها(Redirects)
 
-Did you notice I said “try” in that last sentence? If you click on the “Log In” link it brings up a
-Page not found (404) error.
+توجه کردید که در جمله آخرم گفتم "سعی کنید"؟ اگر روی لینک "Log In" کلیک کنید، با خطای(404) صفحه یافت نشد مواجه می شوید.
 
 
 ![Page not found error](images/5.png)
 
-Django has redirected us to 127.0.0.1:8000/accounts/profile/ yet no such page exists. Now
-why would Django do this? Well, if you think about it, how does Django know where we want to
-redirect the user after log in? Maybe it’s the homepage. But maybe it’s a user profile page. Or any
-number of options.
+جنگو ما را به /http://127.0.0.1:8000/accounts/profile هدایت می کند که هیچ صفحه ای در آن وجود ندارد. حالا چرا جنگو اینطور می کند؟ خوب، اگر در مورد آن فکر کنید، اینکه جنگو چگونه می داند که ما می خواهیم کاربر را پس از لاگین به کجا هدایت کنیم؟ شاید هوم پیج باشد. شاید صفحه پروفایل یک کاربر باشد یا هر گزینه دیگری. 
 
 
-The final piece of the log in puzzle is to set the proper configuration for
-[LOGIN_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#login-redirect-url)
-because by default it redirects to `accounts/profile`.
+آخرین تکه پازل لاگین این است که پیکره بندی مناسبی برای [LOGIN_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#login-redirect-url) تنظیم کنیم. چون به طور پیش فرض به قسمت `accounts/profile` هدایت می شود.
+
+    
+خوشبختانه این کار سریع انجام می شود. ما کاربر را به هوم پیج خود هدایت خواهیم کرد و از آن جایی که نام URL ما home هست، تنها چیزی است که برای هدایت کاربران لاگین شده به هوم پیج نیاز داریم.
+
+به انتهای فایل `config/settings.py` این یک خط را اضافه کنید
 
 
-Fortunately, this is a quick fix. We’ll send the user to our homepage. And since we specified a
-URL name of home that’s all we need to redirect logged in users to the homepage.
-
-At the bottom of the `config/settings.py` file add this one line.
-
-
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -415,33 +330,26 @@ LOGIN_REDIRECT_URL = 'home'
 
 </div>
 
-Attempt to log in again at http://127.0.0.1:8000/accounts/login/. Upon success it redirects
-the user to the homepage greeting the superuser account you just logged in with!
+حالا تلاش کنید تا دوباره در /http://127.0.0.1:8000/accounts/login لاگین نمایید. پس با موفقیت، کاربر را به صفحه هوم پیج و خوشامد گویی به اکانتی که با آن لاگین نموده اید هدایت می شوید.
 
 ![Homepage logged out](images/6.png)
 
 
 
-### Log Out
+## لاگ اوت کاربر (Log Out)
 
 
-Now let’s add a log out option to our homepage since only a superuser will have access to the
-admin. How do we do this?
+حالا بیایید گزینه log out را هم به هوم پیج خود اضافه کنیم. چون فقط یک ابرکاربر یا سوپریوزر به ادمین دسترسی خواد داشت. چطور این کار را انجام دهیم؟
 
 
-If you look at the `auth` views above we can see that logout uses LogoutView, which we could
-explore in the source code, and has a URL name of logout. That means we can refer to it with a
-template tag as just logout
+اگر به `auth` ویوهای بالا نگاهی بیاندازید می بینیم که ویژگی لاگ اوت از LogoutView استفاده می کند، و URL name آن logout است. و ما می توانیم با یک تمپلیت تگ به آن به عنوان logout بنگریم. 
 
 
 
-But we can set this ourself, if desired, using [LOGOUT_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#logout-redirect-url)
-which can be added to
-the bottom of our `config/settings.py` file. Let’s do that so a logged out user is redirected to the
-homepage
+اما اگر بخواهیم، می توانیم با استفاده از [LOGOUT_REDIRECT_URL](https://docs.djangoproject.com/en/3.1/ref/settings/#logout-redirect-url) که می تواند به انتهای فایل `config/settings.py` اضافه شود، خودمان این را تنظیم کنیم. بیایید این کار را انجام دهیم تا کاربری که لاگ اوت نموده به هوم پیج هدایت شود.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -452,9 +360,9 @@ LOGOUT_REDIRECT_URL = 'home' # new
 
 </div>
 
-Then add the logout link to `templates/home.html`.
+سپس لینک logout را به `templates/home.html` اضافه می کنیم.
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```html
@@ -479,40 +387,35 @@ Code
 
 
 
-Refresh the homepage at http://127.0.0.1:8000/ and the “Log out” link is now visible.
+هوم پیج را در /http://127.0.0.1:8000 رفرش کنید و حالا لینک "log out" ظاهر شده است.
 
 ![Homepage with logout link](images/7.png)
 
-If you click on it you will be logged out and redirected to the homepage, which has the “Log In”
-link visible.
+اگر روی آن کلیک نمایید از لاگ اوت می شوید و به هوم پیجی که لینک "Log In" را دارد هدایت می شوید.
 
 ![Homepage with login link](images/8.png)
 
 
 
-### Sign Up
+## ثبت نام کاربر
 
 
-Implementing a sign up page for user registration is completely up to us. We’ll go through the
-standard steps for any new page:
-
-- create an app-level `accounts/urls.py` file
-- update the project-level `config/urls.py` to point to the accounts app
-- add a view called `SignupPageView`
-- create a `signup.html` template
-- update `home.html` to display the sign up page
-
-
-A common question is: what’s the right order for implementing these steps? Honestly it doesn’t
-matter since we need all of them for the sign up page to work properly. Generally, I like to start
-with urls, then switch to views, and finally templates but it’s a matter of personal preference.
+پیاده سازی یک صفحه ثبت نام برای ثبت نام کاربر کاملا بر عهده خودمان هست. برای هر صفحه جدیدی یکسری گام های استاندارد وجود دارد:
+    
+- یک فایل `accounts/urls.py` در سطح اپ ایجاد نمایید
+- `config/urls.py` را به روزرسانی کنید تا به اپ accounts اشاره کند
+- یک ویویی به نام `SignupPageView` اضافه کنید
+- یک تمپلیتی به نام`signup.html` ایجاد کنید
+- صفحه `home.html` را به روز رسانی کنید تا صفحه ثبت نام را نمایش دهد
 
 
-To start create a `urls.py` file within the accounts app. Up to this point it only contains our
-CustomUser in the `models.py` file; we haven’t configured any routes or views.
+یک سوال رایج: درست ترین ترتیب پیاده سازی این مراحل چیست؟ صادقانه بگویم فرقی نمیکند چون ما همه این مراحل را برای اینکه صفحه ثبت نام به درستی کار کند، نیاز داریم. عموما، من خودم دوست دارم با url شروع کنم، سپس سراغ ویوها رفته، و در نهایت تمپلیت ها اما این به انتخاب خود شخص بستگی دارد.
 
 
-<div dir="ltr">
+برای شروع یک فایل `urls.py` در اپ accounts ایجاد کنید. تا اینجا این فقط شامل CustomUser هست که در فایل `models.py` قرار دارد; ما هنوز هیچ ویو یا مسیری را تنظیم نکرده ایم. 
+
+
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -521,16 +424,11 @@ $ touch accounts/urls.py
 
 </div>
 
-
-The URL path for the sign up page will take a view called SignupPageView (which we’ll create
-next), at the route signup/, and have a name of signup which we can later use to refer to the
-page with a url template tag. The existing url names for login and signup are written within the
-built-in Django app file `django/contrib/auth/urls.py` we saw above.
+    
+مسیر URL صفحه ثبت نام ویویی به نام SignupPageView(که بعدا آن را خواهیم ساخت) در مسیر /signup دارد و نام signup که بعدا می توانیم برای ارجاع به صفحه ای با یک تمپلیت تگ URL از آن استفاده کنیم. اسامی url موجود برای لاگین و signup در اپ فایل داخلی جنگو  `django/contrib/auth/urls.py` نوشته شده اند که در بالا آن را دیدیم.
 
 
-
-
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -546,14 +444,10 @@ urlpatterns = [
 </div>
 
 
+در مرحله بعدی فایل config/urls.py را به روز نمایید تا شامل accounts app گردد. ما می توانیم هر مسیری را که دوست داریم ایجاد کنیم اما عموما همان /accounts که توسط auth app پیش فرض استفاده می شد، کاربرد دارد. توجه کنید که باید مسیر را برای accounts.urls زیر لحاظ کنید: مسیرهای URL از بالا به پایین لود می شوند و این را تضمین می کند که هر مسیر auth URL ابتدا لود می شود.
+ 
 
-Next update the `config/urls.py` file to include the `accounts` app. We can create any route we
-like but it’s common to use the same accounts/ one used by the default auth app. Note that it’s
-important to include the path for `accounts.urls` below: URL paths are loaded top-to-bottom so
-this ensures that any auth URL paths will be loaded first.
-
-
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -576,12 +470,10 @@ urlpatterns = [
 
 </div>
 
-Now create the view SignupPageView. It references the CustomUserCreationForm and has a
-`success_url` that points to the login page, meaning after the form is submitted the user will
-be redirected there. The template_name will be `signup.html`.
+حالا ویوی SignupPageView را می سازیم. که به CustomUserCreationForm ارجاع می دهد و یک `success_url` دارد که به صفحه لاگین اشاره می کند، یعنی بعد از اینکه فرم ارسال شد، یوزر به آن جا هدایت خواهد شد. template-name نیز `signup.html` خواهد بود.   
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -601,10 +493,10 @@ class SignupPageView(generic.CreateView):
 </div>
 
 
-As a final step create a file called signup.html file within the existing registration/ directory.
+به عنوان گام نهایی یک فایلی به نام signup.html در مسیر /registration موجود ایجاد کنید. 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -613,11 +505,10 @@ $ touch templates/registration/signup.html
 
 </div>
 
-The code is basically identical to the log in page.
+کد اساسا مشابه به صفحه ورود است. 
 
 
-
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```html
@@ -638,11 +529,10 @@ Code
 
 </div>
 
-As a final step we can add a line for “Sign Up” to our `home.html` template right below the link for
-“Log In”. This is a one-line change.
+به عنوان قدم آخر می توانیم یک خط برای "Sign Up" به تمپلیت `home.html` دقیقا زیر لینک “Log In” اضافه کنیم. این یک تغییر یک خطی هست. 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```html
@@ -667,36 +557,31 @@ Code
 </div>
 
 
-All done! Reload the homepage to see our work.
+تمام شد! هوم پیج را از نو بارگذاری کنید تا کارمان را ببینید.
 
 ![Homepage with Signup](images/9.png)
 
-The “Sign Up” link will redirect us to http://127.0.0.1:8000/accounts/signup/.
+لینک "Sign Up" ما را به  /http://127.0.0.1:8000/accounts/signup هدایت خواهد کرد.
 
 ![Signup page](images/10.png)
 
 
 
-Create a new user with the email address `testuser@email.com`, username of testuser, and
-testpass123 for the password. Upon submission it will redirect us to the Log In page. Log in
-with the new account and it redirects to the homepage with a personalized greeting.
+یک کاربر جدید با آدرس ایمیل `testuser@email.com` و نام کاربری testuser و پسورد testpass123 بسازید. این ما را به صفحه Log In هدایت خواهد نمود. با یک اکانت جدید لاگین نمایید که این ما را به هوم پیجی با صفحه خوشامدگویی شخصی شده هدایت می نماید.  
 
 ![Homepage with testuser greeting](images/11.png)
 
-### Tests
+## تست ها
 
-For tests we do not need to test log in and log out features since those are built into Django and
-already have tests. We do need to test our sign up functionality though!
+از آن جایی که لاگین و لاگ اوت فیچرهایی built-in در جنگو هستند نیازی به تست ندارند. اما ما باید ویژگی sign up را تست نماییم!
 
-Let’s start by creating a setUp method that loads our page. Then we’ll populate test_signup_template 
-with tests for the status code, template used, and both included and excluded text
-similarly to how we did it in the last chapter for the homepage.
+بیایید ابتدا یک متد setUp که صفحه مان را لود کند ایجاد کنیم. سپس متد test_signup_template را برای تست status code و تمپلیت مورد استفاده مشابه با روشی که در فصل قبلی برای هوم پیج انجام داده ایم، ایجاد می کنیم. 
 
-In your text editor, update the `accounts/tests.py` file with these changes.
+در ادیتور متنی خود، فایل `accounts/tests.py` را با تغییرات زیر به روز کنید.
 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -726,9 +611,9 @@ class SignupPageTests(TestCase): # new
 
 </div>
 
-Then run our tests.
+سپس تست هایمان را اجرا کنید.
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -745,11 +630,10 @@ Destroying test database for alias 'default'...
 
 </div>
 
-Next we can test that our CustomUserCreationForm is being used and that the page resolves to
-SignupPageView.
+پس از آن می توانیم تست کنیم که CustomerUserCreationForm مورد استفاده قرار گرفته است و صفحه SignupPageView به آن پاسخ می دهد. 
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Code
 ```python
@@ -793,10 +677,10 @@ class SignupPageTests(TestCase):
 
 </div>
 
-Run our tests again.
+دوباره تست هایمان را اجرا می کنیم.
 
 
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -814,31 +698,22 @@ Destroying test database for alias 'default'...
 
 </div>
 
-All done.
+تمام شد.
 
 
-### setUpTestData()
-
-Django 1.8 introduced a [major update to TestCase](https://docs.djangoproject.com/en/3.1/releases/1.8/#testcase-data-setup)
-that added the ability to run tests both within
-a whole class and for each individual test. In particular,
-[setUpTestData()](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase.setUpTestData)
-allows the creation of
-initial data at the class level that can be applied to the entire TestCase. This results in much
-faster tests than using setUp(), however, care must be taken not to modify any objects created
-in setUpTestData() in your test methods.
+## setUpTestData()
+    
+جنگو 1.8 یک بروزرسانی مهمی در [TestCase](https://docs.djangoproject.com/en/3.1/releases/1.8/#testcase-data-setup) ارائه نموده است که در آن توانایی اجرای تست ها در هر دو حالت کل کلاس و یا برای هر تست به صورت انفرادی، افزوده شده است. به خصوص اینکه [()setUpTestData](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase.setUpTestData) ایجاد دیتای اولیه در سطح کلاس را امکان پذیر می کند که می تواند در کل تست کیس قابل اجرا باشد. این امر برخلاف ()setUp منجر به سرعت بخشیدن به تست ها می شود اما باید توجه کنید که هیچ کدام از اشیاای که در ()setUpTestData ساخته اید را تغییر ندهید.
 
 
-We will use setUp() in this book, but be aware that if your test suite seems sluggish a potential
-optimization to look into is using setUpTestData()
+در این کتاب ما از ()setUp استفاده می کنیم اما توجه کنید اگر تست شما به نظر کند بود ()setUpTestData می تواند بهینه ساز خوبی باشد.
 
 
-### Git
+## گیت
 
-As ever make sure to save our work by adding changes into Git.
+مثل همیشه با اضافه کردن تغییرات به گیت کار خود را ذخیره نمایید.
 
-
-<div dir="ltr">
+<div dir="ltr" align="left">
 
 Command Line
 ```shell
@@ -850,16 +725,13 @@ $ git commit -m 'ch5'
 </div>
 
 
-The official source code is [located on Github](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch5-user-registration)
-if you want to compare your code.
+اگر بخواهید کد خود را مقایسه نمایید، سورس کد اصلی در [گیت هاب](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch5-user-registration) قرار دارد.
 
 
 
-### Conclusion
+## جمع بندی
 
-Our Bookstore project is not the most beautiful site in the world, but it is very functional at
-this point. In the next chapter we’ll configure our static assets and add Bootstrap for improved
-styling.
+پروژه فروشگاه کتاب ما زیباترین سایت دنیا نیست، اما تا اینجا بسیار کاربردی است. در فصل بعدی به تنظیم اشیا استاتیک خود می پردازیم و از Bootstrap برای بهبود استایل دهی استفاده خواهیم کرد. 
 
 
 
