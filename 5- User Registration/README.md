@@ -425,10 +425,7 @@ $ touch accounts/urls.py
 </div>
 
 
-The URL path for the sign up page will take a view called SignupPageView (which we’ll create
-next), at the route signup/, and have a name of signup which we can later use to refer to the
-page with a url template tag. The existing url names for login and signup are written within the
-built-in Django app file `django/contrib/auth/urls.py` we saw above.
+URL path برای صفحه ثبت نام ویویی به نام SignupPageView(که آن را بعدا خواهیم ساخت) در مسیر signup/ را دارد، و نام signup که بعدا می توانیم برای ارجاع به صفحه ای با یک تمپلیت تگ URL از آن استفاده کنیم،  را دارد. اسامی url موجود برای لاگین و ثبت نام در اپ فایل جنگوی `django/contrib/auth/urls.py` که در بالا دیدیم، به صورت built-in نوشته شده اند.
 
 
 
@@ -449,12 +446,7 @@ urlpatterns = [
 </div>
 
 
-
-سپس فایل `config/urls.py` را به روز کنید تا اپ `accounts` را داشته باشد. ما می توانیم هر مسیری که دوست داریم را ایجاد کنیم اما عموما همان accounts/ را که به صورت پیش فرض auth app استفاده می شد، استفاده می کنیم. مهم هست که برای `accounts.urls` زیر مسیر را شامل شود: مسیرهای URL از بالا تا پایین لود می شوند و این ما را مطمئن می کند که هر سیریauth URL ای در ابتدا لود می شود.(؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟) 
-Next update the `config/urls.py` file to include the `accounts` app. We can create any route we
-like but it’s common to use the same accounts/ one used by the default auth app. Note that it’s
-important to include the path for `accounts.urls` below: URL paths are loaded top-to-bottom so
-this ensures that any auth URL paths will be loaded first.
+در مرحله بعدی فایل config/urls.py را به روز نمایید تا شامل accounts app گردد. ما می توانیم هر مسیری را که دوست داریم ایجاد کنیم اما عموما همان accounts/ که توسط auth app پیشفرض استفاده میشد کاربرد دارد.توجه کنید که باید مسیر را برای accounts.urls زیر لحاظ کنید: مسیرهای URL  این تظمین می کند که هر مسیر auth URL ابتدا بارگیری می شود.از بالا به پایین لود می شوند و 
 
 
 <div dir="ltr" align="left">
@@ -585,14 +577,11 @@ Code
 
 ## تست ها
 
-For tests we do not need to test log in and log out features since those are built into Django and
-already have tests. We do need to test our sign up functionality though!
+از آن جایی که لاگین و لاگ اوت فیچرهایی built-in در جنگو هستند نیازی به تست ندارند. اما ما باید ویژگی sign up را تست نماییم!
 
-Let’s start by creating a setUp method that loads our page. Then we’ll populate test_signup_template 
-with tests for the status code, template used, and both included and excluded text
-similarly to how we did it in the last chapter for the homepage.
+بیایید ابتدا یک متد setUp که صفحه مان را لود کند ایجاد کنیم. سپس متد test_signup_template را برای تست status code و تمپلیت مورد استفاده مشابه با روشی که در فصل قبلی برای هوم پیج انجام داده ایم، ایجاد می کنیم. 
 
-In your text editor, update the `accounts/tests.py` file with these changes.
+در ادیتور متنی خود، فایل `accounts/tests.py` را با تغییرات زیر به روز کنید.
 
 
 
@@ -626,7 +615,7 @@ class SignupPageTests(TestCase): # new
 
 </div>
 
-Then run our tests.
+سپس تست هایمان را اجرا کنید.
 
 <div dir="ltr" align="left">
 
@@ -645,8 +634,7 @@ Destroying test database for alias 'default'...
 
 </div>
 
-Next we can test that our CustomUserCreationForm is being used and that the page resolves to
-SignupPageView.
+پس از آن می توانیم تست کنیم که CustomerUserCreationForm مورد استفاده قرار گرفته است و صفحه SignupPageView به آن پاسخ می دهد. 
 
 
 <div dir="ltr" align="left">
@@ -693,7 +681,7 @@ class SignupPageTests(TestCase):
 
 </div>
 
-Run our tests again.
+دوباره تست هایمان را اجرا می کنیم.
 
 
 <div dir="ltr" align="left">
@@ -714,29 +702,20 @@ Destroying test database for alias 'default'...
 
 </div>
 
-All done.
+تمام شد.
 
 
 ## setUpTestData()
-
-Django 1.8 introduced a [major update to TestCase](https://docs.djangoproject.com/en/3.1/releases/1.8/#testcase-data-setup)
-that added the ability to run tests both within
-a whole class and for each individual test. In particular,
-[setUpTestData()](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase.setUpTestData)
-allows the creation of
-initial data at the class level that can be applied to the entire TestCase. This results in much
-faster tests than using setUp(), however, care must be taken not to modify any objects created
-in setUpTestData() in your test methods.
+    
+جنگو 1.8 یک بروزرسانی مهمی در [TestCase](https://docs.djangoproject.com/en/3.1/releases/1.8/#testcase-data-setup) ارائه نموده است که در آن توانایی اجرای تست ها در هر دو حالت کل کلاس و یا برای هر تست به صورت انفرادی، افزوده شده است. به خصوص اینکه [()setUpTestData](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase.setUpTestData) ایجاد دیتای اولیه در سطح کلاس را امکان پذیر می کند که می تواند در کل تست کیس قابل اجرا باشد. این امر برخلاف ()setUp منجر به سرعت بخشیدن به تست ها می شود اما باید توجه کنید که هیچ کدام از اشیاای را که در ()setUpTestData ساخته اید، تغییر ندهید.
 
 
-We will use setUp() in this book, but be aware that if your test suite seems sluggish a potential
-optimization to look into is using setUpTestData()
+در این کتاب ما از ()setUp استفاده می کنیم اما توجه کنید اگر تست شما به نظر کند بود ()setUpTestData می تواند بهینه ساز خوبی باشد.
 
 
 ## گیت
 
-As ever make sure to save our work by adding changes into Git.
-
+مثل همیشه با اضافه کردن تغییرات به گیت کار خود را ذخیره نمایید.
 
 <div dir="ltr" align="left">
 
@@ -750,16 +729,13 @@ $ git commit -m 'ch5'
 </div>
 
 
-The official source code is [located on Github](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch5-user-registration)
-if you want to compare your code.
+اگر بخواهید کد خود را مقایسه نمایید، سورس کد اصلی در [گیت هاب](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch5-user-registration) قرار دارد.
 
 
 
 ## جمع بندی
 
-Our Bookstore project is not the most beautiful site in the world, but it is very functional at
-this point. In the next chapter we’ll configure our static assets and add Bootstrap for improved
-styling.
+پروژه فروشگاه کتاب ما زیباترین سایت دنیا نیست، اما تا اینجا بسیار کاربردی است. در فصل بعدی به تنظیم اشیا استاتیک خود می پردازیم و از Bootstrap برای بهبود استایل دهی استفاده خواهیم کرد. 
 
 
 
