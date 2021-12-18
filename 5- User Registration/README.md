@@ -703,7 +703,7 @@ Destroying test database for alias 'default'...
 
 ## setUpTestData()
     
-جنگو 1.8 یک بروزرسانی مهمی در [TestCase](https://docs.djangoproject.com/en/3.1/releases/1.8/#testcase-data-setup) ارائه نموده است که در آن توانایی اجرای تست ها در هر دو حالت کل کلاس و یا برای هر تست به صورت انفرادی، افزوده شده است. به خصوص اینکه [()setUpTestData](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase.setUpTestData) ایجاد دیتای اولیه در سطح کلاس را امکان پذیر می کند که می تواند در کل تست کیس قابل اجرا باشد. این امر برخلاف ()setUp منجر به سرعت بخشیدن به تست ها می شود اما باید توجه کنید که هیچ کدام از اشیاای را که در ()setUpTestData ساخته اید، تغییر ندهید.
+جنگو 1.8 یک بروزرسانی مهمی در [TestCase](https://docs.djangoproject.com/en/3.1/releases/1.8/#testcase-data-setup) ارائه نموده است که در آن توانایی اجرای تست ها در هر دو حالت کل کلاس و یا برای هر تست به صورت انفرادی، افزوده شده است. به خصوص اینکه [()setUpTestData](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase.setUpTestData) ایجاد دیتای اولیه در سطح کلاس را امکان پذیر می کند که می تواند در کل تست کیس قابل اجرا باشد. این امر برخلاف ()setUp منجر به سرعت بخشیدن به تست ها می شود اما باید توجه کنید که هیچ کدام از اشیاای که در ()setUpTestData ساخته اید را تغییر ندهید.
 
 
 در این کتاب ما از ()setUp استفاده می کنیم اما توجه کنید اگر تست شما به نظر کند بود ()setUpTestData می تواند بهینه ساز خوبی باشد.
