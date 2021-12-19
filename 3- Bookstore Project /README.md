@@ -1,11 +1,13 @@
+
+
 <div dir="rtl">
 
 # پروژه کتاب فروشی
 
 وقتشه که پروژه اصلی کتاب رو شروع کنیم، یک کتاب فروشی آنلاین. در این فصل یه پروژه جدید شروع میکنیم، برمیگردیم به داکر، یه مدل سفارشی میسازیم و اولین آزمایشات خود را پیاده میکنیم.
 
-شروع کنیم با ساخت یک پروژه جتگو جدید با `Pipenv` و بعد کار با داکر.
-به نظز میرسه هنوز توی پوشه `postgresql` باشید از فصل قبل، پس داخل کامند لاین دستور `/.. cd` را وارد کنید تا وارد پوشه دلخواه `code` شوید. (قرض میکنیم که از مک استفاده میکنید). یه پوشه به اسم `book` میسازیم و داخل آن جنگو را نصب میکنیم. همچنین از `PostgreSQL` هم استفاده میکنیم. پس میتونیم `psycopg2` هم نصب کنیم. این فقط تنها کار پس از ساخت ما هست که در اینده پکیج های خود را روی خود داکر نصب میکنیم. در آخر از `pipend shell` استفاده کنید تا وارد محیط مجازی جدید شوید.
+شروع کنیم با ساخت یک پروژه جنگو جدید با `Pipenv` و بعد کار با داکر.
+به نظر میرسه هنوز توی پوشه `postgresql` باشید از فصل قبل، پس داخل کامند لاین دستور `/.. cd` را وارد کنید تا وارد پوشه دلخواه `code` شوید. (فرض میکنیم که از مک استفاده میکنید). یه پوشه به اسم `book` میسازیم و داخل آن جنگو را نصب میکنیم. همچنین از `PostgreSQL` هم استفاده میکنیم. پس میتونیم `psycopg2` هم نصب کنیم. این فقط تنها کار پس از ساخت ما هست که در اینده پکیج های خود را روی خود داکر نصب میکنیم. در آخر از `pipend shell` استفاده کنید تا وارد محیط مجازی جدید شوید.
 
 <div dir="ltr">
 
@@ -148,7 +150,7 @@ DATABASES = {
   
 مرورگر را برای صفحه اصلی رفرش کنید تا همه چیز به درستی کار کند.
   
-### مدل یوزر شفارسی  
+### مدل یوزر سفارشی  
 
 حال زمان آن است یک یوزر سفارشی که [داکیومنت رسمی جنگو بسیار بر آن تاکید دارد](https://docs.djangoproject.com/en/3.1/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) ایجاد کنیم. چرا؟  چون شما احتیاج دارید بعضی از مواقع در یوزر پیش فرض پروژه خود تغییراتی بوجود بیاورید [باصطلاح آنرا سفارشی کنید]. 
 اگر در اولین دستور migrate که اجرا کردید، یوزر سفارشی را نساخته اید و استارت نزدید باید بگویم سخت در اشتباهید ((: چون که `user` رابطه تنگاتنگی با سایر بخش های پروژه ی 
@@ -249,12 +251,189 @@ $ docker-compose exec web python manage.py migrate
 </div>
   
 ### فرم سفارشی یوزر
+یک یوزرمدل میتواند توسط ادمین جنگو ساخته و ویرایش شود. بنابراین نیاز است در فرم های پیش فرض به جای اشاره به `User` از `CustomUser` استفاده شود.
+
+در ابتدا فایل `accounts/forms.py` با دستور زیر ساخته میشود.
+
+<div dir="ltr">
+
+`$ touch accounts/forms.py` 
+
+</div>
+
+در ویرایشگر خود قطعه کدهای زیر را برای استفاده از `CustomUser` وارد کنید.
+
+<div dir="ltr">
+
+```
+# accounts/forms.py
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+class CustomUserCreationForm(UserCreationForm):
+	class Meta:
+		model = get_user_model()
+		fields = ('email', 'username',)
+class CustomUserChangeForm(UserChangeForm):
+	class Meta:
+		model = get_user_model()
+		fields = ('email', 'username',)
+```
+
+</div>
+
+در خط اول، مدل `CustomUser` را از طریق `get_user_model` ایمپورت میکنیم که در اصل  به پیکربندی `AUTH_USER_MODEL` ما در `settings.py` نگاه می‌کند.
+
+استفاده از کتابخانه ها به صورت بالا به جای ایمپورت کردن و استفاده مستقیم از `CostumUser` ممکن است پیچیده تر به نظر برسد. دلیل استفاده از این ایده این است که به جای رفرنس دادن چندباره در سرتاسر پروژه به مدل سفارشی یوزر فقط یک رفرنس مرجع داشته باشیم.
+
+در مرحله بعد، [UserCreationForm](https://docs.djangoproject.com/en/3.1/topics/auth/default/#django.contrib.auth.forms.UserCreationForm) و [UserChangeForm](https://docs.djangoproject.com/en/3.1/topics/auth/default/#django.contrib.auth.forms.UserChangeForm) را وارد می کنیم که هر دو گسترش خواهند یافت. 
+
+سپس دو فرم جدید به نام های `CustomUserCreationForm` و `CustomUserChangeForm`  میسازیم. این 2 فرم گسترش یافته فرم پایه یوزری که در بالا ایمپورت  شد هستند و ما به طور خاص مدل یوزر سفارشی خاص خود را در آن ها جایگزین کرده و دو فیلد ایمیل و یوزرنیم را در آن ها نمایش میدهیم.فیلد پسوورد به صورت پیشفرض موجود است بنابراین نیاز به تعریف دوباره آن در این قسمت نیست.
+
 
 ### سرپرست کاربر سفارشی
 
-### کاربر مدیر
+در نهایت باید اطلاعات فایل `accounts/admin.py` را آپدیت کنیم.
+این فایل محلی برای دستکاری داده های کاربری است و همانطور که می دانید ارتباط تنگاتنگی میان کاربر سیستم و ادمین وجود دارد.
+
+ما `UserAdmin` موجود را به `CustomUserAdmin` گسترش می‌دهیم و به جنگو می‌گوییم که از فرم‌های جدید و مدل کاربر سفارشی استفاده کند و در نهایت یک لیست از ایمیل و نام کاربری یوزرها برای ما برگرداند.
+در صورت تمایل، می‌توانیم فیلدهای [کاربری](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/) موجود بیشتری مانند is_staff را به list_display اضافه کنیم.
+
+<div dir="ltr">
+
+```
+# accounts/admin.py
+from django.contrib import admin
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
+
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+
+CustomUser = get_user_model()
+
+class CustomUserAdmin(UserAdmin):
+	add_form = CustomUserCreationForm
+	form = CustomUserChangeForm
+	model = CustomUser
+	list_display = ['email', 'username',]
+	
+admin.site.register(CustomUser, CustomUserAdmin)
+```
+
+</div>
+
+گذاشتن . قبل از تابع ورودی باعث اضافه شدن مقدار بیشتری کد ورودی شده ولی از دردسرهای آتی جلوگیری می کند.
+
+
+### ابر کاربر
+
+یک راه خوب برای تأیید اینکه مدل کاربر سفارشی ما به درستی راه اندازی و اجرا می شود، ایجاد یک ابرکاربر است که از طریق آن بتوانیم به داشبورد ادمین دسترسی داشته باشیم.
+
+با دستور زیر به طرز مخفی به `CustomUserCreationForm` دسترسی خواهیم داشت.
+
+<div dir="ltr">
+
+`$ docker-compose exec web python manage.py createsuperuser`
+
+</div>
+
+من در این پروژه از `wsv` به عنوان نام کاربری، از `will@learndjango.com` به عنوان ایمیل  و از `testpass123` به عنوان پسوورد استفاده کرده ام. شما میتوانید از مقادیر دلخواه برای ساخت ابرکاربر استفاده کنید.
+
+حال با رجوع به آدرس `http://127.0.0.1:8000/admin` و تایید اطلاعات میتوانید به داشبورد ادمین وارد شوید.
+در این قسمت شما باید نام ابرکاربر را در سمت راست بالای صفحه  مشاهده کنید.
+
+	
+![image](https://user-images.githubusercontent.com/52083195/139411409-013b28bf-9e91-4d1c-83ff-9dfe8660fbf9.png)
+
+
+همچنین با رفتن به زبانه کاربران میتوانید ایمیل و شناسه ابرکاربر خود را مشاهده کنید.
+
+	
+![image](https://user-images.githubusercontent.com/52083195/139411382-fc0a35d6-76a1-4e7a-97b1-7368998218ad.png)
+
+
+### تست
+
+حال پس از اضافه شدن توابع جدید به پروژه موقع تست آن است. چه شما یک برنامه نویس انفرادی باشید و چه عضو یک تیم باشید، تست پروژه در هر حالتی یکی از قسمت های مهم پروژه است. در این باره جیکوب، بنیانگزار جنگو میگوید: " کد بدون تست، در هنگام طراحی شکسته است". به این معنی که این دو بدون هم بی معنا هستند.
+
+دو نوع اصلی تست وجود دارد:
+
+ - تست واحد که ساده، سریع و به صورت اختصاصی برای تست عملکرد یک قسمت از کد است
+ - تست های یکپارچه که حجیم، با سرعت کم و برای تست کلی برنامه یا یکسری از عملکردهای خاص مانند پرداخت و ... است.
+
+شما باید در هنگام نوشتن تست تعداد زیادی تست واحد و تعداد محدودی تست یکپارچه داشته باشید.
+
+زبان برنامه نویسی پایتون شامل کتابخانه های زیادی برای [تست واحد](https://docs.python.org/3/library/unittest.html) است، همچنین جنگو نیز کتابخانه های زیادی برای [تست اتوماتیک](https://docs.djangoproject.com/en/3.1/topics/testing/) برنامه در اختیار شما قرار می دهد. بر این اساس بهانه ای برای ننوشتن تست های فراوان برای یک برنامه وجود ندارد و همانطور که گفته شد این تست ها در زمان شما برای دیباگ کردن برنامه صرفه جویی میکنند.
+
+توجه داشته باشید که لازم نیست برای همه چیز در یک برنامه تست نوشته شود. برای مثال، برای همه توابع پیس ساخته جنگو در کد مرجع تست واحد وجود دارد و شما نیاز به دوباره نویسی تست ها ندارید. مثلا وقتی از مدل `User` استفاده میکنید نیاز به نوشتن تست نیست، ولی اگر به جای آن از مدل `CostumUser` استفاده کنید باید برای آن تست بنویسید.
+
 
 ### تست های واحد
+برای نوشتن [تست واحد](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.TestCase) در جنگو از اکستنشنی به نام [TestCase](https://docs.python.org/3/library/unittest.html#unittest.TestCase) استفاده میکنیم. در حال حاضر در اپلیکیشن ما فایلی به نام `test.py` وجود دارد که به صورت خودکار هنگام ایجاد برنامه با دستور `startapp` ساخته شد؛ این فایل در حال حاضر یک فایل خالی است و ما شروع به تغییر دادن آن میکنیم.
+
+در این قسمت نام هر متد باید با test شروع شود تا بتواند به عنوان یک تست واحد در جنگو اجرا شود. این روش نام گذاری همچنین کمک میکند که شناسایی تست ها ساده تر باشد زیرا در جنگو حدود صدها و شاید هزاران متد وجود داشته باشد!
+
+<div dir="ltr">
+
+```
+# accounts/tests.py
+from django.contrib.auth import get_user_model
+from django.test import TestCase
+class CustomUserTests(TestCase):
+	def test_create_user(self):
+		User = get_user_model()
+		user = User.objects.create_user(
+			username='will',
+			email='will@email.com',
+			password='testpass123'
+		)
+		self.assertEqual(user.username, 'will')
+		self.assertEqual(user.email, 'will@email.com')
+		self.assertTrue(user.is_active)
+		self.assertFalse(user.is_staff)
+		self.assertFalse(user.is_superuser)
+	def test_create_superuser(self):
+		User = get_user_model()
+		admin_user = User.objects.create_superuser(
+			username='superadmin',
+			email='superadmin@email.com',
+			password='testpass123'
+		)
+		self.assertEqual(admin_user.username, 'superadmin')
+		self.assertEqual(admin_user.email, 'superadmin@email.com')
+		self.assertTrue(admin_user.is_active)
+		self.assertTrue(admin_user.is_staff)
+		self.assertTrue(admin_user.is_superuser)
+```
+
+</div>
+
+در ابتدا هر دو کتابخانه `get_user_model` و `TestCase` را قبل از ایجاد کلاس `CustomUserTests` فراخوتنی میکنیم. در این کلاس دو تابع تست مختلف خواهیم داشت. `test_create_user` برای تایید کاربر جدید است، که در این تابع در ابتدا ما یک شی از مدل کاربر میسازیم و سپس با استفاده از متد `create_user` کاربری با دسترسی های مورد نیاز تعریف میکنیم.
+
+برای تابع `test_create_superuser` نیز روند بالا را با یک تفاوت جزئی تکرار میکنیم. در اینجا برای ساخت کاربر از تابع [create_superuser](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.UserManager.create_superuser) به جای تابع [create_user](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/#django.contrib.auth.models.UserManager.create_user)  استفاده میشود. تفاوت این دو کاربر در این است که در ابرکاربر هر دو متغیر `is_staff` و `is_superuser` مقدار True میگیرند.
+
+برای ران کردن تست ها با داکر میتوان از دستور `docker-compose exec` استفاده کرد. یا به طور سنتی میتوانیم فایل تست خود را با دستور `python manage.py test` اجرا کنیم.
+
+
+<div dir="ltr">
+
+```
+
+Command Line
+$ docker-compose exec web python manage.py test
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+..
+---------------------------------------------------------------------
+Ran 2 tests in 0.268s
+OK
+Destroying test database for alias 'default'...
+
+```
+
+</div>
+
+زمانی که همه تست ها موفقیت آمیز باشند میتوانیم از این مرحله گذر کنیم.
+
 
 ### گیت
 
