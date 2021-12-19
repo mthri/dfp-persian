@@ -90,21 +90,21 @@
 </details>
   
 <details>
-  <summary>فصل پنجم : ثبت نام کاربر (مقدماتی)</summary>
+  <summary>فصل پنجم : ثبت نام کاربر (مقدماتی) &check;</summary>
   <br>
     
-  - اپ Auth
-  - View ها و URL های اپ Auth
-  - صفحه اصلی (Homepage)
-  - سورس کد جنگو
-  - لاگین کاربر
-  - ریدارکت ها (Redirects)
-  - لاگ اوت کاربر (Log Out)
-  - ثبت نام کاربر
-  - تست ها
-  - setUpTestData()
-  - گیت
-  - جمع بندی
+  - اپ Auth &check;
+  - View ها و URL های اپ Auth &check;
+  - صفحه اصلی (Homepage) &check;
+  - سورس کد جنگو &check;
+  - لاگین کاربر &check;
+  - ریدارکت ها (Redirects) &check;
+  - لاگ اوت کاربر (Log Out) &check;
+  - ثبت نام کاربر &check;
+  - تست ها &check;
+  - setUpTestData() &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
@@ -166,15 +166,15 @@
 </details>
   
 <details>
-  <summary>فصل نهم : ایمیل</summary>
+  <summary>فصل نهم : ایمیل &check;</summary>
   <br>
   
   - تایید ایمیل شخصی سازی شده &check;
-  - صفحه تایید ایمیل 
-  - تغییر و بازنشانی رمز
-  - سرویس ایمیل در جنگو
-  - گیت
-  - جمع بندی
+  - صفحه تایید ایمیل &check;
+  - تغییر و بازنشانی رمز &check;
+  - سرویس ایمیل در جنگو &check;
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
   
