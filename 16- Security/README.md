@@ -37,8 +37,9 @@
 
 به دلیل اینکه ما داریم از داکر استفاده میکنیم باید دستور `docker-compose exec web` را نیز به دستوراتمان اضافه کنیم.
 
-<div align='left'>
- 
+<div dir="ltr" align='left'>
+
+
 ```bash
 $ docker-compose exec web python manage.py check --deploy
 System check identified some issues:
@@ -49,8 +50,8 @@ System check identified 5 issues (0 silenced).
 
 ```
 
-</div> 
- 
+</div>
+
 چقدر خوب! یک لیست توصیفی و طولانی از مشکلات که باید قبل از دیپلوری کردن پروژه کتاب‌فروشی رفع کنیم
 
 
@@ -59,31 +60,26 @@ System check identified 5 issues (0 silenced).
 
 راه  های زیادی برای برخورد با این چالش وجود دارد.باتوجه به اینکه قرار است در Heroku استقرار دهیم، رویکرد ما ایجاد فایل *docker-compose-prod.yml* است که به واسطه آن می‌توانیم محیط محصول رو تست  کنیم و همچنین میتوانیم بصورت دستی متغییرهای محلی به محیط محصول اضاافه کنیم.
 
- 
-<div align='left'>
- 
+<div dir="ltr" align='left'>
+
+
 ```bash
 $ touch docker-compose-prod.yml
 ```
 
-</div> 
- 
+</div>
+
 بطور پیشفرض، گیت تمامی فایل ها و پوشه ها را در پروژه ما دنبال میکند. ما نمی‌خواهیم این فایل جدید را دنبال کند،‌چون حاوی اطلاعات مهم و حساسی هست. راه حل آن ایجاد فایل جدید به نام *.gitignore* است که درون آن باید نام فایل ها و پوشه  هایی که مایلیم توسط گیت  دنبال **نشود** قرار دهیم.
 
 یک فایل جدید ایجاد میکنیم.
- 
-<div align='left'>
- 
 ```bash
 $ touch .gitignore
 ```
- 
-</div>
- 
+
 تنها فایل خود را به آن اضافه میکنیم
 
-<div align='left'>
- 
+<div dir="ltr" align='left'>
+
 **.gitignore**
 ```bash
 docker-compose-prod.yml
@@ -91,20 +87,19 @@ __pycache__/
 db.sqlite3
 .DS_Store # Mac only
 ```
- 
-</div> 
- 
- 
+
+</div>
+
 اگر کنجکاو هستید، گیت‌هاب یک فایل رسمی برای [python gitignore](https://github.com/github/gitignore/blob/master/Python.gitignore) دارد که شامل تنظیمات اضافی ارزشمندی هست (برای جستجو) 
 
 اگر دوباره دستور `git status` را اجرا کنید فایل *docker-compose-prod.yml* را مشاهده نخواهید کرد، با اینکه هنوز در پروژه شما قرار دارد. دقیقا همان چیزی که ما می‌خواستیم!
 
 حالا، محتویات فایل docker-compose.yml را در docker-compose-prod.yml کپی می‌کنیم.
 
-<div align='left'>
- 
- 
 **docker-compose-prod.yml**
+
+<div dir="ltr" align='left'>
+
 ```yaml
 version: '3.8'
 services:
@@ -129,22 +124,146 @@ services:
   volumes:
     postgres_data:
 ```
- 
-</div> 
- 
- 
-برای اجرای فایل جدید، داکر را با فلگ -f ریستارت کنید تا فایل [کامپوز جایگزین]((https://docs.docker.com/compose/reference/‌))  انتخاب شود.
 
-<div align='left'>
- 
- 
+</div>
+
+برای اجرای فایل جدید، داکر را با فلگ -f ریستارت کنید تا فایل [کامپوز جایگزین]((https://docs.docker.com/compose/reference/‌))  انتخاب شود.
+<div dir="ltr" align='left'>
 ```bash
 $ docker-compose down
 $ docker-compose -f docker-compose-prod.yml up -d --build
 $ docker-compose exec web python manage.py migrate
 ```
- 
-</div> 
+</div>
+
+فلگ `--build` برای بیلد اولیه ایمیج به همراه تمامی پکیج های نرم افزاری برای فایل کامپوز جدید اضافه شده است. همچنین دستور `migrate` دیتابیس جدید را اجرا میکند. این یک نمونه کاملاً جدید از پروژه ما است! به این ترتیب، نه اکانت ابرکاربر(super user) وجود دارد نه اطلاعات کتاب های ما. اما برای الان اشکالی ندارد، این اطلاعات بعدا می‌توانیم روی محیط production اضافه کنیم و تمام تمرکزمان را روی ایجاد محیط production  محلی  برای تست محصول میگذاریم.
+
+به وب‌سایت مراجعه کنید، همه‌چی باید مانند قبل اجرا شود با اینکه داریم از فایل متفاوت کامپوز استفاده میکنیم.
+
+## DEBUG
+
+در این بخش هدف ما این هست که با استفاده از docker-compose-prod.yml تمام چک لیست های استقرار (deployment) جنگو را پاس کنیم. بیاید با تغییر DEBUG شروع کنیم که تنظیم شده است به True در صورتی که در production باید False باشد.
+
+<div dir="ltr" align='left'>
+
+**docker-compose-prod.yml**
+```yaml
+environment:
+- "DJANGO_SECRET_KEY=)*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n"
+- "DJANGO_DEBUG=False" # new
+```
+
+</div>
+
+داکر رو غیر فعال کنید (down) و بعد از تغییر دوباره اجرا (up) کنید.
+
+<div dir="ltr" align='left'>
+
+**Command Line**
+```bash
+$ docker-compose down
+$ docker-compose -f docker-compose-prod.yml up -d --build
+```
+
+</div>
+
+وبسایت باید دوباره مثل قبل اجرا شود، برای اینکه مطمئن شوید که مقدار DEBUG برابر False هست باید صفحه http://127.0.0.1:8000/debug وجود نداشته باشد.
+
+->IMAGE
+
+ این پیام عمومی "Not Found" تایید می‌کند که ما DEBUG را برابر False قرار داده ایم. اگر True بود، باید بجای این صفحه یک گذارش دقیق از ارور ها نمایش میداد.
+
+ بیاید دوباره چک لیست استقرار را اجرا کنیم با این تفاوت که DEBUG تغییر کرده است.به‌یاد بیاورید  قبلا که اجرا میکردیم ۵ خطا دریافت میکردیم.
+
+ <div dir="ltr" align='left'>
+
+**Command Line**
+```bash
+$ docker-compose exec web python manage.py check --deploy
+System check identified some issues:
+WARNINGS:
+...
+System check identified 4 issues (0 silenced).
+```
+
+</div>
+
+پیشرفت کردیم! از ۵ خطا به ۴ خطا رسیدم فقط با False قرار دادن DEBUG.
+
+## Defaults (پیشفرض‌ها)
+
+ما از متغییر های محلی (Enviroment Variables) به دو دلیل استفاده میکنیم: ذخیره مقادیری مانند SECRET_KEY درواقع امن هستند و یک راه برای سویچ کردن تنظیمات از local به production هستند. مشکلی پیش نمیاد اگر دوتا متغییرهای محلی برای تنظیمات مانند DEBUG داشته باشیم، شاید بهتر باشه مقدار پیشفرض برای آن قرار بدیم زمانی که لازم نیست چیزی را مخفی (secret) نگهداریم.
+
+<div dir="ltr" align='left'>
+
+```python
+# config/settings.py
+DEBUG = env.bool("DJANGO_DEBUG", default=False)
+```
+
+</div>
+به این معنا می‌باشد که در محیط پروداکشن اگر متغییر محلی نداشته باشیم، مقدار آن بطور پیشفرض برابر False می‌باشد.ما باید متغییر DJANGO_DEBUG را در فایل محلی docker-compose.yaml نکهداریم، اما باید از فایل docker-compose-prod.yml حذف کنیم. نتایج این رویکرد باعث می‌شود که فایل docker-compose-prod.yml کوچکتر شود و همچنین شاید باعث امنیت بیشتر بشود اگر به دلایلی متغییر های محلی به درستی لود نشوند، ما اشتباها تنظیمات محلی development را فعال نمی‌کنیم.
+
+بریم با حذف کردن DJANGO_DEBUG از فایل docker-compose.prod.yml را بروزرسانی کنیم.
+
+<div dir="ltr" align='left'>
+
+```yaml
+environment:
+- "DJANGO_SECRET_KEY=)*_s#exg*#w+#-xt=vu8b010%%a&p@4edwyj0=(nqq90b9a8*n"
+```
+
+</div>
+
+اگر شما داکر را ریستارت کنید هم تنظیمات محلی و هم تنظیمات پروداکشن شما کار خواهد کرد.
+
+
+## SECRET_KEY
+
+درحال حاظر SECRET_KEY ما در فایل docker-compose.yml قابل رویت می‌باشد. برای امنیت بیشتر، ما باید کلید جدید ایجاد کنیم و توسط docker-compose-prod.yml تست کنیم. SECRET_KEY یک رشته تصادفی ۵۰ کارکتری است که  هر دفعه دستور startproject رو اجرا میکنید، ساخته می‌شود. برای ساخت کلید جدید میتوانید از کتابخانه داخلی پایتون یعنی ماژول [secret](https://docs.python.org/3/library/secrets.html) استفاده کنید.
+
+<div dir="ltr" align='left'>
+
+**Command Line**
+```bash
+$ docker-compose exec web python -c 'import secrets; print(secrets.token_urlsafe(38))'
+ldBHq0YGYxBzaMJnLVOiNG7hruE8WKzGG2zGpYxoTNmphB0mdBo
+```
+
+</div>
+
+پارامتر token_urlsafe تعداد بایت های در یک رشته a URL-safe را بازمیگرداند. با انکدین Base64 بطور میانگین هر بایت برابر ۱.۳ کارکتر می‌باشد. در این مثال با استفاده از ۳۸ ما ۵۱ کارکتر داریم. مهمترین نکته‌ای که باید به آن توجه کنید، مقدار SECRET_KEY حداقل باید ۵۰ کارکتر باشد. هردفعه که این دستور را اجرا کنید، مقدار جدید دریافت می‌کنید.
+
+> به یاد داشته باشید تا زمانی که دارید از داکر استفاده میکنید، اگر در SECRET_KEY شما علامت دلار ($) وجود داشت، باید یک علامت دلار دیگر در کنار آن قرار دهید. [این به دلیل نحوه مدیریت متغییر ها توسط docker-compose می‌باشد](https://docs.docker.com/compose/compose-file/#variable-substitution). به عبارت دیگیر شما ارور خواهید دید!
+
+به روش زیر می‌توانید SECRET_KEY جدید را به docker-compose-prod.yml اضافه کنید:
+
+
+<div dir="ltr" align='left'>
+
+**docker-compose-prod.yml**
+```yaml
+# docker-compose-prod.yml
+environment:
+- "DJANGO_SECRET_KEY=ldBHq0YGYxBzaMJnLVOiNG7hruE8WKzGG2zGpYxoTNmphB0mdBo"
+```
+
+</div>
+
+حال کانتینر داکری خود را ریستارت کنید، به درستی  SECRET_KEY جدید جایگزین شد.
+
+
+<div dir="ltr" align='left'>
+
+**Command Line**
+```bash
+$ docker-compose down
+$ docker-compose -f docker-compose-prod.yml up -d --build
+```
+
+</div>
+
+حال باید مانند قبل وبسایت به درستی کار کند. درحال حاظر چهار مشکل در چک لیست استقرار وجود دارد، اما اول یک سر کوتاه به امنیت وبسایت بزنیم تا متوجه بشویم چرا این تنظیمات مهم است.
  
 ### امنیت وب
  
