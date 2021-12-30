@@ -167,12 +167,14 @@ if settings.DEBUG: # new
 
 ![Debug Toolbar](DebugToolbar.jpg)
 <center><b>Debug Toolbar</b></center>
+
 <br>
 <div dir="rtl"> 
 اگر به روی لینک Hide در بالای نوار ابزار کلیک کنید، نوار کوچکتر و در سمت راست قرار میگیرد.
 </div>
 
 ## Analyzing Pages
+
 
 <div dir='rtl'> 
 debug toolbar <a href="https://django-debug-toolbar.readthedocs.io/en/latest/index.html">موارد زیادی برای سفارشی سازی</a> دارد
