@@ -4,257 +4,257 @@
 
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
 
-شما میتوانید برای کمک کردن و خوشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
-لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یه رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
+شما می‌توانید برای کمک کردن و خشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
+لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یک رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
 
 همچنین میتوانید برای دانلود کتاب (نسخه اصلی) از [این لینک](https://github.com/mthri/dfp-persian/raw/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf) اقدام کنید.
 
 [خواندن کتاب به صورت آنلاین](https://github.com/mthri/dfp-persian/blob/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf)
   
 <details>
-  <summary>مقدمه</summary>
+  <summary>مقدمه &check;</summary>
   <br>
     
-  - پیشنیاز ها  
-  - ساختار کتاب
-  - آرایش کتاب
-  - ادیتور متن
-  - نتیجه گیری
+  - پیشنیاز ها &check;
+  - ساختار کتاب &check;
+  - آرایش کتاب &check;
+  - ادیتور متن &check;
+  - نتیجه گیری &check;
     
 </details>
   
   
 <details>
-  <summary>فصل اول : داکر</summary>
+  <summary>فصل اول : داکر &check;</summary>
   <br>
 
-  - داکر چیست
-  - تفاوت کانتینر ها و Virtual Environments
-  - نصب داکر
-  - Hello World با داکر
-  - Hello World با جنگو
-  - اپ pages
-  - تصاویر و کانتینر ها و میزبانی داکر
-  - گیت
-  - جمع بندی
+  - داکر چیست &check;
+  - تفاوت کانتینر ها و Virtual Environments &check;
+  - نصب داکر &check;
+  - Hello World با داکر &check;
+  - Hello World با جنگو &check;
+  - اپ pages &check;
+  - تصاویر و کانتینر ها و میزبانی داکر &check;
+  - گیت &check;
+  - جمع بندی &check;
 
 </details>
 
 <details>
-  <summary>فصل دوم : PostgreSQL</summary>
+  <summary>فصل دوم : PostgreSQL &check;</summary>
   <br>
   
-  - شروع به کار
-  - داکر 
-  - حالت تفکیک شده (Detached Mode)
-  - PostgreSQL
-  - تنظیمات
-  - Psycopg
-  - دیتابیس تازه
-  - گیت
-  - جمع بندی
-    
-</details>
-
-<details>
-  <summary>فصل سوم : پروژه فروشگاه کتاب</summary>
-  <br>
-    
-  - داکر
-  - PostgreSQL
-  - مدل کاربر شخصی سازی شده (Custom User Model)
-  - فرم های کاربر شخصی سازی شده (Custom User Forms)
-  - پنل ادمین کاربر شخصی سازی شده (Custom User Admin)
-  - سوپریوزر (Superuser)
-  - تست ها 
-  - یونیت تست ها
-  - گیت
-  - جمع بندی
+  - شروع به کار &check;
+  - داکر &check; 
+  - حالت تفکیک شده (Detached Mode) &check;
+  - PostgreSQL &check;
+  - تنظیمات &check;
+  - Psycopg &check;
+  - دیتابیس جدید &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
 
 <details>
-  <summary>فصل چهارم : اپ Pages</summary>
+  <summary>فصل سوم : پروژه فروشگاه کتاب &check;</summary>
   <br>
     
-  - تمپلیت ها
-  - ٰViewها و URL ها
-  - تست ها
-  - تست کردن تمپلیت ها
-  - تست کردن HTML
-  - متد setUP
-  - Resolve
-  - گیت
-  - جمع بندی
+  - داکر &check;
+  - PostgreSQL &check;
+  - مدل کاربر شخصی سازی شده (Custom User Model) &check;
+  - فرم های کاربر شخصی سازی شده (Custom User Forms) &check;
+  - پنل ادمین کاربر شخصی سازی شده (Custom User Admin) &check;
+  - سوپریوزر (Superuser) &check;
+  - تست &check;
+  - یونیت تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
-  
+
 <details>
-  <summary>فصل پنجم : ثبت نام کاربر (مقدماتی)</summary>
+  <summary>فصل چهارم : اپ Pages &check;</summary>
   <br>
     
-  - اپ Auth
-  - View ها و URL های اپ Auth
-  - صفحه اصلی (Homepage)
-  - سورس کد جنگو
-  - لاگین کاربر
-  - ریدارکت ها (Redirects)
-  - لاگ اوت کاربر (Log Out)
-  - ثبت نام کاربر
-  - تست ها
-  - setUpTestData()
-  - گیت
-  - جمع بندی
+  - تمپلیت ها &check;
+  - ٰViewها و URL ها &check;
+  - تست ها &check;
+  - تست کردن تمپلیت ها &check;
+  - تست کردن HTML &check;
+  - متد setUP &check;
+  - Resolve &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
 <details>
-  <summary>فصل ششم : اشیاء استاتیک (Static Assets)</summary>
+  <summary>فصل پنجم : ثبت نام کاربر (مقدماتی) &check;</summary>
   <br>
-  
-  - اپ staticfiles 
-  - STATIC_URL
-  - STATICFILES_DIR
-  - STATIC_ROOT
-  - STATIC_FINDERS
-  - پوشه استاتیک (Static directory)
-  - تصاویر
-  - جاوا اسکریپت
-  - collectstatic
-  - بوت استرپ (Bootstrap)
-  - صفحه درباره ما (About Page)
-  - کار باDjango Crispy Forms
-  - تست ها 
-  - گیت
-  - حمع بندی
-  
-</details>
-  
-<details>
-  <summary>فصل هفتم : ثبت نام کاربر (پیشرقته)</summary>
-  <br>
-  
-  - django-allauth
-  - AUTHENTICATION_BACKENDS
-  - EMAIL_BACKEND
-  - ACCOUNT_LOGOUT_REDIRECT
-  - URL ها
-  - تمپلیت ها
-  -  ورود کاربر (Log in)
-  - خروج کاربر (Log Out)
-  - ثبت نام کاربر (Sign Up)
-  - تنظیمات پنل ادمین
-  - ورود کاربر فقط با ایمیل (Email Only Login)
-  - تست ها
-  - احراز هویت با شبکه های اجتماعی
-  - گیت
-  - جمع بندی
-  
-</details>
-  
-<details>
-  <summary>فصل هشتم : متغییر های Environment</summary>
-  <br>
-  
-  - environs[django]
-  - SECRET_KEY
-  - DEBUG و ALLOWED_HOSTS
-  - DATABASES
-  - گیت
-  - جمع بندی
-  
-</details>
-  
-<details>
-  <summary>فصل نهم : ایمیل</summary>
-  <br>
-  
-  - تایید ایمیل شخصی سازی شده
-  - صفحه تایید ایمیل
-  - تغییر و بازنشانی رمز
-  - سرویس ایمیل در جنگو
-  - گیت
-  - جمع بندی
-  
-</details>
-  
-<details>
-  <summary>فصل دهم : اپ Books</summary>
-  <br>
-  
-  - Model ها 
-  - پنل ادمین
-  - URL ها
-  - View ها
-  - تمپلیت ها
-  - object_list
-  - صفحه جداگانه برای هر کتاب
-  - context_object_name
-  - get_absolute_url
-  - تفاوت Primary Keys با ID ها
-  - تفاوت Slug ها با UUID ها
-  - نوار پیمایش (Navbar)
-  - تست ها
-  - گیت
-  - جمع بندی
+    
+  - اپ Auth &check;
+  - View ها و URL های اپ Auth &check;
+  - صفحه اصلی (Homepage) &check;
+  - سورس کد جنگو &check;
+  - لاگین کاربر &check;
+  - ریدارکت ها (Redirects) &check;
+  - لاگ اوت کاربر (Log Out) &check;
+  - ثبت نام کاربر &check;
+  - تست ها &check;
+  - setUpTestData() &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
 <details>
-  <summary>فصل یازدهم : اپ Reviews</summary>
+  <summary>فصل ششم : اشیاء استاتیک (Static Assets) &check;</summary>
   <br>
   
-  - Foreign Key ها
-  - مدل Review ها
-  - تنظیم ادمین پنل
-  - تمپلیت ها
-  - تست ها
-  - گیت
-  - جمع بندی
+  - اپ staticfiles &check;
+  - STATIC_URL &check;
+  - STATICFILES_DIR &check;
+  - STATIC_ROOT &check;
+  - STATIC_FINDERS &check;
+  - پوشه استاتیک (Static directory) &check;
+  - تصاویر &check;
+  - جاوا اسکریپت &check;
+  - collectstatic &check;
+  - بوت استرپ (Bootstrap) &check;
+  - صفحه درباره ما (About Page) &check;
+  - کار باDjango Crispy Forms &check;
+  - تست ها &check;
+  - گیت &check;
+  - حمع بندی &check;
   
 </details>
   
 <details>
-  <summary>فصل دوازدهم : ابلود فایل ها و تصاویر</summary>
+  <summary>فصل هفتم : ثبت نام کاربر (پیشرفته) &check;</summary>
   <br>
   
-  - فایل های رسانه ای (Media Files)
-  - Model ها
-  - تنظیم پنل ادمین
-  - تمپلیت ها
-  - قدم های فراتر
-  - گیت
-  - جمع بندی
+  - django-allauth &check;
+  - AUTHENTICATION_BACKENDS &check;
+  - EMAIL_BACKEND &check;
+  - ACCOUNT_LOGOUT_REDIRECT &check;
+  - URL ها &check;
+  - تمپلیت ها &check;
+  -  ورود کاربر (Log in) &check;
+  - خروج کاربر (Log Out) &check;
+  - ثبت نام کاربر (Sign Up) &check;
+  - تنظیمات پنل ادمین &check;
+  - ورود کاربر فقط با ایمیل (Email Only Login) &check;
+  - تست ها &check;
+  - احراز هویت با شبکه های اجتماعی &check;
+  - گیت &check;
+  - جمع بندی &check;
+  
+</details>
+  
+<details>
+  <summary>فصل هشتم : متغییر های Environment &check;</summary>
+  <br>
+  
+  - environs[django] &check;
+  - SECRET_KEY &check;
+  - DEBUG و ALLOWED_HOSTS &check;
+  - DATABASES &check;
+  - گیت &check;
+  - جمع بندی &check;
+  
+</details>
+  
+<details>
+  <summary>فصل نهم : ایمیل &check;</summary>
+  <br>
+  
+  - تایید ایمیل شخصی سازی شده &check;
+  - صفحه تایید ایمیل &check;
+  - تغییر و بازنشانی رمز &check;
+  - سرویس ایمیل در جنگو &check;
+  - گیت &check;
+  - جمع بندی &check;
+  
+</details>
+  
+<details>
+  <summary>فصل دهم : اپ Books &check;</summary>
+  <br>
+  
+  - Model ها &check;
+  - پنل ادمین &check;
+  - URL ها &check;
+  - View ها &check;
+  - تمپلیت ها &check;
+  - object_list &check;
+  - صفحه جداگانه برای هر کتاب &check;
+  - context_object_name &check;
+  - get_absolute_url &check;
+  - تفاوت Primary Keys با ID ها &check;
+  - تفاوت Slug ها با UUID ها &check;
+  - نوار پیمایش (Navbar) &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
+    
+</details>
+  
+<details>
+  <summary>فصل یازدهم : اپ Reviews &check;</summary>
+  <br>
+  
+  - Foreign Key ها &check;
+  - مدل Review ها &check;
+  - تنظیم ادمین پنل &check;
+  - تمپلیت ها &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
+  
+</details>
+  
+<details>
+  <summary>فصل دوازدهم : اپلود فایل ها و تصاویر &check;</summary>
+  <br>
+  
+  - فایل های رسانه ای (Media Files) &check;
+  - Model ها &check;
+  - تنظیم پنل ادمین &check; 
+  - تمپلیت ها &check;
+  - قدم های فراتر &check;
+  - گیت &check;
+  - جمع بندی &check;
   
 </details>
 
 <details>
-  <summary>فصل سیزدهم : دسترسی ها (Permissions)</summary>
+  <summary>فصل سیزدهم : دسترسی ها (Permissions) &check;</summary>
   <br>
   
-  - فقط کاربر های وارد شده مجازند (Logged-In Users Only)
-  - دسترسی ها
-  - دسترسی های شخصی سازی شده (Custom Permissions)
-  - دسترسی های کاربر
-  - PermissionRequiredMixin
-  - گروه ها و UserPassesTestMixin
-  - تست ها
-  - گیت
-  - جمع بندی
+  - فقط کاربر های وارد شده مجازند (Logged-In Users Only) &check;
+  - دسترسی ها &check;
+  - دسترسی های شخصی سازی شده (Custom Permissions) &check;
+  - دسترسی های کاربر &check;
+  - PermissionRequiredMixin &check;
+  - گروه ها و UserPassesTestMixin &check;
+  - تست ها &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
 <details>
-  <summary>فصل چهاردهم : جستوجو</summary>
+  <summary>فصل چهاردهم : جستوجو &check;</summary>
   <br>
   
-  - صفحه نتایج جستوجو
-  - فیلتر های مقدماتی (Basic Filtering)
-  - اشیاء Q (Q Objects)
-  - Form ها
-  - Form جستوجو
-  - گیت
-  - جمع بندی
+  - صفحه نتایج جستوجو &check;
+  - فیلتر های مقدماتی (Basic Filtering) &check;
+  - اشیاء Q (Q Objects) &check;
+  - Form ها &check;
+  - Form جستوجو &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
@@ -262,8 +262,8 @@
   <summary>فصل پانزدهم : کارایی</summary>
   <br>
   
-  - django-debug-toolbar
-  - آنالیز صفحه ها
+  - django-debug-toolbar &check;
+  - آنالیز صفحه ها 
   - select_related و prefetch_related
   - کشینگ (Caching)
   - ایندکس ها (Indexes)
@@ -278,43 +278,44 @@
   <summary>فصل شانزدهم : امینت</summary>
   <br>
   
-  - مهندسی اجتماعی (Social Engineering)
-  - آپدیت های جنگو
-  - چک لیست های دیپلویمنت (Deployment Checklist)
-  - docker-compose-prod.yml
+  - مهندسی اجتماعی (Social Engineering) &check;
+  - آپدیت های جنگو &check;
+  - چک لیست های دیپلویمنت (Deployment Checklist) &check;
+  - docker-compose-prod.yml &check;
   - DEBUG
   - پیش فرض ها (Defaults)
   - SECRET_KEY
-  - امنیت وب
-  - تزریق SQL (SQL injection)
-  - تزریق اسکریپت از طریق وبگاه (ٓXSS)
-  - جعل درخواست میان وبگاهی (CSRF)
-  - مقابله با کلیک دزدی (Clickjacking Protection)
-  - HTTPS/SSL
-  - انتقال اکیدا ایمن HTTP (HSTS)
-  - ایمن کردن کوکی ها 
-  - ارتقا امنیت ادمین (Admin Hardening)
-  - گیت
-  - جمع بندی
+  - امنیت وب &check;
+  - تزریق SQL (SQL injection) &check;
+  - تزریق اسکریپت از طریق وبگاه (XSS) &check;
+  - جعل درخواست میان وبگاهی (CSRF) &check;
+  - مقابله با کلیک دزدی (Clickjacking Protection) &check;
+  - HTTPS/SSL &check;
+  - انتقال اکیدا ایمن HTTP (HSTS) &check;
+  - ایمن کردن کوکی ها  &check;
+  - ارتقا امنیت ادمین (Admin Hardening) &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
   
 <details>
-  <summary>فصل هفدهم : دیپلویمنت</summary>
+  <summary>فصل هفدهم : دیپلویمنت &check;</summary>
   <br>
   
-  -  تفاوت PasS و IasS
-  - WhiteNoise
-  - فایل های رسانه ای (Media Files)
-  - Gunicorn
-  - Heroku
-  - دیپلویمنت با داکر
-  - heroku.yml
-  - SECURE_PROXY_SSL_HEADER
-  - لاگ های Heroku 
-  - افزونه های Heroku
-  - جمع بندی
+  -  تفاوت PasS و IasS &check;
+  - WhiteNoise &check;
+  - فایل های رسانه ای (Media Files) &check;
+  - Gunicorn &check;
+  - Heroku &check;
+  - دیپلویمنت با داکر &check;
+  - heroku.yml &check;
+  - دیپلوی Heroku &check;
+  - SECURE_PROXY_SSL_HEADER &check;
+  - لاگ های Heroku &check;
+  - افزونه های Heroku &check;
+  - جمع بندی &check;
   
 </details>
   
@@ -343,16 +344,18 @@
 |خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani) [لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|مترجم فصل های۷ و جمع بندی|
 |مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
 |سید محمد حسین طباطبایی|[گیتهاب](https://github.com/smhtbtb) [لینکدین](https://linkedin.com/in/mohammad-hosein-tabatabaei)|مترجم فصل ۱۲|
-|آرین فوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
-|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۱۴|
+|آرین قوچانی|[گیتهاب](https://github.com/arianghoochani) [لینکدین](https://linkedin.com/in/arian-ghoochani-690980168)|مترجم فصل ۱۳|
+|امین مرادی|[گیتهاب](https://github.com/aminmoradim) [توییتر](https://twitter.com/amin_moradim) [تلگرام](https://t.me/amin_moradim)|مترجم فصل ۸ |
 |کسری صادقیان پور|[گیتهاب](https://github.com/Kasra1377) [لینکدین](https://linkedin.com/in/kasra-sadeghian-pour-87a928204)|مترجم فصل ۲|
 |علی لویویی|[گیتهاب](https://github.com/aliloloee)|مترجم فصل ۱۰|
 |رضا مبارکی|[گیتهاب](https://github.com/MrRezoo) [لینکدین](https://www.linkedin.com/in/mrrezoo/) |مترجم ۱۵|
-|مهرداد بیوکان|[گیتهاب](https://github.com/mehrdadbn9) [لینکدین](https://linkedin.com/in/mehrdad-biukian-naeini)|مترجم فصل ۵|
+|سحر مکرمی|[گیتهاب](https://github.com/mokarramis)|مترجم فصل ۵|
 |مهدی شیر خدایی|[گیتهاب](https://github.com/Mimshimzim)|مترجم ۱۷|
 |مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh) [تلگرام](https://t.me/mahdi_asadzadeh)|مترجم فصل ۱۱|
-|امین ملک محمدی|[گیتهاب](https://github.com/Aminmalek)|مترجم فصل ۴|
+|امیرحسین صالحی|[گیتهاب](https://github.com/Amir796-hash)|مترجم فصل ۴|
 |امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ) [لینکدین](https://linkedin.com/in/amirhosseinmohammadi) [توییتر](https://twitter.com/GNU_Amir)  [تلگرام](https://t.me/BlackIQ)| اداره مخزن|
 |محمدرضا ارغشی|[گیتهاب](https://github.com/phpreza)|مترجم فصل ۶| 
+|امیررضا پاسندی|[گیتهاب](https://github.com/amirpsd) [تلگرام](https://t.me/amir_psd2)|مترجم فصل ۱۴|
+|شمیم صنیع ثالث|[گیتهاب](https://github.com/smimahs) [لینکدین](https://www.linkedin.com/in/shsanisales/)|مترجم فصل ۳|
   
 </div>
