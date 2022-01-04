@@ -259,32 +259,32 @@
 </details>
   
 <details>
-  <summary>فصل پانزدهم : کارایی</summary>
+  <summary>فصل پانزدهم : کارایی &check;</summary>
   <br>
   
-  - django-debug-toolbar &check;
-  - آنالیز صفحه ها 
-  - select_related و prefetch_related
-  - کشینگ (Caching)
-  - ایندکس ها (Indexes)
-  - django-extensions
-  - فرانت اند و متعلقات آن
-  - گیت
-  - جمع بندی
+  - ابزار django-debug-toolbar &check;
+  - آنالیز صفحه ها &check; 
+  - select_related و prefetch_related &check;
+  - کشینگ (Caching) &check;
+  - ایندکس ها (Indexes) &check;
+  - django-extensions &check;
+  - فرانت اند و متعلقات آن &check;
+  - گیت &check;
+  - جمع بندی &check;
     
 </details>
   
 <details>
-  <summary>فصل شانزدهم : امینت</summary>
+  <summary>فصل شانزدهم : امینت &check;</summary>
   <br>
   
   - مهندسی اجتماعی (Social Engineering) &check;
   - آپدیت های جنگو &check;
   - چک لیست های دیپلویمنت (Deployment Checklist) &check;
   - docker-compose-prod.yml &check;
-  - DEBUG
-  - پیش فرض ها (Defaults)
-  - SECRET_KEY
+  - DEBUG &check;
+  - پیش فرض ها (Defaults) &check;
+  - SECRET_KEY &check;
   - امنیت وب &check;
   - تزریق SQL (SQL injection) &check;
   - تزریق اسکریپت از طریق وبگاه (XSS) &check;
@@ -320,11 +320,11 @@
 </details>
   
 <details>
-  <summary>جمع بندی نهایی</summary>
+  <summary>جمع بندی نهایی &check;</summary>
   <br>
   
-  - منابع یادگیری بیشتر
-  - بازخورد ها
+  - منابع یادگیری بیشتر &check;
+  - بازخورد ها &check;
   
 </details>
 
