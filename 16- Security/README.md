@@ -181,7 +181,7 @@ $ docker-compose -f docker-compose-prod.yml up -d --build
 
 وبسایت باید دوباره مثل قبل اجرا شود، برای اینکه مطمئن شوید که مقدار DEBUG برابر False هست باید صفحه http://127.0.0.1:8000/debug وجود نداشته باشد.
 
-->IMAGE
+![Debug Page Not Found](images/1.jpg)
 
  این پیام عمومی "Not Found" تایید می‌کند که ما DEBUG را برابر False قرار داده ایم. اگر True بود، باید بجای این صفحه یک گذارش دقیق از ارور ها نمایش میداد.
 
