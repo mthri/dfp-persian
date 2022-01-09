@@ -362,3 +362,5 @@
 |شمیم صنیع ثالث|[گیتهاب](https://github.com/smimahs) [لینکدین](https://www.linkedin.com/in/shsanisales/)|مترجم فصل ۳|
   
 </div>
+
+<a href="https://github.com/mthri/dfp-persian/graphs/contributors"><img src="https://contrib.rocks/image?repo=mthri/dfp-persian" /></a>
