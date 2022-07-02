@@ -18,7 +18,7 @@
  </p>
  
  
-**django-allauth**
+### django-allauth
 
 <p dir="rtl">
  با نصب پکیج شروع می‌کنیم به خاطر اینکه ما در حال استفاده از pipenv هستیم ما می‌خواهیم که از ناسازگاری‌ها با pipfile.lock دوری کنیم بنابراین ما در ابتدا آن را در داکر نصب خواهیم کرد سپس داکر را متوقف کرده و ایمیج فایل خود را با فلگ(flag) <span dir="ltr">--build</span> مجددا بیلد  می‌کنیم که مانع از ذخیره‌ی ایمیج فایل به صورت پیش فرض می‌شود و تضمین می‌کند که کل ایمیج فایل‌ها از صفر ساخته خواهد شد.
@@ -75,6 +75,10 @@ INSTALLED_APPS = [
 SITE_ID = 1 # new
 ```
 ****
+
+
+### AUTHENTICATION_BACKENDS
+
 <p dir="rtl">
 فایل setting.py که توسط جنگو ساخته شده برای هر پروژه جدیدی شامل یک سری تنظیمات می باشد که به وضوح می توان آن را در فایل setting.py دید علاوه بر این ها یک سری تنظیمات نیز وجود دارد که قابل مشاهده در فایل setting.py نیستند. شاید در ابتدا گیج کننده باشد تمامی این تنظیمات در <a href="https://docs.djangoproject.com/en/3.1/ref/settings/">این قسمت داکیومنت</a> قابل مشاهده می باشد.  
 </p>
@@ -113,7 +117,7 @@ AUTHENTICATION_BACKENDS = (
 ****
 
 
-**EMAIL_BACKEND**
+### EMAIL_BACKEND
 
 <p dir="rtl">
 پیکربندی دیگری که به طور ضمنی در setting.py تنظیم شده است و ما آن را نمی بینیم <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#email-backend">EMAIL_BACKED</a>  می باشد.
@@ -143,7 +147,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # new
 ****
 
 
- **ACCOUNT_LOGOUT_REDIRECT**
+ ### ACCOUNT_LOGOUT_REDIRECT
 
 <p dir="rtl">
 فعلا یک تغییر کوچک دیگری نیز لازم است که باید آن را انجام دهیم. اگر شما مجددا به صفحه <a>confuguration</a> در داکیومنتت جنگو نگاهی بیندازید یک سری تنظیمات برای ACCOUNTـLOGOUTـREDIRECT  وجود دارد که به صورت پیش فرض در مسیر صفحه اصلی در root اصلی url قرار دارد.
@@ -203,7 +207,7 @@ $ docker-compose exec web python manage.py migrate
 
 <p dir="rtl">
 
-**URLS**
+### URLS
 </p>
 
 <p dir="rtl">
@@ -235,7 +239,7 @@ path('', include('pages.urls')),
 
 <p dir="rtl">
 
-**TEMPLATES**
+### TEMPLATES
 </p>
 
 <p dir="rtl">
@@ -330,7 +334,7 @@ $ rm -r templates/registration
 
 <p dir="rtl">
 
-**LOGIN**
+### LOGIN
 </p>
 
 <p dir="rtl">
@@ -393,7 +397,7 @@ ACCOUNT_SESSION_REMEMBER = True # new
 
 <p dir="rtl">
 
-**LOG OUT**
+### LOG OUT
 </p>
 <p dir="rtl">
 با ساختن فایل templates/account/logout.html صفحه logout پیش فرض را می شود override کرد.
@@ -448,7 +452,7 @@ $ touch templates/account/logout.html
 </p>
 
 
-**SIGN UP**
+### SIGN UP
 
 
 <p dir="rtl">
@@ -540,7 +544,7 @@ web_1 | -----------------------------------------------------------------------
 در آینده ما متن این پیام ها را کاستومایز خواهیم کرد و یک سرویس ایمیل مناسب را برای ارسال آن به کاربران واقعی پیکربندی می کنیم.
 </p>
 
-**ADMIN**
+### ADMIN
 
 <p dir="rtl">
 به عنوان superuser به صفحه ی ادمین در آدرس http://127.0.0.1:8000/admin لاگین کنید.همانطور که می بینید یک سری تغییرات را پکیج django-allauth انجام داده است.
@@ -569,7 +573,7 @@ web_1 | -----------------------------------------------------------------------
 قسمت sites پنل ادمین
 </p>
 
-**EMAIL ONLY LOGIN**
+### EMAIL ONLY LOGIN
 
 <p dir="rtl">
 حالا زمان آن فرارسیده است که از <a href="https://django-allauth.readthedocs.io/en/latest/configuration.html">لیست</a> گسترده پیکربندی های پکیج django-allauth استفاده کنیم به وسیله لاگین شدن توسط ایمیل به جای یوزرنیم.این مورد نیازمند چند تغییر در کدهای ما می باشد ابتدا فیلد یوزرنیم را از حالت اجباری به یک فیلد اختیاری تبدیل می کنیم و به جای آن فیلد ایمیل را به عنوان فیلد اجباری در نظر میگیریم. در انتها فیلد ایمیل را به یک فیلد یونیک تبدیل میکنیم و طریقه احراز هویت(authentication) را  بر روی ایمیل قرار میدهیم.
@@ -632,7 +636,7 @@ ACCOUNT_UNIQUE_EMAIL = True # new
 </p>
 
 
-**TESTS**
+### TESTS
 
 <p dir="rtl">
 زمان تست کدها فرارسیده است. مانند هر پکیج ثالثی پکیج django-allauth این پکیج تست خودش را دارد و دیگر نیازی نداریم که function های داخلی پکیج را تست کنیم. فقط باید تایید کنیم که پروژه ما مطابق انتظار کار می کند.
@@ -711,13 +715,13 @@ Destroying test database for alias 'default'...
 ```
 
 ****
-**SOCIAL**
+### SOCIAL
 
 <p dir="rtl">
 اگر می خواهید با اکانت های اجتماعی احراز هویت را انجام دهید نیازمند یک سری تنظیمات می باشد من یک دوره کامل در این رابطه برای اکانت های گیتهاب دارم. این پروسه بسیار به google facebook و بقیه اکانت هایی که پکیج django-allauth در اختیار ما قرار می دهد شبیه می باشد. در <a href="https://django-allauth.readthedocs.io/en/latest/providers.html">اینجا</a> می توانید لیست کامل آن ها را مشاهده کنید.
 </p>
 
-**GIT**
+### GIT
 
 <p dir="rtl">
 طبق روال همیشه تغییرات را در گیت کامیت می کنیم.
@@ -736,7 +740,7 @@ $ git commit -m 'ch7'
 اگر به مشکلی برخوردید می توانید کد خودتان را با <a href="">کدهای گیت هاب</a> مقایسه کنید.
 </p>
 
-**CONCLUSION**
+### جمع بندی
 <p dir="rtl">
 در حال حاضر ما یک جریان ثبت نام کاربر را در وبسایت خودمان داریم که به این مورد احراز هویت با شبکه های اجتماعی به سرعت می تواند اضافه شود.در فصل بعد ما متغیر های محیطی را به پروژه خودمان برای امنیت و انعطاف بیشتر وب اپلیکیشن اضافه می کنیم.  
 </p>
