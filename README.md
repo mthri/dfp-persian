@@ -11,7 +11,7 @@
 لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یک رسید از آن داخل [گروه تلگرامی ما](https://t.me/ftg_iran) آپلود کنید.
   
 <details>
-  <summary><a href="https://github.com/ftg-iran/dfp-persian/tree/main/00-%20Introduction#%D9%85%D9%82%D8%AF%D9%85%D9%87">مقدمه </a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/00- Introduction">مقدمه </a> ✓</summary>
   <br/>
     
   - <a href="https://github.com/mthri/dfp-persian/tree/main/00-%20Introduction#%D9%BE%DB%8C%D8%B4%D9%86%DB%8C%D8%A7%D8%B2-%D9%87%D8%A7">پیشنیاز ها </a> ✓
