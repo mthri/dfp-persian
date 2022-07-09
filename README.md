@@ -8,175 +8,171 @@
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
 
 شما می توانید برای کمک کردن و خشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
-لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یک رسید از آن داخل [گروه تلگرامی ما](https://t.me/dfp_farsi) آپلود کنید.
-
-همچنین میتوانید برای دانلود کتاب (نسخه اصلی) از [این لینک](https://github.com/mthri/dfp-persian/raw/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf) اقدام کنید.
-
-[خواندن کتاب به صورت آنلاین](https://github.com/mthri/dfp-persian/blob/main/book/Django_for_Professionals_Production_websites_with_Python_and_Django.pdf)
+لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یک رسید از آن داخل [گروه تلگرامی ما](https://t.me/ftg_iran) آپلود کنید.
   
 <details>
-  <summary><a href="https://github.com/ftg-iran/dfp-persian/tree/main/0-%20Introduction#%D9%85%D9%82%D8%AF%D9%85%D9%87">مقدمه </a> ✓</summary>
+  <summary><a href="https://github.com/ftg-iran/dfp-persian/tree/main/00-%20Introduction#%D9%85%D9%82%D8%AF%D9%85%D9%87">مقدمه </a> ✓</summary>
   <br/>
     
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction#%D9%BE%DB%8C%D8%B4%D9%86%DB%8C%D8%A7%D8%B2-%D9%87%D8%A7">پیشنیاز ها </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction#%D8%B3%D8%A7%D8%AE%D8%AA%D8%A7%D8%B1-%DA%A9%D8%AA%D8%A7%D8%A8">ساختار کتاب </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction#%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4-%DA%A9%D8%AA%D8%A7%D8%A8">آرایش کتاب </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction#%D9%88%DB%8C%D8%B1%D8%A7%DB%8C%D8%B4%DA%AF%D8%B1-%D9%85%D8%AA%D9%86">ادیتور متن </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/0-%20Introduction#%D8%AC%D9%85%D8%B9-%D8%A8%D9%86%D8%AF%DB%8C">نتیجه گیری </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/00-%20Introduction#%D9%BE%DB%8C%D8%B4%D9%86%DB%8C%D8%A7%D8%B2-%D9%87%D8%A7">پیشنیاز ها </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/00-%20Introduction#%D8%B3%D8%A7%D8%AE%D8%AA%D8%A7%D8%B1-%DA%A9%D8%AA%D8%A7%D8%A8">ساختار کتاب </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/00-%20Introduction#%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4-%DA%A9%D8%AA%D8%A7%D8%A8">آرایش کتاب </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/00-%20Introduction#%D9%88%DB%8C%D8%B1%D8%A7%DB%8C%D8%B4%DA%AF%D8%B1-%D9%85%D8%AA%D9%86">ادیتور متن </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/00-%20Introduction#%D8%AC%D9%85%D8%B9-%D8%A8%D9%86%D8%AF%DB%8C">نتیجه گیری </a> ✓
     
 </details>
   
   
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%D8%AF%D8%A7%DA%A9%D8%B1">فصل اول : داکر </a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%D8%AF%D8%A7%DA%A9%D8%B1">فصل اول : داکر </a> ✓</summary>
   <br/>
 
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%D8%AF%D8%A7%DA%A9%D8%B1-%DA%86%DB%8C%D8%B3%D8%AA">داکر چیست </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%DA%A9%D8%A7%D9%86%D8%AA%DB%8C%D9%86%D8%B1-%D9%87%D8%A7-containers-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%DB%8C%D8%B3%D9%87-%D8%A8%D8%A7-%D9%85%D8%AD%DB%8C%D8%B7-%D9%87%D8%A7%DB%8C-%D9%85%D8%AC%D8%A7%D8%B2%DB%8C">تفاوت کانتینر ها و Virtual Environments </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%D9%86%D8%B5%D8%A8-%D8%AF%D8%A7%DA%A9%D8%B1">نصب داکر </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#hello-world">Hello World با داکر </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%D8%AC%D9%86%DA%AF%D9%88-hello-world">Hello World با جنگو </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%D8%A7%D9%BE-pages">اپ pages </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%D8%A7%DB%8C%D9%85%DB%8C%D8%AC-%D9%87%D8%A7-%DA%A9%D8%A7%D9%86%D8%AA%DB%8C%D9%86%D8%B1-%D9%87%D8%A7-%D9%88-%D9%85%DB%8C%D8%B2%D8%A8%D8%A7%D9%86%DB%8C-%D8%AF%D8%A7%DA%A9%D8%B1">تصاویر و کانتینر ها و میزبانی داکر </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%DA%AF%DB%8C%D8%AA">گیت </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/1-%20Docker#%D9%86%D8%AA%DB%8C%D8%AC%D9%87-%DA%AF%DB%8C%D8%B1%DB%8C">جمع بندی </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%D8%AF%D8%A7%DA%A9%D8%B1-%DA%86%DB%8C%D8%B3%D8%AA">داکر چیست </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%DA%A9%D8%A7%D9%86%D8%AA%DB%8C%D9%86%D8%B1-%D9%87%D8%A7-containers-%D8%AF%D8%B1-%D9%85%D9%82%D8%A7%DB%8C%D8%B3%D9%87-%D8%A8%D8%A7-%D9%85%D8%AD%DB%8C%D8%B7-%D9%87%D8%A7%DB%8C-%D9%85%D8%AC%D8%A7%D8%B2%DB%8C">تفاوت کانتینر ها و Virtual Environments </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%D9%86%D8%B5%D8%A8-%D8%AF%D8%A7%DA%A9%D8%B1">نصب داکر </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#hello-world">Hello World با داکر </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%D8%AC%D9%86%DA%AF%D9%88-hello-world">Hello World با جنگو </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%D8%A7%D9%BE-pages">اپ pages </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%D8%A7%DB%8C%D9%85%DB%8C%D8%AC-%D9%87%D8%A7-%DA%A9%D8%A7%D9%86%D8%AA%DB%8C%D9%86%D8%B1-%D9%87%D8%A7-%D9%88-%D9%85%DB%8C%D8%B2%D8%A8%D8%A7%D9%86%DB%8C-%D8%AF%D8%A7%DA%A9%D8%B1">تصاویر و کانتینر ها و میزبانی داکر </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%DA%AF%DB%8C%D8%AA">گیت </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/01-%20Docker#%D9%86%D8%AA%DB%8C%D8%AC%D9%87-%DA%AF%DB%8C%D8%B1%DB%8C">جمع بندی </a> ✓
 
 </details>
 
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#%D9%81%D8%B5%D9%84-%D8%AF%D9%88%D9%85--postgresql">فصل دوم : PostgreSQL </a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#%D9%81%D8%B5%D9%84-%D8%AF%D9%88%D9%85--postgresql">فصل دوم : PostgreSQL </a> ✓</summary>
   <br/>
   
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#%D8%B4%D8%B1%D9%88%D8%B9-%D8%A8%D9%87-%DA%A9%D8%A7%D8%B1">شروع به کار </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#docker">داکر ✓ </a>
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#%D8%AD%D8%A7%D9%84%D8%AA-%D8%AA%D9%81%DA%A9%DB%8C%DA%A9-%D8%B4%D8%AF%D9%87-detached-mode">حالت تفکیک شده (Detached Mode) </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#postgresql">PostgreSQL </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#settings">تنظیمات </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#psycopg">Psycopg </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#%D8%AF%DB%8C%D8%AA%D8%A7%D8%A8%DB%8C%D8%B3-%D8%AC%D8%AF%DB%8C%D8%AF">دیتابیس جدید </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#%DA%AF%DB%8C%D8%AA">گیت </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/2-%20PostgreSQL#%D9%86%D8%AA%DB%8C%D8%AC%D9%87">جمع بندی </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#%D8%B4%D8%B1%D9%88%D8%B9-%D8%A8%D9%87-%DA%A9%D8%A7%D8%B1">شروع به کار </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#docker">داکر ✓ </a>
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#%D8%AD%D8%A7%D9%84%D8%AA-%D8%AA%D9%81%DA%A9%DB%8C%DA%A9-%D8%B4%D8%AF%D9%87-detached-mode">حالت تفکیک شده (Detached Mode) </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#postgresql">PostgreSQL </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#settings">تنظیمات </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#psycopg">Psycopg </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#%D8%AF%DB%8C%D8%AA%D8%A7%D8%A8%DB%8C%D8%B3-%D8%AC%D8%AF%DB%8C%D8%AF">دیتابیس جدید </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#%DA%AF%DB%8C%D8%AA">گیت </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/02-%20PostgreSQL#%D9%86%D8%AA%DB%8C%D8%AC%D9%87">جمع بندی </a> ✓
     
 </details>
 
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D9%BE%D8%B1%D9%88%DA%98%D9%87-%DA%A9%D8%AA%D8%A7%D8%A8-%D9%81%D8%B1%D9%88%D8%B4%DB%8C">فصل سوم : پروژه فروشگاه کتاب </a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D9%BE%D8%B1%D9%88%DA%98%D9%87-%DA%A9%D8%AA%D8%A7%D8%A8-%D9%81%D8%B1%D9%88%D8%B4%DB%8C">فصل سوم : پروژه فروشگاه کتاب </a> ✓</summary>
   <br/>
     
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D8%AF%D8%A7%DA%A9%D8%B1">داکر </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#postgresql">PostgreSQL </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D9%85%D8%AF%D9%84-%DB%8C%D9%88%D8%B2%D8%B1-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C">مدل کاربر شخصی سازی شده (Custom User Model) </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D9%81%D8%B1%D9%85-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C-%DB%8C%D9%88%D8%B2%D8%B1">فرم های کاربر شخصی سازی شده (Custom User Forms) </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D8%B3%D8%B1%D9%BE%D8%B1%D8%B3%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C">پنل ادمین کاربر شخصی سازی شده (Custom User Admin) </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D8%A7%D8%A8%D8%B1-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">سوپریوزر (Superuser) </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D8%AA%D8%B3%D8%AA">تست </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D8%AA%D8%B3%D8%AA-%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%AD%D8%AF">یونیت تست ها </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%DA%AF%DB%8C%D8%AA">گیت </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/3-%20Bookstore%20Project%20#%D9%86%D8%AA%DB%8C%D8%AC%D9%87-%DA%AF%DB%8C%D8%B1%DB%8C">جمع بندی </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D8%AF%D8%A7%DA%A9%D8%B1">داکر </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#postgresql">PostgreSQL </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D9%85%D8%AF%D9%84-%DB%8C%D9%88%D8%B2%D8%B1-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C">مدل کاربر شخصی سازی شده (Custom User Model) </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D9%81%D8%B1%D9%85-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C-%DB%8C%D9%88%D8%B2%D8%B1">فرم های کاربر شخصی سازی شده (Custom User Forms) </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D8%B3%D8%B1%D9%BE%D8%B1%D8%B3%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C">پنل ادمین کاربر شخصی سازی شده (Custom User Admin) </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D8%A7%D8%A8%D8%B1-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">سوپریوزر (Superuser) </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D8%AA%D8%B3%D8%AA">تست </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D8%AA%D8%B3%D8%AA-%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%AD%D8%AF">یونیت تست ها </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%DA%AF%DB%8C%D8%AA">گیت </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/03-%20Bookstore%20Project%20#%D9%86%D8%AA%DB%8C%D8%AC%D9%87-%DA%AF%DB%8C%D8%B1%DB%8C">جمع بندی </a> ✓
     
 </details>
 
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#%D9%81%D8%B5%D9%84--%DA%86%D9%87%D8%A7%D8%B1%D9%85--pages-app">فصل چهارم : اپ Pages </a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#%D9%81%D8%B5%D9%84--%DA%86%D9%87%D8%A7%D8%B1%D9%85--pages-app">فصل چهارم : اپ Pages </a> ✓</summary>
   <br/>
     
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#templates">تمپلیت ها </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#urls-and-views">ٰViewها و URL ها </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#tests">تست ها </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#testing-templates">تست کردن تمپلیت ها </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#testing-html">تست کردن HTML </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#setup-method">متد setUP </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#resolve">Resolve </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#git">گیت </a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/4-%20Pages%20App#%D8%AE%D9%84%D8%A7%D8%B5%D9%87">جمع بندی </a> ✓
-    
-</details>
-  
-<details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D9%81%D8%B5%D9%84--%D9%BE%D9%86%D8%AC%D9%85--user-registeration">فصل پنجم : ثبت نام کاربر (مقدماتی)</a> ✓</summary>
-  <br/>
-    
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#auth-%D8%A7%D9%BE">اپ Auth</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#auth-%D9%87%D8%A7%DB%8C-%D8%A7%D9%BEurl-%D9%87%D8%A7-%D9%88-view">View ها و URL های اپ Auth</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D8%B5%D9%81%D8%AD%D9%87-%D8%A7%D8%B5%D9%84%DB%8C-homepage">صفحه اصلی (Homepage)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D8%B3%D9%88%D8%B1%D8%B3-%DA%A9%D8%AF-%D8%AC%D9%86%DA%AF%D9%88">سورس کد جنگو</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D9%84%D8%A7%DA%AF%DB%8C%D9%86-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">لاگین کاربر</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D8%B1%DB%8C%D8%AF%D8%A7%DB%8C%D8%B1%DA%A9%D8%AA-%D9%87%D8%A7redirects">ریدارکت ها (Redirects)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D9%84%D8%A7%DA%AF-%D8%A7%D9%88%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1-log-out">لاگ اوت کاربر (Log Out)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">ثبت نام کاربر</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D8%AA%D8%B3%D8%AA-%D9%87%D8%A7">تست ها</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#setuptestdata">setUpTestData()</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/5-%20User%20Registration#%D8%AC%D9%85%D8%B9-%D8%A8%D9%86%D8%AF%DB%8C">جمع بندی</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#templates">تمپلیت ها </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#urls-and-views">ٰViewها و URL ها </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#tests">تست ها </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#testing-templates">تست کردن تمپلیت ها </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#testing-html">تست کردن HTML </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#setup-method">متد setUP </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#resolve">Resolve </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#git">گیت </a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/04-%20Pages%20App#%D8%AE%D9%84%D8%A7%D8%B5%D9%87">جمع بندی </a> ✓
     
 </details>
   
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D9%81%D8%B5%D9%84-%D8%B4%D8%B4%D9%85-static-assets">فصل ششم : اشیاء استاتیک (Static Assets)</a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D9%81%D8%B5%D9%84--%D9%BE%D9%86%D8%AC%D9%85--user-registeration">فصل پنجم : ثبت نام کاربر (مقدماتی)</a> ✓</summary>
+  <br/>
+    
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#auth-%D8%A7%D9%BE">اپ Auth</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#auth-%D9%87%D8%A7%DB%8C-%D8%A7%D9%BEurl-%D9%87%D8%A7-%D9%88-view">View ها و URL های اپ Auth</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D8%B5%D9%81%D8%AD%D9%87-%D8%A7%D8%B5%D9%84%DB%8C-homepage">صفحه اصلی (Homepage)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D8%B3%D9%88%D8%B1%D8%B3-%DA%A9%D8%AF-%D8%AC%D9%86%DA%AF%D9%88">سورس کد جنگو</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D9%84%D8%A7%DA%AF%DB%8C%D9%86-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">لاگین کاربر</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D8%B1%DB%8C%D8%AF%D8%A7%DB%8C%D8%B1%DA%A9%D8%AA-%D9%87%D8%A7redirects">ریدارکت ها (Redirects)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D9%84%D8%A7%DA%AF-%D8%A7%D9%88%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1-log-out">لاگ اوت کاربر (Log Out)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D8%AB%D8%A8%D8%AA-%D9%86%D8%A7%D9%85-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1">ثبت نام کاربر</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D8%AA%D8%B3%D8%AA-%D9%87%D8%A7">تست ها</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#setuptestdata">setUpTestData()</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/05-%20User%20Registration#%D8%AC%D9%85%D8%B9-%D8%A8%D9%86%D8%AF%DB%8C">جمع بندی</a> ✓
+    
+</details>
+  
+<details>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D9%81%D8%B5%D9%84-%D8%B4%D8%B4%D9%85-static-assets">فصل ششم : اشیاء استاتیک (Static Assets)</a> ✓</summary>
   <br/>
   
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-staticfiles">اپ staticfiles</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#static_url">STATIC_URL</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#staticfiles_dirs">STATICFILES_DIR</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#static_root">STATIC_ROOT</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#staticfiles_finders">STATIC_FINDERS</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D8%AF%D8%A7%DB%8C%D8%B1%DA%A9%D8%AA%D9%88%D8%B1%DB%8C%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AA%DB%8C%DA%A9">پوشه استاتیک (Static directory)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1">تصاویر</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D8%AC%D8%A7%D9%88%D8%A7-%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA">جاوا اسکریپت</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#collectstatic">collectstatic</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#bootstrap">بوت استرپ (Bootstrap)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D8%B5%D9%81%D8%AD%D9%87%DB%8C-about">صفحه درباره ما (About Page)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D9%81%D8%B1%D9%85%D9%87%D8%A7%DB%8C-%DA%A9%D8%B1%DB%8C%D8%B3%D9%BE%DB%8C-%D8%AC%D9%86%DA%AF%D9%88">کار باDjango Crispy Forms</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D8%AA%D8%B3%D8%AA-%D9%87%D8%A7">تست ها</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/6-%20Static%20Assets#%D9%86%D8%AA%DB%8C%D8%AC%D9%87%DA%AF%DB%8C%D8%B1%DB%8C">حمع بندی</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-staticfiles">اپ staticfiles</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#static_url">STATIC_URL</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#staticfiles_dirs">STATICFILES_DIR</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#static_root">STATIC_ROOT</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#staticfiles_finders">STATIC_FINDERS</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D8%AF%D8%A7%DB%8C%D8%B1%DA%A9%D8%AA%D9%88%D8%B1%DB%8C%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%AA%D8%A7%D8%AA%DB%8C%DA%A9">پوشه استاتیک (Static directory)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D8%AA%D8%B5%D8%A7%D9%88%DB%8C%D8%B1">تصاویر</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D8%AC%D8%A7%D9%88%D8%A7-%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA">جاوا اسکریپت</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#collectstatic">collectstatic</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#bootstrap">بوت استرپ (Bootstrap)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D8%B5%D9%81%D8%AD%D9%87%DB%8C-about">صفحه درباره ما (About Page)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D9%81%D8%B1%D9%85%D9%87%D8%A7%DB%8C-%DA%A9%D8%B1%DB%8C%D8%B3%D9%BE%DB%8C-%D8%AC%D9%86%DA%AF%D9%88">کار باDjango Crispy Forms</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D8%AA%D8%B3%D8%AA-%D9%87%D8%A7">تست ها</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/06-%20Static%20Assets#%D9%86%D8%AA%DB%8C%D8%AC%D9%87%DA%AF%DB%8C%D8%B1%DB%8C">حمع بندی</a> ✓
   
 </details>
   
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#django-allauth">فصل هفتم : ثبت نام کاربر (پیشرفته)</a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#django-allauth">فصل هفتم : ثبت نام کاربر (پیشرفته)</a> ✓</summary>
   <br/>
   
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#django-allauth">django-allauth</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#authentication_backends">AUTHENTICATION_BACKENDS</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#email_backend">EMAIL_BACKEND</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#account_logout_redirect">ACCOUNT_LOGOUT_REDIRECT</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#urls">URL ها</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#templates">تمپلیت ها</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#login"> ورود کاربر (Log in)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#log-out">خروج کاربر (Log Out)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#sign-up">ثبت نام کاربر (Sign Up)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#admin">تنظیمات پنل ادمین</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#email-only-login">ورود کاربر فقط با ایمیل (Email Only Login)</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#tests">تست ها</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#social">احراز هویت با شبکه های اجتماعی</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#git">گیت</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/7-%20Advanced%20User%20Registration/README.md#%D8%AC%D9%85%D8%B9-%D8%A8%D9%86%D8%AF%DB%8C">جمع بندی</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#django-allauth">django-allauth</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#authentication_backends">AUTHENTICATION_BACKENDS</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#email_backend">EMAIL_BACKEND</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#account_logout_redirect">ACCOUNT_LOGOUT_REDIRECT</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#urls">URL ها</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#templates">تمپلیت ها</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#login"> ورود کاربر (Log in)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#log-out">خروج کاربر (Log Out)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#sign-up">ثبت نام کاربر (Sign Up)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#admin">تنظیمات پنل ادمین</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#email-only-login">ورود کاربر فقط با ایمیل (Email Only Login)</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#tests">تست ها</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#social">احراز هویت با شبکه های اجتماعی</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#git">گیت</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/07-%20Advanced%20User%20Registration/README.md#%D8%AC%D9%85%D8%B9-%D8%A8%D9%86%D8%AF%DB%8C">جمع بندی</a> ✓
   
 </details>
   
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/8-%20Environment%20Variables#%D9%81%D8%B5%D9%84-%DB%B8-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1-%D9%87%D8%A7%DB%8C-%D9%85%D8%AD%DB%8C%D8%B7%DB%8Cenvironment-variables">فصل هشتم : متغییر های Environment</a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/08-%20Environment%20Variables#%D9%81%D8%B5%D9%84-%DB%B8-%D9%85%D8%AA%D8%BA%DB%8C%D8%B1-%D9%87%D8%A7%DB%8C-%D9%85%D8%AD%DB%8C%D8%B7%DB%8Cenvironment-variables">فصل هشتم : متغییر های Environment</a> ✓</summary>
   <br/>
   
-  - <a href="https://github.com/mthri/dfp-persian/blob/main/8-%20Environment%20Variables/README.md#environsdjango">environs[django]</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/8-%20Environment%20Variables#secret_key">SECRET_KEY</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/8-%20Environment%20Variables#debug-%D9%88-allowed_hosts">DEBUG و ALLOWED_HOSTS</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/8-%20Environment%20Variables#%D8%AF%DB%8C%D8%AA%D8%A7%D8%A8%DB%8C%D8%B3%D9%87%D8%A7">DATABASES</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/8-%20Environment%20Variables#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/8-%20Environment%20Variables#%D9%86%D8%AA%DB%8C%D8%AC%D9%87%DA%AF%DB%8C%D8%B1%DB%8C">جمع بندی</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/blob/main/08-%20Environment%20Variables/README.md#environsdjango">environs[django]</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/08-%20Environment%20Variables#secret_key">SECRET_KEY</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/08-%20Environment%20Variables#debug-%D9%88-allowed_hosts">DEBUG و ALLOWED_HOSTS</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/08-%20Environment%20Variables#%D8%AF%DB%8C%D8%AA%D8%A7%D8%A8%DB%8C%D8%B3%D9%87%D8%A7">DATABASES</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/08-%20Environment%20Variables#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/08-%20Environment%20Variables#%D9%86%D8%AA%DB%8C%D8%AC%D9%87%DA%AF%DB%8C%D8%B1%DB%8C">جمع بندی</a> ✓
   
 </details>
   
 <details>
-  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/9-%20Email#%D9%81%D8%B5%D9%84-%DB%B9-%D8%A7%DB%8C%D9%85%DB%8C%D9%84">فصل نهم : ایمیل</a> ✓</summary>
+  <summary><a href="https://github.com/mthri/dfp-persian/tree/main/09-%20Email#%D9%81%D8%B5%D9%84-%DB%B9-%D8%A7%DB%8C%D9%85%DB%8C%D9%84">فصل نهم : ایمیل</a> ✓</summary>
   <br/>
   
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/9-%20Email#%D9%BE%DB%8C%DA%A9%D8%B1%D8%A8%D9%86%D8%AF%DB%8C-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C-%D8%A7%DB%8C%D9%85%DB%8C%D9%84-%D9%87%D8%A7">تایید ایمیل شخصی سازی شده</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/9-%20Email#%D8%B5%D9%81%D8%AD%D9%87-%D8%AA%D8%A7%DB%8C%DB%8C%D8%AF-%D8%A7%DB%8C%D9%85%DB%8C%D9%84">صفحه تایید ایمیل</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/9-%20Email#%D8%A8%D8%A7%D8%B2%D9%86%D8%B4%D8%A7%D9%86%DB%8C-%D8%B1%D9%85%D8%B2-%D8%B9%D8%A8%D9%88%D8%B1-%D9%88-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B1%D9%85%D8%B2-%D8%B9%D8%A8%D9%88%D8%B1">تغییر و بازنشانی رمز</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/9-%20Email#%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D8%A7%DB%8C%D9%85%DB%8C%D9%84">سرویس ایمیل در جنگو</a> ✓
-  - <a href="https://github.com/mthri/dfp-persian/tree/main/9-%20Email#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/09-%20Email#%D9%BE%DB%8C%DA%A9%D8%B1%D8%A8%D9%86%D8%AF%DB%8C-%D8%B3%D9%81%D8%A7%D8%B1%D8%B4%DB%8C-%D8%A7%DB%8C%D9%85%DB%8C%D9%84-%D9%87%D8%A7">تایید ایمیل شخصی سازی شده</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/09-%20Email#%D8%B5%D9%81%D8%AD%D9%87-%D8%AA%D8%A7%DB%8C%DB%8C%D8%AF-%D8%A7%DB%8C%D9%85%DB%8C%D9%84">صفحه تایید ایمیل</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/09-%20Email#%D8%A8%D8%A7%D8%B2%D9%86%D8%B4%D8%A7%D9%86%DB%8C-%D8%B1%D9%85%D8%B2-%D8%B9%D8%A8%D9%88%D8%B1-%D9%88-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B1%D9%85%D8%B2-%D8%B9%D8%A8%D9%88%D8%B1">تغییر و بازنشانی رمز</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/09-%20Email#%D8%B3%D8%B1%D9%88%DB%8C%D8%B3-%D8%A7%DB%8C%D9%85%DB%8C%D9%84">سرویس ایمیل در جنگو</a> ✓
+  - <a href="https://github.com/mthri/dfp-persian/tree/main/09-%20Email#%DA%AF%DB%8C%D8%AA">گیت</a> ✓
   - <a href="link">جمع بندی</a> ✓
   
 </details>

@@ -9,21 +9,21 @@
 
 
 <p dir="rtl">
-برای هماهنگی بیشتر بین افرادی که مایلند در ترجمه این کتاب مشارکت داشته باشن، یک <a href="https://t.me/dfp_farsi">گروه تلگرامی</a> ایجاد کردیم که می‌تونید اونجا عضو بشید که اگر سوالی داشتید بپرسید یا از بقیه کمک بگیرید. (فایل کتاب داخل گروه موجود می‌باشد)
+برای هماهنگی بیشتر بین افرادی که مایلند در ترجمه این کتاب مشارکت داشته باشن، یک <a href="https://t.me/ftg_iran">گروه تلگرامی</a> ایجاد کردیم که می‌تونید اونجا عضو بشید که اگر سوالی داشتید بپرسید یا از بقیه کمک بگیرید. (فایل کتاب داخل گروه موجود می‌باشد)
 </p>
 
 | فصل                           |   وضعیت  | توسط |
 |-------------------------------|:--------:|:----:|
-| Introduction                  | تکمیل |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
-| 1: Docker                     | تکمیل |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
-| 2: PostgreSQL                 | تکمیل |   <a href="https://github.com/Kasra1377">کسری صادقیان پور</a>  |
-| 3: Bookstore Project          | تکمیل |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
-| 4: Pages App                  | تکمیل |   <a href="https://github.com/Aminmalek">امین ملک محمدی</a>  |
-| 5: User Registration          | تکمیل |   <a href="https://github.com/mehrdadbn9">مهرداد بیوکیان</a>  |
-| 6: Static Assets              | تکمیل |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
-| 7: Advanced User Registration | تکمیل |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
-| 8: Environment Variables      | تکمیل |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
-| 9: Email                      | تکمیل |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
+| 00: Introduction                  | تکمیل |   <a href="https://github.com/themaximalist">امید شهبازی</a>  |
+| 01: Docker                     | تکمیل |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
+| 02: PostgreSQL                 | تکمیل |   <a href="https://github.com/Kasra1377">کسری صادقیان پور</a>  |
+| 03: Bookstore Project          | تکمیل |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
+| 04: Pages App                  | تکمیل |   <a href="https://github.com/Aminmalek">امین ملک محمدی</a>  |
+| 05: User Registration          | تکمیل |   <a href="https://github.com/mehrdadbn9">مهرداد بیوکیان</a>  |
+| 06: Static Assets              | تکمیل |   <a href="https://github.com/cemusavi">حدیث سادات موسوی</a>  |
+| 07: Advanced User Registration | تکمیل |   <a href="https://github.com/khalil-farashiani">خلیل فراشیانی</a>  |
+| 08: Environment Variables      | تکمیل |   <a href="https://github.com/aminmoradim">امین مرادی</a>  |
+| 09: Email                      | تکمیل |   <a href="https://github.com/mashahabi15">مائده شهابی</a>  |
 | 10: Books App                 | تکمیل |   <a href="https://github.com/aliloloee">علی لؤلؤیی</a>  |
 | 11: Reviews App               | تکمیل |   <a href="https://github.com/mahdi-asadzadeh">مهدی اسد زاده</a>  |
 | 12: File/Image Uploads        | تکمیل |   <a href="https://github.com/smhtbtb">سید محمد حسین طباطبایی</a>  |
