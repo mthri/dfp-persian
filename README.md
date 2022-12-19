@@ -353,7 +353,7 @@
 |مهدی اسد زاده|[گیتهاب](https://github.com/mahdi-asadzadeh) [تلگرام](https://t.me/mahdi_asadzadeh)|مترجم فصل ۱۱|
 |امیرحسین صالحی|[گیتهاب](https://github.com/Amir796-hash)|مترجم فصل ۴|
 |امیرحسین محمدی|[گیتهاب](https://github.com/BlackIQ) [لینکدین](https://linkedin.com/in/amirhosseinmohammadi) [توییتر](https://twitter.com/GNU_Amir)  [تلگرام](https://t.me/BlackIQ)| اداره مخزن|
-|محمدرضا ارغشی|[گیتهاب](https://github.com/phpreza)|مترجم فصل ۶| 
+|محمدرضا ارغشی|[گیتهاب](https://github.com/desmond4elf)|مترجم فصل ۶| 
 |امیررضا پاسندی|[گیتهاب](https://github.com/amirpsd) [تلگرام](https://t.me/amir_psd2)|مترجم فصل ۱۴|
 |شمیم صنیع ثالث|[گیتهاب](https://github.com/smimahs) [لینکدین](https://www.linkedin.com/in/shsanisales/)|مترجم فصل ۳|
   
