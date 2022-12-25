@@ -8,7 +8,7 @@
 
 در خط فرمان از دستور startapp استفاده کنید تا یک app جدید به نام pages ایجاد کنیم.
 
-#####                                                                                                                                                                                                                                                                                                                    Command Line                                                                                             
+#####                                                      Command Line
 
 ```tex
 $ docker-compose exec web python manage.py startapp pages 
@@ -18,7 +18,7 @@ $ docker-compose exec web python manage.py startapp pages
 
 
 
-#####                                                                                                                                                                                                                                                                                                                                                          Code    
+#####                                                      Code
 
 ------
 
