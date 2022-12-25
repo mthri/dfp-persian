@@ -85,7 +85,7 @@ COPY . /code/
   
 <div dir="ltr">
 
-```docker
+```yml
 version: '3.8'
   services:
     web:
@@ -265,7 +265,7 @@ $ docker-compose exec web python manage.py migrate
 
 <div dir="ltr">
 
-```
+```python
 # accounts/forms.py
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
@@ -300,7 +300,7 @@ class CustomUserChangeForm(UserChangeForm):
 
 <div dir="ltr">
 
-```
+```python
 # accounts/admin.py
 from django.contrib import admin
 from django.contrib.auth import get_user_model
@@ -374,7 +374,7 @@ admin.site.register(CustomUser, CustomUserAdmin)
 
 <div dir="ltr">
 
-```
+```python
 # accounts/tests.py
 from django.contrib.auth import get_user_model
 from django.test import TestCase
@@ -416,8 +416,7 @@ class CustomUserTests(TestCase):
 
 <div dir="ltr">
 
-```
-
+```powershell
 Command Line
 $ docker-compose exec web python manage.py test
 Creating test database for alias 'default'...
@@ -441,7 +440,7 @@ Destroying test database for alias 'default'...
 
 <div dir="ltr">
 
-```shell
+```powershell
 $ git init
 $ git status
 $ git add -A
