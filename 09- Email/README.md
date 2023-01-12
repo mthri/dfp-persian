@@ -33,10 +33,10 @@ $ mkdir templates/account/email
 $ touch templates/account/email/email_confirmation_subject.txt
 $ touch templates/account/email/email_confirmation_message.txt
 ```
-</div> 
- 
+</div>
+
  با به‌روزرسانی فایل موضوع ایمیل شروع می‌کنیم زیرا بین این دو کوتاه‌تر است. محتویات این فایل به طور پیش فرض در django-allauth به این شکل است:
- 
+
 <div dir='ltr'>
 email_confirmation_subject.txt
 
@@ -46,16 +46,16 @@ email_confirmation_subject.txt
 {% blocktrans %}Please Confirm Your E-mail Address{% endblocktrans %}
 {% endautoescape %}
 ```
-</div> 
+</div>
 اولین  خط، {% load i18n %}، برای پشتیبانی از
 
   [عملکرد بین‌المللی‌ کردن](https://docs.djangoproject.com/en/3.1/topics/i18n/) جنگو است، قابلیت پشتیبانی از چندین زبان.
-  
-  سپس تگ قالب جنگو 
-  [autoscape](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#autoescape) را می‌بینید. 
+
+  سپس تگ قالب جنگو
+  [autoscape](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#autoescape) را می‌بینید.
    به طور پیش‌فرض autoscape روشن است، و در برابر مشکلات امنیتی مانند تزریق اسکریپت از طریق وبگاه محافظت می‌کند. اما به این دلیل که ما اینجا به محتوای متن اطمینان داریم autoscape را خاموش می‌کنیم.
-   در نهایت، به خود متن می‌رسیم که داخل تگ قالب 
-   [blocktrans](https://docs.djangoproject.com/en/3.1/topics/i18n/translation/#std:templatetag-blocktrans) قرار داده شده است تا از ترجمه پشتیبانی کند. حال بیایید متن را تغییر دهیم 
+   در نهایت، به خود متن می‌رسیم که داخل تگ قالب
+   [blocktrans](https://docs.djangoproject.com/en/3.1/topics/i18n/translation/#std:templatetag-blocktrans) قرار داده شده است تا از ترجمه پشتیبانی کند. حال بیایید متن را تغییر دهیم
 
 <div dir='ltr'>
 email_confirmation_subject.txt
@@ -66,7 +66,7 @@ email_confirmation_subject.txt
 {% blocktrans %}Confirm Your Sign Up{% endblocktrans %}
 {% endautoescape %}
 ```
-</div> 
+</div>
 
 حال به سراغ خود پیام ایمیل تاییدیه می‌رویم.
 این
@@ -89,21 +89,21 @@ site_domain=current_site.domain %}
 Thank you from {{ site_name }}!
 {{ site_domain }}{% endblocktrans %}
 ```
-</div> 
+</div>
 
 توجه داشته باشید که بک‌اسلش‌ها \ برای قالب‌بندی اضافه شده‌اند و داخل کد خام ضروری نیستند. به عبارت دیگر، شما می‌توانید بر حسب نیاز آن‌ها را از این کد -و هر مثال کد دیگری- حذف کنید.
 
 شما احتمالا متوجه شده‌اید که ایمیل پیش‌فرضی که ارسال شد به سایت ما با آدرس example.com ارجاع داده است که اینجا با {{ site_name }} نشان داده شده است. این از کجا می‌آید؟ پاسخ در قسمت sites پنل ادمین جنگو است، که توسط django-allauth استفاده می‌شود. پس به پنل ادمین با آدرس http://127.0.0.1:8000/admin/ بروید و در صفحه‌ی خانه روی لینک Sites کلیک کنید.
- 
+
 ![Admin Sites](./images/Admin%20Sites.png)
-در این قسمت «نام دامنه» و «نام نمایشی» را می‌بینیم. در قسمت «نام دامنه» روی example.com کلیک کنید تا آن را ویرایش کنیم. 
-[نام دامنه](https://docs.djangoproject.com/en/3.1/ref/contrib/sites/#django.contrib.sites.models.Site.domain) نام دامنه‌ی کامل برای یک سایت است، به طور مثال djangobookstore.com، در حالیکه 
+در این قسمت «نام دامنه» و «نام نمایشی» را می‌بینیم. در قسمت «نام دامنه» روی example.com کلیک کنید تا آن را ویرایش کنیم.
+[نام دامنه](https://docs.djangoproject.com/en/3.1/ref/contrib/sites/#django.contrib.sites.models.Site.domain) نام دامنه‌ی کامل برای یک سایت است، به طور مثال djangobookstore.com، در حالیکه
 [نام نمایشی](https://docs.djangoproject.com/en/3.1/ref/contrib/sites/#django.contrib.sites.models.Site.name) یک نام قابل خواندن برای انسان برای سایت است، مانند Django Bookstore.
 این به‌روزرسانی‌ها را انجام دهید و وقتی انجام شد روی دکمه «ذخیره» در گوشه‌ی پایین راست صفحه کلیک کنید.
 
  ![Admin Sites - DjangoBookstore.com](./images/Admin%20Sites%20-%20DjangoBookstore.com.png)
- 
-بسیار خوب، به ایمیلمان برمی‌گردیم. بیایید آن را با تغییر کوچکی در پیام خوش‌آمدگویی از "Hello" به "Hi" تغییر دهیم.  
+
+بسیار خوب، به ایمیلمان برمی‌گردیم. بیایید آن را با تغییر کوچکی در پیام خوش‌آمدگویی از "Hello" به "Hi" تغییر دهیم.
 
 <div dir='ltr'>
 email_confirmation_subject.txt
@@ -122,9 +122,9 @@ site_domain=current_site.domain %}
 Thank you from {{ site_name }}!
 {{ site_domain }}{% endblocktrans %}
 ```
-</div> 
+</div>
 
-آخرین مورد برای تغییر دادن. آیا متوجه شدید که ایمیل از آدرس webmaster@localhost ارسال شد؟ این تنظیمات پیش‌فرض است که ما می‌توانیم آن را از طریق 
+آخرین مورد برای تغییر دادن. آیا متوجه شدید که ایمیل از آدرس webmaster@localhost ارسال شد؟ این تنظیمات پیش‌فرض است که ما می‌توانیم آن را از طریق
 [DEFAULT_FROM_EMAIL](https://docs.djangoproject.com/en/3.1/ref/settings/#default-from-email) به روز‌رسانی کنیم.
 این کار را با اضافه کردن خط پایین به آخر فایل config/settings.py انجام می‌دهیم:
 
@@ -135,7 +135,7 @@ Code
 # config/settings.py
 DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 ```
-</div> 
+</div>
 
 مطمئن شوید که از سایت خارج شده اید و دوباره به صفحه ثبت‌نام بروید و یک کاربر جدید بسازید. من برای راحتی از testuser4@email.com استفاده کرده‌ام.
 
@@ -167,16 +167,16 @@ web_1 |
 web_1 | Thank you from Django Bookstore!
 web_1 | djangobookstore.com
 ```
-</div> 
+</div>
 
-و حال ایمیل ما با تنظیمات جدید From، دامنه‌ی جدید djangobookstore.com، و پیام جدید داخل ایمیل ایجاد شده است. 
+و حال ایمیل ما با تنظیمات جدید From، دامنه‌ی جدید djangobookstore.com، و پیام جدید داخل ایمیل ایجاد شده است.
 
 ## صفحه تایید ایمیل
 روی لینک یکتای داخل ایمیل که به صفحه‌ی تایید ایمیل هدایت می‌کند کلیک کنید.
 
 ![Email Confirm Page](./images/Confirm%20Email%20Page.png)
 
-خیلی جذاب نیست. بیایید آن را به‌روزرسانی کنیم تا با ظاهر بقیه‌ی سایت ما هماهنگ باشد. جست‌وجوی دوباره در 
+خیلی جذاب نیست. بیایید آن را به‌روزرسانی کنیم تا با ظاهر بقیه‌ی سایت ما هماهنگ باشد. جست‌وجوی دوباره در
   [سورس کد django-allauth در گیت‌هاب](https://github.com/pennersr/django-allauth)
 مشخص می‌کند که نام و موقعیت این فایل templates/account/email_confirm.html است.
 پس بیایید قالب خودمان را ایجاد کنیم.
@@ -220,7 +220,7 @@ Chapter 9: Email
 {% endif %}
 {% endblock %}
 ```
-</div> 
+</div>
 
 صفحه‌ را رفرش کنید تا به‌روز‌رسانی را ببینید.
 
@@ -228,9 +228,9 @@ Chapter 9: Email
 
 ## بازنشانی رمز عبور و تغییر رمز عبور
 
-جنگو و django-allauth ویژگی‌های بیشتر برای اکانت کاربر را همراه خود دارند، مانند توانایی بازنشانی رمز عبور و تغییر رمز عبور اگر از قبل وارد شده‌اید. 
+جنگو و django-allauth ویژگی‌های بیشتر برای اکانت کاربر را همراه خود دارند، مانند توانایی بازنشانی رمز عبور و تغییر رمز عبور اگر از قبل وارد شده‌اید.
  صفحات پیش‌فرض بازنشانی رمز عبور و تغییر رمز عبور اینجا قرار دارند:
- 
+
 - http://127.0.0.1:8000/accounts/password/reset/
 - http://127.0.0.1:8000/accounts/password/change/
 
@@ -247,8 +247,8 @@ Simple Email Service.
   یا یک Web API می‌توانید انتخاب کنید. پیکربندی SMTP آسان‌تر است،
  اما web API قابلیت‌های پیکربندی بیشتری دارد و قدرتمندتر است. با SMTP شروع کنید و کار خودتان را از آن‌جا پیش ببرید: پیکربندی‌های ایمیل می‌توانند به خودی خود کاملا پیچیده باشند.
 پس از دریافت نام کاربری و رمز عبور از یک ارائه‌دهنده ایمیل، یکسری تنظیمات دقیق به جنگو اجازه می‌دهد تا برای ارسال ایمیل از آن‌ها استفاده کند.
-اولین قدم به‌روزرسانی تنظیمات EMAIL_BACKEND است، که در انتهای فایل config/settings.py قرار دارد چون ما قبلا آن‌را آپدیت کرده‌ایم.   
-  
+اولین قدم به‌روزرسانی تنظیمات EMAIL_BACKEND است، که در انتهای فایل config/settings.py قرار دارد چون ما قبلا آن‌را آپدیت کرده‌ایم.
+
 <div dir='ltr'>
 
 ```Code
@@ -256,13 +256,13 @@ Simple Email Service.
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 ```
 
-</div> 
+</div>
 و سپس برای پیکربندی EMAIL_HOST، EMAIL_HOST_USER، EMAIL_HOST_PASSWORD، EMAIL_PORT و EMAIL_USE_TLS به عنوان متغیرهای محلی بر اساس دستورالعمل‌های ارائه‌دهنده سرویس ایمیل شما.
 در سورس کد رسمی، EMAIL_BACKEND همان console باقی خواهد ماند، اما مراحل قبلی چگونگی اضافه کردن یک سرویس ایمیل بودند. اگر هنگام پیکربندی مناسب ایمیل ناامید شدید، شما تنها نیستید! حداقل جنگو این کار را برای ما بسیار بسیار آسان‌تر کرده است.
 
 ## گیت
 برای کامیت کردن تغییرات کد این فصل، حتما وضعیت تغییرات را چک کرده، همه‌ی آن‌ها را اضافه کنید و سپس یک پیام کامیت بنویسید.
-  
+
 <div dir='ltr'>
 
 ```Command Line
@@ -273,12 +273,12 @@ $ git commit -m 'ch9'
 
 </div>
 
-اگر هر مشکلی داشتید، کد خود را با 
+اگر هر مشکلی داشتید، کد خود را با
   [سورس کد رسمی در گیت‌هاب](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch9-email)
 مقایسه کنید.
 
 ## نتیجه گیری
-پیکربندی صحیح ایمیل تا حد زیادی یک درد یکباره است. ولی این یک قسمت ضروری از وبسایت هر محصولی می‌باشد. [پیکربندی ایمیل] به فصل‌های اساسی پروژه کتاب‌فروشی ما ختم می‌شود. در فصل بعدی ما بالاخره ساخت خود سایت کتاب‌فروشی را آغاز خواهیم کرد.   
+پیکربندی صحیح ایمیل تا حد زیادی یک درد یکباره است. ولی این یک قسمت ضروری از وبسایت هر محصولی می‌باشد. [پیکربندی ایمیل] به فصل‌های اساسی پروژه کتاب‌فروشی ما ختم می‌شود. در فصل بعدی ما بالاخره ساخت خود سایت کتاب‌فروشی را آغاز خواهیم کرد.
 
 
 </div>
