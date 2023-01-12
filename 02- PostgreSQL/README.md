@@ -254,8 +254,8 @@ services:
             - 8000:8000
         depends_on:
             - db
-db:
-    image: postgres:11
+   db:
+       image: postgres:11
 ```
 
 <p dir="rtl">
