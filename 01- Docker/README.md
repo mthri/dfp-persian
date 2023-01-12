@@ -145,7 +145,7 @@ $ mkdir code && cd code
 
 ```shell
 $ mkdir hello && cd hello
-$ pipenv install django=3.1.0
+$ pipenv install django~=3.1.0
 $ pipenv shell
 (hello) $
 ```
