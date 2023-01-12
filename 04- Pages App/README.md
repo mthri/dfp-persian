@@ -1,6 +1,6 @@
 # فصل  چهارم : Pages App
 
-بیاید یک صفحه ی اصلی برای پروژه ی جدید ایجاد کنیم.  برای الان این صفحه یک صفحه ی استاتیک خواهد بود به این معنی که با پایگاه داده به هیچ عنوان در ارتباط نیست. بعدا این صفحه یک صفحه ی دینامیک خواهد شد که کتاب های فروشی را نمایش خواهد داد. 
+بیاید یک صفحه ی اصلی برای پروژه ی جدید ایجاد کنیم.  برای الان این صفحه یک صفحه ی استاتیک خواهد بود به این معنی که با پایگاه داده به هیچ عنوان در ارتباط نیست. بعدا این صفحه یک صفحه ی دینامیک خواهد شد که کتاب های فروشی را نمایش خواهد داد.
 
 
 
@@ -11,10 +11,10 @@
 #####                                                      Command Line
 
 ```tex
-$ docker-compose exec web python manage.py startapp pages 
+$ docker-compose exec web python manage.py startapp pages
 ```
 
-بعد این app جدید را باید در فایل settings.py در قسمت INSTALLED_APPS اضافه کنید. همچنین در قسمت TEMPLATES در همین فایل، قسمت DIRS را به روز رسانی کنید. 
+بعد این app جدید را باید در فایل settings.py در قسمت INSTALLED_APPS اضافه کنید. همچنین در قسمت TEMPLATES در همین فایل، قسمت DIRS را به روز رسانی کنید.
 
 
 
@@ -32,18 +32,18 @@ INSTALLED_APPS = [
 		 'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     # Local
     'accounts',
     'pages', # new
-    
+
 ]
 TEMPLATES = [
     {
        ...
        'DIRS': [str(BASE_DIR.joinpath('templates'))], # new
        ...
-    }    
+    }
 ]
 ```
 
@@ -106,7 +106,7 @@ $ touch templates/home.html
 
 ------
 
-برای الان در صفحه ی اصلی، خیلی ساده کلمه ی "Homepage" را می بینیم. 
+برای الان در صفحه ی اصلی، خیلی ساده کلمه ی "Homepage" را می بینیم.
 
 
 
@@ -132,7 +132,7 @@ $ touch templates/home.html
 
 هر صفحه ی وب در پروژه های django  نیاز به دو فایل urls.py و views.py را دارند. برای مقدماتی مهم نمی باشد که به چه ترتیبی عمل بشود، در اینجا ما نیاز به 3 فایل یا گاهی اوقات به 4 فایل، ( models.py برای پایگاه داده) داریم. به طور کلی من ترجیح می دهم که با urls شروع کنم و روی این فایل کار کنم، اما هیچ وقت یه راه مستقیم برای کار روی این فایل ها و ارتباط دهی به ان ها وجود ندارد.
 
-بیاید با فایل urls.py شروع کنیم برای آدرس دهی مناسب به صفحات سایتمان در app pages. زمانیکه ما در پروژه ای بر روی صفحه ی اصلی کار میکنیم ، نیاز نیست که هیچ چیزی را به url نسبت بدهیم و ان را در یک ' ' قرار می دهیم. ما همچنین در خط دوم include را وارد کرده ایم. 
+بیاید با فایل urls.py شروع کنیم برای آدرس دهی مناسب به صفحات سایتمان در app pages. زمانیکه ما در پروژه ای بر روی صفحه ی اصلی کار میکنیم ، نیاز نیست که هیچ چیزی را به url نسبت بدهیم و ان را در یک ' ' قرار می دهیم. ما همچنین در خط دوم include را وارد کرده ایم.
 
 
 
@@ -157,7 +157,7 @@ path('', include('pages.urls')), # new
 
 ------
 
-بعد از این باید فایل urls.py را در app pages ایجاد کنیم . 
+بعد از این باید فایل urls.py را در app pages ایجاد کنیم .
 
 ##### Command Line
 
@@ -174,7 +174,7 @@ $ touch pages/urls.py
 
 ------
 
-این فایل HomePageView را وارد خواهد کرد و آدرس را داخل یک رشته ی خالی' ' تنظیم می کند. توجه داشته باشید که پیشنهاد می شود ان را به این فرم وارد کنید:  'home' . 
+این فایل HomePageView را وارد خواهد کرد و آدرس را داخل یک رشته ی خالی' ' تنظیم می کند. توجه داشته باشید که پیشنهاد می شود ان را به این فرم وارد کنید:  'home' .
 
 
 
@@ -197,7 +197,7 @@ path('', HomePageView.as_view(), name='home'),
 
 ------
 
-در آخر به فایل views.py احتیاج داریم. ما می توانیم خیلی راحت با استفاده از تابع درون ساز [TemplateView](https://docs.djangoproject.com/en/3.1/ref/class-based-views/base/#django.views.generic.base.TemplateView)، فقط با مشخص کردن template_name  مشخص، که در اینجا home.html می باشد اطلاعات را در صفحه ی اصلی نمایش دهیم. 
+در آخر به فایل views.py احتیاج داریم. ما می توانیم خیلی راحت با استفاده از تابع درون ساز [TemplateView](https://docs.djangoproject.com/en/3.1/ref/class-based-views/base/#django.views.generic.base.TemplateView)، فقط با مشخص کردن template_name  مشخص، که در اینجا home.html می باشد اطلاعات را در صفحه ی اصلی نمایش دهیم.
 
 ##### Code
 
@@ -214,9 +214,9 @@ template_name = 'home.html'
 
 ------
 
-ما تقریبا تمام مراحل  را انجام دادیم . اگر شما به صفحه ی اصلی  رجوع کنید به خطا بر خواهید خورد . اما چرا این اتفاق افتاد؟ زمانیکه شمابا یک خطا مواجه می شوید  باید در خط فرمان با استفاده از دستور logs ، آن را بررسی کنید. 
+ما تقریبا تمام مراحل  را انجام دادیم . اگر شما به صفحه ی اصلی  رجوع کنید به خطا بر خواهید خورد . اما چرا این اتفاق افتاد؟ زمانیکه شمابا یک خطا مواجه می شوید  باید در خط فرمان با استفاده از دستور logs ، آن را بررسی کنید.
 
-پس دستور docker-compose logs را تایپ کنید که با این عبارت مواجه می شوید :   no module named pages.urls .   اتفاقی  که افتاده این است که : django به طور اتوماتیک، نمی تواند فایل settings.py را به روز رسانی کند. برای اینکه فایل settings.py به روزرسانی شود باید از دستور زیر استفاده کرد. 
+پس دستور docker-compose logs را تایپ کنید که با این عبارت مواجه می شوید :   no module named pages.urls .   اتفاقی  که افتاده این است که : django به طور اتوماتیک، نمی تواند فایل settings.py را به روز رسانی کند. برای اینکه فایل settings.py به روزرسانی شود باید از دستور زیر استفاده کرد.
 
 
 
@@ -241,7 +241,7 @@ $ docker-compose up -d
 
 # Tests
 
-الان زمانه تست است. برای صفحه ی اصلی ما می توانیم از [SimpleTestCase](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#simpletestcase) خود Django استفاده کنیم که یک حالت خاص از Testcase می باشد که طراحی شده است برای تست مواردی که با پایگاه داده در ارتباط نمی باشند. 
+الان زمانه تست است. برای صفحه ی اصلی ما می توانیم از [SimpleTestCase](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#simpletestcase) خود Django استفاده کنیم که یک حالت خاص از Testcase می باشد که طراحی شده است برای تست مواردی که با پایگاه داده در ارتباط نمی باشند.
 
 تست ها در ابتدا غافلگیر کننده هستند اما به سرعت خسته کننده می شوند . شما از ساختار ها و تکنیک های مشابه بارها و بارها استفاده خواهید کرد. در editor خود قسمت pages/tests.py  را به روز رسانی کنید. ما ابتدا با تست template شروع می کنیم.
 
@@ -303,7 +303,7 @@ Destroying test database for alias 'default'...
 
 تاکنون ما وجود صفحه ی اصلی را تست کرده ایم، اما باید تست کنیم که صفحه ی اصلی از قالب درستی استفاده می کند. SimpleTestCase از روشی به نام [assertTemplatedUsed](https://docs.djangoproject.com/en/3.1/topics/testing/tools/#django.test.SimpleTestCase.assertTemplateUsed) استفاده میکند فقط برای همین منظور. پس بیاید از این روش استفاده کنیم.
 
-##### 
+#####
 
 Code
 
@@ -318,11 +318,11 @@ class HomepageTests(SimpleTestCase):
 	def test_homepage_status_code(self):
 	    response = self.client.get('/')
 		  self.assertEqual(response.status_code, 200)
-    
+
   def test_homepage_url_name(self):
       response = self.client.get(reverse('home'))
       self.assertEqual(response.status_code, 200)
-    
+
   def test_homepage_template(self): # new
 	    response = self.client.get('/')
 	    self.assertTemplateUsed(response, 'home.html')
@@ -372,19 +372,19 @@ class HomepageTests(SimpleTestCase):
     def test_homepage_status_code(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        
+
     def test_homepage_url_name(self):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        
+
     def test_homepage_template(self):
         response = self.client.get('/')
         self.assertTemplateUsed(response, 'home.html')
-        
+
     def test_homepage_contains_correct_html(self): # new
         response = self.client.get('/')
         self.assertContains(response, 'Homepage')
-        
+
     def test_homepage_does_not_contain_incorrect_html(self): 			# new
 					response = self.client.get('/')
         self.assertNotContains(
@@ -421,7 +421,7 @@ Destroying test database for alias 'default'...
 
 
 
-از انجایی که تست های واحد از بالا به پایین اجرا می شوند، می توانیم یک متد setup اضافه کنیم که قبل اجرای تست ها اجرا خواهد شد. قبل از هر تست self.response را در صفحه  اصلی اجرا خواهد کرد. بنابراین نیازی نیست که متغیر response را برای هر تست ایجاد کنیم. و همچنین به این معنی است که دیگر می توانیم test_homepage_url_name را حذف کنیم به خاطر اینکه برای هر تست، ان را با استفاده از reverse صدا خواهیم کرد. 
+از انجایی که تست های واحد از بالا به پایین اجرا می شوند، می توانیم یک متد setup اضافه کنیم که قبل اجرای تست ها اجرا خواهد شد. قبل از هر تست self.response را در صفحه  اصلی اجرا خواهد کرد. بنابراین نیازی نیست که متغیر response را برای هر تست ایجاد کنیم. و همچنین به این معنی است که دیگر می توانیم test_homepage_url_name را حذف کنیم به خاطر اینکه برای هر تست، ان را با استفاده از reverse صدا خواهیم کرد.
 
 ##### code
 
@@ -433,23 +433,23 @@ from django.test import SimpleTestCase
 from django.urls import reverse
 
 class HomepageTests(SimpleTestCase): # new
-    
+
     def setUp(self):
         url = reverse('home')
         self.response = self.client.get(url)
-        
+
     def test_homepage_status_code(self):
     	self.assertEqual(self.response.status_code, 200)
-        
+
 		def test_homepage_template(self):
       self.assertTemplateUsed(self.response, 'home.html')
-    
+
     def test_homepage_contains_correct_html(self):
     	self.assertContains(self.response, 'Homepage')
-        
+
 		def test_homepage_does_not_contain_incorrect_html(self):
         self.assertNotContains(
-        self.response, 'Hi there! I should not be on the 		page.')      
+        self.response, 'Hi there! I should not be on the 		page.')
 
 ```
 
@@ -477,9 +477,9 @@ Destroying test database for alias 'default'...
 
 # Resolve
 
-اخرین تستی که می توانیم انجام بدهیم این است که مطمئن شویم homepageviwe در مسیر درستی قرار دارد. 
+اخرین تستی که می توانیم انجام بدهیم این است که مطمئن شویم homepageviwe در مسیر درستی قرار دارد.
 
-Django برای این کار ابزار مخصوصی به نام [resolve](https://docs.djangoproject.com/en/3.1/ref/urlresolvers/#resolve) دارد که می خواهیم از ان استفاده کنیم. ما نیاز داریم علاوه بر homepageview ، resolve را هم در بالای کد وارد کنیم. تست، Test_homepage_resolves_homepageview،  بررسی می کند که نام view 
+Django برای این کار ابزار مخصوصی به نام [resolve](https://docs.djangoproject.com/en/3.1/ref/urlresolvers/#resolve) دارد که می خواهیم از ان استفاده کنیم. ما نیاز داریم علاوه بر homepageview ، resolve را هم در بالای کد وارد کنیم. تست، Test_homepage_resolves_homepageview،  بررسی می کند که نام view
 
 ای که متد resolve استفاده می کند برابر HomePageView خواهد بود.
 
@@ -497,20 +497,20 @@ class HomepageTests(SimpleTestCase):
     def setUp(self):
         url = reverse('home')
         self.response = self.client.get(url)
-    
+
     def test_homepage_status_code(self):
         self.assertEqual(self.response.status_code, 200)
-    
+
     def test_homepage_template(self):
         self.assertTemplateUsed(self.response, 'home.html')
-    
+
     def test_homepage_contains_correct_html(self):
         self.assertContains(self.response, 'Homepage')
-    
+
     def test_homepage_does_not_contain_incorrect_html(self):
         self.assertNotContains(
         self.response, 'Hi there! I should not be on the page.')
-    
+
     def test_homepage_url_resolves_homepageview(self): # new
         view = resolve('/')
         self.assertEqual(
@@ -545,7 +545,7 @@ Destroying test database for alias 'default'...
 
 # Git
 
-الان زمانی است که باید تغییرات را به git اضافه کنیم. 
+الان زمانی است که باید تغییرات را به git اضافه کنیم.
 
 
 
@@ -561,7 +561,7 @@ $ git commit -m 'ch4'
 
 ------
 
-شما می توانید کد خود را با کد اصلی در [اینجا](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch4-pages) مقایسه کنید. 
+شما می توانید کد خود را با کد اصلی در [اینجا](https://github.com/wsvincent/djangoforprofessionals/tree/master/ch4-pages) مقایسه کنید.
 
 
 

@@ -2,7 +2,7 @@
 <h1 dir="rtl">فصل دوم : PostgreSQL</h1>
 
 <p dir="rtl">
-یکی از تفاوت های اصلی بین یک اپلیکیشن ابتدایی و یک اپلیکیشن آماده به کار (production-ready) جنگو، در دیتابیس های آنان است.  
+یکی از تفاوت های اصلی بین یک اپلیکیشن ابتدایی و یک اپلیکیشن آماده به کار (production-ready) جنگو، در دیتابیس های آنان است.
 جنگو بدلیل راحت بودن، سریع بودن و file-based بودن SQLite، از این دیتابیس بصورت پیشفرض برای توسعه ی محلی (local development) بهره می برد و آن را به گزینه ی مناسبی تبدیل می کند. علاوه بر آن، این دیتابیس نیاز به هیچ گونه نصب و پیکربندی ندارد.
 </p>
 
@@ -24,19 +24,19 @@
 
 <h2 dir="rtl">شروع به کار</h2>
 <p dir="rtl">
-ابتدا با استفاده از command line بر روی پوشه ی code در desktop سوییچ کنید. شما این کار را می توانید با دو روش انجام دهید. یا با تایپ کردن    <code dir="ltr">cd ..</code> می توانید از  <code dir="ltr">Desktop/code/hello</code>به  <code>Desktop/code</code> هدایت شوید و  یا با تایپ 
+ابتدا با استفاده از command line بر روی پوشه ی code در desktop سوییچ کنید. شما این کار را می توانید با دو روش انجام دهید. یا با تایپ کردن <code dir="ltr">cd ..</code> می توانید از  <code dir="ltr">Desktop/code/hello</code> به <code>Desktop/code</code> هدایت شوید و یا با تایپ
  <code dir="ltr">cd ~/Desktop/code/</code>می توانید به آدرس مورد نظرتان هدایت شوید. سپس یک directory به اسم  <code dir="lt">postgresql</code> بسازید.
 
-</p> 
+</p>
 
 **Command Line**
 ```bash
 $ cd  ..
 $ mkdir postgresql && cd postgresql
 ```
-  
+
 <p dir="rtl">
-حالا جنگو را نصب کنید،   <code>shell</code>را راه اندازی کنید و یک پروژه ی کوچک به نام <code>postgresql_project</code> بسازید. یادتان باشد که <code>.</code>  را در آخر command وارد کنید 
+حالا جنگو را نصب کنید،   <code>shell</code>را راه اندازی کنید و یک پروژه ی کوچک به نام <code>postgresql_project</code> بسازید. یادتان باشد که <code>.</code>  را در آخر command وارد کنید.
 </p>
 
 **Command Line**
@@ -52,7 +52,7 @@ $ pipenv shell
 <blockquote dir="rtl">
 به طور کلی، من اجرای migrate را بر روی پروژه های جدید پیشنهاد نمی کنم؛ مگر این که مدل اختصاصی کاربر پیکربندی شده باشد. در غیر این صورت، جنگو، دیتابیس را به مدل داخلی کاربر  متصل می کند که در این حالت اصلاح و تغییر آن در ادامه ی این پروژه، کار دشوار و پیچیده ای خواهد بود. این مبحث را بصورت جزیی تر در فصل 3 بیان خواهیم کرد. چون قصد اصلی ما در این فصل صرفا پیاده سازی هدفمان می باشد؛ بنابراین استفاده از مدل پیش فرض کاربر یک استثنا می باشد.
 </blockquote>
-  
+
 **Command Line**
 ```bash
 (postgresql) $ python manage.py migrate
@@ -62,11 +62,11 @@ $ pipenv shell
 <p dir="rtl">
 اگر دستورات به درستی اجرا شوند، شما به آدرس http://127.0.0.1:8000/  در مرورگرتان هدایت می شوید.شاید نیاز باشد که شما حداقل یک بار صفحه را ریفرش کنید اما بعد از این کار، شما باید با صفحه ی خوش آمد گویی جنگو مواجه شوید.
 </p>
-  
+
 <p dir="rtl">
 سرور محلی  (local server) را با <code>control + c</code> متوقف کنید و سپس با دستور <code>ls</code> همه ی فایل ها و directory ها را لیست کنید.
 </p>
- 
+
 **Command Line**
 ```bash
 (postresql) $ ls
@@ -75,9 +75,9 @@ Pipfile     Pipfile.lock     db.sqlite3     manage.py     postgresql_project.
 <h2 dir="rtl">Docker</h2>
 
 <p dir="rtl">
-برای سوییچ به داکر، ابتدا با تایپ  <code dir=”ltr”>exit</code>از محیط مجازی (virtual environment) خارج شده و سپس فایل هایی با اسم <code dir=”ltr”>Dockerfile</code> و <code dir=”ltr”> docker-compose.yml</code> ایجاد کنید. این فایل ها بترتیب، <code dir=”ltr>Docker image</code> و <code dir=”ltr”>container</code> را کنترل می کنند. 
+برای سوییچ به داکر، ابتدا با تایپ  <code dir=”ltr”>exit</code>از محیط مجازی (virtual environment) خارج شده و سپس فایل هایی با اسم <code dir=”ltr”>Dockerfile</code> و <code dir=”ltr”> docker-compose.yml</code> ایجاد کنید. این فایل ها بترتیب، <code dir=”ltr>Docker image</code> و <code dir=”ltr”>container</code> را کنترل می کنند.
 </p>
- 
+
 **Command Line**
 ```bash
 (postgresql) $ exit
@@ -85,7 +85,7 @@ $ touch Dockerfile
 $ touch docker-compose.yml
 ```
 <p dir="rtl">
-<code dir=”ltr”>Dockerfile</code> زیر، همانند فایلی است که در فصل اول مورد استفاده قرار گرفته بود.       
+<code dir=”ltr”>Dockerfile</code> زیر، همانند فایلی است که در فصل اول مورد استفاده قرار گرفته بود.
 </p>
 
 **Dockerfile**
@@ -113,11 +113,11 @@ COPY . /code/
 </p>
 
 <p dir="rtl">
-آیا متوجه شدید که <code dir="ltr">Dockerfile</code> این بار image را بسیار سریع تر ایجاد کرد؟ این اتفاق به این دلیل است که داکر در همان ابتدا، در کامپیوتر شما بصورت محلی به دنبال یک image خاص می گردد. اگر image مورد نظر را بصورت محلی پیدا نکرد؛ سپس آن را دانلود می کند. چون بسیاری از این image ها از فصل قبل بر روی کامپیوتر بوده اند، بنابراین داکر نیازی نمی بیند که آن ها را دوباره دانلود نماید.  
+آیا متوجه شدید که <code dir="ltr">Dockerfile</code> این بار image را بسیار سریع تر ایجاد کرد؟ این اتفاق به این دلیل است که داکر در همان ابتدا، در کامپیوتر شما بصورت محلی به دنبال یک image خاص می گردد. اگر image مورد نظر را بصورت محلی پیدا نکرد؛ سپس آن را دانلود می کند. چون بسیاری از این image ها از فصل قبل بر روی کامپیوتر بوده اند، بنابراین داکر نیازی نمی بیند که آن ها را دوباره دانلود نماید.
 </p>
 
 <p dir="rtl">
-حالا نوبت به فایل <code dir="ltr">docker-compose.yml</code> می رسد؛ که این فایل نیز همان فایلی است  در فصل اول مورد استفاده قرار گرفته بود.     
+حالا نوبت به فایل <code dir="ltr">docker-compose.yml</code> می رسد؛ که این فایل نیز همان فایلی است  در فصل اول مورد استفاده قرار گرفته بود.
 </p>
 
 **docker-compose.yml**
@@ -132,7 +132,7 @@ services:
         volumes:
             - .:/code
         ports:
-            - 8000:8000			      
+            - 8000:8000
 ```
 
 <h2 dir="rtl">حالت تفکیک شده (Detached Mode)</h2>
@@ -146,11 +146,11 @@ $ docker-compose up -d
 ```
 
 <p dir="rtl">
-حالت تفکیک شده، <a href="https://docs.docker.com/compose/reference/up/">container</a> را در پس زمینه اجرا می کند. این بدان معنی است که ما می توانیم تنها از یک command line استفاده کنیم، بدون این که نیازی به command line دیگری باشد. این مهم باعث می شود که وقت ما بیهوده صرف سوییچ کردن بین command line ها نشود. از طرفی دیگر بدی این روش این است که اگر اروری بوجود آید؛ این ارور همیشه نمایش داده نمی شود. بنابراین اگر،در برخی موارد، صفحه ی نمایش کامپیوتر شما با این کتاب همخوانی نداشت؛ با تایپ کردن <code dir=”ltr”>docker-compose logs</code> خروجی فعلی را چاپ کنید و خطا ها و ارور های آن را برطرف نمایید. 
+حالت تفکیک شده، <a href="https://docs.docker.com/compose/reference/up/">container</a> را در پس زمینه اجرا می کند. این بدان معنی است که ما می توانیم تنها از یک command line استفاده کنیم، بدون این که نیازی به command line دیگری باشد. این مهم باعث می شود که وقت ما بیهوده صرف سوییچ کردن بین command line ها نشود. از طرفی دیگر بدی این روش این است که اگر اروری بوجود آید؛ این ارور همیشه نمایش داده نمی شود. بنابراین اگر،در برخی موارد، صفحه ی نمایش کامپیوتر شما با این کتاب همخوانی نداشت؛ با تایپ کردن <code dir=”ltr”>docker-compose logs</code> خروجی فعلی را چاپ کنید و خطا ها و ارور های آن را برطرف نمایید.
 </p>
 
 <p dir="rtl">
- به احتمای زیاد شما با پیام <code dir="ltr">Warning: Image for service web was built because it did not already exist</code> در زیر command مواجه خواهید شد. داکر بصورت اتوماتیک یک image درون container ساخته است. همانطور که در ادامه ی این کتاب خواهیم دید؛ اضافه کردن فلگ <code dir="ltr">--build</code> ، زمانی که پکیج های نرم افزار (software package) آپدیت هستند، لازم است. چرا که داکر، بصورت پیش فرض، بدنبال کپی حافظه ی محلی (local cached copy) نرم افزار می گردد و از آن برای ارتقا عملکرد استفاده می کند.
+ به احتمال زیاد شما با پیام <code dir="ltr">Warning: Image for service web was built because it did not already exist</code> در زیر command مواجه خواهید شد. داکر بصورت اتوماتیک یک image درون container ساخته است. همانطور که در ادامه ی این کتاب خواهیم دید؛ اضافه کردن فلگ <code dir="ltr">--build</code> ، زمانی که پکیج های نرم افزار (software package) آپدیت هستند، لازم است. چرا که داکر، بصورت پیش فرض، بدنبال کپی حافظه ی محلی (local cached copy) نرم افزار می گردد و از آن برای ارتقا عملکرد استفاده می کند.
 </p>
 
 <p dir="rtl">
@@ -255,7 +255,7 @@ services:
         depends_on:
             - db
 db:
-    image: postgres:11	
+    image: postgres:11
 ```
 
 <p dir="rtl">
@@ -418,12 +418,12 @@ $ docker-compose up -d --build
 <div dir='rtl' align='right'>
 
 ### دیتابیس جدید
-با این حال از آنجا که ما از PostgreSQL استفاده می کنیم نه SQLite دیتابیس ما خالی است . اگر نگاه کنید گزارش های فعلی را دوباره با تایپ کردن 
+با این حال از آنجا که ما از PostgreSQL استفاده می کنیم نه SQLite دیتابیس ما خالی است . اگر نگاه کنید گزارش های فعلی را دوباره با تایپ کردن
   `docker-compose logs` مشاهده خواهید کرد . شکایاتی مانند "شما 18 مهاجرت (migrations) های اعمال نشده دارید".
-  
+
 برای تقویت این نکته به admin در http://127.0.0.1:8000/admin/ مراجعه کنید و وارد شوید . آیا حساب کاربری superuser ما از `sqliteadmin` و `testpass123`
   کار می کند ؟
-  
+
 پاسخ منفی است ! ما در `admin/` ارور `ProgrammingError` میبینیم . برای حل کردن این مشکل , ما میتوانیم هم مهاجرت بکنیم و هم یک کاربر superuser
   در داخل داکر بسازیم که به دیتابیس PostgreSQL دسترسی خواهد داشت .
 
@@ -434,71 +434,65 @@ $ docker-compose exec web python manage.py migrate
 $ docker-compose exec web python manage.py createsuperuser
 ```
 
-</div>  
+</div>
 
-  
+
   ما باید چگونه superuser را بنامیم (صدا بزنیم) ؟ بیایید از `postgresqladmin` استفاده کنیم و برای آزمایش ایمیل را به `postgresqladmin@email.com`
   و رمز عبور را به `testpass123` تنظیم کنید .
-  
+
   در مرورگر خود به صفحه `admin` در آدرس http://127.0.0.1:8000/admin/ بروید و اطلاعات superuser جدید را وارد کنید .
-  
+
   ![image](./imgs/Admin_with_postgresadmin.png)
 
-  
-  در گوشه سمت راست بالا نشان می دهد که ما با `postgresadmin` وارد شده ایم نه با `sqliteadmin` 
+
+  در گوشه سمت راست بالا نشان می دهد که ما با `postgresadmin` وارد شده ایم نه با `sqliteadmin`
   همچنین ، می توانید بر روی برگه کاربران در صفحه اصلی کلیک کرده
   و از قسمت کاربران دیدن کنید تا مشاهده کنید که تنها کاربر ما حساب superuser جدید است .
-  
+
   ![image](./imgs/Admin_users.png)
-  
+
   به یاد داشته باشید که ظرف در حال اجرا را با دستور `docker-compose down` متوقف کنید .
-  
-  
-  
+
+
+
   <div dir='ltr' align='left'>
-  
+
   ```shell
   $ docker-compose down
   ```
-    
-  </div> 
-  
-  
+
+  </div>
+
+
   ### گیت
-  
-  
+
+
   بیاید تغیرات خود را با راه اندازی اولیه Git  برای این پروژه جدید ذخیره کنیم , اضافه کردن تغیرات خود, و از جمله یک پیام کامیت.
-  
+
   <div dir='ltr' align='left'>
-  
+
   ```shell
   $ git init
   $ git status
   $ git add .
   $ git commit -m 'ch2'
   ```
-  
-  </div> 
-  
+
+  </div>
+
   کد های رسمی فصل ۲ در <a href="https://github.com/wsvincent/djangoforprofessionals/tree/master/ch2-postgresql">گیتهاب</a> در دسترس است .
-  
-  
+
+
   ### نتیجه
-  
+
   هدف اصلی این فصل نشان دادن نحوه همکاری docker و PostgreSQL در پروژه جنگو بود .
   تغییر دیتابیس SQLite به PostgreSQL برای بسیاری از توسعه دهندگان در ابتدا یک جهش ذهنی است .
-  
+
   نکته کلیدی این است که با داکر دیگر نیازی به حضور در یک محیط مجازی محلی نداریم.
-  داکر محیط مجازی ما و ... و همچنین دیتابیس ما و در صورت تمایل بیشتر . هاست داکر اساسا جایگزین سیستم عامل ما شده است 
+  داکر محیط مجازی ما و ... و همچنین دیتابیس ما و در صورت تمایل بیشتر . هاست داکر اساسا جایگزین سیستم عامل ما شده است
   و در داخل آن میتوانیم چندین ظرف (containers) را اجرا کنیم ,
-  مانند برنامه وب و دیتابیس ما , که همه می توانند جدا شوند و جداگانه اجرا شوند . 
-  
-  در فصل بعدی ما پروژه کتابفروشی آنلاین خود را آغاز می کنیم . بزن بریم !
-  
-  
-  
+  مانند برنامه وب و دیتابیس ما , که همه می توانند جدا شوند و جداگانه اجرا شوند .
+
+  در فصل بعدی ما پروژه کتابفروشی آنلاین خود را آغاز می کنیم . بزن بریم!
+
 </div>
-
-
-
-
