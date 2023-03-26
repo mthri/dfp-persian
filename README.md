@@ -344,7 +344,7 @@
 |نام همکار|راه های ارتباطی|نوع مشارکت
 |:-:|:-:|:-:|
 |امیر مطهری|[گیتهاب](https://github.com/mthri) [لینکدین](https://www.linkedin.com/in/amir-motahari-963689138/) [توییتر](https://twitter.com/a_mthri) [تلگرام](https://t.me/a_motahari)|اداره مخزن - مترجم فصل ۱۶|
-|سامیت|[گیتلب](https://gitlab.com/sameetmoosavi) [لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)| اداره مخزن - مترجم مقدمه|
+|سامیت|[گیتلب](https://gitlab.com/sameetmoosavi) [لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)|برنامه نویس و طراح وبسایت |
 امید شهبازی|[گیتهاب](https://github.com/themaximalist) [لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)| اداره مخزن - مترجم مقدمه|
 |حدیث سادات موسوی|[گیتهاب](https://github.com/cemusavi) [لینکدین](https://linkedin.com/in/hadis-sadat-mousavi-178108219)|مترجم فصل های ۱و۳|
 |خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani) [لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|مترجم فصل های۷ و جمع بندی|
