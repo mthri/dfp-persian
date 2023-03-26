@@ -1,12 +1,18 @@
-<h1 dir="rtl"> ترجمه آزاد کتاب  Django for Professionals</h1>
+<h1 dir="rtl">
+  
+<a href="https://django-for-professionals-ir.vercel.app/"> ترجمه آزاد کتاب Django for Professionals </a>
+
+</h1>
 
 ![Cover Book](cover.jpg)
 
 
 <div dir="rtl">
 
-قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
+شما میتوانید کتاب را به صورت یک داکیومنت مطالعه کنید :   [مشاهده کتاب به صورت داکیومنت](https://django-for-professionals-ir.vercel.app/)
 
+قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
+  
 شما می توانید برای کمک کردن و خشنود کردن و انگیزه دادن به تیم ما، اهدای مالی به خیریه محک داشته باشید.
 لینک درگاه خیریه محک در سمت راست صفحه درج شده است. لازم به ذکر است که اگر مبلغی را اهدا کرده اید چون ما بی خبر از آن کار هستیم، یک رسید از آن داخل [گروه تلگرامی ما](https://t.me/ftg_iran) آپلود کنید.
   
@@ -338,7 +344,8 @@
 |نام همکار|راه های ارتباطی|نوع مشارکت
 |:-:|:-:|:-:|
 |امیر مطهری|[گیتهاب](https://github.com/mthri) [لینکدین](https://www.linkedin.com/in/amir-motahari-963689138/) [توییتر](https://twitter.com/a_mthri) [تلگرام](https://t.me/a_motahari)|اداره مخزن - مترجم فصل ۱۶|
-|امید شهبازی|[گیتهاب](https://github.com/themaximalist) [لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)| اداره مخزن - مترجم مقدمه|
+|سامیت|[گیتلب](https://gitlab.com/sameetmoosavi) [لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)| اداره مخزن - مترجم مقدمه|
+امید شهبازی|[گیتهاب](https://github.com/themaximalist) [لینکدین](https://linkedin.com/in/omid-shahbazi-76635b21b)| اداره مخزن - مترجم مقدمه|
 |حدیث سادات موسوی|[گیتهاب](https://github.com/cemusavi) [لینکدین](https://linkedin.com/in/hadis-sadat-mousavi-178108219)|مترجم فصل های ۱و۳|
 |خلیل فراشیانی|[گیتهاب](https://github.com/khalil-farashiani) [لینکدین](https://linkedin.com/in/khalil-farashiani-36393b21a)|مترجم فصل های۷ و جمع بندی|
 |مائده شهابی|[گیتهاب](https://github.com/mashahabi15)|مترجم فصل ۹|
