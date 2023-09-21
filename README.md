@@ -9,7 +9,6 @@
 
 <div dir="rtl">
 
-شما میتوانید کتاب را به صورت یک داکیومنت مطالعه کنید :   [مشاهده کتاب به صورت داکیومنت](https://django-for-professionals-ir.vercel.app/)
 
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
   
