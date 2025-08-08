@@ -1,7 +1,5 @@
 <h1 dir="rtl">
-  
-<a href="https://django-for-professionals-ir.vercel.app/"> ترجمه آزاد کتاب Django for Professionals </a>
-
+ترجمه آزاد کتاب Django for Professionals 
 </h1>
 
 ![Cover Book](cover.jpg)
