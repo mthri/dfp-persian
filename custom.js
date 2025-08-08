@@ -79,6 +79,10 @@ window.$docsify = {
   alias: {
     '/.*/_sidebar.md': '/_sidebar.md'
   },
+  search: {
+    paths: 'auto',
+    placeholder: 'Search...'
+  },
   markdown: {
       tables: true  // Explicitly enable tables
   },
