@@ -6,6 +6,10 @@
 
 
 <div dir="rtl">
+<h2>
+  <a href="https://www.youtube.com/playlist?list=PLmKrvAD6HAATmyM2MTRG-U-tbWNFIFLIT" target="_blank">مشاهده دوره آموزشی نسخه ۴ این کتاب در یوتوب</a>
+</h2>
+
 
 
 قبل از شروع فهرست کتاب اگر، اگر مایل به مشارکت هستید، [نحوه مشارکت](https://github.com/mthri/dfp-persian/blob/main/CONTRIBUTING.md) را حتما مطالعه کنید.
